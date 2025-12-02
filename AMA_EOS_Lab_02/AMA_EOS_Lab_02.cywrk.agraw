@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\global.h">
+<ExpandedNodeIds>
+<v>AMA_EOS_Lab_02</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\TopDesign</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydwr</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydwr\Pins</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydwr\Analog</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydwr\Clocks</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydwr\Interrupts</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydwr\DMA</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydwr\System</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydwr\Directives</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydwr\Flash Security</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydwr\EEPROM</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\asw</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\asw\cyapicallbacks.h</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\asw\main.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\labboard</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\labboard\button.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\labboard\button.h</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\labboard\led.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\labboard\led.h</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\labboard\seven.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\labboard\seven.h</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\derivate.h</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\global.h</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\reactiongame.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\reactiongame.h</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\Generated_Source</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\Generated_Source\PSoC5</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\Generated_Source\PSoC5\ErikaOS_1</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydwr\Clocks</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydwr\Interrupts</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydwr\DMA</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydwr\System</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydwr\Directives</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydwr\Flash Security</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydwr\EEPROM</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\asw</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\asw\cyapicallbacks.h</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\asw\main.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\labboard</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\labboard\button.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\labboard\button.h</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\labboard\led.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\labboard\led.h</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\labboard\seven.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\labboard\seven.h</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\derivate.h</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\global.h</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\reactiongame.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\bsw\reactiongame.h</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\Generated_Source</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\Generated_Source\PSoC5</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\Generated_Source\PSoC5\BUTTON_1</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\Generated_Source\PSoC5\BUTTON_2</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\Generated_Source\PSoC5\BUTTON_3</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\Generated_Source\PSoC5\BUTTON_4</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\Generated_Source\PSoC5\cy_boot</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\Generated_Source\PSoC5\ErikaOS_1</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\Generated_Source\PSoC5\ErikaOS_1\ErikaOS_1_common_ee_compiler_gcc.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\Generated_Source\PSoC5\ErikaOS_1\ErikaOS_1_common_ee_hal_structs.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\Generated_Source\PSoC5\ErikaOS_1\ErikaOS_1_common_ee_hal_structs.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\Generated_Source\PSoC5\ErikaOS_1\ErikaOS_1_common_ee_irqstub.inc</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="AMA_EOS_Lab_02\AMA_EOS_Lab_02">
+<ExpandedNodeIds>
+<v>AMA_EOS_Lab_02</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\common_ee_compiler_gcc.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\common_ee_hal_structs.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\common_ee_hal_structs.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\common_ee_irqstub.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\common_ee_primitives.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\common_ee_stdint.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\common_ee_types.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\cortex_mx_ee_context.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\cortex_mx_ee_context.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\cortex_mx_ee_cpu.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\cortex_mx_ee_internal.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\cortex_mx_ee_irq.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\cortex_mx_ee_irq_cng_cont.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\cortex_mx_ee_nvic.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\cortex_mx_ee_system_timer.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\cortex_mx_ee_systick.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\cortex_mx_ee_utils.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee.h</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_activate.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_alcancel.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_alget.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_algetbase.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_alsetabs.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_alsetrel.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_altick.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_api.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_as_internal.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_as_kernel.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_as_timing_prot.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_chaintas.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_evclear.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_evget.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_evset.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_evwait.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_force_schedule.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_getcountervalue.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_getelapsedvalue.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_gettaskid.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_gettaskstate.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_gnu_change_context_isr.s</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_gnu_irq_stack.s</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_gnu_multi_context.s</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_gnu_oo.s</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_internal.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_iparam.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_irq.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_irqendin.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_lockres.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_lookup.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_oo_api.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_oo_common.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_oo_inline.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_oo_internal.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_oo_intfunc.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_oo_irq.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_oo_kernel.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_os.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_rq_exchg.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_rq_first.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_rq_inser.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_rtdruid_versions.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_schedule.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_semgetvalue.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_sempost.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_semtrywait.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_semwait.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_shtdown.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_startos.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_terminat.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_thendin.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_tnterm.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_tracing.h</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_tstub.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_ulockallres.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_ulockres.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\eecfg.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\eecfg.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\event_definition.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ISR_definition.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\resource_priorities.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\task_priorities.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\Custom</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\Custom\ErikaOSAlarmsCounters.cs</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\Custom\ErikaOSAlarmsCounters.Designer.cs</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\Custom\ErikaOSAlarmsCounters.resx</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\Custom\ErikaOSControl.cs</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\Custom\ErikaOSControl.Designer.cs</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\Custom\ErikaOSControl.resx</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\Custom\ErikaOSCustomizer.cs</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\Custom\ErikaOSEventsResources.cs</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\Custom\ErikaOSEventsResources.Designer.cs</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\Custom\ErikaOSEventsResources.resx</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\Custom\ErikaOSISRs.cs</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\Custom\ErikaOSISRs.Designer.cs</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\Custom\ErikaOSISRs.resx</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\Custom\ErikaOSParameters.cs</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\Custom\ErikaOSTask.cs</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\Custom\ErikaOSTask.Designer.cs</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\Custom\ErikaOSTask.resx</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\ErikaOS_v2_5_3.cysym</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\ErikaOS_v2_5_3.pdf</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\TopDesign</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>AMA_EOS_Lab_02</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\common_ee_compiler_gcc.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\common_ee_hal_structs.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\common_ee_hal_structs.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\common_ee_irqstub.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\common_ee_primitives.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\common_ee_stdint.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\common_ee_types.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\cortex_mx_ee_context.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\cortex_mx_ee_context.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\cortex_mx_ee_cpu.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\cortex_mx_ee_internal.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\cortex_mx_ee_irq.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\cortex_mx_ee_irq_cng_cont.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\cortex_mx_ee_nvic.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\cortex_mx_ee_system_timer.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\cortex_mx_ee_systick.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\cortex_mx_ee_utils.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee.h</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_activate.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_alcancel.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_alget.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_algetbase.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_alsetabs.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_alsetrel.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_altick.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_api.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_as_internal.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_as_kernel.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_as_timing_prot.inc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_chaintas.c</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3\API\ee_evclear.c</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>AMA_EOS_Lab_02</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\button.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\BUTTON_1.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\BUTTON_2.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\BUTTON_3.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\BUTTON_4.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_common_ee_hal_structs.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_cortex_mx_ee_context.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_cortex_mx_ee_system_timer.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_cortex_mx_ee_utils.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_activate.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_alcancel.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_alget.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_algetbase.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_alsetabs.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_alsetrel.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_altick.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_chaintas.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_evclear.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_evget.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_evset.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_evwait.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_force_schedule.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_getcountervalue.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_getelapsedvalue.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_gettaskid.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_gettaskstate.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_gnu_change_context_isr.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_gnu_irq_stack.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_gnu_multi_context.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_gnu_oo.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_iparam.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_irqendin.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_lockres.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_lookup.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_rq_exchg.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_rq_first.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_rq_inser.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_schedule.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_semgetvalue.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_sempost.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_semtrywait.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_semwait.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_shtdown.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_startos.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_terminat.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_thendin.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_tnterm.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_tstub.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_ulockallres.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_ulockres.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_eecfg.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_Button_Pressed.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\led.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\LED_GREEN.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\LED_RED.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\LED_YELLOW.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_Clock.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_green.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_green_PM.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_red.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_red_PM.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_yellow.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_yellow_PM.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\reactiongame.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\RGB_B.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\RGB_G.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\RGB_PWM_blue.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\RGB_PWM_blue_PM.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\RGB_PWM_green.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\RGB_PWM_green_PM.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\RGB_PWM_red.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\RGB_PWM_red_PM.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\RGB_R.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\seven.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\SEVEN_A.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\SEVEN_B.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\SEVEN_C.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\SEVEN_D.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\SEVEN_DP.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\SEVEN_E.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\SEVEN_F.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\SEVEN_G.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\SEVEN_Reg.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\SEVEN_Reg_PM.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\SEVEN_SELECT.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_LOG.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_LOG_BOOT.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_LOG_INT.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_LOG_IntClock.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_LOG_PM.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\AMA_EOS_Lab_02.elf</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\AMA_EOS_Lab_02.hex</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\AMA_EOS_Lab_02.map</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.gpdsc</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.rpt</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\AMA_EOS_Lab_02_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>AMA_EOS_Lab_02</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\button.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\BUTTON_1.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\BUTTON_2.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\BUTTON_3.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\BUTTON_4.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_common_ee_hal_structs.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_cortex_mx_ee_context.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_cortex_mx_ee_system_timer.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_cortex_mx_ee_utils.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_activate.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_alcancel.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_alget.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_algetbase.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_alsetabs.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_alsetrel.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_altick.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_chaintas.lst</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CortexM3\ARM_GCC_541\Debug\Listing Files\ErikaOS_1_ee_evclear.lst</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="AMA_EOS_Lab_02\AMA_EOS_Lab_02">
+<ExpandedNodeIds>
+<v>AMA_EOS_Lab_02</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\PSoC 5LP Architecture TRM</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CY8C58LP Family Datasheet</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\System Reference Guides</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\System Reference Guides\cy_boot_v6_10</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\cy_clock_v2_20.pdf</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\cy_isr_v1_71.pdf</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\cy_pins_v2_20</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\CyControlReg_v1_80.pdf</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\ErikaOS_v2_5_3.pdf</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\or_v1_0.pdf</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\PWM_v3_30</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02\UART_v2_50.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>AMA_EOS_Lab_02</v>
+<v>AMA_EOS_Lab_02\AMA_EOS_Lab_02</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\AMA_EOS_Lab_02.cydsn\source\asw\main.c" />
+<name v=".\AMA_EOS_Lab_02.cydsn\source\bsw\reactiongame.c" />
+<name v=".\AMA_EOS_Lab_02.cydsn\source\bsw\reactiongame.h" />
+<name v=".\AMA_EOS_Lab_02.cydsn\Generated_Source\PSoC5\ErikaOS_1_ee_oo_api.inc" />
+<name v=".\AMA_EOS_Lab_02.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\AMA_EOS_Lab_02.cydsn\Generated_Source\PSoC5\ErikaOS_1_ee_oo_common.inc" />
+<name v=".\AMA_EOS_Lab_02.cydsn\source\bsw\global.h" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1656, 686" SelectedTabbedMdiWindow="d7520863-8d1d-420d-b8f0-91deaa144237"><DocumentWindow Key="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\source\asw\main.c" Guid="d7520863-8d1d-420d-b8f0-91deaa144237" /><DocumentWindow Key="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\source\bsw\reactiongame.c" Guid="b458e698-277a-4c97-9b28-43d80b9c8a1d" /><DocumentWindow Key="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\source\bsw\reactiongame.h" Guid="4a72457e-80bc-4a83-a67f-18e4d3aad654" /><DocumentWindow Key="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\Generated_Source\PSoC5\ErikaOS_1_ee_oo_api.inc" Guid="a7c00146-34cb-4481-aa95-9c7b0fefed6d" /><DocumentWindow Key="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\TopDesign\TopDesign.cysch" Guid="e1134e16-2432-4e63-ba8b-dde59ea8dd09" /><DocumentWindow Key="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\Generated_Source\PSoC5\ErikaOS_1_ee_oo_common.inc" Guid="063e7169-52c0-4b7e-bb67-9690fa3e9e24" /><DocumentWindow Key="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\source\bsw\global.h" Guid="5ff6e067-cde3-4bd1-add3-ccc65651eca2" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="7c1ca66c-77c8-41cb-a819-6df6f5ed6863" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

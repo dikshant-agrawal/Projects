@@ -1,0 +1,10 @@
+--------------- Build Started: 12/01/2025 23:10:38 Project: AMA_EOS_Lab_02, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+The code generation step is up to date.
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source\bsw -I.\source\asw -I.\source\bsw\labboard -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c source\asw\main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
+source\asw\main.c: In function 'FuncTask_Event':
+source\asw\main.c:93:73: error: 'ev_waitOver' undeclared (first use in this function)
+         WaitEvent(ev_leftButton | ev_rightButton | ev_slow | ev_reset | ev_waitOver | ev_score);
+                                                                         ^
+source\asw\main.c:93:73: note: each undeclared identifier is reported only once for each function it appears in
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+--------------- Build Failed: 12/01/2025 23:10:38 ---------------

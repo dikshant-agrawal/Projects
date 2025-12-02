@@ -1,0 +1,1594 @@
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.comm	TimingAnalyzer_SystickCounterMillis,4,4
+  20              		.section	.rodata
+  21              		.align	2
+  22              	.LC0:
+  23 0000 54696D65 		.ascii	"Timer DWT_OUTPUT\000"
+  23      72204457 
+  23      545F4F55 
+  23      54505554 
+  23      00
+  24 0011 000000   		.align	2
+  25              	.LC1:
+  26 0014 54696D65 		.ascii	"Timer SYSTICK_OUTPUT\000"
+  26      72205359 
+  26      53544943 
+  26      4B5F4F55 
+  26      54505554 
+  27 0029 000000   		.align	2
+  28              	.LC2:
+  29 002c 4572726F 		.ascii	"Error initalizing\000"
+  29      7220696E 
+  29      6974616C 
+  29      697A696E 
+  29      6700
+  30              		.section	.text.main,"ax",%progbits
+  31              		.align	2
+  32              		.global	main
+  33              		.thumb
+  34              		.thumb_func
+  35              		.type	main, %function
+  36              	main:
+  37              	.LFB65:
+  38              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  * \file	main.c
+   3:main.c        ****  * \author	Dikshant Agrawal 	Hochschule Darmstadt - dikshant.agrawal@stud.h-da.de
+   4:main.c        ****  * \date 	27.10.2025
+   5:main.c        ****  * \version	1.0
+   6:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   7:main.c        ****  * All Rights Reserved
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 2
+
+
+   8:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   9:main.c        ****  *
+  10:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+  11:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+  12:main.c        ****  *
+  13:main.c        ****  * ========================================
+  14:main.c        **** */
+  15:main.c        **** #include "project.h"
+  16:main.c        **** #include "analyzer.h"
+  17:main.c        **** #include "global.h"
+  18:main.c        **** #include "stdio.h"
+  19:main.c        **** #include <math.h>
+  20:main.c        **** 
+  21:main.c        **** #define TestCase2
+  22:main.c        **** 
+  23:main.c        **** /*Just to check entry value (for personal use)*/
+  24:main.c        **** #ifdef TestCase0
+  25:main.c        **** 
+  26:main.c        ****     int main(void)
+  27:main.c        **** {
+  28:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  29:main.c        ****     int entryValue2 = 0;
+  30:main.c        ****     int entryValue1 = 0;
+  31:main.c        **** 
+  32:main.c        ****     TimingAnalyzer_Init(); //Initalize the analyzer and pheripherals
+  33:main.c        ****        
+  34:main.c        ****     TimingAnalyser_Instance_t analyzers[1];
+  35:main.c        ****     
+  36:main.c        ****     //Create struct Instance for Timing Analyzer for DWT with OUTPUT [Timer DWT_OUTPUT]
+  37:main.c        ****     TimingAnalyzer_Create(&analyzers[0], C_DWT_OUTPUT, LED_GREEN, "Timer DWT_OUTPUT", 111);
+  38:main.c        ****     char temp[100];
+  39:main.c        ****     entryValue1= TimingAnalyzer_CaptureEntry(&analyzers[0]);
+  40:main.c        ****     CyDelay(1);
+  41:main.c        ****     entryValue2 = TimingAnalyzer_CaptureEntry(&analyzers[0]);
+  42:main.c        ****     sprintf(temp, "entry1=%u, entry2=%u\n", entryValue1, entryValue2);
+  43:main.c        ****     UART_PutString(temp);
+  44:main.c        **** 
+  45:main.c        **** for(;;);
+  46:main.c        **** }
+  47:main.c        **** 
+  48:main.c        **** #endif
+  49:main.c        **** 
+  50:main.c        **** /*Basic Test case written for Lab 1A/1B */
+  51:main.c        **** #ifdef TestCase1
+  52:main.c        ****     
+  53:main.c        **** int main(void)
+  54:main.c        **** {
+  55:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  56:main.c        ****  
+  57:main.c        ****     TimingAnalyzer_Init(); //Initalize the analyzer and pheripherals
+  58:main.c        ****        
+  59:main.c        ****     TimingAnalyser_Instance_t analyzers[3];
+  60:main.c        ****     uint32_t Active_Analyzer[] = {0,1,2};
+  61:main.c        ****     uint32_t Active_Analyzer_size = sizeof(Active_Analyzer) / sizeof(Active_Analyzer[0]);;
+  62:main.c        ****     
+  63:main.c        ****     
+  64:main.c        ****     //Create struct Instance for Timing Analyzer for DWT with OUTPUT [Timer DWT_OUTPUT]
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 3
+
+
+  65:main.c        ****     TimingAnalyzer_Create(&analyzers[0], C_DWT_OUTPUT, LED_GREEN, "Timer DWT_OUTPUT", 111);
+  66:main.c        ****     TimingAnalyzer_Create(&analyzers[1], C_SYSTICK_OUTPUT, LED_RED, "Timer SYS_OUTPUT", 123);
+  67:main.c        ****     TimingAnalyzer_Create(&analyzers[2], C_OUTPUT, LED_YELLOW, "Timer OUTPUT", 223);
+  68:main.c        ****     
+  69:main.c        ****     TimingAnalyzer_Start(&analyzers[0]);
+  70:main.c        ****     //CyDelay(1000);
+  71:main.c        ****     TimingAnalyzer_Stop(&analyzers[0]);
+  72:main.c        ****     TimingAnalyzer_Print(&analyzers[0]);
+  73:main.c        ****     TimingAnalyzer_Start(&analyzers[1]);
+  74:main.c        ****     TimingAnalyzer_Stop(&analyzers[1]);
+  75:main.c        ****     TimingAnalyzer_PrintAll(analyzers, Active_Analyzer, Active_Analyzer_size);
+  76:main.c        ****     
+  77:main.c        ****     
+  78:main.c        ****     for(;;){}
+  79:main.c        **** 
+  80:main.c        **** }
+  81:main.c        **** #endif
+  82:main.c        **** 
+  83:main.c        **** /*Test Case 2.1 Basic Functionality start / stop and print works properly 
+  84:main.c        **** * pause / resume works as expected 
+  85:main.c        **** * multiple timers can be used in parallel without interfering 
+  86:main.c        **** */
+  87:main.c        **** #ifdef TestCase2
+  88:main.c        **** 
+  89:main.c        **** int main(void)
+  90:main.c        **** {
+  39              		.loc 1 90 0
+  40              		.cfi_startproc
+  41              		@ args = 0, pretend = 0, frame = 184
+  42              		@ frame_needed = 1, uses_anonymous_args = 0
+  43 0000 B0B5     		push	{r4, r5, r7, lr}
+  44              		.cfi_def_cfa_offset 16
+  45              		.cfi_offset 4, -16
+  46              		.cfi_offset 5, -12
+  47              		.cfi_offset 7, -8
+  48              		.cfi_offset 14, -4
+  49 0002 B0B0     		sub	sp, sp, #192
+  50              		.cfi_def_cfa_offset 208
+  51 0004 02AF     		add	r7, sp, #8
+  52              		.cfi_def_cfa 7, 200
+  91:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  53              		.loc 1 91 0
+  54              		.syntax unified
+  55              	@ 91 "main.c" 1
+  56 0006 62B6     		CPSIE   i
+  57              	@ 0 "" 2
+  92:main.c        ****     char temp[32];
+  93:main.c        ****     uint32_t Active_Analyzer[] = {0,1};
+  58              		.loc 1 93 0
+  59              		.thumb
+  60              		.syntax unified
+  61 0008 0023     		movs	r3, #0
+  62 000a C7F88830 		str	r3, [r7, #136]
+  63 000e 0123     		movs	r3, #1
+  64 0010 C7F88C30 		str	r3, [r7, #140]
+  94:main.c        ****     uint32_t Active_Analyzer_size = sizeof(Active_Analyzer)/sizeof(Active_Analyzer[0]);
+  65              		.loc 1 94 0
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 4
+
+
+  66 0014 0223     		movs	r3, #2
+  67 0016 C7F8B430 		str	r3, [r7, #180]
+  95:main.c        ****     TimingAnalyser_Instance_t analyzers[2];
+  96:main.c        ****     
+  97:main.c        ****     TimingAnalyzer_Init(); //Initalize the analyzer and pheripherals
+  68              		.loc 1 97 0
+  69 001a FFF7FEFF 		bl	TimingAnalyzer_Init
+  98:main.c        ****     
+  99:main.c        ****     
+ 100:main.c        ****     //Create struct Instance for Timing Analyzer for DWT with OUTPUT [Timer DWT_OUTPUT]
+ 101:main.c        ****     RC_t rc = TimingAnalyzer_Create(&analyzers[0], C_DWT_OUTPUT, LED_GREEN, "Timer DWT_OUTPUT", 111
+  70              		.loc 1 101 0
+  71 001e 3846     		mov	r0, r7
+  72 0020 6F23     		movs	r3, #111
+  73 0022 0093     		str	r3, [sp]
+  74 0024 404B     		ldr	r3, .L5
+  75 0026 0222     		movs	r2, #2
+  76 0028 0121     		movs	r1, #1
+  77 002a FFF7FEFF 		bl	TimingAnalyzer_Create
+  78 002e 0346     		mov	r3, r0
+  79 0030 87F8B330 		strb	r3, [r7, #179]
+ 102:main.c        ****     RC_t rc1 = TimingAnalyzer_Create(&analyzers[1], C_SYSTICK_OUTPUT, LED_RED, "Timer SYSTICK_OUTPU
+  80              		.loc 1 102 0
+  81 0034 3B46     		mov	r3, r7
+  82 0036 03F14400 		add	r0, r3, #68
+  83 003a DE23     		movs	r3, #222
+  84 003c 0093     		str	r3, [sp]
+  85 003e 3B4B     		ldr	r3, .L5+4
+  86 0040 0022     		movs	r2, #0
+  87 0042 0321     		movs	r1, #3
+  88 0044 FFF7FEFF 		bl	TimingAnalyzer_Create
+  89 0048 0346     		mov	r3, r0
+  90 004a 87F8B230 		strb	r3, [r7, #178]
+ 103:main.c        ****     //If Create is not initialized properly it should skip the timing analysis object
+ 104:main.c        ****     //Can add more logics for error handeling using RC Codes in Main.c
+ 105:main.c        ****     
+ 106:main.c        ****     if(rc != RC_SUCCESS || rc1 != RC_SUCCESS){
+  91              		.loc 1 106 0
+  92 004e 97F9B330 		ldrsb	r3, [r7, #179]
+  93 0052 002B     		cmp	r3, #0
+  94 0054 03D1     		bne	.L2
+  95              		.loc 1 106 0 is_stmt 0 discriminator 1
+  96 0056 97F9B230 		ldrsb	r3, [r7, #178]
+  97 005a 002B     		cmp	r3, #0
+  98 005c 0DD0     		beq	.L3
+  99              	.L2:
+ 107:main.c        ****         sprintf(temp, "Error initalizing");
+ 100              		.loc 1 107 0 is_stmt 1
+ 101 005e 07F19003 		add	r3, r7, #144
+ 102 0062 334A     		ldr	r2, .L5+8
+ 103 0064 1C46     		mov	r4, r3
+ 104 0066 1546     		mov	r5, r2
+ 105 0068 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+ 106 006a 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+ 107 006c 2B68     		ldr	r3, [r5]
+ 108 006e 2380     		strh	r3, [r4]	@ movhi
+ 108:main.c        ****         UART_PutString(temp);
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 5
+
+
+ 109              		.loc 1 108 0
+ 110 0070 07F19003 		add	r3, r7, #144
+ 111 0074 1846     		mov	r0, r3
+ 112 0076 FFF7FEFF 		bl	UART_PutString
+ 113              	.L3:
+ 109:main.c        ****     }
+ 110:main.c        **** 
+ 111:main.c        ****     /*
+ 112:main.c        ****     * Test Case 2.1 Basic START STOP PAUSE RESUME
+ 113:main.c        ****     * Write code in the main.c with CyDelay() to prove that: 
+ 114:main.c        ****     * start / stop and print works properly
+ 115:main.c        ****     * pause / resume works as expected 
+ 116:main.c        ****     * multiple timers can be used in parallel without interfering
+ 117:main.c        **** 	*/
+ 118:main.c        ****     
+ 119:main.c        ****     TimingAnalyzer_Start(&analyzers[1]);
+ 114              		.loc 1 119 0
+ 115 007a 3B46     		mov	r3, r7
+ 116 007c 4433     		adds	r3, r3, #68
+ 117 007e 1846     		mov	r0, r3
+ 118 0080 FFF7FEFF 		bl	TimingAnalyzer_Start
+ 120:main.c        ****     TimingAnalyzer_Start(&analyzers[0]);
+ 119              		.loc 1 120 0
+ 120 0084 3B46     		mov	r3, r7
+ 121 0086 1846     		mov	r0, r3
+ 122 0088 FFF7FEFF 		bl	TimingAnalyzer_Start
+ 121:main.c        ****     CyDelay(3000);
+ 123              		.loc 1 121 0
+ 124 008c 40F6B830 		movw	r0, #3000
+ 125 0090 FFF7FEFF 		bl	CyDelay
+ 122:main.c        ****     TimingAnalyzer_Stop(&analyzers[1]);
+ 126              		.loc 1 122 0
+ 127 0094 3B46     		mov	r3, r7
+ 128 0096 4433     		adds	r3, r3, #68
+ 129 0098 1846     		mov	r0, r3
+ 130 009a FFF7FEFF 		bl	TimingAnalyzer_Stop
+ 123:main.c        ****     TimingAnalyzer_Stop(&analyzers[0]);
+ 131              		.loc 1 123 0
+ 132 009e 3B46     		mov	r3, r7
+ 133 00a0 1846     		mov	r0, r3
+ 134 00a2 FFF7FEFF 		bl	TimingAnalyzer_Stop
+ 124:main.c        ****     TimingAnalyzer_PrintAll(analyzers, Active_Analyzer, Active_Analyzer_size );
+ 135              		.loc 1 124 0
+ 136 00a6 07F18801 		add	r1, r7, #136
+ 137 00aa 3B46     		mov	r3, r7
+ 138 00ac D7F8B420 		ldr	r2, [r7, #180]
+ 139 00b0 1846     		mov	r0, r3
+ 140 00b2 FFF7FEFF 		bl	TimingAnalyzer_PrintAll
+ 125:main.c        ****     
+ 126:main.c        ****     
+ 127:main.c        ****     TimingAnalyzer_Start(&analyzers[1]);
+ 141              		.loc 1 127 0
+ 142 00b6 3B46     		mov	r3, r7
+ 143 00b8 4433     		adds	r3, r3, #68
+ 144 00ba 1846     		mov	r0, r3
+ 145 00bc FFF7FEFF 		bl	TimingAnalyzer_Start
+ 128:main.c        ****     TimingAnalyzer_Start(&analyzers[0]);
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 6
+
+
+ 146              		.loc 1 128 0
+ 147 00c0 3B46     		mov	r3, r7
+ 148 00c2 1846     		mov	r0, r3
+ 149 00c4 FFF7FEFF 		bl	TimingAnalyzer_Start
+ 129:main.c        ****     CyDelay(1000);
+ 150              		.loc 1 129 0
+ 151 00c8 4FF47A70 		mov	r0, #1000
+ 152 00cc FFF7FEFF 		bl	CyDelay
+ 130:main.c        ****     TimingAnalyzer_Pause(&analyzers[1]);
+ 153              		.loc 1 130 0
+ 154 00d0 3B46     		mov	r3, r7
+ 155 00d2 4433     		adds	r3, r3, #68
+ 156 00d4 1846     		mov	r0, r3
+ 157 00d6 FFF7FEFF 		bl	TimingAnalyzer_Pause
+ 131:main.c        ****     TimingAnalyzer_Pause(&analyzers[0]);
+ 158              		.loc 1 131 0
+ 159 00da 3B46     		mov	r3, r7
+ 160 00dc 1846     		mov	r0, r3
+ 161 00de FFF7FEFF 		bl	TimingAnalyzer_Pause
+ 132:main.c        ****     CyDelay(1000);
+ 162              		.loc 1 132 0
+ 163 00e2 4FF47A70 		mov	r0, #1000
+ 164 00e6 FFF7FEFF 		bl	CyDelay
+ 133:main.c        ****     TimingAnalyzer_Resume(&analyzers[1]);
+ 165              		.loc 1 133 0
+ 166 00ea 3B46     		mov	r3, r7
+ 167 00ec 4433     		adds	r3, r3, #68
+ 168 00ee 1846     		mov	r0, r3
+ 169 00f0 FFF7FEFF 		bl	TimingAnalyzer_Resume
+ 134:main.c        ****     TimingAnalyzer_Resume(&analyzers[0]);
+ 170              		.loc 1 134 0
+ 171 00f4 3B46     		mov	r3, r7
+ 172 00f6 1846     		mov	r0, r3
+ 173 00f8 FFF7FEFF 		bl	TimingAnalyzer_Resume
+ 135:main.c        ****     CyDelay(2000);
+ 174              		.loc 1 135 0
+ 175 00fc 4FF4FA60 		mov	r0, #2000
+ 176 0100 FFF7FEFF 		bl	CyDelay
+ 136:main.c        ****     TimingAnalyzer_Stop(&analyzers[1]);
+ 177              		.loc 1 136 0
+ 178 0104 3B46     		mov	r3, r7
+ 179 0106 4433     		adds	r3, r3, #68
+ 180 0108 1846     		mov	r0, r3
+ 181 010a FFF7FEFF 		bl	TimingAnalyzer_Stop
+ 137:main.c        ****     TimingAnalyzer_Stop(&analyzers[0]);
+ 182              		.loc 1 137 0
+ 183 010e 3B46     		mov	r3, r7
+ 184 0110 1846     		mov	r0, r3
+ 185 0112 FFF7FEFF 		bl	TimingAnalyzer_Stop
+ 138:main.c        ****     TimingAnalyzer_PrintAll(analyzers, Active_Analyzer, Active_Analyzer_size );
+ 186              		.loc 1 138 0
+ 187 0116 07F18801 		add	r1, r7, #136
+ 188 011a 3B46     		mov	r3, r7
+ 189 011c D7F8B420 		ldr	r2, [r7, #180]
+ 190 0120 1846     		mov	r0, r3
+ 191 0122 FFF7FEFF 		bl	TimingAnalyzer_PrintAll
+ 192              	.L4:
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 7
+
+
+ 139:main.c        ****     
+ 140:main.c        ****     
+ 141:main.c        ****     
+ 142:main.c        ****     for(;;){}
+ 193              		.loc 1 142 0 discriminator 1
+ 194 0126 FEE7     		b	.L4
+ 195              	.L6:
+ 196              		.align	2
+ 197              	.L5:
+ 198 0128 00000000 		.word	.LC0
+ 199 012c 14000000 		.word	.LC1
+ 200 0130 2C000000 		.word	.LC2
+ 201              		.cfi_endproc
+ 202              	.LFE65:
+ 203              		.size	main, .-main
+ 204              		.text
+ 205              	.Letext0:
+ 206              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 207              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 208              		.file 4 ".\\bsw/global.h"
+ 209              		.file 5 "analyzer.h"
+ 210              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+ 211              		.section	.debug_info,"",%progbits
+ 212              	.Ldebug_info0:
+ 213 0000 9C030000 		.4byte	0x39c
+ 214 0004 0400     		.2byte	0x4
+ 215 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 216 000a 04       		.byte	0x4
+ 217 000b 01       		.uleb128 0x1
+ 218 000c 8E000000 		.4byte	.LASF84
+ 219 0010 0C       		.byte	0xc
+ 220 0011 2B040000 		.4byte	.LASF85
+ 221 0015 50040000 		.4byte	.LASF86
+ 222 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 223 001d 00000000 		.4byte	0
+ 224 0021 00000000 		.4byte	.Ldebug_line0
+ 225 0025 02       		.uleb128 0x2
+ 226 0026 01       		.byte	0x1
+ 227 0027 06       		.byte	0x6
+ 228 0028 D5020000 		.4byte	.LASF0
+ 229 002c 02       		.uleb128 0x2
+ 230 002d 01       		.byte	0x1
+ 231 002e 08       		.byte	0x8
+ 232 002f A8020000 		.4byte	.LASF1
+ 233 0033 02       		.uleb128 0x2
+ 234 0034 02       		.byte	0x2
+ 235 0035 05       		.byte	0x5
+ 236 0036 65010000 		.4byte	.LASF2
+ 237 003a 02       		.uleb128 0x2
+ 238 003b 02       		.byte	0x2
+ 239 003c 07       		.byte	0x7
+ 240 003d 9E030000 		.4byte	.LASF3
+ 241 0041 03       		.uleb128 0x3
+ 242 0042 CB040000 		.4byte	.LASF5
+ 243 0046 02       		.byte	0x2
+ 244 0047 3F       		.byte	0x3f
+ 245 0048 4C000000 		.4byte	0x4c
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 8
+
+
+ 246 004c 02       		.uleb128 0x2
+ 247 004d 04       		.byte	0x4
+ 248 004e 05       		.byte	0x5
+ 249 004f FE010000 		.4byte	.LASF4
+ 250 0053 03       		.uleb128 0x3
+ 251 0054 3E010000 		.4byte	.LASF6
+ 252 0058 02       		.byte	0x2
+ 253 0059 41       		.byte	0x41
+ 254 005a 5E000000 		.4byte	0x5e
+ 255 005e 02       		.uleb128 0x2
+ 256 005f 04       		.byte	0x4
+ 257 0060 07       		.byte	0x7
+ 258 0061 3E040000 		.4byte	.LASF7
+ 259 0065 02       		.uleb128 0x2
+ 260 0066 08       		.byte	0x8
+ 261 0067 05       		.byte	0x5
+ 262 0068 CC010000 		.4byte	.LASF8
+ 263 006c 02       		.uleb128 0x2
+ 264 006d 08       		.byte	0x8
+ 265 006e 07       		.byte	0x7
+ 266 006f E9020000 		.4byte	.LASF9
+ 267 0073 04       		.uleb128 0x4
+ 268 0074 04       		.byte	0x4
+ 269 0075 05       		.byte	0x5
+ 270 0076 696E7400 		.ascii	"int\000"
+ 271 007a 02       		.uleb128 0x2
+ 272 007b 04       		.byte	0x4
+ 273 007c 07       		.byte	0x7
+ 274 007d 1C030000 		.4byte	.LASF10
+ 275 0081 03       		.uleb128 0x3
+ 276 0082 E1020000 		.4byte	.LASF11
+ 277 0086 03       		.byte	0x3
+ 278 0087 2C       		.byte	0x2c
+ 279 0088 41000000 		.4byte	0x41
+ 280 008c 03       		.uleb128 0x3
+ 281 008d 00030000 		.4byte	.LASF12
+ 282 0091 03       		.byte	0x3
+ 283 0092 30       		.byte	0x30
+ 284 0093 53000000 		.4byte	0x53
+ 285 0097 02       		.uleb128 0x2
+ 286 0098 04       		.byte	0x4
+ 287 0099 04       		.byte	0x4
+ 288 009a A5010000 		.4byte	.LASF13
+ 289 009e 02       		.uleb128 0x2
+ 290 009f 08       		.byte	0x8
+ 291 00a0 04       		.byte	0x4
+ 292 00a1 88040000 		.4byte	.LASF14
+ 293 00a5 02       		.uleb128 0x2
+ 294 00a6 01       		.byte	0x1
+ 295 00a7 08       		.byte	0x8
+ 296 00a8 CB030000 		.4byte	.LASF15
+ 297 00ac 02       		.uleb128 0x2
+ 298 00ad 08       		.byte	0x8
+ 299 00ae 04       		.byte	0x4
+ 300 00af 9C020000 		.4byte	.LASF16
+ 301 00b3 02       		.uleb128 0x2
+ 302 00b4 04       		.byte	0x4
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 9
+
+
+ 303 00b5 07       		.byte	0x7
+ 304 00b6 85000000 		.4byte	.LASF17
+ 305 00ba 05       		.uleb128 0x5
+ 306 00bb 8C000000 		.4byte	0x8c
+ 307 00bf 06       		.uleb128 0x6
+ 308 00c0 8C000000 		.4byte	0x8c
+ 309 00c4 CF000000 		.4byte	0xcf
+ 310 00c8 07       		.uleb128 0x7
+ 311 00c9 B3000000 		.4byte	0xb3
+ 312 00cd 01       		.byte	0x1
+ 313 00ce 00       		.byte	0
+ 314 00cf 03       		.uleb128 0x3
+ 315 00d0 68020000 		.4byte	.LASF18
+ 316 00d4 04       		.byte	0x4
+ 317 00d5 9C       		.byte	0x9c
+ 318 00d6 2C000000 		.4byte	0x2c
+ 319 00da 03       		.uleb128 0x3
+ 320 00db 26020000 		.4byte	.LASF19
+ 321 00df 04       		.byte	0x4
+ 322 00e0 9D       		.byte	0x9d
+ 323 00e1 A5000000 		.4byte	0xa5
+ 324 00e5 08       		.uleb128 0x8
+ 325 00e6 01       		.byte	0x1
+ 326 00e7 25000000 		.4byte	0x25
+ 327 00eb 04       		.byte	0x4
+ 328 00ec CF       		.byte	0xcf
+ 329 00ed 8E010000 		.4byte	0x18e
+ 330 00f1 09       		.uleb128 0x9
+ 331 00f2 13000000 		.4byte	.LASF20
+ 332 00f6 00       		.byte	0
+ 333 00f7 0A       		.uleb128 0xa
+ 334 00f8 1C050000 		.4byte	.LASF21
+ 335 00fc 7F       		.sleb128 -1
+ 336 00fd 0A       		.uleb128 0xa
+ 337 00fe 7A030000 		.4byte	.LASF22
+ 338 0102 7E       		.sleb128 -2
+ 339 0103 0A       		.uleb128 0xa
+ 340 0104 1C010000 		.4byte	.LASF23
+ 341 0108 7D       		.sleb128 -3
+ 342 0109 0A       		.uleb128 0xa
+ 343 010a 2D050000 		.4byte	.LASF24
+ 344 010e 7C       		.sleb128 -4
+ 345 010f 0A       		.uleb128 0xa
+ 346 0110 96010000 		.4byte	.LASF25
+ 347 0114 7B       		.sleb128 -5
+ 348 0115 0A       		.uleb128 0xa
+ 349 0116 5F000000 		.4byte	.LASF26
+ 350 011a 7A       		.sleb128 -6
+ 351 011b 0A       		.uleb128 0xa
+ 352 011c 07020000 		.4byte	.LASF27
+ 353 0120 79       		.sleb128 -7
+ 354 0121 0A       		.uleb128 0xa
+ 355 0122 D5030000 		.4byte	.LASF28
+ 356 0126 78       		.sleb128 -8
+ 357 0127 0A       		.uleb128 0xa
+ 358 0128 88030000 		.4byte	.LASF29
+ 359 012c 77       		.sleb128 -9
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 10
+
+
+ 360 012d 0A       		.uleb128 0xa
+ 361 012e 37020000 		.4byte	.LASF30
+ 362 0132 76       		.sleb128 -10
+ 363 0133 0A       		.uleb128 0xa
+ 364 0134 55050000 		.4byte	.LASF31
+ 365 0138 75       		.sleb128 -11
+ 366 0139 0A       		.uleb128 0xa
+ 367 013a 29030000 		.4byte	.LASF32
+ 368 013e 74       		.sleb128 -12
+ 369 013f 0A       		.uleb128 0xa
+ 370 0140 A7040000 		.4byte	.LASF33
+ 371 0144 73       		.sleb128 -13
+ 372 0145 0A       		.uleb128 0xa
+ 373 0146 00000000 		.4byte	.LASF34
+ 374 014a 72       		.sleb128 -14
+ 375 014b 0A       		.uleb128 0xa
+ 376 014c 35000000 		.4byte	.LASF35
+ 377 0150 71       		.sleb128 -15
+ 378 0151 0A       		.uleb128 0xa
+ 379 0152 45020000 		.4byte	.LASF36
+ 380 0156 70       		.sleb128 -16
+ 381 0157 0A       		.uleb128 0xa
+ 382 0158 2A010000 		.4byte	.LASF37
+ 383 015c 6F       		.sleb128 -17
+ 384 015d 0A       		.uleb128 0xa
+ 385 015e 70000000 		.4byte	.LASF38
+ 386 0162 6E       		.sleb128 -18
+ 387 0163 0A       		.uleb128 0xa
+ 388 0164 DA010000 		.4byte	.LASF39
+ 389 0168 6D       		.sleb128 -19
+ 390 0169 0A       		.uleb128 0xa
+ 391 016a FF030000 		.4byte	.LASF40
+ 392 016e 6C       		.sleb128 -20
+ 393 016f 0A       		.uleb128 0xa
+ 394 0170 56020000 		.4byte	.LASF41
+ 395 0174 6B       		.sleb128 -21
+ 396 0175 0A       		.uleb128 0xa
+ 397 0176 DB040000 		.4byte	.LASF42
+ 398 017a 6A       		.sleb128 -22
+ 399 017b 0A       		.uleb128 0xa
+ 400 017c 7F010000 		.4byte	.LASF43
+ 401 0180 69       		.sleb128 -23
+ 402 0181 0A       		.uleb128 0xa
+ 403 0182 ED010000 		.4byte	.LASF44
+ 404 0186 68       		.sleb128 -24
+ 405 0187 0A       		.uleb128 0xa
+ 406 0188 B3010000 		.4byte	.LASF45
+ 407 018c 67       		.sleb128 -25
+ 408 018d 00       		.byte	0
+ 409 018e 03       		.uleb128 0x3
+ 410 018f 50050000 		.4byte	.LASF46
+ 411 0193 04       		.byte	0x4
+ 412 0194 EA       		.byte	0xea
+ 413 0195 E5000000 		.4byte	0xe5
+ 414 0199 08       		.uleb128 0x8
+ 415 019a 01       		.byte	0x1
+ 416 019b 2C000000 		.4byte	0x2c
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 11
+
+
+ 417 019f 05       		.byte	0x5
+ 418 01a0 33       		.byte	0x33
+ 419 01a1 C4010000 		.4byte	0x1c4
+ 420 01a5 09       		.uleb128 0x9
+ 421 01a6 D5040000 		.4byte	.LASF47
+ 422 01aa 00       		.byte	0
+ 423 01ab 09       		.uleb128 0x9
+ 424 01ac 19020000 		.4byte	.LASF48
+ 425 01b0 01       		.byte	0x1
+ 426 01b1 09       		.uleb128 0x9
+ 427 01b2 46050000 		.4byte	.LASF49
+ 428 01b6 02       		.byte	0x2
+ 429 01b7 09       		.uleb128 0x9
+ 430 01b8 4E000000 		.4byte	.LASF50
+ 431 01bc 03       		.byte	0x3
+ 432 01bd 09       		.uleb128 0x9
+ 433 01be 09030000 		.4byte	.LASF51
+ 434 01c2 04       		.byte	0x4
+ 435 01c3 00       		.byte	0
+ 436 01c4 03       		.uleb128 0x3
+ 437 01c5 ED040000 		.4byte	.LASF52
+ 438 01c9 05       		.byte	0x5
+ 439 01ca 39       		.byte	0x39
+ 440 01cb 99010000 		.4byte	0x199
+ 441 01cf 08       		.uleb128 0x8
+ 442 01d0 01       		.byte	0x1
+ 443 01d1 2C000000 		.4byte	0x2c
+ 444 01d5 05       		.byte	0x5
+ 445 01d6 3F       		.byte	0x3f
+ 446 01d7 FA010000 		.4byte	0x1fa
+ 447 01db 09       		.uleb128 0x9
+ 448 01dc 1C040000 		.4byte	.LASF53
+ 449 01e0 00       		.byte	0
+ 450 01e1 09       		.uleb128 0x9
+ 451 01e2 F8030000 		.4byte	.LASF54
+ 452 01e6 01       		.byte	0x1
+ 453 01e7 09       		.uleb128 0x9
+ 454 01e8 2D020000 		.4byte	.LASF55
+ 455 01ec 02       		.byte	0x2
+ 456 01ed 09       		.uleb128 0x9
+ 457 01ee 3D050000 		.4byte	.LASF56
+ 458 01f2 03       		.byte	0x3
+ 459 01f3 09       		.uleb128 0x9
+ 460 01f4 70030000 		.4byte	.LASF57
+ 461 01f8 04       		.byte	0x4
+ 462 01f9 00       		.byte	0
+ 463 01fa 03       		.uleb128 0x3
+ 464 01fb 4E010000 		.4byte	.LASF58
+ 465 01ff 05       		.byte	0x5
+ 466 0200 45       		.byte	0x45
+ 467 0201 CF010000 		.4byte	0x1cf
+ 468 0205 08       		.uleb128 0x8
+ 469 0206 01       		.byte	0x1
+ 470 0207 2C000000 		.4byte	0x2c
+ 471 020b 05       		.byte	0x5
+ 472 020c 4B       		.byte	0x4b
+ 473 020d 30020000 		.4byte	0x230
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 12
+
+
+ 474 0211 09       		.uleb128 0x9
+ 475 0212 25050000 		.4byte	.LASF59
+ 476 0216 00       		.byte	0
+ 477 0217 09       		.uleb128 0x9
+ 478 0218 B6020000 		.4byte	.LASF60
+ 479 021c 01       		.byte	0x1
+ 480 021d 09       		.uleb128 0x9
+ 481 021e 12040000 		.4byte	.LASF61
+ 482 0222 02       		.byte	0x2
+ 483 0223 09       		.uleb128 0x9
+ 484 0224 AB010000 		.4byte	.LASF62
+ 485 0228 03       		.byte	0x3
+ 486 0229 09       		.uleb128 0x9
+ 487 022a 89020000 		.4byte	.LASF63
+ 488 022e 04       		.byte	0x4
+ 489 022f 00       		.byte	0
+ 490 0230 03       		.uleb128 0x3
+ 491 0231 32040000 		.4byte	.LASF64
+ 492 0235 05       		.byte	0x5
+ 493 0236 51       		.byte	0x51
+ 494 0237 05020000 		.4byte	0x205
+ 495 023b 0B       		.uleb128 0xb
+ 496 023c 44       		.byte	0x44
+ 497 023d 05       		.byte	0x5
+ 498 023e 63       		.byte	0x63
+ 499 023f D4020000 		.4byte	0x2d4
+ 500 0243 0C       		.uleb128 0xc
+ 501 0244 49010000 		.4byte	.LASF65
+ 502 0248 05       		.byte	0x5
+ 503 0249 64       		.byte	0x64
+ 504 024a C4010000 		.4byte	0x1c4
+ 505 024e 00       		.byte	0
+ 506 024f 0C       		.uleb128 0xc
+ 507 0250 2C000000 		.4byte	.LASF66
+ 508 0254 05       		.byte	0x5
+ 509 0255 65       		.byte	0x65
+ 510 0256 30020000 		.4byte	0x230
+ 511 025a 01       		.byte	0x1
+ 512 025b 0C       		.uleb128 0xc
+ 513 025c 84020000 		.4byte	.LASF67
+ 514 0260 05       		.byte	0x5
+ 515 0261 66       		.byte	0x66
+ 516 0262 D4020000 		.4byte	0x2d4
+ 517 0266 02       		.byte	0x2
+ 518 0267 0C       		.uleb128 0xc
+ 519 0268 72020000 		.4byte	.LASF68
+ 520 026c 05       		.byte	0x5
+ 521 026d 67       		.byte	0x67
+ 522 026e FA010000 		.4byte	0x1fa
+ 523 0272 22       		.byte	0x22
+ 524 0273 0C       		.uleb128 0xc
+ 525 0274 91020000 		.4byte	.LASF69
+ 526 0278 05       		.byte	0x5
+ 527 0279 68       		.byte	0x68
+ 528 027a 8C000000 		.4byte	0x8c
+ 529 027e 24       		.byte	0x24
+ 530 027f 0C       		.uleb128 0xc
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 13
+
+
+ 531 0280 B9040000 		.4byte	.LASF70
+ 532 0284 05       		.byte	0x5
+ 533 0285 69       		.byte	0x69
+ 534 0286 8C000000 		.4byte	0x8c
+ 535 028a 28       		.byte	0x28
+ 536 028b 0C       		.uleb128 0xc
+ 537 028c 1E000000 		.4byte	.LASF71
+ 538 0290 05       		.byte	0x5
+ 539 0291 6A       		.byte	0x6a
+ 540 0292 8C000000 		.4byte	0x8c
+ 541 0296 2C       		.byte	0x2c
+ 542 0297 0C       		.uleb128 0xc
+ 543 0298 78020000 		.4byte	.LASF72
+ 544 029c 05       		.byte	0x5
+ 545 029d 6B       		.byte	0x6b
+ 546 029e CF000000 		.4byte	0xcf
+ 547 02a2 30       		.byte	0x30
+ 548 02a3 0C       		.uleb128 0xc
+ 549 02a4 EA030000 		.4byte	.LASF73
+ 550 02a8 05       		.byte	0x5
+ 551 02a9 6C       		.byte	0x6c
+ 552 02aa 8C000000 		.4byte	0x8c
+ 553 02ae 34       		.byte	0x34
+ 554 02af 0C       		.uleb128 0xc
+ 555 02b0 6F010000 		.4byte	.LASF74
+ 556 02b4 05       		.byte	0x5
+ 557 02b5 6D       		.byte	0x6d
+ 558 02b6 8C000000 		.4byte	0x8c
+ 559 02ba 38       		.byte	0x38
+ 560 02bb 0C       		.uleb128 0xc
+ 561 02bc C1020000 		.4byte	.LASF75
+ 562 02c0 05       		.byte	0x5
+ 563 02c1 6E       		.byte	0x6e
+ 564 02c2 8C000000 		.4byte	0x8c
+ 565 02c6 3C       		.byte	0x3c
+ 566 02c7 0C       		.uleb128 0xc
+ 567 02c8 8F040000 		.4byte	.LASF76
+ 568 02cc 05       		.byte	0x5
+ 569 02cd 6F       		.byte	0x6f
+ 570 02ce 8C000000 		.4byte	0x8c
+ 571 02d2 40       		.byte	0x40
+ 572 02d3 00       		.byte	0
+ 573 02d4 06       		.uleb128 0x6
+ 574 02d5 DA000000 		.4byte	0xda
+ 575 02d9 E4020000 		.4byte	0x2e4
+ 576 02dd 07       		.uleb128 0x7
+ 577 02de B3000000 		.4byte	0xb3
+ 578 02e2 1F       		.byte	0x1f
+ 579 02e3 00       		.byte	0
+ 580 02e4 03       		.uleb128 0x3
+ 581 02e5 B1030000 		.4byte	.LASF77
+ 582 02e9 05       		.byte	0x5
+ 583 02ea 70       		.byte	0x70
+ 584 02eb 3B020000 		.4byte	0x23b
+ 585 02ef 0D       		.uleb128 0xd
+ 586 02f0 D0030000 		.4byte	.LASF87
+ 587 02f4 01       		.byte	0x1
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 14
+
+
+ 588 02f5 59       		.byte	0x59
+ 589 02f6 73000000 		.4byte	0x73
+ 590 02fa 00000000 		.4byte	.LFB65
+ 591 02fe 34010000 		.4byte	.LFE65-.LFB65
+ 592 0302 01       		.uleb128 0x1
+ 593 0303 9C       		.byte	0x9c
+ 594 0304 5D030000 		.4byte	0x35d
+ 595 0308 0E       		.uleb128 0xe
+ 596 0309 49000000 		.4byte	.LASF78
+ 597 030d 01       		.byte	0x1
+ 598 030e 5C       		.byte	0x5c
+ 599 030f 5D030000 		.4byte	0x35d
+ 600 0313 02       		.uleb128 0x2
+ 601 0314 91       		.byte	0x91
+ 602 0315 48       		.sleb128 -56
+ 603 0316 0E       		.uleb128 0xe
+ 604 0317 0C050000 		.4byte	.LASF79
+ 605 031b 01       		.byte	0x1
+ 606 031c 5D       		.byte	0x5d
+ 607 031d BF000000 		.4byte	0xbf
+ 608 0321 02       		.uleb128 0x2
+ 609 0322 91       		.byte	0x91
+ 610 0323 40       		.sleb128 -64
+ 611 0324 0E       		.uleb128 0xe
+ 612 0325 37030000 		.4byte	.LASF80
+ 613 0329 01       		.byte	0x1
+ 614 032a 5E       		.byte	0x5e
+ 615 032b 8C000000 		.4byte	0x8c
+ 616 032f 02       		.uleb128 0x2
+ 617 0330 91       		.byte	0x91
+ 618 0331 6C       		.sleb128 -20
+ 619 0332 0E       		.uleb128 0xe
+ 620 0333 12030000 		.4byte	.LASF81
+ 621 0337 01       		.byte	0x1
+ 622 0338 5F       		.byte	0x5f
+ 623 0339 6D030000 		.4byte	0x36d
+ 624 033d 03       		.uleb128 0x3
+ 625 033e 91       		.byte	0x91
+ 626 033f B87E     		.sleb128 -200
+ 627 0341 0F       		.uleb128 0xf
+ 628 0342 726300   		.ascii	"rc\000"
+ 629 0345 01       		.byte	0x1
+ 630 0346 65       		.byte	0x65
+ 631 0347 8E010000 		.4byte	0x18e
+ 632 034b 02       		.uleb128 0x2
+ 633 034c 91       		.byte	0x91
+ 634 034d 6B       		.sleb128 -21
+ 635 034e 0F       		.uleb128 0xf
+ 636 034f 72633100 		.ascii	"rc1\000"
+ 637 0353 01       		.byte	0x1
+ 638 0354 66       		.byte	0x66
+ 639 0355 8E010000 		.4byte	0x18e
+ 640 0359 02       		.uleb128 0x2
+ 641 035a 91       		.byte	0x91
+ 642 035b 6A       		.sleb128 -22
+ 643 035c 00       		.byte	0
+ 644 035d 06       		.uleb128 0x6
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 15
+
+
+ 645 035e A5000000 		.4byte	0xa5
+ 646 0362 6D030000 		.4byte	0x36d
+ 647 0366 07       		.uleb128 0x7
+ 648 0367 B3000000 		.4byte	0xb3
+ 649 036b 1F       		.byte	0x1f
+ 650 036c 00       		.byte	0
+ 651 036d 06       		.uleb128 0x6
+ 652 036e E4020000 		.4byte	0x2e4
+ 653 0372 7D030000 		.4byte	0x37d
+ 654 0376 07       		.uleb128 0x7
+ 655 0377 B3000000 		.4byte	0xb3
+ 656 037b 01       		.byte	0x1
+ 657 037c 00       		.byte	0
+ 658 037d 10       		.uleb128 0x10
+ 659 037e 9A040000 		.4byte	.LASF82
+ 660 0382 06       		.byte	0x6
+ 661 0383 1207     		.2byte	0x712
+ 662 0385 89030000 		.4byte	0x389
+ 663 0389 05       		.uleb128 0x5
+ 664 038a 81000000 		.4byte	0x81
+ 665 038e 11       		.uleb128 0x11
+ 666 038f 4C030000 		.4byte	.LASF83
+ 667 0393 05       		.byte	0x5
+ 668 0394 23       		.byte	0x23
+ 669 0395 BA000000 		.4byte	0xba
+ 670 0399 05       		.uleb128 0x5
+ 671 039a 03       		.byte	0x3
+ 672 039b 00000000 		.4byte	TimingAnalyzer_SystickCounterMillis
+ 673 039f 00       		.byte	0
+ 674              		.section	.debug_abbrev,"",%progbits
+ 675              	.Ldebug_abbrev0:
+ 676 0000 01       		.uleb128 0x1
+ 677 0001 11       		.uleb128 0x11
+ 678 0002 01       		.byte	0x1
+ 679 0003 25       		.uleb128 0x25
+ 680 0004 0E       		.uleb128 0xe
+ 681 0005 13       		.uleb128 0x13
+ 682 0006 0B       		.uleb128 0xb
+ 683 0007 03       		.uleb128 0x3
+ 684 0008 0E       		.uleb128 0xe
+ 685 0009 1B       		.uleb128 0x1b
+ 686 000a 0E       		.uleb128 0xe
+ 687 000b 55       		.uleb128 0x55
+ 688 000c 17       		.uleb128 0x17
+ 689 000d 11       		.uleb128 0x11
+ 690 000e 01       		.uleb128 0x1
+ 691 000f 10       		.uleb128 0x10
+ 692 0010 17       		.uleb128 0x17
+ 693 0011 00       		.byte	0
+ 694 0012 00       		.byte	0
+ 695 0013 02       		.uleb128 0x2
+ 696 0014 24       		.uleb128 0x24
+ 697 0015 00       		.byte	0
+ 698 0016 0B       		.uleb128 0xb
+ 699 0017 0B       		.uleb128 0xb
+ 700 0018 3E       		.uleb128 0x3e
+ 701 0019 0B       		.uleb128 0xb
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 16
+
+
+ 702 001a 03       		.uleb128 0x3
+ 703 001b 0E       		.uleb128 0xe
+ 704 001c 00       		.byte	0
+ 705 001d 00       		.byte	0
+ 706 001e 03       		.uleb128 0x3
+ 707 001f 16       		.uleb128 0x16
+ 708 0020 00       		.byte	0
+ 709 0021 03       		.uleb128 0x3
+ 710 0022 0E       		.uleb128 0xe
+ 711 0023 3A       		.uleb128 0x3a
+ 712 0024 0B       		.uleb128 0xb
+ 713 0025 3B       		.uleb128 0x3b
+ 714 0026 0B       		.uleb128 0xb
+ 715 0027 49       		.uleb128 0x49
+ 716 0028 13       		.uleb128 0x13
+ 717 0029 00       		.byte	0
+ 718 002a 00       		.byte	0
+ 719 002b 04       		.uleb128 0x4
+ 720 002c 24       		.uleb128 0x24
+ 721 002d 00       		.byte	0
+ 722 002e 0B       		.uleb128 0xb
+ 723 002f 0B       		.uleb128 0xb
+ 724 0030 3E       		.uleb128 0x3e
+ 725 0031 0B       		.uleb128 0xb
+ 726 0032 03       		.uleb128 0x3
+ 727 0033 08       		.uleb128 0x8
+ 728 0034 00       		.byte	0
+ 729 0035 00       		.byte	0
+ 730 0036 05       		.uleb128 0x5
+ 731 0037 35       		.uleb128 0x35
+ 732 0038 00       		.byte	0
+ 733 0039 49       		.uleb128 0x49
+ 734 003a 13       		.uleb128 0x13
+ 735 003b 00       		.byte	0
+ 736 003c 00       		.byte	0
+ 737 003d 06       		.uleb128 0x6
+ 738 003e 01       		.uleb128 0x1
+ 739 003f 01       		.byte	0x1
+ 740 0040 49       		.uleb128 0x49
+ 741 0041 13       		.uleb128 0x13
+ 742 0042 01       		.uleb128 0x1
+ 743 0043 13       		.uleb128 0x13
+ 744 0044 00       		.byte	0
+ 745 0045 00       		.byte	0
+ 746 0046 07       		.uleb128 0x7
+ 747 0047 21       		.uleb128 0x21
+ 748 0048 00       		.byte	0
+ 749 0049 49       		.uleb128 0x49
+ 750 004a 13       		.uleb128 0x13
+ 751 004b 2F       		.uleb128 0x2f
+ 752 004c 0B       		.uleb128 0xb
+ 753 004d 00       		.byte	0
+ 754 004e 00       		.byte	0
+ 755 004f 08       		.uleb128 0x8
+ 756 0050 04       		.uleb128 0x4
+ 757 0051 01       		.byte	0x1
+ 758 0052 0B       		.uleb128 0xb
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 17
+
+
+ 759 0053 0B       		.uleb128 0xb
+ 760 0054 49       		.uleb128 0x49
+ 761 0055 13       		.uleb128 0x13
+ 762 0056 3A       		.uleb128 0x3a
+ 763 0057 0B       		.uleb128 0xb
+ 764 0058 3B       		.uleb128 0x3b
+ 765 0059 0B       		.uleb128 0xb
+ 766 005a 01       		.uleb128 0x1
+ 767 005b 13       		.uleb128 0x13
+ 768 005c 00       		.byte	0
+ 769 005d 00       		.byte	0
+ 770 005e 09       		.uleb128 0x9
+ 771 005f 28       		.uleb128 0x28
+ 772 0060 00       		.byte	0
+ 773 0061 03       		.uleb128 0x3
+ 774 0062 0E       		.uleb128 0xe
+ 775 0063 1C       		.uleb128 0x1c
+ 776 0064 0B       		.uleb128 0xb
+ 777 0065 00       		.byte	0
+ 778 0066 00       		.byte	0
+ 779 0067 0A       		.uleb128 0xa
+ 780 0068 28       		.uleb128 0x28
+ 781 0069 00       		.byte	0
+ 782 006a 03       		.uleb128 0x3
+ 783 006b 0E       		.uleb128 0xe
+ 784 006c 1C       		.uleb128 0x1c
+ 785 006d 0D       		.uleb128 0xd
+ 786 006e 00       		.byte	0
+ 787 006f 00       		.byte	0
+ 788 0070 0B       		.uleb128 0xb
+ 789 0071 13       		.uleb128 0x13
+ 790 0072 01       		.byte	0x1
+ 791 0073 0B       		.uleb128 0xb
+ 792 0074 0B       		.uleb128 0xb
+ 793 0075 3A       		.uleb128 0x3a
+ 794 0076 0B       		.uleb128 0xb
+ 795 0077 3B       		.uleb128 0x3b
+ 796 0078 0B       		.uleb128 0xb
+ 797 0079 01       		.uleb128 0x1
+ 798 007a 13       		.uleb128 0x13
+ 799 007b 00       		.byte	0
+ 800 007c 00       		.byte	0
+ 801 007d 0C       		.uleb128 0xc
+ 802 007e 0D       		.uleb128 0xd
+ 803 007f 00       		.byte	0
+ 804 0080 03       		.uleb128 0x3
+ 805 0081 0E       		.uleb128 0xe
+ 806 0082 3A       		.uleb128 0x3a
+ 807 0083 0B       		.uleb128 0xb
+ 808 0084 3B       		.uleb128 0x3b
+ 809 0085 0B       		.uleb128 0xb
+ 810 0086 49       		.uleb128 0x49
+ 811 0087 13       		.uleb128 0x13
+ 812 0088 38       		.uleb128 0x38
+ 813 0089 0B       		.uleb128 0xb
+ 814 008a 00       		.byte	0
+ 815 008b 00       		.byte	0
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 18
+
+
+ 816 008c 0D       		.uleb128 0xd
+ 817 008d 2E       		.uleb128 0x2e
+ 818 008e 01       		.byte	0x1
+ 819 008f 3F       		.uleb128 0x3f
+ 820 0090 19       		.uleb128 0x19
+ 821 0091 03       		.uleb128 0x3
+ 822 0092 0E       		.uleb128 0xe
+ 823 0093 3A       		.uleb128 0x3a
+ 824 0094 0B       		.uleb128 0xb
+ 825 0095 3B       		.uleb128 0x3b
+ 826 0096 0B       		.uleb128 0xb
+ 827 0097 27       		.uleb128 0x27
+ 828 0098 19       		.uleb128 0x19
+ 829 0099 49       		.uleb128 0x49
+ 830 009a 13       		.uleb128 0x13
+ 831 009b 11       		.uleb128 0x11
+ 832 009c 01       		.uleb128 0x1
+ 833 009d 12       		.uleb128 0x12
+ 834 009e 06       		.uleb128 0x6
+ 835 009f 40       		.uleb128 0x40
+ 836 00a0 18       		.uleb128 0x18
+ 837 00a1 9642     		.uleb128 0x2116
+ 838 00a3 19       		.uleb128 0x19
+ 839 00a4 01       		.uleb128 0x1
+ 840 00a5 13       		.uleb128 0x13
+ 841 00a6 00       		.byte	0
+ 842 00a7 00       		.byte	0
+ 843 00a8 0E       		.uleb128 0xe
+ 844 00a9 34       		.uleb128 0x34
+ 845 00aa 00       		.byte	0
+ 846 00ab 03       		.uleb128 0x3
+ 847 00ac 0E       		.uleb128 0xe
+ 848 00ad 3A       		.uleb128 0x3a
+ 849 00ae 0B       		.uleb128 0xb
+ 850 00af 3B       		.uleb128 0x3b
+ 851 00b0 0B       		.uleb128 0xb
+ 852 00b1 49       		.uleb128 0x49
+ 853 00b2 13       		.uleb128 0x13
+ 854 00b3 02       		.uleb128 0x2
+ 855 00b4 18       		.uleb128 0x18
+ 856 00b5 00       		.byte	0
+ 857 00b6 00       		.byte	0
+ 858 00b7 0F       		.uleb128 0xf
+ 859 00b8 34       		.uleb128 0x34
+ 860 00b9 00       		.byte	0
+ 861 00ba 03       		.uleb128 0x3
+ 862 00bb 08       		.uleb128 0x8
+ 863 00bc 3A       		.uleb128 0x3a
+ 864 00bd 0B       		.uleb128 0xb
+ 865 00be 3B       		.uleb128 0x3b
+ 866 00bf 0B       		.uleb128 0xb
+ 867 00c0 49       		.uleb128 0x49
+ 868 00c1 13       		.uleb128 0x13
+ 869 00c2 02       		.uleb128 0x2
+ 870 00c3 18       		.uleb128 0x18
+ 871 00c4 00       		.byte	0
+ 872 00c5 00       		.byte	0
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 19
+
+
+ 873 00c6 10       		.uleb128 0x10
+ 874 00c7 34       		.uleb128 0x34
+ 875 00c8 00       		.byte	0
+ 876 00c9 03       		.uleb128 0x3
+ 877 00ca 0E       		.uleb128 0xe
+ 878 00cb 3A       		.uleb128 0x3a
+ 879 00cc 0B       		.uleb128 0xb
+ 880 00cd 3B       		.uleb128 0x3b
+ 881 00ce 05       		.uleb128 0x5
+ 882 00cf 49       		.uleb128 0x49
+ 883 00d0 13       		.uleb128 0x13
+ 884 00d1 3F       		.uleb128 0x3f
+ 885 00d2 19       		.uleb128 0x19
+ 886 00d3 3C       		.uleb128 0x3c
+ 887 00d4 19       		.uleb128 0x19
+ 888 00d5 00       		.byte	0
+ 889 00d6 00       		.byte	0
+ 890 00d7 11       		.uleb128 0x11
+ 891 00d8 34       		.uleb128 0x34
+ 892 00d9 00       		.byte	0
+ 893 00da 03       		.uleb128 0x3
+ 894 00db 0E       		.uleb128 0xe
+ 895 00dc 3A       		.uleb128 0x3a
+ 896 00dd 0B       		.uleb128 0xb
+ 897 00de 3B       		.uleb128 0x3b
+ 898 00df 0B       		.uleb128 0xb
+ 899 00e0 49       		.uleb128 0x49
+ 900 00e1 13       		.uleb128 0x13
+ 901 00e2 3F       		.uleb128 0x3f
+ 902 00e3 19       		.uleb128 0x19
+ 903 00e4 02       		.uleb128 0x2
+ 904 00e5 18       		.uleb128 0x18
+ 905 00e6 00       		.byte	0
+ 906 00e7 00       		.byte	0
+ 907 00e8 00       		.byte	0
+ 908              		.section	.debug_aranges,"",%progbits
+ 909 0000 1C000000 		.4byte	0x1c
+ 910 0004 0200     		.2byte	0x2
+ 911 0006 00000000 		.4byte	.Ldebug_info0
+ 912 000a 04       		.byte	0x4
+ 913 000b 00       		.byte	0
+ 914 000c 0000     		.2byte	0
+ 915 000e 0000     		.2byte	0
+ 916 0010 00000000 		.4byte	.LFB65
+ 917 0014 34010000 		.4byte	.LFE65-.LFB65
+ 918 0018 00000000 		.4byte	0
+ 919 001c 00000000 		.4byte	0
+ 920              		.section	.debug_ranges,"",%progbits
+ 921              	.Ldebug_ranges0:
+ 922 0000 00000000 		.4byte	.LFB65
+ 923 0004 34010000 		.4byte	.LFE65
+ 924 0008 00000000 		.4byte	0
+ 925 000c 00000000 		.4byte	0
+ 926              		.section	.debug_line,"",%progbits
+ 927              	.Ldebug_line0:
+ 928 0000 9E010000 		.section	.debug_str,"MS",%progbits,1
+ 928      02005F01 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 20
+
+
+ 928      00000201 
+ 928      FB0E0D00 
+ 928      01010101 
+ 929              	.LASF34:
+ 930 0000 52435F45 		.ascii	"RC_ERROR_READ_ONLY\000"
+ 930      52524F52 
+ 930      5F524541 
+ 930      445F4F4E 
+ 930      4C5900
+ 931              	.LASF20:
+ 932 0013 52435F53 		.ascii	"RC_SUCCESS\000"
+ 932      55434345 
+ 932      535300
+ 933              	.LASF71:
+ 934 001e 656C6170 		.ascii	"elapsedCycles\000"
+ 934      73656443 
+ 934      79636C65 
+ 934      7300
+ 935              	.LASF66:
+ 936 002c 4F757470 		.ascii	"OutputId\000"
+ 936      75744964 
+ 936      00
+ 937              	.LASF35:
+ 938 0035 52435F45 		.ascii	"RC_ERROR_WRITE_ONLY\000"
+ 938      52524F52 
+ 938      5F575249 
+ 938      54455F4F 
+ 938      4E4C5900 
+ 939              	.LASF78:
+ 940 0049 74656D70 		.ascii	"temp\000"
+ 940      00
+ 941              	.LASF50:
+ 942 004e 435F5359 		.ascii	"C_SYSTICK_OUTPUT\000"
+ 942      53544943 
+ 942      4B5F4F55 
+ 942      54505554 
+ 942      00
+ 943              	.LASF26:
+ 944 005f 52435F45 		.ascii	"RC_ERROR_OVERRUN\000"
+ 944      52524F52 
+ 944      5F4F5645 
+ 944      5252554E 
+ 944      00
+ 945              	.LASF38:
+ 946 0070 52435F45 		.ascii	"RC_ERROR_WRITE_FAILS\000"
+ 946      52524F52 
+ 946      5F575249 
+ 946      54455F46 
+ 946      41494C53 
+ 947              	.LASF17:
+ 948 0085 73697A65 		.ascii	"sizetype\000"
+ 948      74797065 
+ 948      00
+ 949              	.LASF84:
+ 950 008e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 950      43313120 
+ 950      352E342E 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 21
+
+
+ 950      31203230 
+ 950      31363036 
+ 951 00c1 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 951      20726576 
+ 951      6973696F 
+ 951      6E203233 
+ 951      37373135 
+ 952 00f4 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 952      66756E63 
+ 952      74696F6E 
+ 952      2D736563 
+ 952      74696F6E 
+ 953              	.LASF23:
+ 954 011c 52435F45 		.ascii	"RC_ERROR_ZERO\000"
+ 954      52524F52 
+ 954      5F5A4552 
+ 954      4F00
+ 955              	.LASF37:
+ 956 012a 52435F45 		.ascii	"RC_ERROR_READ_FAILS\000"
+ 956      52524F52 
+ 956      5F524541 
+ 956      445F4641 
+ 956      494C5300 
+ 957              	.LASF6:
+ 958 013e 5F5F7569 		.ascii	"__uint32_t\000"
+ 958      6E743332 
+ 958      5F7400
+ 959              	.LASF65:
+ 960 0149 6D6F6465 		.ascii	"mode\000"
+ 960      00
+ 961              	.LASF58:
+ 962 014e 54696D69 		.ascii	"TimingAnalyzer_State_t\000"
+ 962      6E67416E 
+ 962      616C797A 
+ 962      65725F53 
+ 962      74617465 
+ 963              	.LASF2:
+ 964 0165 73686F72 		.ascii	"short int\000"
+ 964      7420696E 
+ 964      7400
+ 965              	.LASF74:
+ 966 016f 53797374 		.ascii	"Systick_elapsed\000"
+ 966      69636B5F 
+ 966      656C6170 
+ 966      73656400 
+ 967              	.LASF43:
+ 968 017f 52435F45 		.ascii	"RC_ERROR_INVALID_STATE\000"
+ 968      52524F52 
+ 968      5F494E56 
+ 968      414C4944 
+ 968      5F535441 
+ 969              	.LASF25:
+ 970 0196 52435F45 		.ascii	"RC_ERROR_RANGE\000"
+ 970      52524F52 
+ 970      5F52414E 
+ 970      474500
+ 971              	.LASF13:
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 22
+
+
+ 972 01a5 666C6F61 		.ascii	"float\000"
+ 972      7400
+ 973              	.LASF62:
+ 974 01ab 4C4F4749 		.ascii	"LOGIC_1\000"
+ 974      435F3100 
+ 975              	.LASF45:
+ 976 01b3 52435F45 		.ascii	"RC_ERROR_NOT_IMPLEMENTED\000"
+ 976      52524F52 
+ 976      5F4E4F54 
+ 976      5F494D50 
+ 976      4C454D45 
+ 977              	.LASF8:
+ 978 01cc 6C6F6E67 		.ascii	"long long int\000"
+ 978      206C6F6E 
+ 978      6720696E 
+ 978      7400
+ 979              	.LASF39:
+ 980 01da 52435F45 		.ascii	"RC_ERROR_NOT_MATCH\000"
+ 980      52524F52 
+ 980      5F4E4F54 
+ 980      5F4D4154 
+ 980      434800
+ 981              	.LASF44:
+ 982 01ed 52435F45 		.ascii	"RC_ERROR_UNKNOWN\000"
+ 982      52524F52 
+ 982      5F554E4B 
+ 982      4E4F574E 
+ 982      00
+ 983              	.LASF4:
+ 984 01fe 6C6F6E67 		.ascii	"long int\000"
+ 984      20696E74 
+ 984      00
+ 985              	.LASF27:
+ 986 0207 52435F45 		.ascii	"RC_ERROR_UNDERRUN\000"
+ 986      52524F52 
+ 986      5F554E44 
+ 986      45525255 
+ 986      4E00
+ 987              	.LASF48:
+ 988 0219 435F4457 		.ascii	"C_DWT_OUTPUT\000"
+ 988      545F4F55 
+ 988      54505554 
+ 988      00
+ 989              	.LASF19:
+ 990 0226 63686172 		.ascii	"char_t\000"
+ 990      5F7400
+ 991              	.LASF55:
+ 992 022d 535F5255 		.ascii	"S_RUNNING\000"
+ 992      4E4E494E 
+ 992      4700
+ 993              	.LASF30:
+ 994 0237 52435F45 		.ascii	"RC_ERROR_BUSY\000"
+ 994      52524F52 
+ 994      5F425553 
+ 994      5900
+ 995              	.LASF36:
+ 996 0245 52435F45 		.ascii	"RC_ERROR_INVALID\000"
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 23
+
+
+ 996      52524F52 
+ 996      5F494E56 
+ 996      414C4944 
+ 996      00
+ 997              	.LASF41:
+ 998 0256 52435F45 		.ascii	"RC_ERROR_BAD_DATA\000"
+ 998      52524F52 
+ 998      5F424144 
+ 998      5F444154 
+ 998      4100
+ 999              	.LASF18:
+ 1000 0268 626F6F6C 		.ascii	"boolean_t\000"
+ 1000      65616E5F 
+ 1000      7400
+ 1001              	.LASF68:
+ 1002 0272 73746174 		.ascii	"state\000"
+ 1002      6500
+ 1003              	.LASF72:
+ 1004 0278 76616C69 		.ascii	"validResult\000"
+ 1004      64526573 
+ 1004      756C7400 
+ 1005              	.LASF67:
+ 1006 0284 6E616D65 		.ascii	"name\000"
+ 1006      00
+ 1007              	.LASF63:
+ 1008 0289 4C4F4749 		.ascii	"LOGIC_2\000"
+ 1008      435F3200 
+ 1009              	.LASF69:
+ 1010 0291 73746172 		.ascii	"startStamp\000"
+ 1010      74537461 
+ 1010      6D7000
+ 1011              	.LASF16:
+ 1012 029c 6C6F6E67 		.ascii	"long double\000"
+ 1012      20646F75 
+ 1012      626C6500 
+ 1013              	.LASF1:
+ 1014 02a8 756E7369 		.ascii	"unsigned char\000"
+ 1014      676E6564 
+ 1014      20636861 
+ 1014      7200
+ 1015              	.LASF60:
+ 1016 02b6 4C45445F 		.ascii	"LED_YELLOW\000"
+ 1016      59454C4C 
+ 1016      4F5700
+ 1017              	.LASF75:
+ 1018 02c1 53797374 		.ascii	"Systick_accumulated\000"
+ 1018      69636B5F 
+ 1018      61636375 
+ 1018      6D756C61 
+ 1018      74656400 
+ 1019              	.LASF0:
+ 1020 02d5 7369676E 		.ascii	"signed char\000"
+ 1020      65642063 
+ 1020      68617200 
+ 1021              	.LASF11:
+ 1022 02e1 696E7433 		.ascii	"int32_t\000"
+ 1022      325F7400 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 24
+
+
+ 1023              	.LASF9:
+ 1024 02e9 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1024      206C6F6E 
+ 1024      6720756E 
+ 1024      7369676E 
+ 1024      65642069 
+ 1025              	.LASF12:
+ 1026 0300 75696E74 		.ascii	"uint32_t\000"
+ 1026      33325F74 
+ 1026      00
+ 1027              	.LASF51:
+ 1028 0309 435F4F55 		.ascii	"C_OUTPUT\000"
+ 1028      54505554 
+ 1028      00
+ 1029              	.LASF81:
+ 1030 0312 616E616C 		.ascii	"analyzers\000"
+ 1030      797A6572 
+ 1030      7300
+ 1031              	.LASF10:
+ 1032 031c 756E7369 		.ascii	"unsigned int\000"
+ 1032      676E6564 
+ 1032      20696E74 
+ 1032      00
+ 1033              	.LASF32:
+ 1034 0329 52435F45 		.ascii	"RC_ERROR_OPEN\000"
+ 1034      52524F52 
+ 1034      5F4F5045 
+ 1034      4E00
+ 1035              	.LASF80:
+ 1036 0337 41637469 		.ascii	"Active_Analyzer_size\000"
+ 1036      76655F41 
+ 1036      6E616C79 
+ 1036      7A65725F 
+ 1036      73697A65 
+ 1037              	.LASF83:
+ 1038 034c 54696D69 		.ascii	"TimingAnalyzer_SystickCounterMillis\000"
+ 1038      6E67416E 
+ 1038      616C797A 
+ 1038      65725F53 
+ 1038      79737469 
+ 1039              	.LASF57:
+ 1040 0370 535F5354 		.ascii	"S_STOPPED\000"
+ 1040      4F505045 
+ 1040      4400
+ 1041              	.LASF22:
+ 1042 037a 52435F45 		.ascii	"RC_ERROR_NULL\000"
+ 1042      52524F52 
+ 1042      5F4E554C 
+ 1042      4C00
+ 1043              	.LASF29:
+ 1044 0388 52435F45 		.ascii	"RC_ERROR_BUFFER_EMTPY\000"
+ 1044      52524F52 
+ 1044      5F425546 
+ 1044      4645525F 
+ 1044      454D5450 
+ 1045              	.LASF3:
+ 1046 039e 73686F72 		.ascii	"short unsigned int\000"
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 25
+
+
+ 1046      7420756E 
+ 1046      7369676E 
+ 1046      65642069 
+ 1046      6E7400
+ 1047              	.LASF77:
+ 1048 03b1 54696D69 		.ascii	"TimingAnalyser_Instance_t\000"
+ 1048      6E67416E 
+ 1048      616C7973 
+ 1048      65725F49 
+ 1048      6E737461 
+ 1049              	.LASF15:
+ 1050 03cb 63686172 		.ascii	"char\000"
+ 1050      00
+ 1051              	.LASF87:
+ 1052 03d0 6D61696E 		.ascii	"main\000"
+ 1052      00
+ 1053              	.LASF28:
+ 1054 03d5 52435F45 		.ascii	"RC_ERROR_BUFFER_FULL\000"
+ 1054      52524F52 
+ 1054      5F425546 
+ 1054      4645525F 
+ 1054      46554C4C 
+ 1055              	.LASF73:
+ 1056 03ea 53797374 		.ascii	"Systick_start\000"
+ 1056      69636B5F 
+ 1056      73746172 
+ 1056      7400
+ 1057              	.LASF54:
+ 1058 03f8 535F4944 		.ascii	"S_IDLE\000"
+ 1058      4C4500
+ 1059              	.LASF40:
+ 1060 03ff 52435F45 		.ascii	"RC_ERROR_BAD_PARAM\000"
+ 1060      52524F52 
+ 1060      5F424144 
+ 1060      5F504152 
+ 1060      414D00
+ 1061              	.LASF61:
+ 1062 0412 4C45445F 		.ascii	"LED_GREEN\000"
+ 1062      47524545 
+ 1062      4E00
+ 1063              	.LASF53:
+ 1064 041c 535F554E 		.ascii	"S_UNCONFIGURED\000"
+ 1064      434F4E46 
+ 1064      49475552 
+ 1064      454400
+ 1065              	.LASF85:
+ 1066 042b 6D61696E 		.ascii	"main.c\000"
+ 1066      2E6300
+ 1067              	.LASF64:
+ 1068 0432 4F757470 		.ascii	"Output_id_t\000"
+ 1068      75745F69 
+ 1068      645F7400 
+ 1069              	.LASF7:
+ 1070 043e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1070      20756E73 
+ 1070      69676E65 
+ 1070      6420696E 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 26
+
+
+ 1070      7400
+ 1071              	.LASF86:
+ 1072 0450 443A5C45 		.ascii	"D:\\Embedded\\Assignment\\AMA_EOS_Lab_01\\PreDesign"
+ 1072      6D626564 
+ 1072      6465645C 
+ 1072      41737369 
+ 1072      676E6D65 
+ 1073 047f 30312E63 		.ascii	"01.cydsn\000"
+ 1073      7964736E 
+ 1073      00
+ 1074              	.LASF14:
+ 1075 0488 646F7562 		.ascii	"double\000"
+ 1075      6C6500
+ 1076              	.LASF76:
+ 1077 048f 616E616C 		.ascii	"analyzerID\000"
+ 1077      797A6572 
+ 1077      494400
+ 1078              	.LASF82:
+ 1079 049a 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1079      52784275 
+ 1079      66666572 
+ 1079      00
+ 1080              	.LASF33:
+ 1081 04a7 52435F45 		.ascii	"RC_ERROR_CHECKSUM\000"
+ 1081      52524F52 
+ 1081      5F434845 
+ 1081      434B5355 
+ 1081      4D00
+ 1082              	.LASF70:
+ 1083 04b9 61636375 		.ascii	"accumulatedCycles\000"
+ 1083      6D756C61 
+ 1083      74656443 
+ 1083      79636C65 
+ 1083      7300
+ 1084              	.LASF5:
+ 1085 04cb 5F5F696E 		.ascii	"__int32_t\000"
+ 1085      7433325F 
+ 1085      7400
+ 1086              	.LASF47:
+ 1087 04d5 435F4457 		.ascii	"C_DWT\000"
+ 1087      5400
+ 1088              	.LASF42:
+ 1089 04db 52435F45 		.ascii	"RC_ERROR_CANCELED\000"
+ 1089      52524F52 
+ 1089      5F43414E 
+ 1089      43454C45 
+ 1089      4400
+ 1090              	.LASF52:
+ 1091 04ed 54696D69 		.ascii	"TimingAnalyser_Configuration_t\000"
+ 1091      6E67416E 
+ 1091      616C7973 
+ 1091      65725F43 
+ 1091      6F6E6669 
+ 1092              	.LASF79:
+ 1093 050c 41637469 		.ascii	"Active_Analyzer\000"
+ 1093      76655F41 
+ 1093      6E616C79 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccq4Vhes.s 			page 27
+
+
+ 1093      7A657200 
+ 1094              	.LASF21:
+ 1095 051c 52435F45 		.ascii	"RC_ERROR\000"
+ 1095      52524F52 
+ 1095      00
+ 1096              	.LASF59:
+ 1097 0525 4C45445F 		.ascii	"LED_RED\000"
+ 1097      52454400 
+ 1098              	.LASF24:
+ 1099 052d 52435F45 		.ascii	"RC_ERROR_MEMORY\000"
+ 1099      52524F52 
+ 1099      5F4D454D 
+ 1099      4F525900 
+ 1100              	.LASF56:
+ 1101 053d 535F5041 		.ascii	"S_PAUSED\000"
+ 1101      55534544 
+ 1101      00
+ 1102              	.LASF49:
+ 1103 0546 435F5359 		.ascii	"C_SYSTICK\000"
+ 1103      53544943 
+ 1103      4B00
+ 1104              	.LASF46:
+ 1105 0550 52435F74 		.ascii	"RC_t\000"
+ 1105      00
+ 1106              	.LASF31:
+ 1107 0555 52435F45 		.ascii	"RC_ERROR_TIME_OUT\000"
+ 1107      52524F52 
+ 1107      5F54494D 
+ 1107      455F4F55 
+ 1107      5400
+ 1108              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
