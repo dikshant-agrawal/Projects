@@ -1,5 +1,5 @@
 # AMA_EOS_Lab_02
-# 2025-12-01 22:09:26Z
+# 2025-12-05 01:08:29Z
 
 set_location "ClockBlock" clockblockcell -1 -1 0
 set_io "RGB_B(0)" iocell 2 3
@@ -23,7 +23,7 @@ set_io "Tx_1(0)" iocell 12 7
 set_io "LED_GREEN(0)" iocell 0 7
 set_io "LED_YELLOW(0)" iocell 2 0
 set_io "LED_RED(0)" iocell 0 6
-set_location "Net_3165" 3 2 1 2
+set_location "Net_3170" 3 2 1 2
 set_location "Net_33" 0 2 0 1
 set_location "\UART_LOG:BUART:counter_load_not\" 2 1 0 1
 set_location "\UART_LOG:BUART:tx_status_0\" 3 1 1 0
@@ -39,7 +39,6 @@ set_location "\PWM_green:PWMUDB:status_2\" 2 4 0 1
 set_location "\PWM_red:PWMUDB:status_2\" 0 2 0 2
 set_location "\PWM_yellow:PWMUDB:status_2\" 0 3 0 3
 set_location "\SEVEN_Reg:Sync:ctrl_reg\" 0 1 6
-set_location "isr_Button_Pressed" interrupt -1 -1 1
 set_location "\UART_LOG:TXInternalInterrupt\" interrupt -1 -1 0
 set_location "\UART_LOG:BUART:sTX:TxShifter:u0\" 3 2 2
 set_location "\UART_LOG:BUART:sTX:sCLOCK:TxBitClkGen\" 2 2 2
@@ -59,6 +58,7 @@ set_location "\RGB_PWM_red:PWMUDB:genblk1:ctrlreg\" 1 5 6
 set_location "\RGB_PWM_red:PWMUDB:genblk8:stsreg\" 1 5 4
 set_location "\RGB_PWM_red:PWMUDB:sP16:pwmdp:u0\" 0 5 2
 set_location "\RGB_PWM_red:PWMUDB:sP16:pwmdp:u1\" 1 5 2
+set_location "isr_buttonPressed" interrupt -1 -1 1
 set_location "\PWM_green:PWMUDB:genblk1:ctrlreg\" 3 4 6
 set_location "\PWM_green:PWMUDB:genblk8:stsreg\" 2 4 4
 set_location "\PWM_green:PWMUDB:sP16:pwmdp:u0\" 3 4 2

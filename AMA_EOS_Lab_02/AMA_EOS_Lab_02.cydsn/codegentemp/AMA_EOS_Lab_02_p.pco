@@ -56,7 +56,7 @@ set_location "\RGB_PWM_red:PWMUDB:status_0\" macrocell 1 5 1 0
 set_location "\UART_LOG:BUART:rx_status_5\" macrocell 1 1 0 2
 set_location "\UART_LOG:BUART:rx_counter_load\" macrocell 1 2 0 1
 set_location "\UART_LOG:BUART:pollcount_1\" macrocell 1 0 1 3
-set_location "Net_3165" macrocell 3 2 1 2
+set_location "Net_3170" macrocell 3 2 1 2
 set_location "\UART_LOG:BUART:rx_bitclk_enable\" macrocell 1 0 0 1
 set_location "\UART_LOG:BUART:rx_load_fifo\" macrocell 1 1 1 3
 set_location "\UART_LOG:BUART:tx_state_1\" macrocell 2 2 1 1
@@ -89,7 +89,7 @@ set_io "BUTTON_4(0)" iocell 3 2
 set_io "SEVEN_C(0)" iocell 1 5
 set_io "BUTTON_2(0)" iocell 0 4
 set_io "SEVEN_B(0)" iocell 1 6
-set_location "isr_Button_Pressed" interrupt -1 -1 1
+set_location "isr_buttonPressed" interrupt -1 -1 1
 set_location "\PWM_red:PWMUDB:genblk1:ctrlreg\" controlcell 1 2 6 
 set_location "\PWM_green:PWMUDB:genblk1:ctrlreg\" controlcell 3 4 6 
 set_location "\PWM_yellow:PWMUDB:genblk1:ctrlreg\" controlcell 1 4 6 

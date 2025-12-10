@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.262ms
+Loading plugins phase: Elapsed time ==> 0s.183ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\AMA_EOS_Lab_02.cyprj -d CY8C5888LTI-LP097 -s D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn\AMA_EOS_Lab_02.cyprj -d CY8C5888LTI-LP097 -s D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 2s.550ms
+Elaboration phase: Elapsed time ==> 2s.904ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.085ms
+HDL generation phase: Elapsed time ==> 0s.079ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -25,23 +25,23 @@ HDL generation phase: Elapsed time ==> 0s.085ms
 ======================================================================
 Compiling:  AMA_EOS_Lab_02.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\AMA_EOS_Lab_02.cyprj -dcpsoc3 AMA_EOS_Lab_02.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn\AMA_EOS_Lab_02.cyprj -dcpsoc3 AMA_EOS_Lab_02.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  AMA_EOS_Lab_02.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\AMA_EOS_Lab_02.cyprj -dcpsoc3 AMA_EOS_Lab_02.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn\AMA_EOS_Lab_02.cyprj -dcpsoc3 AMA_EOS_Lab_02.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  AMA_EOS_Lab_02.v
 Program  :   vlogfe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\AMA_EOS_Lab_02.cyprj -dcpsoc3 -verilog AMA_EOS_Lab_02.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn\AMA_EOS_Lab_02.cyprj -dcpsoc3 -verilog AMA_EOS_Lab_02.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Mon Dec 01 23:09:19 2025
+Fri Dec 05 02:08:23 2025
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 AMA_EOS_Lab_02.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Mon Dec 01 23:09:19 2025
+Fri Dec 05 02:08:23 2025
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'
@@ -99,11 +99,11 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  AMA_EOS_Lab_02.v
 Program  :   tovif
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\AMA_EOS_Lab_02.cyprj -dcpsoc3 -verilog AMA_EOS_Lab_02.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn\AMA_EOS_Lab_02.cyprj -dcpsoc3 -verilog AMA_EOS_Lab_02.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Mon Dec 01 23:09:19 2025
+Fri Dec 05 02:08:23 2025
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -114,11 +114,11 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\codegentemp\AMA_EOS_Lab_02.ctl'.
+Linking 'D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn\codegentemp\AMA_EOS_Lab_02.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
-Linking 'D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\codegentemp\AMA_EOS_Lab_02.v'.
+Linking 'D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn\codegentemp\AMA_EOS_Lab_02.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v'.
@@ -136,11 +136,11 @@ tovif:  No errors.
 ======================================================================
 Compiling:  AMA_EOS_Lab_02.v
 Program  :   topld
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\AMA_EOS_Lab_02.cyprj -dcpsoc3 -verilog AMA_EOS_Lab_02.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn\AMA_EOS_Lab_02.cyprj -dcpsoc3 -verilog AMA_EOS_Lab_02.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Mon Dec 01 23:09:21 2025
+Fri Dec 05 02:08:25 2025
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -151,11 +151,11 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\codegentemp\AMA_EOS_Lab_02.ctl'.
+Linking 'D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn\codegentemp\AMA_EOS_Lab_02.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
-Linking 'D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\codegentemp\AMA_EOS_Lab_02.v'.
+Linking 'D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn\codegentemp\AMA_EOS_Lab_02.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v'.
@@ -1579,8 +1579,8 @@ Aliasing \PWM_yellow:PWMUDB:trig_last\\D\ to zero
 Aliasing \PWM_yellow:PWMUDB:ltch_kill_reg\\D\ to tmpOE__RGB_B_net_0
 Aliasing \PWM_yellow:PWMUDB:prevCompare1\\D\ to \PWM_yellow:PWMUDB:pwm_temp\
 Aliasing \PWM_yellow:PWMUDB:tc_i_reg\\D\ to \PWM_yellow:PWMUDB:status_2\
-Removing Rhs of wire Net_1452[2] = \RGB_PWM_blue:Net_96\[983]
-Removing Rhs of wire Net_1452[2] = \RGB_PWM_blue:PWMUDB:pwm_i_reg\[975]
+Removing Rhs of wire Net_1452[2] = \RGB_PWM_blue:Net_96\[982]
+Removing Rhs of wire Net_1452[2] = \RGB_PWM_blue:PWMUDB:pwm_i_reg\[974]
 Removing Lhs of wire one[7] = tmpOE__RGB_B_net_0[1]
 Removing Lhs of wire \SEVEN_Reg:clk\[9] = zero[6]
 Removing Lhs of wire \SEVEN_Reg:rst\[10] = zero[6]
@@ -1613,321 +1613,321 @@ Removing Lhs of wire tmpOE__BUTTON_1_net_0[96] = tmpOE__RGB_B_net_0[1]
 Removing Lhs of wire tmpOE__BUTTON_2_net_0[101] = tmpOE__RGB_B_net_0[1]
 Removing Lhs of wire tmpOE__BUTTON_4_net_0[106] = tmpOE__RGB_B_net_0[1]
 Removing Lhs of wire tmpOE__BUTTON_3_net_0[111] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire tmpOE__RGB_R_net_0[119] = tmpOE__RGB_B_net_0[1]
-Removing Rhs of wire Net_1454[120] = \RGB_PWM_red:Net_96\[1363]
-Removing Rhs of wire Net_1454[120] = \RGB_PWM_red:PWMUDB:pwm_i_reg\[1355]
-Removing Lhs of wire tmpOE__RGB_G_net_0[126] = tmpOE__RGB_B_net_0[1]
-Removing Rhs of wire Net_1455[127] = \RGB_PWM_green:Net_96\[603]
-Removing Rhs of wire Net_1455[127] = \RGB_PWM_green:PWMUDB:pwm_i_reg\[595]
-Removing Rhs of wire Net_631[133] = \UART_LOG:BUART:tx_interrupt_out\[152]
-Removing Lhs of wire \UART_LOG:Net_61\[136] = \UART_LOG:Net_9\[135]
-Removing Lhs of wire \UART_LOG:BUART:tx_hd_send_break\[140] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:HalfDuplexSend\[141] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:FinalParityType_1\[142] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:FinalParityType_0\[143] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:FinalAddrMode_2\[144] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:FinalAddrMode_1\[145] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:FinalAddrMode_0\[146] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:tx_ctrl_mark\[147] = zero[6]
-Removing Rhs of wire \UART_LOG:BUART:tx_bitclk_enable_pre\[158] = \UART_LOG:BUART:tx_bitclk_dp\[194]
-Removing Lhs of wire \UART_LOG:BUART:tx_counter_tc\[204] = \UART_LOG:BUART:tx_counter_dp\[195]
-Removing Lhs of wire \UART_LOG:BUART:tx_status_6\[205] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:tx_status_5\[206] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:tx_status_4\[207] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:tx_status_1\[209] = \UART_LOG:BUART:tx_fifo_empty\[172]
-Removing Lhs of wire \UART_LOG:BUART:tx_status_3\[211] = \UART_LOG:BUART:tx_fifo_notfull\[171]
-Removing Lhs of wire \UART_LOG:BUART:rx_count7_bit8_wire\[271] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:add_vv_vv_MODGEN_1_1\[279] = \UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:s_1\[290]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:add_vv_vv_MODGEN_1_0\[281] = \UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:s_0\[291]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:cmp_vv_vv_MODGEN_2\[282] = \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:lta_0\[307]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:cmp_vv_vv_MODGEN_3\[283] = \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:lta_0\[321]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:a_1\[284] = \UART_LOG:BUART:sRX:s23Poll:MODIN1_1\[285]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODIN1_1\[285] = \UART_LOG:BUART:pollcount_1\[277]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:a_0\[286] = \UART_LOG:BUART:sRX:s23Poll:MODIN1_0\[287]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODIN1_0\[287] = \UART_LOG:BUART:pollcount_0\[280]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\[293] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\[294] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:newa_1\[295] = \UART_LOG:BUART:pollcount_1\[277]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODIN2_1\[296] = \UART_LOG:BUART:pollcount_1\[277]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:newa_0\[297] = \UART_LOG:BUART:pollcount_0\[280]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODIN2_0\[298] = \UART_LOG:BUART:pollcount_0\[280]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:newb_1\[299] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:newb_0\[300] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:dataa_1\[301] = \UART_LOG:BUART:pollcount_1\[277]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:dataa_0\[302] = \UART_LOG:BUART:pollcount_0\[280]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:datab_1\[303] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:datab_0\[304] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:newa_1\[309] = \UART_LOG:BUART:pollcount_1\[277]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODIN3_1\[310] = \UART_LOG:BUART:pollcount_1\[277]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:newa_0\[311] = \UART_LOG:BUART:pollcount_0\[280]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODIN3_0\[312] = \UART_LOG:BUART:pollcount_0\[280]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:newb_1\[313] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:newb_0\[314] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:dataa_1\[315] = \UART_LOG:BUART:pollcount_1\[277]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:dataa_0\[316] = \UART_LOG:BUART:pollcount_0\[280]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:datab_1\[317] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:datab_0\[318] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:rx_status_1\[325] = zero[6]
-Removing Rhs of wire \UART_LOG:BUART:rx_status_2\[326] = \UART_LOG:BUART:rx_parity_error_status\[327]
-Removing Rhs of wire \UART_LOG:BUART:rx_status_3\[328] = \UART_LOG:BUART:rx_stop_bit_error\[329]
-Removing Lhs of wire \UART_LOG:BUART:sRX:cmp_vv_vv_MODGEN_4\[339] = \UART_LOG:BUART:sRX:MODULE_4:g2:a0:lta_0\[388]
-Removing Lhs of wire \UART_LOG:BUART:sRX:cmp_vv_vv_MODGEN_5\[343] = \UART_LOG:BUART:sRX:MODULE_5:g1:a0:xneq\[410]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_6\[344] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_5\[345] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_4\[346] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_3\[347] = \UART_LOG:BUART:sRX:MODIN4_6\[348]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODIN4_6\[348] = \UART_LOG:BUART:rx_count_6\[266]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_2\[349] = \UART_LOG:BUART:sRX:MODIN4_5\[350]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODIN4_5\[350] = \UART_LOG:BUART:rx_count_5\[267]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_1\[351] = \UART_LOG:BUART:sRX:MODIN4_4\[352]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODIN4_4\[352] = \UART_LOG:BUART:rx_count_4\[268]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_0\[353] = \UART_LOG:BUART:sRX:MODIN4_3\[354]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODIN4_3\[354] = \UART_LOG:BUART:rx_count_3\[269]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_6\[355] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_5\[356] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_4\[357] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_3\[358] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_2\[359] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_1\[360] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_0\[361] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:dataa_6\[362] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:dataa_5\[363] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:dataa_4\[364] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:dataa_3\[365] = \UART_LOG:BUART:rx_count_6\[266]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:dataa_2\[366] = \UART_LOG:BUART:rx_count_5\[267]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:dataa_1\[367] = \UART_LOG:BUART:rx_count_4\[268]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:dataa_0\[368] = \UART_LOG:BUART:rx_count_3\[269]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:datab_6\[369] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:datab_5\[370] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:datab_4\[371] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:datab_3\[372] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:datab_2\[373] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:datab_1\[374] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:datab_0\[375] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:newa_0\[390] = \UART_LOG:BUART:rx_postpoll\[225]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:newb_0\[391] = \UART_LOG:BUART:rx_parity_bit\[342]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:dataa_0\[392] = \UART_LOG:BUART:rx_postpoll\[225]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:datab_0\[393] = \UART_LOG:BUART:rx_parity_bit\[342]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:a_0\[394] = \UART_LOG:BUART:rx_postpoll\[225]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:b_0\[395] = \UART_LOG:BUART:rx_parity_bit\[342]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:aeqb_0\[397] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:eq_0\[398] = \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:xnor_array_0\[396]
-Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:eqi_0\[399] = \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:xnor_array_0\[396]
-Removing Lhs of wire tmpOE__Rx_1_net_0[421] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire tmpOE__Tx_1_net_0[426] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:ctrl_enable\[444] = \RGB_PWM_green:PWMUDB:control_7\[436]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:hwCapture\[454] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:hwEnable\[455] = \RGB_PWM_green:PWMUDB:control_7\[436]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:trig_out\[459] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:runmode_enable\\R\[461] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:runmode_enable\\S\[462] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:final_enable\[463] = \RGB_PWM_green:PWMUDB:runmode_enable\[460]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:ltch_kill_reg\\R\[467] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:ltch_kill_reg\\S\[468] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:min_kill_reg\\R\[469] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:min_kill_reg\\S\[470] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:final_kill\[473] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:add_vi_vv_MODGEN_6_1\[477] = \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:s_1\[765]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:add_vi_vv_MODGEN_6_0\[479] = \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:s_0\[766]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:dith_count_1\\R\[480] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:dith_count_1\\S\[481] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:dith_count_0\\R\[482] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:dith_count_0\\S\[483] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:reset\[486] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:status_6\[487] = zero[6]
-Removing Rhs of wire \RGB_PWM_green:PWMUDB:status_5\[488] = \RGB_PWM_green:PWMUDB:final_kill_reg\[502]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:status_4\[489] = zero[6]
-Removing Rhs of wire \RGB_PWM_green:PWMUDB:status_3\[490] = \RGB_PWM_green:PWMUDB:fifo_full\[509]
-Removing Rhs of wire \RGB_PWM_green:PWMUDB:status_1\[492] = \RGB_PWM_green:PWMUDB:cmp2_status_reg\[501]
-Removing Rhs of wire \RGB_PWM_green:PWMUDB:status_0\[493] = \RGB_PWM_green:PWMUDB:cmp1_status_reg\[500]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:cmp2_status\[498] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:cmp2\[499] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:cmp1_status_reg\\R\[503] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:cmp1_status_reg\\S\[504] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:cmp2_status_reg\\R\[505] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:cmp2_status_reg\\S\[506] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:final_kill_reg\\R\[507] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:final_kill_reg\\S\[508] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:cs_addr_2\[510] = \RGB_PWM_green:PWMUDB:tc_i\[465]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:cs_addr_1\[511] = \RGB_PWM_green:PWMUDB:runmode_enable\[460]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:cs_addr_0\[512] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:compare1\[593] = \RGB_PWM_green:PWMUDB:cmp1_less\[564]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:pwm1_i\[598] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:pwm2_i\[600] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:pwm_temp\[606] = \RGB_PWM_green:PWMUDB:cmp1\[496]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_23\[647] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_22\[648] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_21\[649] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_20\[650] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_19\[651] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_18\[652] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_17\[653] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_16\[654] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_15\[655] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_14\[656] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_13\[657] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_12\[658] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_11\[659] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_10\[660] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_9\[661] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_8\[662] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_7\[663] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_6\[664] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_5\[665] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_4\[666] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_3\[667] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_2\[668] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_1\[669] = \RGB_PWM_green:PWMUDB:MODIN5_1\[670]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODIN5_1\[670] = \RGB_PWM_green:PWMUDB:dith_count_1\[476]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_0\[671] = \RGB_PWM_green:PWMUDB:MODIN5_0\[672]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODIN5_0\[672] = \RGB_PWM_green:PWMUDB:dith_count_0\[478]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:g1:z1:s0:g1:u0:c_0\[804] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:g1:z1:s0:g1:u0:b_0\[805] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:ctrl_enable\[824] = \RGB_PWM_blue:PWMUDB:control_7\[816]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:hwCapture\[834] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:hwEnable\[835] = \RGB_PWM_blue:PWMUDB:control_7\[816]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:trig_out\[839] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:runmode_enable\\R\[841] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:runmode_enable\\S\[842] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:final_enable\[843] = \RGB_PWM_blue:PWMUDB:runmode_enable\[840]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:ltch_kill_reg\\R\[847] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:ltch_kill_reg\\S\[848] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:min_kill_reg\\R\[849] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:min_kill_reg\\S\[850] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:final_kill\[853] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:add_vi_vv_MODGEN_7_1\[857] = \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:s_1\[1145]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:add_vi_vv_MODGEN_7_0\[859] = \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:s_0\[1146]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:dith_count_1\\R\[860] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:dith_count_1\\S\[861] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:dith_count_0\\R\[862] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:dith_count_0\\S\[863] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:reset\[866] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:status_6\[867] = zero[6]
-Removing Rhs of wire \RGB_PWM_blue:PWMUDB:status_5\[868] = \RGB_PWM_blue:PWMUDB:final_kill_reg\[882]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:status_4\[869] = zero[6]
-Removing Rhs of wire \RGB_PWM_blue:PWMUDB:status_3\[870] = \RGB_PWM_blue:PWMUDB:fifo_full\[889]
-Removing Rhs of wire \RGB_PWM_blue:PWMUDB:status_1\[872] = \RGB_PWM_blue:PWMUDB:cmp2_status_reg\[881]
-Removing Rhs of wire \RGB_PWM_blue:PWMUDB:status_0\[873] = \RGB_PWM_blue:PWMUDB:cmp1_status_reg\[880]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:cmp2_status\[878] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:cmp2\[879] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:cmp1_status_reg\\R\[883] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:cmp1_status_reg\\S\[884] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:cmp2_status_reg\\R\[885] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:cmp2_status_reg\\S\[886] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:final_kill_reg\\R\[887] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:final_kill_reg\\S\[888] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:cs_addr_2\[890] = \RGB_PWM_blue:PWMUDB:tc_i\[845]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:cs_addr_1\[891] = \RGB_PWM_blue:PWMUDB:runmode_enable\[840]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:cs_addr_0\[892] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:compare1\[973] = \RGB_PWM_blue:PWMUDB:cmp1_less\[944]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:pwm1_i\[978] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:pwm2_i\[980] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:pwm_temp\[986] = \RGB_PWM_blue:PWMUDB:cmp1\[876]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_23\[1027] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_22\[1028] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_21\[1029] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_20\[1030] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_19\[1031] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_18\[1032] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_17\[1033] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_16\[1034] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_15\[1035] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_14\[1036] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_13\[1037] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_12\[1038] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_11\[1039] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_10\[1040] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_9\[1041] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_8\[1042] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_7\[1043] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_6\[1044] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_5\[1045] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_4\[1046] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_3\[1047] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_2\[1048] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_1\[1049] = \RGB_PWM_blue:PWMUDB:MODIN6_1\[1050]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODIN6_1\[1050] = \RGB_PWM_blue:PWMUDB:dith_count_1\[856]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_0\[1051] = \RGB_PWM_blue:PWMUDB:MODIN6_0\[1052]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODIN6_0\[1052] = \RGB_PWM_blue:PWMUDB:dith_count_0\[858]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:g1:z1:s0:g1:u0:c_0\[1184] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:g1:z1:s0:g1:u0:b_0\[1185] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:ctrl_enable\[1204] = \RGB_PWM_red:PWMUDB:control_7\[1196]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:hwCapture\[1214] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:hwEnable\[1215] = \RGB_PWM_red:PWMUDB:control_7\[1196]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:trig_out\[1219] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:runmode_enable\\R\[1221] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:runmode_enable\\S\[1222] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:final_enable\[1223] = \RGB_PWM_red:PWMUDB:runmode_enable\[1220]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:ltch_kill_reg\\R\[1227] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:ltch_kill_reg\\S\[1228] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:min_kill_reg\\R\[1229] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:min_kill_reg\\S\[1230] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:final_kill\[1233] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:add_vi_vv_MODGEN_8_1\[1237] = \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:s_1\[1525]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:add_vi_vv_MODGEN_8_0\[1239] = \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:s_0\[1526]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:dith_count_1\\R\[1240] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:dith_count_1\\S\[1241] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:dith_count_0\\R\[1242] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:dith_count_0\\S\[1243] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:reset\[1246] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:status_6\[1247] = zero[6]
-Removing Rhs of wire \RGB_PWM_red:PWMUDB:status_5\[1248] = \RGB_PWM_red:PWMUDB:final_kill_reg\[1262]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:status_4\[1249] = zero[6]
-Removing Rhs of wire \RGB_PWM_red:PWMUDB:status_3\[1250] = \RGB_PWM_red:PWMUDB:fifo_full\[1269]
-Removing Rhs of wire \RGB_PWM_red:PWMUDB:status_1\[1252] = \RGB_PWM_red:PWMUDB:cmp2_status_reg\[1261]
-Removing Rhs of wire \RGB_PWM_red:PWMUDB:status_0\[1253] = \RGB_PWM_red:PWMUDB:cmp1_status_reg\[1260]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:cmp2_status\[1258] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:cmp2\[1259] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:cmp1_status_reg\\R\[1263] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:cmp1_status_reg\\S\[1264] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:cmp2_status_reg\\R\[1265] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:cmp2_status_reg\\S\[1266] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:final_kill_reg\\R\[1267] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:final_kill_reg\\S\[1268] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:cs_addr_2\[1270] = \RGB_PWM_red:PWMUDB:tc_i\[1225]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:cs_addr_1\[1271] = \RGB_PWM_red:PWMUDB:runmode_enable\[1220]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:cs_addr_0\[1272] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:compare1\[1353] = \RGB_PWM_red:PWMUDB:cmp1_less\[1324]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:pwm1_i\[1358] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:pwm2_i\[1360] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:pwm_temp\[1366] = \RGB_PWM_red:PWMUDB:cmp1\[1256]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_23\[1407] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_22\[1408] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_21\[1409] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_20\[1410] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_19\[1411] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_18\[1412] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_17\[1413] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_16\[1414] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_15\[1415] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_14\[1416] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_13\[1417] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_12\[1418] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_11\[1419] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_10\[1420] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_9\[1421] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_8\[1422] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_7\[1423] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_6\[1424] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_5\[1425] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_4\[1426] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_3\[1427] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_2\[1428] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_1\[1429] = \RGB_PWM_red:PWMUDB:MODIN7_1\[1430]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODIN7_1\[1430] = \RGB_PWM_red:PWMUDB:dith_count_1\[1236]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_0\[1431] = \RGB_PWM_red:PWMUDB:MODIN7_0\[1432]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODIN7_0\[1432] = \RGB_PWM_red:PWMUDB:dith_count_0\[1238]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:g1:z1:s0:g1:u0:c_0\[1564] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:g1:z1:s0:g1:u0:b_0\[1565] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire tmpOE__LED_GREEN_net_0[1572] = tmpOE__RGB_B_net_0[1]
-Removing Rhs of wire Net_2265[1573] = \PWM_green:Net_96\[1764]
-Removing Rhs of wire Net_2265[1573] = \PWM_green:PWMUDB:pwm_i_reg\[1756]
-Removing Lhs of wire tmpOE__LED_YELLOW_net_0[1579] = tmpOE__RGB_B_net_0[1]
-Removing Rhs of wire Net_2365[1580] = \PWM_yellow:Net_96\[2524]
-Removing Rhs of wire Net_2365[1580] = \PWM_yellow:PWMUDB:pwm_i_reg\[2516]
-Removing Lhs of wire tmpOE__LED_RED_net_0[1586] = tmpOE__RGB_B_net_0[1]
-Removing Rhs of wire Net_2426[1587] = \PWM_red:Net_96\[2144]
-Removing Rhs of wire Net_2426[1587] = \PWM_red:PWMUDB:pwm_i_reg\[2136]
+Removing Lhs of wire tmpOE__RGB_R_net_0[118] = tmpOE__RGB_B_net_0[1]
+Removing Rhs of wire Net_1454[119] = \RGB_PWM_red:Net_96\[1362]
+Removing Rhs of wire Net_1454[119] = \RGB_PWM_red:PWMUDB:pwm_i_reg\[1354]
+Removing Lhs of wire tmpOE__RGB_G_net_0[125] = tmpOE__RGB_B_net_0[1]
+Removing Rhs of wire Net_1455[126] = \RGB_PWM_green:Net_96\[602]
+Removing Rhs of wire Net_1455[126] = \RGB_PWM_green:PWMUDB:pwm_i_reg\[594]
+Removing Rhs of wire Net_631[132] = \UART_LOG:BUART:tx_interrupt_out\[151]
+Removing Lhs of wire \UART_LOG:Net_61\[135] = \UART_LOG:Net_9\[134]
+Removing Lhs of wire \UART_LOG:BUART:tx_hd_send_break\[139] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:HalfDuplexSend\[140] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:FinalParityType_1\[141] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:FinalParityType_0\[142] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:FinalAddrMode_2\[143] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:FinalAddrMode_1\[144] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:FinalAddrMode_0\[145] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:tx_ctrl_mark\[146] = zero[6]
+Removing Rhs of wire \UART_LOG:BUART:tx_bitclk_enable_pre\[157] = \UART_LOG:BUART:tx_bitclk_dp\[193]
+Removing Lhs of wire \UART_LOG:BUART:tx_counter_tc\[203] = \UART_LOG:BUART:tx_counter_dp\[194]
+Removing Lhs of wire \UART_LOG:BUART:tx_status_6\[204] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:tx_status_5\[205] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:tx_status_4\[206] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:tx_status_1\[208] = \UART_LOG:BUART:tx_fifo_empty\[171]
+Removing Lhs of wire \UART_LOG:BUART:tx_status_3\[210] = \UART_LOG:BUART:tx_fifo_notfull\[170]
+Removing Lhs of wire \UART_LOG:BUART:rx_count7_bit8_wire\[270] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:add_vv_vv_MODGEN_1_1\[278] = \UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:s_1\[289]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:add_vv_vv_MODGEN_1_0\[280] = \UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:s_0\[290]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:cmp_vv_vv_MODGEN_2\[281] = \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:lta_0\[306]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:cmp_vv_vv_MODGEN_3\[282] = \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:lta_0\[320]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:a_1\[283] = \UART_LOG:BUART:sRX:s23Poll:MODIN1_1\[284]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODIN1_1\[284] = \UART_LOG:BUART:pollcount_1\[276]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:a_0\[285] = \UART_LOG:BUART:sRX:s23Poll:MODIN1_0\[286]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODIN1_0\[286] = \UART_LOG:BUART:pollcount_0\[279]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\[292] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\[293] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:newa_1\[294] = \UART_LOG:BUART:pollcount_1\[276]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODIN2_1\[295] = \UART_LOG:BUART:pollcount_1\[276]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:newa_0\[296] = \UART_LOG:BUART:pollcount_0\[279]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODIN2_0\[297] = \UART_LOG:BUART:pollcount_0\[279]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:newb_1\[298] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:newb_0\[299] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:dataa_1\[300] = \UART_LOG:BUART:pollcount_1\[276]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:dataa_0\[301] = \UART_LOG:BUART:pollcount_0\[279]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:datab_1\[302] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:datab_0\[303] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:newa_1\[308] = \UART_LOG:BUART:pollcount_1\[276]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODIN3_1\[309] = \UART_LOG:BUART:pollcount_1\[276]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:newa_0\[310] = \UART_LOG:BUART:pollcount_0\[279]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODIN3_0\[311] = \UART_LOG:BUART:pollcount_0\[279]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:newb_1\[312] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:newb_0\[313] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:dataa_1\[314] = \UART_LOG:BUART:pollcount_1\[276]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:dataa_0\[315] = \UART_LOG:BUART:pollcount_0\[279]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:datab_1\[316] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:datab_0\[317] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:rx_status_1\[324] = zero[6]
+Removing Rhs of wire \UART_LOG:BUART:rx_status_2\[325] = \UART_LOG:BUART:rx_parity_error_status\[326]
+Removing Rhs of wire \UART_LOG:BUART:rx_status_3\[327] = \UART_LOG:BUART:rx_stop_bit_error\[328]
+Removing Lhs of wire \UART_LOG:BUART:sRX:cmp_vv_vv_MODGEN_4\[338] = \UART_LOG:BUART:sRX:MODULE_4:g2:a0:lta_0\[387]
+Removing Lhs of wire \UART_LOG:BUART:sRX:cmp_vv_vv_MODGEN_5\[342] = \UART_LOG:BUART:sRX:MODULE_5:g1:a0:xneq\[409]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_6\[343] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_5\[344] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_4\[345] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_3\[346] = \UART_LOG:BUART:sRX:MODIN4_6\[347]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODIN4_6\[347] = \UART_LOG:BUART:rx_count_6\[265]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_2\[348] = \UART_LOG:BUART:sRX:MODIN4_5\[349]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODIN4_5\[349] = \UART_LOG:BUART:rx_count_5\[266]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_1\[350] = \UART_LOG:BUART:sRX:MODIN4_4\[351]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODIN4_4\[351] = \UART_LOG:BUART:rx_count_4\[267]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_0\[352] = \UART_LOG:BUART:sRX:MODIN4_3\[353]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODIN4_3\[353] = \UART_LOG:BUART:rx_count_3\[268]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_6\[354] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_5\[355] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_4\[356] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_3\[357] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_2\[358] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_1\[359] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_0\[360] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:dataa_6\[361] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:dataa_5\[362] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:dataa_4\[363] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:dataa_3\[364] = \UART_LOG:BUART:rx_count_6\[265]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:dataa_2\[365] = \UART_LOG:BUART:rx_count_5\[266]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:dataa_1\[366] = \UART_LOG:BUART:rx_count_4\[267]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:dataa_0\[367] = \UART_LOG:BUART:rx_count_3\[268]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:datab_6\[368] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:datab_5\[369] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:datab_4\[370] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:datab_3\[371] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:datab_2\[372] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:datab_1\[373] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:datab_0\[374] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:newa_0\[389] = \UART_LOG:BUART:rx_postpoll\[224]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:newb_0\[390] = \UART_LOG:BUART:rx_parity_bit\[341]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:dataa_0\[391] = \UART_LOG:BUART:rx_postpoll\[224]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:datab_0\[392] = \UART_LOG:BUART:rx_parity_bit\[341]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:a_0\[393] = \UART_LOG:BUART:rx_postpoll\[224]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:b_0\[394] = \UART_LOG:BUART:rx_parity_bit\[341]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:aeqb_0\[396] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:eq_0\[397] = \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:xnor_array_0\[395]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:eqi_0\[398] = \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:xnor_array_0\[395]
+Removing Lhs of wire tmpOE__Rx_1_net_0[420] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire tmpOE__Tx_1_net_0[425] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:ctrl_enable\[443] = \RGB_PWM_green:PWMUDB:control_7\[435]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:hwCapture\[453] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:hwEnable\[454] = \RGB_PWM_green:PWMUDB:control_7\[435]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:trig_out\[458] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:runmode_enable\\R\[460] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:runmode_enable\\S\[461] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:final_enable\[462] = \RGB_PWM_green:PWMUDB:runmode_enable\[459]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:ltch_kill_reg\\R\[466] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:ltch_kill_reg\\S\[467] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:min_kill_reg\\R\[468] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:min_kill_reg\\S\[469] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:final_kill\[472] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:add_vi_vv_MODGEN_6_1\[476] = \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:s_1\[764]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:add_vi_vv_MODGEN_6_0\[478] = \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:s_0\[765]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:dith_count_1\\R\[479] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:dith_count_1\\S\[480] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:dith_count_0\\R\[481] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:dith_count_0\\S\[482] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:reset\[485] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:status_6\[486] = zero[6]
+Removing Rhs of wire \RGB_PWM_green:PWMUDB:status_5\[487] = \RGB_PWM_green:PWMUDB:final_kill_reg\[501]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:status_4\[488] = zero[6]
+Removing Rhs of wire \RGB_PWM_green:PWMUDB:status_3\[489] = \RGB_PWM_green:PWMUDB:fifo_full\[508]
+Removing Rhs of wire \RGB_PWM_green:PWMUDB:status_1\[491] = \RGB_PWM_green:PWMUDB:cmp2_status_reg\[500]
+Removing Rhs of wire \RGB_PWM_green:PWMUDB:status_0\[492] = \RGB_PWM_green:PWMUDB:cmp1_status_reg\[499]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:cmp2_status\[497] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:cmp2\[498] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:cmp1_status_reg\\R\[502] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:cmp1_status_reg\\S\[503] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:cmp2_status_reg\\R\[504] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:cmp2_status_reg\\S\[505] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:final_kill_reg\\R\[506] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:final_kill_reg\\S\[507] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:cs_addr_2\[509] = \RGB_PWM_green:PWMUDB:tc_i\[464]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:cs_addr_1\[510] = \RGB_PWM_green:PWMUDB:runmode_enable\[459]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:cs_addr_0\[511] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:compare1\[592] = \RGB_PWM_green:PWMUDB:cmp1_less\[563]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:pwm1_i\[597] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:pwm2_i\[599] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:pwm_temp\[605] = \RGB_PWM_green:PWMUDB:cmp1\[495]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_23\[646] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_22\[647] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_21\[648] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_20\[649] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_19\[650] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_18\[651] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_17\[652] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_16\[653] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_15\[654] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_14\[655] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_13\[656] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_12\[657] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_11\[658] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_10\[659] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_9\[660] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_8\[661] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_7\[662] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_6\[663] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_5\[664] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_4\[665] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_3\[666] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_2\[667] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_1\[668] = \RGB_PWM_green:PWMUDB:MODIN5_1\[669]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODIN5_1\[669] = \RGB_PWM_green:PWMUDB:dith_count_1\[475]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:a_0\[670] = \RGB_PWM_green:PWMUDB:MODIN5_0\[671]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODIN5_0\[671] = \RGB_PWM_green:PWMUDB:dith_count_0\[477]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:g1:z1:s0:g1:u0:c_0\[803] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:g1:z1:s0:g1:u0:b_0\[804] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:ctrl_enable\[823] = \RGB_PWM_blue:PWMUDB:control_7\[815]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:hwCapture\[833] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:hwEnable\[834] = \RGB_PWM_blue:PWMUDB:control_7\[815]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:trig_out\[838] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:runmode_enable\\R\[840] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:runmode_enable\\S\[841] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:final_enable\[842] = \RGB_PWM_blue:PWMUDB:runmode_enable\[839]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:ltch_kill_reg\\R\[846] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:ltch_kill_reg\\S\[847] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:min_kill_reg\\R\[848] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:min_kill_reg\\S\[849] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:final_kill\[852] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:add_vi_vv_MODGEN_7_1\[856] = \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:s_1\[1144]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:add_vi_vv_MODGEN_7_0\[858] = \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:s_0\[1145]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:dith_count_1\\R\[859] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:dith_count_1\\S\[860] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:dith_count_0\\R\[861] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:dith_count_0\\S\[862] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:reset\[865] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:status_6\[866] = zero[6]
+Removing Rhs of wire \RGB_PWM_blue:PWMUDB:status_5\[867] = \RGB_PWM_blue:PWMUDB:final_kill_reg\[881]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:status_4\[868] = zero[6]
+Removing Rhs of wire \RGB_PWM_blue:PWMUDB:status_3\[869] = \RGB_PWM_blue:PWMUDB:fifo_full\[888]
+Removing Rhs of wire \RGB_PWM_blue:PWMUDB:status_1\[871] = \RGB_PWM_blue:PWMUDB:cmp2_status_reg\[880]
+Removing Rhs of wire \RGB_PWM_blue:PWMUDB:status_0\[872] = \RGB_PWM_blue:PWMUDB:cmp1_status_reg\[879]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:cmp2_status\[877] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:cmp2\[878] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:cmp1_status_reg\\R\[882] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:cmp1_status_reg\\S\[883] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:cmp2_status_reg\\R\[884] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:cmp2_status_reg\\S\[885] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:final_kill_reg\\R\[886] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:final_kill_reg\\S\[887] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:cs_addr_2\[889] = \RGB_PWM_blue:PWMUDB:tc_i\[844]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:cs_addr_1\[890] = \RGB_PWM_blue:PWMUDB:runmode_enable\[839]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:cs_addr_0\[891] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:compare1\[972] = \RGB_PWM_blue:PWMUDB:cmp1_less\[943]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:pwm1_i\[977] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:pwm2_i\[979] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:pwm_temp\[985] = \RGB_PWM_blue:PWMUDB:cmp1\[875]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_23\[1026] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_22\[1027] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_21\[1028] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_20\[1029] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_19\[1030] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_18\[1031] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_17\[1032] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_16\[1033] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_15\[1034] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_14\[1035] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_13\[1036] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_12\[1037] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_11\[1038] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_10\[1039] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_9\[1040] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_8\[1041] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_7\[1042] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_6\[1043] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_5\[1044] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_4\[1045] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_3\[1046] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_2\[1047] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_1\[1048] = \RGB_PWM_blue:PWMUDB:MODIN6_1\[1049]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODIN6_1\[1049] = \RGB_PWM_blue:PWMUDB:dith_count_1\[855]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:a_0\[1050] = \RGB_PWM_blue:PWMUDB:MODIN6_0\[1051]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODIN6_0\[1051] = \RGB_PWM_blue:PWMUDB:dith_count_0\[857]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:g1:z1:s0:g1:u0:c_0\[1183] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:g1:z1:s0:g1:u0:b_0\[1184] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:ctrl_enable\[1203] = \RGB_PWM_red:PWMUDB:control_7\[1195]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:hwCapture\[1213] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:hwEnable\[1214] = \RGB_PWM_red:PWMUDB:control_7\[1195]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:trig_out\[1218] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:runmode_enable\\R\[1220] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:runmode_enable\\S\[1221] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:final_enable\[1222] = \RGB_PWM_red:PWMUDB:runmode_enable\[1219]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:ltch_kill_reg\\R\[1226] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:ltch_kill_reg\\S\[1227] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:min_kill_reg\\R\[1228] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:min_kill_reg\\S\[1229] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:final_kill\[1232] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:add_vi_vv_MODGEN_8_1\[1236] = \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:s_1\[1524]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:add_vi_vv_MODGEN_8_0\[1238] = \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:s_0\[1525]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:dith_count_1\\R\[1239] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:dith_count_1\\S\[1240] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:dith_count_0\\R\[1241] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:dith_count_0\\S\[1242] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:reset\[1245] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:status_6\[1246] = zero[6]
+Removing Rhs of wire \RGB_PWM_red:PWMUDB:status_5\[1247] = \RGB_PWM_red:PWMUDB:final_kill_reg\[1261]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:status_4\[1248] = zero[6]
+Removing Rhs of wire \RGB_PWM_red:PWMUDB:status_3\[1249] = \RGB_PWM_red:PWMUDB:fifo_full\[1268]
+Removing Rhs of wire \RGB_PWM_red:PWMUDB:status_1\[1251] = \RGB_PWM_red:PWMUDB:cmp2_status_reg\[1260]
+Removing Rhs of wire \RGB_PWM_red:PWMUDB:status_0\[1252] = \RGB_PWM_red:PWMUDB:cmp1_status_reg\[1259]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:cmp2_status\[1257] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:cmp2\[1258] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:cmp1_status_reg\\R\[1262] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:cmp1_status_reg\\S\[1263] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:cmp2_status_reg\\R\[1264] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:cmp2_status_reg\\S\[1265] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:final_kill_reg\\R\[1266] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:final_kill_reg\\S\[1267] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:cs_addr_2\[1269] = \RGB_PWM_red:PWMUDB:tc_i\[1224]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:cs_addr_1\[1270] = \RGB_PWM_red:PWMUDB:runmode_enable\[1219]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:cs_addr_0\[1271] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:compare1\[1352] = \RGB_PWM_red:PWMUDB:cmp1_less\[1323]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:pwm1_i\[1357] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:pwm2_i\[1359] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:pwm_temp\[1365] = \RGB_PWM_red:PWMUDB:cmp1\[1255]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_23\[1406] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_22\[1407] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_21\[1408] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_20\[1409] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_19\[1410] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_18\[1411] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_17\[1412] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_16\[1413] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_15\[1414] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_14\[1415] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_13\[1416] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_12\[1417] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_11\[1418] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_10\[1419] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_9\[1420] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_8\[1421] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_7\[1422] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_6\[1423] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_5\[1424] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_4\[1425] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_3\[1426] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_2\[1427] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_1\[1428] = \RGB_PWM_red:PWMUDB:MODIN7_1\[1429]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODIN7_1\[1429] = \RGB_PWM_red:PWMUDB:dith_count_1\[1235]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:a_0\[1430] = \RGB_PWM_red:PWMUDB:MODIN7_0\[1431]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODIN7_0\[1431] = \RGB_PWM_red:PWMUDB:dith_count_0\[1237]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:g1:z1:s0:g1:u0:c_0\[1563] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:g1:z1:s0:g1:u0:b_0\[1564] = tmpOE__RGB_B_net_0[1]
+Removing Lhs of wire tmpOE__LED_GREEN_net_0[1571] = tmpOE__RGB_B_net_0[1]
+Removing Rhs of wire Net_2265[1572] = \PWM_green:Net_96\[1764]
+Removing Rhs of wire Net_2265[1572] = \PWM_green:PWMUDB:pwm_i_reg\[1756]
+Removing Lhs of wire tmpOE__LED_YELLOW_net_0[1578] = tmpOE__RGB_B_net_0[1]
+Removing Rhs of wire Net_2365[1579] = \PWM_yellow:Net_96\[2524]
+Removing Rhs of wire Net_2365[1579] = \PWM_yellow:PWMUDB:pwm_i_reg\[2516]
+Removing Lhs of wire tmpOE__LED_RED_net_0[1585] = tmpOE__RGB_B_net_0[1]
+Removing Rhs of wire Net_2426[1586] = \PWM_red:Net_96\[2144]
+Removing Rhs of wire Net_2426[1586] = \PWM_red:PWMUDB:pwm_i_reg\[2136]
 Removing Lhs of wire \PWM_green:PWMUDB:ctrl_enable\[1605] = \PWM_green:PWMUDB:control_7\[1597]
 Removing Lhs of wire \PWM_green:PWMUDB:hwCapture\[1615] = zero[6]
 Removing Lhs of wire \PWM_green:PWMUDB:hwEnable\[1616] = \PWM_green:PWMUDB:control_7\[1597]
@@ -2133,42 +2133,42 @@ Removing Lhs of wire \PWM_yellow:PWMUDB:MODIN10_0\[2593] = \PWM_yellow:PWMUDB:di
 Removing Lhs of wire \PWM_yellow:PWMUDB:MODULE_11:g2:a0:g1:z1:s0:g1:u0:c_0\[2725] = tmpOE__RGB_B_net_0[1]
 Removing Lhs of wire \PWM_yellow:PWMUDB:MODULE_11:g2:a0:g1:z1:s0:g1:u0:b_0\[2726] = tmpOE__RGB_B_net_0[1]
 Removing Lhs of wire \UART_LOG:BUART:reset_reg\\D\[2732] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:rx_bitclk\\D\[2747] = \UART_LOG:BUART:rx_bitclk_pre\[260]
-Removing Lhs of wire \UART_LOG:BUART:rx_parity_error_pre\\D\[2756] = \UART_LOG:BUART:rx_parity_error_pre\[337]
+Removing Lhs of wire \UART_LOG:BUART:rx_bitclk\\D\[2747] = \UART_LOG:BUART:rx_bitclk_pre\[259]
+Removing Lhs of wire \UART_LOG:BUART:rx_parity_error_pre\\D\[2756] = \UART_LOG:BUART:rx_parity_error_pre\[336]
 Removing Lhs of wire \UART_LOG:BUART:rx_break_status\\D\[2757] = zero[6]
 Removing Lhs of wire \RGB_PWM_green:PWMUDB:min_kill_reg\\D\[2761] = tmpOE__RGB_B_net_0[1]
 Removing Lhs of wire \RGB_PWM_green:PWMUDB:prevCapture\\D\[2762] = zero[6]
 Removing Lhs of wire \RGB_PWM_green:PWMUDB:trig_last\\D\[2763] = zero[6]
 Removing Lhs of wire \RGB_PWM_green:PWMUDB:ltch_kill_reg\\D\[2766] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:prevCompare1\\D\[2769] = \RGB_PWM_green:PWMUDB:cmp1\[496]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:cmp1_status_reg\\D\[2770] = \RGB_PWM_green:PWMUDB:cmp1_status\[497]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:prevCompare1\\D\[2769] = \RGB_PWM_green:PWMUDB:cmp1\[495]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:cmp1_status_reg\\D\[2770] = \RGB_PWM_green:PWMUDB:cmp1_status\[496]
 Removing Lhs of wire \RGB_PWM_green:PWMUDB:cmp2_status_reg\\D\[2771] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:pwm_i_reg\\D\[2773] = \RGB_PWM_green:PWMUDB:pwm_i\[596]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:pwm_i_reg\\D\[2773] = \RGB_PWM_green:PWMUDB:pwm_i\[595]
 Removing Lhs of wire \RGB_PWM_green:PWMUDB:pwm1_i_reg\\D\[2774] = zero[6]
 Removing Lhs of wire \RGB_PWM_green:PWMUDB:pwm2_i_reg\\D\[2775] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:tc_i_reg\\D\[2776] = \RGB_PWM_green:PWMUDB:status_2\[491]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:tc_i_reg\\D\[2776] = \RGB_PWM_green:PWMUDB:status_2\[490]
 Removing Lhs of wire \RGB_PWM_blue:PWMUDB:min_kill_reg\\D\[2777] = tmpOE__RGB_B_net_0[1]
 Removing Lhs of wire \RGB_PWM_blue:PWMUDB:prevCapture\\D\[2778] = zero[6]
 Removing Lhs of wire \RGB_PWM_blue:PWMUDB:trig_last\\D\[2779] = zero[6]
 Removing Lhs of wire \RGB_PWM_blue:PWMUDB:ltch_kill_reg\\D\[2782] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:prevCompare1\\D\[2785] = \RGB_PWM_blue:PWMUDB:cmp1\[876]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:cmp1_status_reg\\D\[2786] = \RGB_PWM_blue:PWMUDB:cmp1_status\[877]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:prevCompare1\\D\[2785] = \RGB_PWM_blue:PWMUDB:cmp1\[875]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:cmp1_status_reg\\D\[2786] = \RGB_PWM_blue:PWMUDB:cmp1_status\[876]
 Removing Lhs of wire \RGB_PWM_blue:PWMUDB:cmp2_status_reg\\D\[2787] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:pwm_i_reg\\D\[2789] = \RGB_PWM_blue:PWMUDB:pwm_i\[976]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:pwm_i_reg\\D\[2789] = \RGB_PWM_blue:PWMUDB:pwm_i\[975]
 Removing Lhs of wire \RGB_PWM_blue:PWMUDB:pwm1_i_reg\\D\[2790] = zero[6]
 Removing Lhs of wire \RGB_PWM_blue:PWMUDB:pwm2_i_reg\\D\[2791] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:tc_i_reg\\D\[2792] = \RGB_PWM_blue:PWMUDB:status_2\[871]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:tc_i_reg\\D\[2792] = \RGB_PWM_blue:PWMUDB:status_2\[870]
 Removing Lhs of wire \RGB_PWM_red:PWMUDB:min_kill_reg\\D\[2793] = tmpOE__RGB_B_net_0[1]
 Removing Lhs of wire \RGB_PWM_red:PWMUDB:prevCapture\\D\[2794] = zero[6]
 Removing Lhs of wire \RGB_PWM_red:PWMUDB:trig_last\\D\[2795] = zero[6]
 Removing Lhs of wire \RGB_PWM_red:PWMUDB:ltch_kill_reg\\D\[2798] = tmpOE__RGB_B_net_0[1]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:prevCompare1\\D\[2801] = \RGB_PWM_red:PWMUDB:cmp1\[1256]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:cmp1_status_reg\\D\[2802] = \RGB_PWM_red:PWMUDB:cmp1_status\[1257]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:prevCompare1\\D\[2801] = \RGB_PWM_red:PWMUDB:cmp1\[1255]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:cmp1_status_reg\\D\[2802] = \RGB_PWM_red:PWMUDB:cmp1_status\[1256]
 Removing Lhs of wire \RGB_PWM_red:PWMUDB:cmp2_status_reg\\D\[2803] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:pwm_i_reg\\D\[2805] = \RGB_PWM_red:PWMUDB:pwm_i\[1356]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:pwm_i_reg\\D\[2805] = \RGB_PWM_red:PWMUDB:pwm_i\[1355]
 Removing Lhs of wire \RGB_PWM_red:PWMUDB:pwm1_i_reg\\D\[2806] = zero[6]
 Removing Lhs of wire \RGB_PWM_red:PWMUDB:pwm2_i_reg\\D\[2807] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:tc_i_reg\\D\[2808] = \RGB_PWM_red:PWMUDB:status_2\[1251]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:tc_i_reg\\D\[2808] = \RGB_PWM_red:PWMUDB:status_2\[1250]
 Removing Lhs of wire \PWM_green:PWMUDB:min_kill_reg\\D\[2809] = tmpOE__RGB_B_net_0[1]
 Removing Lhs of wire \PWM_green:PWMUDB:prevCapture\\D\[2810] = zero[6]
 Removing Lhs of wire \PWM_green:PWMUDB:trig_last\\D\[2811] = zero[6]
@@ -2829,21 +2829,21 @@ Aliasing \RGB_PWM_red:PWMUDB:final_kill_reg\\D\ to zero
 Aliasing \PWM_green:PWMUDB:final_kill_reg\\D\ to zero
 Aliasing \PWM_red:PWMUDB:final_kill_reg\\D\ to zero
 Aliasing \PWM_yellow:PWMUDB:final_kill_reg\\D\ to zero
-Removing Rhs of wire \UART_LOG:BUART:rx_bitclk_enable\[224] = \UART_LOG:BUART:rx_bitclk\[272]
-Removing Lhs of wire \UART_LOG:BUART:rx_status_0\[323] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:rx_status_6\[332] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:final_capture\[514] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:g1:z1:s0:g1:u0:b_24\[775] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:g1:z1:s0:g1:u0:b_16\[785] = zero[6]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:g1:z1:s0:g1:u0:b_8\[795] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:final_capture\[894] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:g1:z1:s0:g1:u0:b_24\[1155] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:g1:z1:s0:g1:u0:b_16\[1165] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:g1:z1:s0:g1:u0:b_8\[1175] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:final_capture\[1274] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:g1:z1:s0:g1:u0:b_24\[1535] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:g1:z1:s0:g1:u0:b_16\[1545] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:g1:z1:s0:g1:u0:b_8\[1555] = zero[6]
+Removing Rhs of wire \UART_LOG:BUART:rx_bitclk_enable\[223] = \UART_LOG:BUART:rx_bitclk\[271]
+Removing Lhs of wire \UART_LOG:BUART:rx_status_0\[322] = zero[6]
+Removing Lhs of wire \UART_LOG:BUART:rx_status_6\[331] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:final_capture\[513] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:g1:z1:s0:g1:u0:b_24\[774] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:g1:z1:s0:g1:u0:b_16\[784] = zero[6]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:MODULE_6:g2:a0:g1:z1:s0:g1:u0:b_8\[794] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:final_capture\[893] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:g1:z1:s0:g1:u0:b_24\[1154] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:g1:z1:s0:g1:u0:b_16\[1164] = zero[6]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:MODULE_7:g2:a0:g1:z1:s0:g1:u0:b_8\[1174] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:final_capture\[1273] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:g1:z1:s0:g1:u0:b_24\[1534] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:g1:z1:s0:g1:u0:b_16\[1544] = zero[6]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:MODULE_8:g2:a0:g1:z1:s0:g1:u0:b_8\[1554] = zero[6]
 Removing Lhs of wire \PWM_green:PWMUDB:final_capture\[1675] = zero[6]
 Removing Lhs of wire \PWM_green:PWMUDB:MODULE_9:g2:a0:g1:z1:s0:g1:u0:b_24\[1936] = zero[6]
 Removing Lhs of wire \PWM_green:PWMUDB:MODULE_9:g2:a0:g1:z1:s0:g1:u0:b_16\[1946] = zero[6]
@@ -2856,17 +2856,17 @@ Removing Lhs of wire \PWM_yellow:PWMUDB:final_capture\[2435] = zero[6]
 Removing Lhs of wire \PWM_yellow:PWMUDB:MODULE_11:g2:a0:g1:z1:s0:g1:u0:b_24\[2696] = zero[6]
 Removing Lhs of wire \PWM_yellow:PWMUDB:MODULE_11:g2:a0:g1:z1:s0:g1:u0:b_16\[2706] = zero[6]
 Removing Lhs of wire \PWM_yellow:PWMUDB:MODULE_11:g2:a0:g1:z1:s0:g1:u0:b_8\[2716] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:tx_ctrl_mark_last\\D\[2739] = \UART_LOG:BUART:tx_ctrl_mark_last\[215]
+Removing Lhs of wire \UART_LOG:BUART:tx_ctrl_mark_last\\D\[2739] = \UART_LOG:BUART:tx_ctrl_mark_last\[214]
 Removing Lhs of wire \UART_LOG:BUART:rx_markspace_status\\D\[2751] = zero[6]
 Removing Lhs of wire \UART_LOG:BUART:rx_parity_error_status\\D\[2752] = zero[6]
 Removing Lhs of wire \UART_LOG:BUART:rx_addr_match_status\\D\[2754] = zero[6]
-Removing Lhs of wire \UART_LOG:BUART:rx_markspace_pre\\D\[2755] = \UART_LOG:BUART:rx_markspace_pre\[336]
-Removing Lhs of wire \UART_LOG:BUART:rx_parity_bit\\D\[2760] = \UART_LOG:BUART:rx_parity_bit\[342]
-Removing Lhs of wire \RGB_PWM_green:PWMUDB:runmode_enable\\D\[2764] = \RGB_PWM_green:PWMUDB:control_7\[436]
+Removing Lhs of wire \UART_LOG:BUART:rx_markspace_pre\\D\[2755] = \UART_LOG:BUART:rx_markspace_pre\[335]
+Removing Lhs of wire \UART_LOG:BUART:rx_parity_bit\\D\[2760] = \UART_LOG:BUART:rx_parity_bit\[341]
+Removing Lhs of wire \RGB_PWM_green:PWMUDB:runmode_enable\\D\[2764] = \RGB_PWM_green:PWMUDB:control_7\[435]
 Removing Lhs of wire \RGB_PWM_green:PWMUDB:final_kill_reg\\D\[2772] = zero[6]
-Removing Lhs of wire \RGB_PWM_blue:PWMUDB:runmode_enable\\D\[2780] = \RGB_PWM_blue:PWMUDB:control_7\[816]
+Removing Lhs of wire \RGB_PWM_blue:PWMUDB:runmode_enable\\D\[2780] = \RGB_PWM_blue:PWMUDB:control_7\[815]
 Removing Lhs of wire \RGB_PWM_blue:PWMUDB:final_kill_reg\\D\[2788] = zero[6]
-Removing Lhs of wire \RGB_PWM_red:PWMUDB:runmode_enable\\D\[2796] = \RGB_PWM_red:PWMUDB:control_7\[1196]
+Removing Lhs of wire \RGB_PWM_red:PWMUDB:runmode_enable\\D\[2796] = \RGB_PWM_red:PWMUDB:control_7\[1195]
 Removing Lhs of wire \RGB_PWM_red:PWMUDB:final_kill_reg\\D\[2804] = zero[6]
 Removing Lhs of wire \PWM_green:PWMUDB:runmode_enable\\D\[2812] = \PWM_green:PWMUDB:control_7\[1597]
 Removing Lhs of wire \PWM_green:PWMUDB:final_kill_reg\\D\[2820] = zero[6]
@@ -2910,16 +2910,16 @@ topld:  No errors.
 
 CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
-Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\AMA_EOS_Lab_02.cyprj -dcpsoc3 AMA_EOS_Lab_02.v -verilog
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn\AMA_EOS_Lab_02.cyprj -dcpsoc3 AMA_EOS_Lab_02.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 3s.522ms
+Warp synthesis phase: Elapsed time ==> 3s.314ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Monday, 01 December 2025 23:09:22
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\AMA_EOS_Lab_02.cyprj -d CY8C5888LTI-LP097 AMA_EOS_Lab_02.v -verilog
+cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Friday, 05 December 2025 02:08:26
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn\AMA_EOS_Lab_02.cyprj -d CY8C5888LTI-LP097 AMA_EOS_Lab_02.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.038ms
+Design parsing phase: Elapsed time ==> 0s.040ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -3547,7 +3547,7 @@ Design Equations
             Input Sync needed: False
             Output Sync needed: False
             SC shield enabled: False
-            POR State: ANY
+            POR State: INP_DIS_HI
             LCD Mode: COMMON
             Register Mode: RegComb
             CaSense Mode: NEITHER
@@ -3980,7 +3980,7 @@ Design Equations
     Macrocell listing
     ------------------------------------------------------------
 
-    MacroCell: Name=Net_3165, Mode=(Combinatorial)
+    MacroCell: Name=Net_3170, Mode=(Combinatorial)
         Total # of inputs        : 4
         Total # of product terms : 1
             Clock Enable: True
@@ -3988,7 +3988,7 @@ Design Equations
         !(
               !Net_3166 * !Net_3167 * !Net_3168 * !Net_3169
         );
-        Output = Net_3165 (fanout=1)
+        Output = Net_3170 (fanout=1)
 
     MacroCell: Name=Net_33, Mode=(Combinatorial)
         Total # of inputs        : 1
@@ -5607,21 +5607,21 @@ Design Equations
     Interrupt listing
     ------------------------------------------------------------
 
-    interrupt: Name =isr_Button_Pressed
-        PORT MAP (
-            interrupt => Net_3165 );
-        Properties:
-        {
-            int_type = "10"
-            is_nmi = 0
-        }
-
     interrupt: Name =\UART_LOG:TXInternalInterrupt\
         PORT MAP (
             interrupt => Net_631 );
         Properties:
         {
             int_type = "10"
+            is_nmi = 0
+        }
+
+    interrupt: Name =isr_buttonPressed
+        PORT MAP (
+            interrupt => Net_3170 );
+        Properties:
+        {
+            int_type = "00"
             is_nmi = 0
         }
     </CYPRESSTAG>
@@ -5666,8 +5666,8 @@ Analog (SC/CT) Blocks         :    0 :    4 :    4 :  0.00 %
 DAC                           :      :      :      :        
   VIDAC                       :    0 :    4 :    4 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.212ms
-Tech Mapping phase: Elapsed time ==> 0s.316ms
+Technology Mapping: Elapsed time ==> 0s.205ms
+Tech Mapping phase: Elapsed time ==> 0s.284ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 Initial Analog Placement Results:
@@ -5692,7 +5692,7 @@ IO_2@[IOP=(1)][IoId=(2)] : SEVEN_F(0) (fixed)
 IO_1@[IOP=(1)][IoId=(1)] : SEVEN_G(0) (fixed)
 IO_5@[IOP=(3)][IoId=(5)] : SEVEN_SELECT(0) (fixed)
 IO_7@[IOP=(12)][IoId=(7)] : Tx_1(0) (fixed)
-Analog Placement phase: Elapsed time ==> 0s.025ms
+Analog Placement phase: Elapsed time ==> 0s.047ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 Analog Routing phase: Elapsed time ==> 0s.000ms
@@ -5710,11 +5710,11 @@ Dump of CyP35AnalogRoutingResultsDB
 IsVddaHalfUsedForComp = False
 IsVddaHalfUsedForSar0 = False
 IsVddaHalfUsedForSar1 = False
-Analog Code Generation phase: Elapsed time ==> 0s.266ms
+Analog Code Generation phase: Elapsed time ==> 0s.355ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 1.5 sec.
+I2076: Total run-time: 1.4 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -5738,14 +5738,14 @@ PLD Packing Summary
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.004ms
+PLD Packing: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.130ms
+Partitioning: Elapsed time ==> 0s.142ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -7555,7 +7555,7 @@ LAB@[UDB=(3,2)][LB=1] #macrocells=2, #inputs=10, #pterms=5
 {
     [McSlotId=0]: (empty)
     [McSlotId=1]: (empty)
-    [McSlotId=2]:     MacroCell: Name=Net_3165, Mode=(Combinatorial) @ [UDB=(3,2)][LB=1][MC=2]
+    [McSlotId=2]:     MacroCell: Name=Net_3170, Mode=(Combinatorial) @ [UDB=(3,2)][LB=1][MC=2]
         Total # of inputs        : 4
         Total # of product terms : 1
             Clock Enable: True
@@ -7563,7 +7563,7 @@ LAB@[UDB=(3,2)][LB=1] #macrocells=2, #inputs=10, #pterms=5
         !(
               !Net_3166 * !Net_3167 * !Net_3168 * !Net_3169
         );
-        Output = Net_3165 (fanout=1)
+        Output = Net_3170 (fanout=1)
         Properties               : 
         {
         }
@@ -7744,12 +7744,12 @@ Intr container @ [IntrContainer=(0)]:
             is_nmi = 0
         }
   Intr@ [IntrContainer=(0)][IntrId=(1)] 
-    interrupt: Name =isr_Button_Pressed
+    interrupt: Name =isr_buttonPressed
         PORT MAP (
-            interrupt => Net_3165 );
+            interrupt => Net_3170 );
         Properties:
         {
-            int_type = "10"
+            int_type = "00"
             is_nmi = 0
         }
 Drq container @ [DrqContainer=(0)]: empty
@@ -7768,7 +7768,7 @@ Pin : Name = BUTTON_1(0)
         Input Sync needed: False
         Output Sync needed: False
         SC shield enabled: False
-        POR State: ANY
+        POR State: INP_DIS_HI
         LCD Mode: COMMON
         Register Mode: RegComb
         CaSense Mode: NEITHER
@@ -8705,33 +8705,33 @@ Port | Pin | Fixed |      Type |       Drive Mode |            Name | Connection
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.085ms
-Digital Placement phase: Elapsed time ==> 2s.105ms
+Digital component placer commit/Report: Elapsed time ==> 0s.070ms
+Digital Placement phase: Elapsed time ==> 2s.084ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc5/psoc5lp/route_arch-rrg.cydata" --vh2-path "AMA_EOS_Lab_02_r.vh2" --pcf-path "AMA_EOS_Lab_02.pco" --des-name "AMA_EOS_Lab_02" --dsf-path "AMA_EOS_Lab_02.dsf" --sdc-path "AMA_EOS_Lab_02.sdc" --lib-path "AMA_EOS_Lab_02_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 3s.076ms
+Digital Routing phase: Elapsed time ==> 2s.470ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.220ms
+Bitstream Generation phase: Elapsed time ==> 0s.275ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.036ms
+Bitstream Verification phase: Elapsed time ==> 0s.075ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in AMA_EOS_Lab_02_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.503ms
+Static timing analysis phase: Elapsed time ==> 0s.474ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.350ms
+Design database save phase: Elapsed time ==> 0s.446ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 7s.080ms
+cydsfit: Elapsed time ==> 6s.753ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 7s.082ms
-API generation phase: Elapsed time ==> 2s.375ms
-Dependency generation phase: Elapsed time ==> 0s.031ms
-Cleanup phase: Elapsed time ==> 0s.002ms
+Fitter phase: Elapsed time ==> 6s.753ms
+API generation phase: Elapsed time ==> 3s.088ms
+Dependency generation phase: Elapsed time ==> 0s.034ms
+Cleanup phase: Elapsed time ==> 0s.000ms

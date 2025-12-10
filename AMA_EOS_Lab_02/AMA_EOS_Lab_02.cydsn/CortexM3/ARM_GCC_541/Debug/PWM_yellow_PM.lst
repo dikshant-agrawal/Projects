@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccY22Qad.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
   28:Generated_Source\PSoC5/PWM_yellow_PM.c **** *  Saves the current user configuration of the component.
   29:Generated_Source\PSoC5/PWM_yellow_PM.c **** *
   30:Generated_Source\PSoC5/PWM_yellow_PM.c **** * Parameters:
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 2
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccY22Qad.s 			page 2
 
 
   31:Generated_Source\PSoC5/PWM_yellow_PM.c **** *  None
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
   64:Generated_Source\PSoC5/PWM_yellow_PM.c ****             PWM_yellow_backup.PWMControlRegister = PWM_yellow_ReadControlRegister();
   49              		.loc 1 64 0
   50 0016 FFF7FEFF 		bl	PWM_yellow_ReadControlRegister
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 3
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccY22Qad.s 			page 3
 
 
   51              	.LVL2:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
   92:Generated_Source\PSoC5/PWM_yellow_PM.c ****                 PWM_yellow_WritePeriod(PWM_yellow_backup.PWMPeriod);
   78              		.loc 1 92 0
   79 0002 074C     		ldr	r4, .L7
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 4
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccY22Qad.s 			page 4
 
 
   80 0004 A088     		ldrh	r0, [r4, #4]
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
  115:Generated_Source\PSoC5/PWM_yellow_PM.c **** 
  116:Generated_Source\PSoC5/PWM_yellow_PM.c **** 
  117:Generated_Source\PSoC5/PWM_yellow_PM.c **** /*******************************************************************************
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 5
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccY22Qad.s 			page 5
 
 
  118:Generated_Source\PSoC5/PWM_yellow_PM.c **** * Function Name: PWM_yellow_Sleep
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
  148:Generated_Source\PSoC5/PWM_yellow_PM.c ****         }
  149:Generated_Source\PSoC5/PWM_yellow_PM.c ****     #endif /* (PWM_yellow_UseControl) */
  150:Generated_Source\PSoC5/PWM_yellow_PM.c **** 
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 6
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccY22Qad.s 			page 6
 
 
  151:Generated_Source\PSoC5/PWM_yellow_PM.c ****     /* Stop component */
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
  161              		@ args = 0, pretend = 0, frame = 0
  162              		@ frame_needed = 0, uses_anonymous_args = 0
  163 0000 08B5     		push	{r3, lr}
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 7
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccY22Qad.s 			page 7
 
 
  164              		.cfi_def_cfa_offset 8
@@ -412,17 +412,17 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
  204 000c BA000000 		.4byte	.LASF35
  205 0010 0C       		.byte	0xc
  206 0011 2F000000 		.4byte	.LASF36
- 207 0015 DE020000 		.4byte	.LASF37
+ 207 0015 7D020000 		.4byte	.LASF37
  208 0019 00000000 		.4byte	.Ldebug_ranges0+0
  209 001d 00000000 		.4byte	0
  210 0021 00000000 		.4byte	.Ldebug_line0
  211 0025 02       		.uleb128 0x2
  212 0026 01       		.byte	0x1
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 8
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccY22Qad.s 			page 8
 
 
  213 0027 06       		.byte	0x6
- 214 0028 B3020000 		.4byte	.LASF0
+ 214 0028 F6020000 		.4byte	.LASF0
  215 002c 02       		.uleb128 0x2
  216 002d 01       		.byte	0x1
  217 002e 08       		.byte	0x8
@@ -430,7 +430,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
  219 0033 02       		.uleb128 0x2
  220 0034 02       		.byte	0x2
  221 0035 05       		.byte	0x5
- 222 0036 7D020000 		.4byte	.LASF2
+ 222 0036 C0020000 		.4byte	.LASF2
  223 003a 02       		.uleb128 0x2
  224 003b 02       		.byte	0x2
  225 003c 07       		.byte	0x7
@@ -438,7 +438,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
  227 0041 02       		.uleb128 0x2
  228 0042 04       		.byte	0x4
  229 0043 05       		.byte	0x5
- 230 0044 9E020000 		.4byte	.LASF4
+ 230 0044 E1020000 		.4byte	.LASF4
  231 0048 02       		.uleb128 0x2
  232 0049 04       		.byte	0x4
  233 004a 07       		.byte	0x7
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
  267 008c 04       		.byte	0x4
  268 008d A2010000 		.4byte	.LASF12
  269 0091 02       		.uleb128 0x2
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 9
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccY22Qad.s 			page 9
 
 
  270 0092 01       		.byte	0x1
@@ -494,7 +494,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
  280 00a9 02       		.uleb128 0x2
  281 00aa 08       		.byte	0x8
  282 00ab 04       		.byte	0x4
- 283 00ac A7020000 		.4byte	.LASF15
+ 283 00ac EA020000 		.4byte	.LASF15
  284 00b0 02       		.uleb128 0x2
  285 00b1 04       		.byte	0x4
  286 00b2 07       		.byte	0x7
@@ -523,7 +523,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
  309 00de 77000000 		.4byte	0x77
  310 00e2 04       		.byte	0x4
  311 00e3 07       		.uleb128 0x7
- 312 00e4 1E030000 		.4byte	.LASF20
+ 312 00e4 21030000 		.4byte	.LASF20
  313 00e8 03       		.byte	0x3
  314 00e9 76       		.byte	0x76
  315 00ea 6B000000 		.4byte	0x6b
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
  324 00fc 08       		.uleb128 0x8
  325 00fd 11000000 		.4byte	.LASF22
  326 0101 03       		.byte	0x3
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 10
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccY22Qad.s 			page 10
 
 
  327 0102 8B       		.byte	0x8b
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
  381 018c 07010000 		.4byte	0x107
  382 0190 00       		.byte	0
  383 0191 09       		.uleb128 0x9
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 11
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccY22Qad.s 			page 11
 
 
  384 0192 6B020000 		.4byte	.LASF26
@@ -635,13 +635,13 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
  415 01de 03       		.byte	0x3
  416 01df B3       		.byte	0xb3
  417 01e0 0C       		.uleb128 0xc
- 418 01e1 BF020000 		.4byte	.LASF29
- 419 01e5 BF020000 		.4byte	.LASF29
+ 418 01e1 02030000 		.4byte	.LASF29
+ 419 01e5 02030000 		.4byte	.LASF29
  420 01e9 03       		.byte	0x3
  421 01ea 9D       		.byte	0x9d
  422 01eb 0C       		.uleb128 0xc
- 423 01ec 87020000 		.4byte	.LASF30
- 424 01f0 87020000 		.4byte	.LASF30
+ 423 01ec CA020000 		.4byte	.LASF30
+ 424 01f0 CA020000 		.4byte	.LASF30
  425 01f4 03       		.byte	0x3
  426 01f5 BE       		.byte	0xbe
  427 01f6 0C       		.uleb128 0xc
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
  438 020d EB010000 		.4byte	.LASF33
  439 0211 EB010000 		.4byte	.LASF33
  440 0215 03       		.byte	0x3
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 12
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccY22Qad.s 			page 12
 
 
  441 0216 93       		.byte	0x93
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
  495 002d 0E       		.uleb128 0xe
  496 002e 3A       		.uleb128 0x3a
  497 002f 0B       		.uleb128 0xb
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 13
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccY22Qad.s 			page 13
 
 
  498 0030 3B       		.uleb128 0x3b
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
  552 0066 09       		.uleb128 0x9
  553 0067 2E       		.uleb128 0x2e
  554 0068 01       		.byte	0x1
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 14
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccY22Qad.s 			page 14
 
 
  555 0069 3F       		.uleb128 0x3f
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
  609 00a2 0E       		.uleb128 0xe
  610 00a3 03       		.uleb128 0x3
  611 00a4 0E       		.uleb128 0xe
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 15
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccY22Qad.s 			page 15
 
 
  612 00a5 3A       		.uleb128 0x3a
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
  657      6F775F62 
  657      61636B75 
  657      70537472 
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 16
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccY22Qad.s 			page 16
 
 
  658              	.LASF11:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
  676              	.LASF17:
  677 0148 50574D45 		.ascii	"PWMEnableState\000"
  677      6E61626C 
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 17
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccY22Qad.s 			page 17
 
 
  677      65537461 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
  699      6F775F62 
  699      61636B75 
  699      7000
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 18
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccY22Qad.s 			page 18
 
 
  700              	.LASF14:
@@ -1060,50 +1060,50 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 1
  715      6F775F57 
  715      616B6575 
  715      7000
- 716              	.LASF2:
- 717 027d 73686F72 		.ascii	"short int\000"
- 717      7420696E 
- 717      7400
- 718              	.LASF30:
- 719 0287 50574D5F 		.ascii	"PWM_yellow_WritePeriod\000"
- 719      79656C6C 
- 719      6F775F57 
- 719      72697465 
- 719      50657269 
- 720              	.LASF4:
- 721 029e 6C6F6E67 		.ascii	"long int\000"
- 721      20696E74 
- 721      00
- 722              	.LASF15:
- 723 02a7 6C6F6E67 		.ascii	"long double\000"
- 723      20646F75 
- 723      626C6500 
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc6w811t.s 			page 19
+ 716              	.LASF37:
+ 717 027d 443A5C45 		.ascii	"D:\\Embedded\\Assignment02\\Lab02\\AMA_EOS_Lab_02\\"
+ 717      6D626564 
+ 717      6465645C 
+ 717      41737369 
+ 717      676E6D65 
+ 718 02ab 414D415F 		.ascii	"AMA_EOS_Lab_02.cydsn\000"
+ 718      454F535F 
+ 718      4C61625F 
+ 718      30322E63 
+ 718      7964736E 
+ 719              	.LASF2:
+ 720 02c0 73686F72 		.ascii	"short int\000"
+ 720      7420696E 
+ 720      7400
+ 721              	.LASF30:
+ 722 02ca 50574D5F 		.ascii	"PWM_yellow_WritePeriod\000"
+ 722      79656C6C 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccY22Qad.s 			page 19
 
 
- 724              	.LASF0:
- 725 02b3 7369676E 		.ascii	"signed char\000"
- 725      65642063 
- 725      68617200 
- 726              	.LASF29:
- 727 02bf 50574D5F 		.ascii	"PWM_yellow_ReadControlRegister\000"
- 727      79656C6C 
- 727      6F775F52 
- 727      65616443 
- 727      6F6E7472 
- 728              	.LASF37:
- 729 02de 443A5C45 		.ascii	"D:\\Embedded\\Assignment02\\Lab02\\Workspace01\\AMA"
- 729      6D626564 
- 729      6465645C 
- 729      41737369 
- 729      676E6D65 
- 730 030c 5F454F53 		.ascii	"_EOS_Lab_02.cydsn\000"
- 730      5F4C6162 
- 730      5F30322E 
- 730      63796473 
- 730      6E00
+ 722      6F775F57 
+ 722      72697465 
+ 722      50657269 
+ 723              	.LASF4:
+ 724 02e1 6C6F6E67 		.ascii	"long int\000"
+ 724      20696E74 
+ 724      00
+ 725              	.LASF15:
+ 726 02ea 6C6F6E67 		.ascii	"long double\000"
+ 726      20646F75 
+ 726      626C6500 
+ 727              	.LASF0:
+ 728 02f6 7369676E 		.ascii	"signed char\000"
+ 728      65642063 
+ 728      68617200 
+ 729              	.LASF29:
+ 730 0302 50574D5F 		.ascii	"PWM_yellow_ReadControlRegister\000"
+ 730      79656C6C 
+ 730      6F775F52 
+ 730      65616443 
+ 730      6F6E7472 
  731              	.LASF20:
- 732 031e 496E7465 		.ascii	"InterruptMaskValue\000"
+ 732 0321 496E7465 		.ascii	"InterruptMaskValue\000"
  732      72727570 
  732      744D6173 
  732      6B56616C 

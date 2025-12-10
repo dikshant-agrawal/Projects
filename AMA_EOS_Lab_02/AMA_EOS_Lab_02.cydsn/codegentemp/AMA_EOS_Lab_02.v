@@ -1,6 +1,6 @@
 // ======================================================================
 // AMA_EOS_Lab_02.v generated from TopDesign.cysch
-// 12/01/2025 at 23:09
+// 12/05/2025 at 02:08
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1003,7 +1003,7 @@ module top ;
           wire  Net_3168;
           wire  Net_3167;
           wire  Net_3166;
-          wire  Net_3165;
+          wire  Net_3170;
           wire  Net_10;
           wire  Net_8;
           wire  Net_7;
@@ -1793,7 +1793,7 @@ module top ;
 	assign tmpOE__SEVEN_SELECT_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
 
-    assign Net_3165 = Net_3166 | Net_3167 | Net_3168 | Net_3169;
+    assign Net_3170 = Net_3166 | Net_3167 | Net_3168 | Net_3169;
 
 	wire [0:0] tmpOE__BUTTON_1_net;
 	wire [0:0] tmpIO_0__BUTTON_1_net;
@@ -1834,7 +1834,7 @@ module top ;
 		  .pa_out_reset(-1),
 		  .pin_aliases(""),
 		  .pin_mode("I"),
-		  .por_state(4),
+		  .por_state(3),
 		  .sio_group_cnt(0),
 		  .sio_hyst(1'b1),
 		  .sio_ibuf(""),
@@ -2090,13 +2090,6 @@ module top ;
 		  .out_reset({1'b0}));
 
 	assign tmpOE__BUTTON_3_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
-
-
-	cy_isr_v1_0
-		#(.int_type(2'b10))
-		isr_Button_Pressed
-		 (.int_signal(Net_3165));
-
 
 
 	cy_clock_v1_0
@@ -2711,6 +2704,13 @@ module top ;
 		  .out_reset({1'b0}));
 
 	assign tmpOE__LED_RED_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+
+	cy_isr_v1_0
+		#(.int_type(2'b00))
+		isr_buttonPressed
+		 (.int_signal(Net_3170));
+
 
     PWM_v3_30_4 PWM_green (
         .capture(1'b0),

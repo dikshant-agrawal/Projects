@@ -100,27 +100,27 @@ void EE_system_init(void)
 
 #define ISR_MIN_PRI 48
 
-#if (Number_of_ISRs > 0) && defined isr_Button_Pressed__INTC_NUMBER
-    ramVectorTable[CY_INT_IRQ_BASE + (isr_Button_Pressed__INTC_NUMBER & CY_INT_NUMBER_MASK)] = isr_Button_Pressed;
+#if (Number_of_ISRs > 0) && defined isr_buttonPressed__INTC_NUMBER
+    ramVectorTable[CY_INT_IRQ_BASE + (isr_buttonPressed__INTC_NUMBER & CY_INT_NUMBER_MASK)] = isr_buttonPressed;
 	//PF v2.5.3
-    //NVIC_SET_PRI(isr_Button_Pressed__INTC_NUMBER, (ISR_MIN_PRI - 6));
-    CyIntSetPriority(isr_Button_Pressed__INTC_NUMBER, ISR_SCALE(6));
+    //NVIC_SET_PRI(isr_buttonPressed__INTC_NUMBER, (ISR_MIN_PRI - 7));
+    CyIntSetPriority(isr_buttonPressed__INTC_NUMBER, ISR_SCALE(7));
     //\PF
-	NVIC_INT_ENABLE(isr_Button_Pressed__INTC_NUMBER);
+	NVIC_INT_ENABLE(isr_buttonPressed__INTC_NUMBER);
 #elif Number_of_ISRs > 0
-#error  The Interrupt isr_Button_Pressed could not be found. Make sure the name in the OS config exactly matches the name of the interrupt in the interrupt tab.
-#endif	/* isr_Button_Pressed */
+#error  The Interrupt isr_buttonPressed could not be found. Make sure the name in the OS config exactly matches the name of the interrupt in the interrupt tab.
+#endif	/* isr_buttonPressed */
 
-#if (Number_of_ISRs > 1) && defined isr_uartTx__INTC_NUMBER
-    ramVectorTable[CY_INT_IRQ_BASE + (isr_uartTx__INTC_NUMBER & CY_INT_NUMBER_MASK)] = isr_uartTx;
+#if (Number_of_ISRs > 1) && defined ISR_2__INTC_NUMBER
+    ramVectorTable[CY_INT_IRQ_BASE + (ISR_2__INTC_NUMBER & CY_INT_NUMBER_MASK)] = ISR_2;
 	//PF v2.5.3
-    //NVIC_SET_PRI(isr_uartTx__INTC_NUMBER, (ISR_MIN_PRI - 5));
-    CyIntSetPriority(isr_uartTx__INTC_NUMBER, ISR_SCALE(5));
+    //NVIC_SET_PRI(ISR_2__INTC_NUMBER, (ISR_MIN_PRI - 0));
+    CyIntSetPriority(ISR_2__INTC_NUMBER, ISR_SCALE(0));
     //\PF
-	NVIC_INT_ENABLE(isr_uartTx__INTC_NUMBER);
+	NVIC_INT_ENABLE(ISR_2__INTC_NUMBER);
 #elif Number_of_ISRs > 1
-#error  The Interrupt isr_uartTx could not be found. Make sure the name in the OS config exactly matches the name of the interrupt in the interrupt tab.
-#endif	/* isr_uartTx */
+#error  The Interrupt ISR_2 could not be found. Make sure the name in the OS config exactly matches the name of the interrupt in the interrupt tab.
+#endif	/* ISR_2 */
 
 #if (Number_of_ISRs > 2) && defined ISR_3__INTC_NUMBER
     ramVectorTable[CY_INT_IRQ_BASE + (ISR_3__INTC_NUMBER & CY_INT_NUMBER_MASK)] = ISR_3;

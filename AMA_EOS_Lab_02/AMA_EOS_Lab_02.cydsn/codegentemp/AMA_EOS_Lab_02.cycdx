@@ -478,7 +478,7 @@
       </field>
     </register>
   </block>
-  <block name="ErikaOS_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="isr_buttonPressed" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="PWM_Clock" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="SEVEN_E" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="SEVEN_F" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -493,7 +493,7 @@
   <block name="SEVEN_B" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="BUTTON_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="BUTTON_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="isr_Button_Pressed" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="ErikaOS_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="BUTTON_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="SEVEN_SELECT" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="SEVEN_A" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
   28:Generated_Source\PSoC5/ErikaOS_1_ee_gettaskid.c ****  * exception statement from your version.
   29:Generated_Source\PSoC5/ErikaOS_1_ee_gettaskid.c ****  *
   30:Generated_Source\PSoC5/ErikaOS_1_ee_gettaskid.c ****  * ERIKA Enterprise is distributed in the hope that it will be
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 2
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 2
 
 
   31:Generated_Source\PSoC5/ErikaOS_1_ee_gettaskid.c ****  * useful, but WITHOUT ANY WARRANTY; without even the implied warranty
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
   79:Generated_Source\PSoC5/ErikaOS_1_ee_gettaskid.c ****      Post TaskHook */
   80:Generated_Source\PSoC5/ErikaOS_1_ee_gettaskid.c ****   if ( EE_as_execution_context > PostTaskHook_Context ) {
   81:Generated_Source\PSoC5/ErikaOS_1_ee_gettaskid.c ****     ev = E_OS_CALLEVEL;
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 3
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 3
 
 
   82:Generated_Source\PSoC5/ErikaOS_1_ee_gettaskid.c ****   } else if( EE_oo_check_disableint_error() ) {
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
   39:Generated_Source\PSoC5/ErikaOS_1_ee_oo_internal.inc ****  * ###*E*### */
   40:Generated_Source\PSoC5/ErikaOS_1_ee_oo_internal.inc **** 
   41:Generated_Source\PSoC5/ErikaOS_1_ee_oo_internal.inc **** /*
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 4
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 4
 
 
   42:Generated_Source\PSoC5/ErikaOS_1_ee_oo_internal.inc ****  * Author: 2002 Paolo Gai
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
   96:Generated_Source\PSoC5/ErikaOS_1_ee_oo_internal.inc **** 
   97:Generated_Source\PSoC5/ErikaOS_1_ee_oo_internal.inc **** #define EE_OS_ERROR_PARAMETERS_INIT(param1_in,param2_in,param3_in)  ((void)0)
   98:Generated_Source\PSoC5/ErikaOS_1_ee_oo_internal.inc **** 
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 5
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 5
 
 
   99:Generated_Source\PSoC5/ErikaOS_1_ee_oo_internal.inc **** #define EE_OS_ERROR_PARAMETERS_PARAM1_VALUE(param1_value)           ((void)0)
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  153:Generated_Source\PSoC5/ErikaOS_1_ee_oo_internal.inc **** #else /* !__EE_MEMORY_PROTECTION__ */
  154:Generated_Source\PSoC5/ErikaOS_1_ee_oo_internal.inc **** /* If MemMap.h support is enabled (i.e. because memory protection): use it */
  155:Generated_Source\PSoC5/ErikaOS_1_ee_oo_internal.inc **** #ifdef EE_SUPPORT_MEMMAP_H
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 6
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 6
 
 
  156:Generated_Source\PSoC5/ErikaOS_1_ee_oo_internal.inc **** /* The following code belong to ERIKA API section ee_api_text */
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  210:Generated_Source\PSoC5/ErikaOS_1_ee_oo_internal.inc ****     EE_hal_end_nested_primitive(flag);            \
  211:Generated_Source\PSoC5/ErikaOS_1_ee_oo_internal.inc ****   } while ( 0 )
  212:Generated_Source\PSoC5/ErikaOS_1_ee_oo_internal.inc **** 
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 7
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 7
 
 
  213:Generated_Source\PSoC5/ErikaOS_1_ee_oo_internal.inc **** #define EE_OS_FOREVER_CRITICAL_SECTION()          \
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  111:Generated_Source\PSoC5/ErikaOS_1_ee_gettaskid.c ****     ev = E_OK;
   47              		.loc 1 111 0
   48 0008 0020     		movs	r0, #0
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 8
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 8
 
 
   49              	.LVL2:
@@ -467,24 +467,24 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
   77 0006 00000000 		.4byte	.Ldebug_abbrev0
   78 000a 04       		.byte	0x4
   79 000b 01       		.uleb128 0x1
-  80 000c 77040000 		.4byte	.LASF70
+  80 000c 74040000 		.4byte	.LASF70
   81 0010 0C       		.byte	0xc
-  82 0011 FF000000 		.4byte	.LASF71
-  83 0015 47030000 		.4byte	.LASF72
+  82 0011 3C010000 		.4byte	.LASF71
+  83 0015 E9000000 		.4byte	.LASF72
   84 0019 00000000 		.4byte	.Ldebug_ranges0+0
   85 001d 00000000 		.4byte	0
   86 0021 00000000 		.4byte	.Ldebug_line0
   87 0025 02       		.uleb128 0x2
   88 0026 01       		.byte	0x1
   89 0027 06       		.byte	0x6
-  90 0028 DD020000 		.4byte	.LASF0
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 9
+  90 0028 1A030000 		.4byte	.LASF0
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 9
 
 
   91 002c 02       		.uleb128 0x2
   92 002d 01       		.byte	0x1
   93 002e 08       		.byte	0x8
-  94 002f 9E020000 		.4byte	.LASF1
+  94 002f DB020000 		.4byte	.LASF1
   95 0033 02       		.uleb128 0x2
   96 0034 02       		.byte	0x2
   97 0035 05       		.byte	0x5
@@ -492,23 +492,23 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
   99 003a 02       		.uleb128 0x2
  100 003b 02       		.byte	0x2
  101 003c 07       		.byte	0x7
- 102 003d AF030000 		.4byte	.LASF3
+ 102 003d 84030000 		.4byte	.LASF3
  103 0041 02       		.uleb128 0x2
  104 0042 04       		.byte	0x4
  105 0043 05       		.byte	0x5
- 106 0044 0B020000 		.4byte	.LASF4
+ 106 0044 48020000 		.4byte	.LASF4
  107 0048 02       		.uleb128 0x2
  108 0049 04       		.byte	0x4
  109 004a 07       		.byte	0x7
- 110 004b EA030000 		.4byte	.LASF5
+ 110 004b E7030000 		.4byte	.LASF5
  111 004f 02       		.uleb128 0x2
  112 0050 08       		.byte	0x8
  113 0051 05       		.byte	0x5
- 114 0052 BB010000 		.4byte	.LASF6
+ 114 0052 F8010000 		.4byte	.LASF6
  115 0056 02       		.uleb128 0x2
  116 0057 08       		.byte	0x8
  117 0058 07       		.byte	0x7
- 118 0059 E9020000 		.4byte	.LASF7
+ 118 0059 26030000 		.4byte	.LASF7
  119 005d 03       		.uleb128 0x3
  120 005e 04       		.byte	0x4
  121 005f 05       		.byte	0x5
@@ -516,29 +516,29 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  123 0064 02       		.uleb128 0x2
  124 0065 04       		.byte	0x4
  125 0066 07       		.byte	0x7
- 126 0067 1E030000 		.4byte	.LASF8
+ 126 0067 5B030000 		.4byte	.LASF8
  127 006b 02       		.uleb128 0x2
  128 006c 08       		.byte	0x8
  129 006d 04       		.byte	0x4
- 130 006e 83020000 		.4byte	.LASF9
+ 130 006e C0020000 		.4byte	.LASF9
  131 0072 04       		.uleb128 0x4
  132 0073 1E000000 		.4byte	.LASF10
  133 0077 03       		.byte	0x3
  134 0078 3E       		.byte	0x3e
  135 0079 2C000000 		.4byte	0x2c
  136 007d 04       		.uleb128 0x4
- 137 007e C9010000 		.4byte	.LASF11
+ 137 007e 06020000 		.4byte	.LASF11
  138 0082 03       		.byte	0x3
  139 0083 3F       		.byte	0x3f
  140 0084 25000000 		.4byte	0x25
  141 0088 04       		.uleb128 0x4
- 142 0089 A5030000 		.4byte	.LASF12
+ 142 0089 B5030000 		.4byte	.LASF12
  143 008d 03       		.byte	0x3
  144 008e 52       		.byte	0x52
  145 008f 3A000000 		.4byte	0x3a
  146 0093 04       		.uleb128 0x4
- 147 0094 3E030000 		.4byte	.LASF13
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 10
+ 147 0094 7B030000 		.4byte	.LASF13
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 10
 
 
  148 0098 03       		.byte	0x3
@@ -560,7 +560,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  164 00ba 4F       		.byte	0x4f
  165 00bb 9E000000 		.4byte	0x9e
  166 00bf 04       		.uleb128 0x4
- 167 00c0 FC030000 		.4byte	.LASF17
+ 167 00c0 F9030000 		.4byte	.LASF17
  168 00c4 04       		.byte	0x4
  169 00c5 54       		.byte	0x54
  170 00c6 A9000000 		.4byte	0xa9
@@ -570,12 +570,12 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  174 00d0 78       		.byte	0x78
  175 00d1 93000000 		.4byte	0x93
  176 00d5 05       		.uleb128 0x5
- 177 00d6 EA010000 		.4byte	.LASF19
+ 177 00d6 27020000 		.4byte	.LASF19
  178 00da 05       		.byte	0x5
  179 00db 1101     		.2byte	0x111
  180 00dd 88000000 		.4byte	0x88
  181 00e1 05       		.uleb128 0x5
- 182 00e2 00030000 		.4byte	.LASF20
+ 182 00e2 3D030000 		.4byte	.LASF20
  183 00e6 05       		.byte	0x5
  184 00e7 FA01     		.2byte	0x1fa
  185 00e9 ED000000 		.4byte	0xed
@@ -583,22 +583,22 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  187 00ee 04       		.byte	0x4
  188 00ef CA000000 		.4byte	0xca
  189 00f3 05       		.uleb128 0x5
- 190 00f4 59020000 		.4byte	.LASF21
+ 190 00f4 96020000 		.4byte	.LASF21
  191 00f8 05       		.byte	0x5
  192 00f9 3502     		.2byte	0x235
  193 00fb A9000000 		.4byte	0xa9
  194 00ff 05       		.uleb128 0x5
- 195 0100 71020000 		.4byte	.LASF22
+ 195 0100 AE020000 		.4byte	.LASF22
  196 0104 05       		.byte	0x5
  197 0105 5D02     		.2byte	0x25d
  198 0107 A9000000 		.4byte	0xa9
  199 010b 05       		.uleb128 0x5
- 200 010c 3F040000 		.4byte	.LASF23
+ 200 010c 3C040000 		.4byte	.LASF23
  201 0110 05       		.byte	0x5
  202 0111 6C02     		.2byte	0x26c
  203 0113 A9000000 		.4byte	0xa9
  204 0117 07       		.uleb128 0x7
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 11
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 11
 
 
  205 0118 0C       		.byte	0xc
@@ -606,7 +606,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  207 011a 7202     		.2byte	0x272
  208 011c 48010000 		.4byte	0x148
  209 0120 08       		.uleb128 0x8
- 210 0121 14020000 		.4byte	.LASF24
+ 210 0121 51020000 		.4byte	.LASF24
  211 0125 05       		.byte	0x5
  212 0126 7302     		.2byte	0x273
  213 0128 F3000000 		.4byte	0xf3
@@ -625,7 +625,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  226 0146 08       		.byte	0x8
  227 0147 00       		.byte	0
  228 0148 05       		.uleb128 0x5
- 229 0149 42020000 		.4byte	.LASF27
+ 229 0149 7F020000 		.4byte	.LASF27
  230 014d 05       		.byte	0x5
  231 014e 7A02     		.2byte	0x27a
  232 0150 17010000 		.4byte	0x117
@@ -635,20 +635,20 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  236 0157 7D02     		.2byte	0x27d
  237 0159 78010000 		.4byte	0x178
  238 015d 08       		.uleb128 0x8
- 239 015e E9000000 		.4byte	.LASF28
+ 239 015e 0B050000 		.4byte	.LASF28
  240 0162 05       		.byte	0x5
  241 0163 7E02     		.2byte	0x27e
  242 0165 F3000000 		.4byte	0xf3
  243 0169 00       		.byte	0
  244 016a 08       		.uleb128 0x8
- 245 016b 38050000 		.4byte	.LASF29
+ 245 016b 3B050000 		.4byte	.LASF29
  246 016f 05       		.byte	0x5
  247 0170 7F02     		.2byte	0x27f
  248 0172 FF000000 		.4byte	0xff
  249 0176 04       		.byte	0x4
  250 0177 00       		.byte	0
  251 0178 05       		.uleb128 0x5
- 252 0179 A4010000 		.4byte	.LASF30
+ 252 0179 E1010000 		.4byte	.LASF30
  253 017d 05       		.byte	0x5
  254 017e 8002     		.2byte	0x280
  255 0180 54010000 		.4byte	0x154
@@ -658,18 +658,18 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  259 018a 05       		.byte	0x5
  260 018b 8A02     		.2byte	0x28a
  261 018d 9E010000 		.4byte	0x19e
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 12
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 12
 
 
  262 0191 0A       		.uleb128 0xa
- 263 0192 28040000 		.4byte	.LASF31
+ 263 0192 25040000 		.4byte	.LASF31
  264 0196 00       		.byte	0
  265 0197 0A       		.uleb128 0xa
- 266 0198 FA010000 		.4byte	.LASF32
+ 266 0198 37020000 		.4byte	.LASF32
  267 019c 01       		.byte	0x1
  268 019d 00       		.byte	0
  269 019e 05       		.uleb128 0x5
- 270 019f 59010000 		.4byte	.LASF33
+ 270 019f 96010000 		.4byte	.LASF33
  271 01a3 05       		.byte	0x5
  272 01a4 8D02     		.2byte	0x28d
  273 01a6 84010000 		.4byte	0x184
@@ -703,7 +703,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  301 01e3 08       		.byte	0x8
  302 01e4 00       		.byte	0
  303 01e5 05       		.uleb128 0x5
- 304 01e6 87030000 		.4byte	.LASF37
+ 304 01e6 97030000 		.4byte	.LASF37
  305 01ea 05       		.byte	0x5
  306 01eb 9B02     		.2byte	0x29b
  307 01ed B6010000 		.4byte	0x1b6
@@ -713,16 +713,16 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  311 01f4 9F02     		.2byte	0x29f
  312 01f6 2F020000 		.4byte	0x22f
  313 01fa 08       		.uleb128 0x8
- 314 01fb 31040000 		.4byte	.LASF38
+ 314 01fb 2E040000 		.4byte	.LASF38
  315 01ff 05       		.byte	0x5
  316 0200 A002     		.2byte	0x2a0
  317 0202 BF000000 		.4byte	0xbf
  318 0206 00       		.byte	0
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 13
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 13
 
 
  319 0207 08       		.uleb128 0x8
- 320 0208 05050000 		.4byte	.LASF39
+ 320 0208 02050000 		.4byte	.LASF39
  321 020c 05       		.byte	0x5
  322 020d A102     		.2byte	0x2a1
  323 020f F3000000 		.4byte	0xf3
@@ -734,14 +734,14 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  329 021c F3000000 		.4byte	0xf3
  330 0220 08       		.byte	0x8
  331 0221 08       		.uleb128 0x8
- 332 0222 26050000 		.4byte	.LASF41
+ 332 0222 29050000 		.4byte	.LASF41
  333 0226 05       		.byte	0x5
  334 0227 A302     		.2byte	0x2a3
  335 0229 FF000000 		.4byte	0xff
  336 022d 0C       		.byte	0xc
  337 022e 00       		.byte	0
  338 022f 05       		.uleb128 0x5
- 339 0230 24020000 		.4byte	.LASF42
+ 339 0230 61020000 		.4byte	.LASF42
  340 0234 05       		.byte	0x5
  341 0235 A402     		.2byte	0x2a4
  342 0237 F1010000 		.4byte	0x1f1
@@ -763,7 +763,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  358 025c 72000000 		.4byte	0x72
  359 0260 00       		.byte	0
  360 0261 0C       		.uleb128 0xc
- 361 0262 8D010000 		.4byte	.LASF45
+ 361 0262 CA010000 		.4byte	.LASF45
  362 0266 05       		.byte	0x5
  363 0267 A303     		.2byte	0x3a3
  364 0269 03       		.byte	0x3
@@ -775,16 +775,16 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  370 0275 72000000 		.4byte	0x72
  371 0279 00       		.byte	0
  372 027a 0E       		.uleb128 0xe
- 373 027b 0C030000 		.4byte	.LASF73
+ 373 027b 49030000 		.4byte	.LASF73
  374 027f 02       		.byte	0x2
  375 0280 EE       		.byte	0xee
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 14
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 14
 
 
  376 0281 CA000000 		.4byte	0xca
  377 0285 03       		.byte	0x3
  378 0286 0C       		.uleb128 0xc
- 379 0287 AC020000 		.4byte	.LASF46
+ 379 0287 E9020000 		.4byte	.LASF46
  380 028b 05       		.byte	0x5
  381 028c A803     		.2byte	0x3a8
  382 028e 03       		.byte	0x3
@@ -796,19 +796,19 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  388 029a 72000000 		.4byte	0x72
  389 029e 00       		.byte	0
  390 029f 0F       		.uleb128 0xf
- 391 02a0 08040000 		.4byte	.LASF47
+ 391 02a0 05040000 		.4byte	.LASF47
  392 02a4 02       		.byte	0x2
  393 02a5 B7       		.byte	0xb7
  394 02a6 03       		.byte	0x3
  395 02a7 B7020000 		.4byte	0x2b7
  396 02ab 10       		.uleb128 0x10
- 397 02ac C2030000 		.4byte	.LASF48
+ 397 02ac BF030000 		.4byte	.LASF48
  398 02b0 02       		.byte	0x2
  399 02b1 B8       		.byte	0xb8
  400 02b2 3B020000 		.4byte	0x23b
  401 02b6 00       		.byte	0
  402 02b7 11       		.uleb128 0x11
- 403 02b8 EF000000 		.4byte	.LASF74
+ 403 02b8 2C010000 		.4byte	.LASF74
  404 02bc 01       		.byte	0x1
  405 02bd 3E       		.byte	0x3e
  406 02be 3B020000 		.4byte	0x23b
@@ -818,7 +818,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  410 02cb 9C       		.byte	0x9c
  411 02cc FD020000 		.4byte	0x2fd
  412 02d0 12       		.uleb128 0x12
- 413 02d1 37030000 		.4byte	.LASF75
+ 413 02d1 74030000 		.4byte	.LASF75
  414 02d5 01       		.byte	0x1
  415 02d6 3E       		.byte	0x3e
  416 02d7 E1000000 		.4byte	0xe1
@@ -837,8 +837,8 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  429 02fb 6E       		.byte	0x6e
  430 02fc 00       		.byte	0
  431 02fd 15       		.uleb128 0x15
- 432 02fe 78010000 		.4byte	.LASF49
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 15
+ 432 02fe B5010000 		.4byte	.LASF49
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 15
 
 
  433 0302 06       		.byte	0x6
@@ -854,12 +854,12 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  443 0318 23030000 		.4byte	0x323
  444 031c 17       		.uleb128 0x17
  445 031d 23030000 		.4byte	0x323
- 446 0321 02       		.byte	0x2
+ 446 0321 04       		.byte	0x4
  447 0322 00       		.byte	0
  448 0323 02       		.uleb128 0x2
  449 0324 04       		.byte	0x4
  450 0325 07       		.byte	0x7
- 451 0326 36040000 		.4byte	.LASF51
+ 451 0326 33040000 		.4byte	.LASF51
  452 032a 18       		.uleb128 0x18
  453 032b A9000000 		.4byte	0xa9
  454 032f 15       		.uleb128 0x15
@@ -870,7 +870,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  459 033a 18       		.uleb128 0x18
  460 033b 13030000 		.4byte	0x313
  461 033f 15       		.uleb128 0x15
- 462 0340 58040000 		.4byte	.LASF53
+ 462 0340 55040000 		.4byte	.LASF53
  463 0344 05       		.byte	0x5
  464 0345 B3       		.byte	0xb3
  465 0346 4A030000 		.4byte	0x34a
@@ -881,10 +881,10 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  470 0354 5F030000 		.4byte	0x35f
  471 0358 17       		.uleb128 0x17
  472 0359 23030000 		.4byte	0x323
- 473 035d 02       		.byte	0x2
+ 473 035d 04       		.byte	0x4
  474 035e 00       		.byte	0
  475 035f 15       		.uleb128 0x15
- 476 0360 4B040000 		.4byte	.LASF54
+ 476 0360 48040000 		.4byte	.LASF54
  477 0364 05       		.byte	0x5
  478 0365 CA       		.byte	0xca
  479 0366 4F030000 		.4byte	0x34f
@@ -893,18 +893,18 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  482 036f 7A030000 		.4byte	0x37a
  483 0373 17       		.uleb128 0x17
  484 0374 23030000 		.4byte	0x323
- 485 0378 02       		.byte	0x2
+ 485 0378 04       		.byte	0x4
  486 0379 00       		.byte	0
  487 037a 15       		.uleb128 0x15
- 488 037b 6C040000 		.4byte	.LASF55
+ 488 037b 69040000 		.4byte	.LASF55
  489 037f 05       		.byte	0x5
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 16
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 16
 
 
  490 0380 D2       		.byte	0xd2
  491 0381 6A030000 		.4byte	0x36a
  492 0385 15       		.uleb128 0x15
- 493 0386 2B030000 		.4byte	.LASF56
+ 493 0386 68030000 		.4byte	.LASF56
  494 038a 05       		.byte	0x5
  495 038b DA       		.byte	0xda
  496 038c 4F030000 		.4byte	0x34f
@@ -914,7 +914,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  500 0396 E2       		.byte	0xe2
  501 0397 CA000000 		.4byte	0xca
  502 039b 15       		.uleb128 0x15
- 503 039c 62020000 		.4byte	.LASF58
+ 503 039c 9F020000 		.4byte	.LASF58
  504 03a0 05       		.byte	0x5
  505 03a1 F7       		.byte	0xf7
  506 03a2 A9000000 		.4byte	0xa9
@@ -933,10 +933,10 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  519 03c3 CE030000 		.4byte	0x3ce
  520 03c7 17       		.uleb128 0x17
  521 03c8 23030000 		.4byte	0x323
- 522 03cc 02       		.byte	0x2
+ 522 03cc 04       		.byte	0x4
  523 03cd 00       		.byte	0
  524 03ce 19       		.uleb128 0x19
- 525 03cf 2F010000 		.4byte	.LASF61
+ 525 03cf 6C010000 		.4byte	.LASF61
  526 03d3 05       		.byte	0x5
  527 03d4 6701     		.2byte	0x167
  528 03d6 BE030000 		.4byte	0x3be
@@ -950,7 +950,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  536 03ea 18       		.uleb128 0x18
  537 03eb 48010000 		.4byte	0x148
  538 03ef 19       		.uleb128 0x19
- 539 03f0 8F020000 		.4byte	.LASF62
+ 539 03f0 CC020000 		.4byte	.LASF62
  540 03f4 05       		.byte	0x5
  541 03f5 CA02     		.2byte	0x2ca
  542 03f7 FB030000 		.4byte	0x3fb
@@ -958,18 +958,18 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  544 03fc DA030000 		.4byte	0x3da
  545 0400 16       		.uleb128 0x16
  546 0401 10040000 		.4byte	0x410
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 17
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 17
 
 
  547 0405 10040000 		.4byte	0x410
  548 0409 17       		.uleb128 0x17
  549 040a 23030000 		.4byte	0x323
- 550 040e 00       		.byte	0
+ 550 040e 04       		.byte	0x4
  551 040f 00       		.byte	0
  552 0410 18       		.uleb128 0x18
  553 0411 E5010000 		.4byte	0x1e5
  554 0415 19       		.uleb128 0x19
- 555 0416 40010000 		.4byte	.LASF63
+ 555 0416 7D010000 		.4byte	.LASF63
  556 041a 05       		.byte	0x5
  557 041b DD02     		.2byte	0x2dd
  558 041d 21040000 		.4byte	0x421
@@ -983,7 +983,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  566 0434 00       		.byte	0
  567 0435 00       		.byte	0
  568 0436 19       		.uleb128 0x19
- 569 0437 C8030000 		.4byte	.LASF64
+ 569 0437 C5030000 		.4byte	.LASF64
  570 043b 05       		.byte	0x5
  571 043c FB02     		.2byte	0x2fb
  572 043e 26040000 		.4byte	0x426
@@ -992,25 +992,25 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  575 0447 52040000 		.4byte	0x452
  576 044b 17       		.uleb128 0x17
  577 044c 23030000 		.4byte	0x323
- 578 0450 00       		.byte	0
+ 578 0450 04       		.byte	0x4
  579 0451 00       		.byte	0
  580 0452 19       		.uleb128 0x19
- 581 0453 C4020000 		.4byte	.LASF65
+ 581 0453 01030000 		.4byte	.LASF65
  582 0457 05       		.byte	0x5
  583 0458 0403     		.2byte	0x304
  584 045a 42040000 		.4byte	0x442
  585 045e 15       		.uleb128 0x15
- 586 045f 0E050000 		.4byte	.LASF66
+ 586 045f 11050000 		.4byte	.LASF66
  587 0463 08       		.byte	0x8
  588 0464 40       		.byte	0x40
  589 0465 A9000000 		.4byte	0xa9
  590 0469 15       		.uleb128 0x15
- 591 046a D1010000 		.4byte	.LASF67
+ 591 046a 0E020000 		.4byte	.LASF67
  592 046e 08       		.byte	0x8
  593 046f 47       		.byte	0x47
  594 0470 B4000000 		.4byte	0xb4
  595 0474 15       		.uleb128 0x15
- 596 0475 D7030000 		.4byte	.LASF68
+ 596 0475 D4030000 		.4byte	.LASF68
  597 0479 08       		.byte	0x8
  598 047a 4A       		.byte	0x4a
  599 047b A9000000 		.4byte	0xa9
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  601 0480 8F040000 		.4byte	0x48f
  602 0484 8F040000 		.4byte	0x48f
  603 0488 17       		.uleb128 0x17
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 18
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 18
 
 
  604 0489 23030000 		.4byte	0x323
@@ -1027,7 +1027,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  607 048f 18       		.uleb128 0x18
  608 0490 7D000000 		.4byte	0x7d
  609 0494 19       		.uleb128 0x19
- 610 0495 2B050000 		.4byte	.LASF69
+ 610 0495 2E050000 		.4byte	.LASF69
  611 0499 02       		.byte	0x2
  612 049a AB01     		.2byte	0x1ab
  613 049c A0040000 		.4byte	0x4a0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  658 0027 00       		.byte	0
  659 0028 00       		.byte	0
  660 0029 04       		.uleb128 0x4
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 19
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 19
 
 
  661 002a 16       		.uleb128 0x16
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  715 0060 3B       		.uleb128 0x3b
  716 0061 05       		.uleb128 0x5
  717 0062 49       		.uleb128 0x49
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 20
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 20
 
 
  718 0063 13       		.uleb128 0x13
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  772 0099 19       		.uleb128 0x19
  773 009a 20       		.uleb128 0x20
  774 009b 0B       		.uleb128 0xb
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 21
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 21
 
 
  775 009c 01       		.uleb128 0x1
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  829 00d2 03       		.uleb128 0x3
  830 00d3 0E       		.uleb128 0xe
  831 00d4 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 22
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 22
 
 
  832 00d5 0B       		.uleb128 0xb
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  886 010c 3A       		.uleb128 0x3a
  887 010d 0B       		.uleb128 0xb
  888 010e 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 23
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 23
 
 
  889 010f 0B       		.uleb128 0xb
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  943 0145 0B       		.uleb128 0xb
  944 0146 00       		.byte	0
  945 0147 00       		.byte	0
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 24
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 24
 
 
  946 0148 18       		.uleb128 0x18
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  1000 003e 0C000000 		.4byte	.LVL3
  1001 0042 0200     		.2byte	0x2
  1002 0044 30       		.byte	0x30
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 25
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 25
 
 
  1003 0045 9F       		.byte	0x9f
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  1042 003d 7469636B 		.ascii	"ticksperbase\000"
  1042      73706572 
  1042      62617365 
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 26
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 26
 
 
  1042      00
@@ -1558,319 +1558,319 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 1
  1068 00e0 6D696E63 		.ascii	"mincycle\000"
  1068      79636C65 
  1068      00
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 27
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 27
 
 
- 1069              	.LASF28:
- 1070 00e9 76616C75 		.ascii	"value\000"
- 1070      6500
- 1071              	.LASF74:
- 1072 00ef 45455F6F 		.ascii	"EE_oo_GetTaskID\000"
- 1072      6F5F4765 
- 1072      74546173 
- 1072      6B494400 
- 1073              	.LASF71:
- 1074 00ff 47656E65 		.ascii	"Generated_Source\\PSoC5\\ErikaOS_1_ee_gettaskid.c\000"
- 1074      72617465 
- 1074      645F536F 
- 1074      75726365 
- 1074      5C50536F 
- 1075              	.LASF61:
- 1076 012f 45455F74 		.ascii	"EE_th_waswaiting\000"
- 1076      685F7761 
- 1076      73776169 
- 1076      74696E67 
- 1076      00
- 1077              	.LASF63:
- 1078 0140 45455F6F 		.ascii	"EE_oo_counter_object_ROM\000"
- 1078      6F5F636F 
- 1078      756E7465 
- 1078      725F6F62 
- 1078      6A656374 
- 1079              	.LASF33:
- 1080 0159 45455F6F 		.ascii	"EE_oo_counter_object_kind_type\000"
- 1080      6F5F636F 
- 1080      756E7465 
- 1080      725F6F62 
- 1080      6A656374 
- 1081              	.LASF49:
- 1082 0178 45455F49 		.ascii	"EE_IRQ_nesting_level\000"
- 1082      52515F6E 
- 1082      65737469 
- 1082      6E675F6C 
- 1082      6576656C 
- 1083              	.LASF45:
- 1084 018d 45455F4F 		.ascii	"EE_ORTI_set_service_in\000"
- 1084      5254495F 
- 1084      7365745F 
- 1084      73657276 
- 1084      6963655F 
- 1085              	.LASF30:
- 1086 01a4 45455F6F 		.ascii	"EE_oo_counter_RAM_type\000"
- 1086      6F5F636F 
- 1086      756E7465 
- 1086      725F5241 
- 1086      4D5F7479 
- 1087              	.LASF6:
- 1088 01bb 6C6F6E67 		.ascii	"long long int\000"
- 1088      206C6F6E 
- 1088      6720696E 
- 1088      7400
- 1089              	.LASF11:
- 1090 01c9 45455F49 		.ascii	"EE_INT8\000"
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 28
+ 1069              	.LASF72:
+ 1070 00e9 443A5C45 		.ascii	"D:\\Embedded\\Assignment02\\Lab02\\AMA_EOS_Lab_02\\"
+ 1070      6D626564 
+ 1070      6465645C 
+ 1070      41737369 
+ 1070      676E6D65 
+ 1071 0117 414D415F 		.ascii	"AMA_EOS_Lab_02.cydsn\000"
+ 1071      454F535F 
+ 1071      4C61625F 
+ 1071      30322E63 
+ 1071      7964736E 
+ 1072              	.LASF74:
+ 1073 012c 45455F6F 		.ascii	"EE_oo_GetTaskID\000"
+ 1073      6F5F4765 
+ 1073      74546173 
+ 1073      6B494400 
+ 1074              	.LASF71:
+ 1075 013c 47656E65 		.ascii	"Generated_Source\\PSoC5\\ErikaOS_1_ee_gettaskid.c\000"
+ 1075      72617465 
+ 1075      645F536F 
+ 1075      75726365 
+ 1075      5C50536F 
+ 1076              	.LASF61:
+ 1077 016c 45455F74 		.ascii	"EE_th_waswaiting\000"
+ 1077      685F7761 
+ 1077      73776169 
+ 1077      74696E67 
+ 1077      00
+ 1078              	.LASF63:
+ 1079 017d 45455F6F 		.ascii	"EE_oo_counter_object_ROM\000"
+ 1079      6F5F636F 
+ 1079      756E7465 
+ 1079      725F6F62 
+ 1079      6A656374 
+ 1080              	.LASF33:
+ 1081 0196 45455F6F 		.ascii	"EE_oo_counter_object_kind_type\000"
+ 1081      6F5F636F 
+ 1081      756E7465 
+ 1081      725F6F62 
+ 1081      6A656374 
+ 1082              	.LASF49:
+ 1083 01b5 45455F49 		.ascii	"EE_IRQ_nesting_level\000"
+ 1083      52515F6E 
+ 1083      65737469 
+ 1083      6E675F6C 
+ 1083      6576656C 
+ 1084              	.LASF45:
+ 1085 01ca 45455F4F 		.ascii	"EE_ORTI_set_service_in\000"
+ 1085      5254495F 
+ 1085      7365745F 
+ 1085      73657276 
+ 1085      6963655F 
+ 1086              	.LASF30:
+ 1087 01e1 45455F6F 		.ascii	"EE_oo_counter_RAM_type\000"
+ 1087      6F5F636F 
+ 1087      756E7465 
+ 1087      725F5241 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 28
 
 
- 1090      4E543800 
- 1091              	.LASF67:
- 1092 01d1 45455F6F 		.ascii	"EE_oo_IRQ_suspend_status\000"
- 1092      6F5F4952 
- 1092      515F7375 
- 1092      7370656E 
- 1092      645F7374 
- 1093              	.LASF19:
- 1094 01ea 45455F54 		.ascii	"EE_TYPE_RQ_MASK\000"
- 1094      5950455F 
- 1094      52515F4D 
- 1094      41534B00 
- 1095              	.LASF32:
- 1096 01fa 45455F53 		.ascii	"EE_SCHEDULETABLE\000"
- 1096      43484544 
- 1096      554C4554 
- 1096      41424C45 
- 1096      00
- 1097              	.LASF4:
- 1098 020b 6C6F6E67 		.ascii	"long int\000"
- 1098      20696E74 
- 1098      00
- 1099              	.LASF24:
- 1100 0214 6D617861 		.ascii	"maxallowedvalue\000"
- 1100      6C6C6F77 
- 1100      65647661 
- 1100      6C756500 
- 1101              	.LASF42:
- 1102 0224 45455F6F 		.ascii	"EE_oo_counter_object_RAM_type\000"
- 1102      6F5F636F 
- 1102      756E7465 
- 1102      725F6F62 
- 1102      6A656374 
- 1103              	.LASF27:
- 1104 0242 45455F6F 		.ascii	"EE_oo_counter_ROM_type\000"
- 1104      6F5F636F 
- 1104      756E7465 
- 1104      725F524F 
- 1104      4D5F7479 
- 1105              	.LASF21:
- 1106 0259 5469636B 		.ascii	"TickType\000"
- 1106      54797065 
- 1106      00
- 1107              	.LASF58:
- 1108 0262 45455F73 		.ascii	"EE_sys_ceiling\000"
- 1108      79735F63 
- 1108      65696C69 
- 1108      6E6700
- 1109              	.LASF22:
- 1110 0271 436F756E 		.ascii	"CounterObjectType\000"
- 1110      7465724F 
- 1110      626A6563 
- 1110      74547970 
- 1110      6500
- 1111              	.LASF9:
- 1112 0283 6C6F6E67 		.ascii	"long double\000"
- 1112      20646F75 
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 29
+ 1087      4D5F7479 
+ 1088              	.LASF6:
+ 1089 01f8 6C6F6E67 		.ascii	"long long int\000"
+ 1089      206C6F6E 
+ 1089      6720696E 
+ 1089      7400
+ 1090              	.LASF11:
+ 1091 0206 45455F49 		.ascii	"EE_INT8\000"
+ 1091      4E543800 
+ 1092              	.LASF67:
+ 1093 020e 45455F6F 		.ascii	"EE_oo_IRQ_suspend_status\000"
+ 1093      6F5F4952 
+ 1093      515F7375 
+ 1093      7370656E 
+ 1093      645F7374 
+ 1094              	.LASF19:
+ 1095 0227 45455F54 		.ascii	"EE_TYPE_RQ_MASK\000"
+ 1095      5950455F 
+ 1095      52515F4D 
+ 1095      41534B00 
+ 1096              	.LASF32:
+ 1097 0237 45455F53 		.ascii	"EE_SCHEDULETABLE\000"
+ 1097      43484544 
+ 1097      554C4554 
+ 1097      41424C45 
+ 1097      00
+ 1098              	.LASF4:
+ 1099 0248 6C6F6E67 		.ascii	"long int\000"
+ 1099      20696E74 
+ 1099      00
+ 1100              	.LASF24:
+ 1101 0251 6D617861 		.ascii	"maxallowedvalue\000"
+ 1101      6C6C6F77 
+ 1101      65647661 
+ 1101      6C756500 
+ 1102              	.LASF42:
+ 1103 0261 45455F6F 		.ascii	"EE_oo_counter_object_RAM_type\000"
+ 1103      6F5F636F 
+ 1103      756E7465 
+ 1103      725F6F62 
+ 1103      6A656374 
+ 1104              	.LASF27:
+ 1105 027f 45455F6F 		.ascii	"EE_oo_counter_ROM_type\000"
+ 1105      6F5F636F 
+ 1105      756E7465 
+ 1105      725F524F 
+ 1105      4D5F7479 
+ 1106              	.LASF21:
+ 1107 0296 5469636B 		.ascii	"TickType\000"
+ 1107      54797065 
+ 1107      00
+ 1108              	.LASF58:
+ 1109 029f 45455F73 		.ascii	"EE_sys_ceiling\000"
+ 1109      79735F63 
+ 1109      65696C69 
+ 1109      6E6700
+ 1110              	.LASF22:
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 29
 
 
- 1112      626C6500 
- 1113              	.LASF62:
- 1114 028f 45455F63 		.ascii	"EE_counter_ROM\000"
- 1114      6F756E74 
- 1114      65725F52 
- 1114      4F4D00
- 1115              	.LASF1:
- 1116 029e 756E7369 		.ascii	"unsigned char\000"
- 1116      676E6564 
- 1116      20636861 
- 1116      7200
- 1117              	.LASF46:
- 1118 02ac 45455F4F 		.ascii	"EE_ORTI_set_service_out\000"
- 1118      5254495F 
- 1118      7365745F 
- 1118      73657276 
- 1118      6963655F 
- 1119              	.LASF65:
- 1120 02c4 45455F6F 		.ascii	"EE_oo_counter_object_RAM\000"
- 1120      6F5F636F 
- 1120      756E7465 
- 1120      725F6F62 
- 1120      6A656374 
- 1121              	.LASF0:
- 1122 02dd 7369676E 		.ascii	"signed char\000"
- 1122      65642063 
- 1122      68617200 
- 1123              	.LASF7:
- 1124 02e9 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1124      206C6F6E 
- 1124      6720756E 
- 1124      7369676E 
- 1124      65642069 
- 1125              	.LASF20:
- 1126 0300 5461736B 		.ascii	"TaskRefType\000"
- 1126      52656654 
- 1126      79706500 
- 1127              	.LASF73:
- 1128 030c 45455F73 		.ascii	"EE_stk_queryfirst\000"
- 1128      746B5F71 
- 1128      75657279 
- 1128      66697273 
- 1128      7400
- 1129              	.LASF8:
- 1130 031e 756E7369 		.ascii	"unsigned int\000"
- 1130      676E6564 
- 1130      20696E74 
- 1130      00
- 1131              	.LASF56:
- 1132 032b 45455F74 		.ascii	"EE_th_rnact\000"
- 1132      685F726E 
- 1132      61637400 
- 1133              	.LASF75:
- 1134 0337 5461736B 		.ascii	"TaskID\000"
- 1134      494400
- 1135              	.LASF13:
- 1136 033e 45455F49 		.ascii	"EE_INT32\000"
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 30
+ 1111 02ae 436F756E 		.ascii	"CounterObjectType\000"
+ 1111      7465724F 
+ 1111      626A6563 
+ 1111      74547970 
+ 1111      6500
+ 1112              	.LASF9:
+ 1113 02c0 6C6F6E67 		.ascii	"long double\000"
+ 1113      20646F75 
+ 1113      626C6500 
+ 1114              	.LASF62:
+ 1115 02cc 45455F63 		.ascii	"EE_counter_ROM\000"
+ 1115      6F756E74 
+ 1115      65725F52 
+ 1115      4F4D00
+ 1116              	.LASF1:
+ 1117 02db 756E7369 		.ascii	"unsigned char\000"
+ 1117      676E6564 
+ 1117      20636861 
+ 1117      7200
+ 1118              	.LASF46:
+ 1119 02e9 45455F4F 		.ascii	"EE_ORTI_set_service_out\000"
+ 1119      5254495F 
+ 1119      7365745F 
+ 1119      73657276 
+ 1119      6963655F 
+ 1120              	.LASF65:
+ 1121 0301 45455F6F 		.ascii	"EE_oo_counter_object_RAM\000"
+ 1121      6F5F636F 
+ 1121      756E7465 
+ 1121      725F6F62 
+ 1121      6A656374 
+ 1122              	.LASF0:
+ 1123 031a 7369676E 		.ascii	"signed char\000"
+ 1123      65642063 
+ 1123      68617200 
+ 1124              	.LASF7:
+ 1125 0326 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1125      206C6F6E 
+ 1125      6720756E 
+ 1125      7369676E 
+ 1125      65642069 
+ 1126              	.LASF20:
+ 1127 033d 5461736B 		.ascii	"TaskRefType\000"
+ 1127      52656654 
+ 1127      79706500 
+ 1128              	.LASF73:
+ 1129 0349 45455F73 		.ascii	"EE_stk_queryfirst\000"
+ 1129      746B5F71 
+ 1129      75657279 
+ 1129      66697273 
+ 1129      7400
+ 1130              	.LASF8:
+ 1131 035b 756E7369 		.ascii	"unsigned int\000"
+ 1131      676E6564 
+ 1131      20696E74 
+ 1131      00
+ 1132              	.LASF56:
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 30
 
 
- 1136      4E543332 
- 1136      00
- 1137              	.LASF72:
- 1138 0347 443A5C45 		.ascii	"D:\\Embedded\\Assignment02\\Lab02\\Workspace01\\AMA"
- 1138      6D626564 
- 1138      6465645C 
- 1138      41737369 
- 1138      676E6D65 
- 1139 0375 5F454F53 		.ascii	"_EOS_Lab_02.cydsn\000"
- 1139      5F4C6162 
- 1139      5F30322E 
- 1139      63796473 
- 1139      6E00
+ 1133 0368 45455F74 		.ascii	"EE_th_rnact\000"
+ 1133      685F726E 
+ 1133      61637400 
+ 1134              	.LASF75:
+ 1135 0374 5461736B 		.ascii	"TaskID\000"
+ 1135      494400
+ 1136              	.LASF13:
+ 1137 037b 45455F49 		.ascii	"EE_INT32\000"
+ 1137      4E543332 
+ 1137      00
+ 1138              	.LASF3:
+ 1139 0384 73686F72 		.ascii	"short unsigned int\000"
+ 1139      7420756E 
+ 1139      7369676E 
+ 1139      65642069 
+ 1139      6E7400
  1140              	.LASF37:
- 1141 0387 45455F6F 		.ascii	"EE_oo_counter_object_ROM_type\000"
+ 1141 0397 45455F6F 		.ascii	"EE_oo_counter_object_ROM_type\000"
  1141      6F5F636F 
  1141      756E7465 
  1141      725F6F62 
  1141      6A656374 
  1142              	.LASF12:
- 1143 03a5 45455F55 		.ascii	"EE_UINT16\000"
+ 1143 03b5 45455F55 		.ascii	"EE_UINT16\000"
  1143      494E5431 
  1143      3600
- 1144              	.LASF3:
- 1145 03af 73686F72 		.ascii	"short unsigned int\000"
- 1145      7420756E 
- 1145      7369676E 
- 1145      65642069 
- 1145      6E7400
- 1146              	.LASF48:
- 1147 03c2 4572726F 		.ascii	"Error\000"
- 1147      7200
- 1148              	.LASF64:
- 1149 03c8 45455F63 		.ascii	"EE_counter_RAM\000"
- 1149      6F756E74 
- 1149      65725F52 
- 1149      414D00
- 1150              	.LASF68:
- 1151 03d7 45455F41 		.ascii	"EE_ApplicationMode\000"
- 1151      70706C69 
- 1151      63617469 
- 1151      6F6E4D6F 
- 1151      646500
- 1152              	.LASF5:
- 1153 03ea 6C6F6E67 		.ascii	"long unsigned int\000"
- 1153      20756E73 
- 1153      69676E65 
- 1153      6420696E 
- 1153      7400
- 1154              	.LASF17:
- 1155 03fc 45455F54 		.ascii	"EE_TYPEBOOL\000"
- 1155      59504542 
- 1155      4F4F4C00 
- 1156              	.LASF47:
- 1157 0408 45455F6F 		.ascii	"EE_os_notify_error_from_us_impl\000"
- 1157      735F6E6F 
- 1157      74696679 
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 31
+ 1144              	.LASF48:
+ 1145 03bf 4572726F 		.ascii	"Error\000"
+ 1145      7200
+ 1146              	.LASF64:
+ 1147 03c5 45455F63 		.ascii	"EE_counter_RAM\000"
+ 1147      6F756E74 
+ 1147      65725F52 
+ 1147      414D00
+ 1148              	.LASF68:
+ 1149 03d4 45455F41 		.ascii	"EE_ApplicationMode\000"
+ 1149      70706C69 
+ 1149      63617469 
+ 1149      6F6E4D6F 
+ 1149      646500
+ 1150              	.LASF5:
+ 1151 03e7 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1151      20756E73 
+ 1151      69676E65 
+ 1151      6420696E 
+ 1151      7400
+ 1152              	.LASF17:
+ 1153 03f9 45455F54 		.ascii	"EE_TYPEBOOL\000"
+ 1153      59504542 
+ 1153      4F4F4C00 
+ 1154              	.LASF47:
+ 1155 0405 45455F6F 		.ascii	"EE_os_notify_error_from_us_impl\000"
+ 1155      735F6E6F 
+ 1155      74696679 
+ 1155      5F657272 
+ 1155      6F725F66 
+ 1156              	.LASF31:
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 31
 
 
- 1157      5F657272 
- 1157      6F725F66 
- 1158              	.LASF31:
- 1159 0428 45455F41 		.ascii	"EE_ALARM\000"
- 1159      4C41524D 
+ 1157 0425 45455F41 		.ascii	"EE_ALARM\000"
+ 1157      4C41524D 
+ 1157      00
+ 1158              	.LASF38:
+ 1159 042e 75736564 		.ascii	"used\000"
  1159      00
- 1160              	.LASF38:
- 1161 0431 75736564 		.ascii	"used\000"
+ 1160              	.LASF51:
+ 1161 0433 73697A65 		.ascii	"sizetype\000"
+ 1161      74797065 
  1161      00
- 1162              	.LASF51:
- 1163 0436 73697A65 		.ascii	"sizetype\000"
- 1163      74797065 
- 1163      00
- 1164              	.LASF23:
- 1165 043f 436F756E 		.ascii	"CounterType\000"
- 1165      74657254 
- 1165      79706500 
- 1166              	.LASF54:
- 1167 044b 45455F74 		.ascii	"EE_th_status\000"
- 1167      685F7374 
- 1167      61747573 
- 1167      00
- 1168              	.LASF53:
- 1169 0458 45455F74 		.ascii	"EE_th_dispatch_prio\000"
- 1169      685F6469 
- 1169      73706174 
- 1169      63685F70 
- 1169      72696F00 
- 1170              	.LASF55:
- 1171 046c 45455F74 		.ascii	"EE_th_next\000"
- 1171      685F6E65 
- 1171      787400
- 1172              	.LASF70:
- 1173 0477 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1173      43313120 
- 1173      352E342E 
- 1173      31203230 
- 1173      31363036 
- 1174 04aa 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 1174      20726576 
- 1174      6973696F 
- 1174      6E203233 
- 1174      37373135 
- 1175 04dd 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1175      66756E63 
- 1175      74696F6E 
- 1175      2D736563 
- 1175      74696F6E 
- 1176              	.LASF39:
- 1177 0505 636E7463 		.ascii	"cntcycle\000"
- 1177      79636C65 
- 1177      00
+ 1162              	.LASF23:
+ 1163 043c 436F756E 		.ascii	"CounterType\000"
+ 1163      74657254 
+ 1163      79706500 
+ 1164              	.LASF54:
+ 1165 0448 45455F74 		.ascii	"EE_th_status\000"
+ 1165      685F7374 
+ 1165      61747573 
+ 1165      00
+ 1166              	.LASF53:
+ 1167 0455 45455F74 		.ascii	"EE_th_dispatch_prio\000"
+ 1167      685F6469 
+ 1167      73706174 
+ 1167      63685F70 
+ 1167      72696F00 
+ 1168              	.LASF55:
+ 1169 0469 45455F74 		.ascii	"EE_th_next\000"
+ 1169      685F6E65 
+ 1169      787400
+ 1170              	.LASF70:
+ 1171 0474 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1171      43313120 
+ 1171      352E342E 
+ 1171      31203230 
+ 1171      31363036 
+ 1172 04a7 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1172      20726576 
+ 1172      6973696F 
+ 1172      6E203233 
+ 1172      37373135 
+ 1173 04da 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1173      66756E63 
+ 1173      74696F6E 
+ 1173      2D736563 
+ 1173      74696F6E 
+ 1174              	.LASF39:
+ 1175 0502 636E7463 		.ascii	"cntcycle\000"
+ 1175      79636C65 
+ 1175      00
+ 1176              	.LASF28:
+ 1177 050b 76616C75 		.ascii	"value\000"
+ 1177      6500
  1178              	.LASF66:
- 1179 050e 45455F6F 		.ascii	"EE_oo_IRQ_disable_count\000"
+ 1179 0511 45455F6F 		.ascii	"EE_oo_IRQ_disable_count\000"
  1179      6F5F4952 
  1179      515F6469 
  1179      7361626C 
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc8YGa8s.s 			page 32
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccCs0DlW.s 			page 32
 
 
  1179      655F636F 
  1180              	.LASF41:
- 1181 0526 6E657874 		.ascii	"next\000"
+ 1181 0529 6E657874 		.ascii	"next\000"
  1181      00
  1182              	.LASF69:
- 1183 052b 45455F72 		.ascii	"EE_rq_lookup\000"
+ 1183 052e 45455F72 		.ascii	"EE_rq_lookup\000"
  1183      715F6C6F 
  1183      6F6B7570 
  1183      00
  1184              	.LASF29:
- 1185 0538 66697273 		.ascii	"first\000"
+ 1185 053b 66697273 		.ascii	"first\000"
  1185      7400
  1186              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

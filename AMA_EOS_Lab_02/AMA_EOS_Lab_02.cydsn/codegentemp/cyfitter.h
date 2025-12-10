@@ -1305,15 +1305,15 @@
 #define RGB_PWM_green_PWMUDB_sP16_pwmdp_u1__MSK_DP_AUX_CTL_REG CYREG_B0_UDB13_MSK_ACTL
 #define RGB_PWM_green_PWMUDB_sP16_pwmdp_u1__PER_DP_AUX_CTL_REG CYREG_B0_UDB13_MSK_ACTL
 
-/* isr_Button_Pressed */
-#define isr_Button_Pressed__INTC_CLR_EN_REG CYREG_NVIC_CLRENA0
-#define isr_Button_Pressed__INTC_CLR_PD_REG CYREG_NVIC_CLRPEND0
-#define isr_Button_Pressed__INTC_MASK 0x02u
-#define isr_Button_Pressed__INTC_NUMBER 1u
-#define isr_Button_Pressed__INTC_PRIOR_NUM 7u
-#define isr_Button_Pressed__INTC_PRIOR_REG CYREG_NVIC_PRI_1
-#define isr_Button_Pressed__INTC_SET_EN_REG CYREG_NVIC_SETENA0
-#define isr_Button_Pressed__INTC_SET_PD_REG CYREG_NVIC_SETPEND0
+/* isr_buttonPressed */
+#define isr_buttonPressed__INTC_CLR_EN_REG CYREG_NVIC_CLRENA0
+#define isr_buttonPressed__INTC_CLR_PD_REG CYREG_NVIC_CLRPEND0
+#define isr_buttonPressed__INTC_MASK 0x02u
+#define isr_buttonPressed__INTC_NUMBER 1u
+#define isr_buttonPressed__INTC_PRIOR_NUM 7u
+#define isr_buttonPressed__INTC_PRIOR_REG CYREG_NVIC_PRI_1
+#define isr_buttonPressed__INTC_SET_EN_REG CYREG_NVIC_SETENA0
+#define isr_buttonPressed__INTC_SET_PD_REG CYREG_NVIC_SETPEND0
 
 /* Miscellaneous */
 #define BCLK__BUS_CLK__HZ 24000000U

@@ -11,25 +11,25 @@
 */
     #define EE_MAX_EVENT 5
     #if 5 > 0
-    #define ev_leftButton 0x1U
+    #define ev_waitOver 0x1U
     #endif
     #if 5 > 1
-    #define ev_rightButton 0x2U
+    #define ev_leftButton 0x2U
     #endif
     #if 5 > 2
-    #define ev_reset 0x4U
+    #define ev_rightButton 0x4U
     #endif
     #if 5 > 3
     #define ev_slow 0x8U
     #endif
     #if 5 > 4
-    #define ev_score 0x10U
+    #define ev_reset 0x10U
     #endif
     #if 5 > 5
-    #define ev_score 0x20U
+    #define Event_6 0x20U
     #endif
     #if 5 > 6
-    #define ev_score 0x40U
+    #define Event_7 0x40U
     #endif
     #if 5 > 7
     #define Event_8 0x80U

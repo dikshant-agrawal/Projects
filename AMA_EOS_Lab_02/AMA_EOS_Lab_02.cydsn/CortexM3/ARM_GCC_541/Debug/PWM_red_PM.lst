@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc1IaVM3.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
   28:Generated_Source\PSoC5/PWM_red_PM.c **** *  Saves the current user configuration of the component.
   29:Generated_Source\PSoC5/PWM_red_PM.c **** *
   30:Generated_Source\PSoC5/PWM_red_PM.c **** * Parameters:
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 2
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc1IaVM3.s 			page 2
 
 
   31:Generated_Source\PSoC5/PWM_red_PM.c **** *  None
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
   64:Generated_Source\PSoC5/PWM_red_PM.c ****             PWM_red_backup.PWMControlRegister = PWM_red_ReadControlRegister();
   49              		.loc 1 64 0
   50 0016 FFF7FEFF 		bl	PWM_red_ReadControlRegister
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 3
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc1IaVM3.s 			page 3
 
 
   51              	.LVL2:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
   92:Generated_Source\PSoC5/PWM_red_PM.c ****                 PWM_red_WritePeriod(PWM_red_backup.PWMPeriod);
   78              		.loc 1 92 0
   79 0002 074C     		ldr	r4, .L7
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 4
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc1IaVM3.s 			page 4
 
 
   80 0004 A088     		ldrh	r0, [r4, #4]
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
  115:Generated_Source\PSoC5/PWM_red_PM.c **** 
  116:Generated_Source\PSoC5/PWM_red_PM.c **** 
  117:Generated_Source\PSoC5/PWM_red_PM.c **** /*******************************************************************************
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 5
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc1IaVM3.s 			page 5
 
 
  118:Generated_Source\PSoC5/PWM_red_PM.c **** * Function Name: PWM_red_Sleep
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
  148:Generated_Source\PSoC5/PWM_red_PM.c ****         }
  149:Generated_Source\PSoC5/PWM_red_PM.c ****     #endif /* (PWM_red_UseControl) */
  150:Generated_Source\PSoC5/PWM_red_PM.c **** 
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 6
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc1IaVM3.s 			page 6
 
 
  151:Generated_Source\PSoC5/PWM_red_PM.c ****     /* Stop component */
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
  161              		@ args = 0, pretend = 0, frame = 0
  162              		@ frame_needed = 0, uses_anonymous_args = 0
  163 0000 08B5     		push	{r3, lr}
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 7
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc1IaVM3.s 			page 7
 
 
  164              		.cfi_def_cfa_offset 8
@@ -411,14 +411,14 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
  203 000b 01       		.uleb128 0x1
  204 000c 95000000 		.4byte	.LASF35
  205 0010 0C       		.byte	0xc
- 206 0011 19020000 		.4byte	.LASF36
- 207 0015 B1020000 		.4byte	.LASF37
+ 206 0011 5C020000 		.4byte	.LASF36
+ 207 0015 04020000 		.4byte	.LASF37
  208 0019 00000000 		.4byte	.Ldebug_ranges0+0
  209 001d 00000000 		.4byte	0
  210 0021 00000000 		.4byte	.Ldebug_line0
  211 0025 02       		.uleb128 0x2
  212 0026 01       		.byte	0x1
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 8
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc1IaVM3.s 			page 8
 
 
  213 0027 06       		.byte	0x6
@@ -430,7 +430,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
  219 0033 02       		.uleb128 0x2
  220 0034 02       		.byte	0x2
  221 0035 05       		.byte	0x5
- 222 0036 3D020000 		.4byte	.LASF2
+ 222 0036 80020000 		.4byte	.LASF2
  223 003a 02       		.uleb128 0x2
  224 003b 02       		.byte	0x2
  225 003c 07       		.byte	0x7
@@ -438,7 +438,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
  227 0041 02       		.uleb128 0x2
  228 0042 04       		.byte	0x4
  229 0043 05       		.byte	0x5
- 230 0044 47020000 		.4byte	.LASF4
+ 230 0044 8A020000 		.4byte	.LASF4
  231 0048 02       		.uleb128 0x2
  232 0049 04       		.byte	0x4
  233 004a 07       		.byte	0x7
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
  267 008c 04       		.byte	0x4
  268 008d 6E010000 		.4byte	.LASF12
  269 0091 02       		.uleb128 0x2
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 9
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc1IaVM3.s 			page 9
 
 
  270 0092 01       		.byte	0x1
@@ -494,7 +494,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
  280 00a9 02       		.uleb128 0x2
  281 00aa 08       		.byte	0x8
  282 00ab 04       		.byte	0x4
- 283 00ac 66020000 		.4byte	.LASF15
+ 283 00ac A9020000 		.4byte	.LASF15
  284 00b0 02       		.uleb128 0x2
  285 00b1 04       		.byte	0x4
  286 00b2 07       		.byte	0x7
@@ -523,7 +523,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
  309 00de 77000000 		.4byte	0x77
  310 00e2 04       		.byte	0x4
  311 00e3 07       		.uleb128 0x7
- 312 00e4 F1020000 		.4byte	.LASF20
+ 312 00e4 F4020000 		.4byte	.LASF20
  313 00e8 03       		.byte	0x3
  314 00e9 76       		.byte	0x76
  315 00ea 6B000000 		.4byte	0x6b
@@ -536,15 +536,15 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
  322 00fa 07       		.byte	0x7
  323 00fb 00       		.byte	0
  324 00fc 08       		.uleb128 0x8
- 325 00fd 04020000 		.4byte	.LASF22
+ 325 00fd 47020000 		.4byte	.LASF22
  326 0101 03       		.byte	0x3
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 10
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc1IaVM3.s 			page 10
 
 
  327 0102 8B       		.byte	0x8b
  328 0103 B7000000 		.4byte	0xb7
  329 0107 09       		.uleb128 0x9
- 330 0108 9E020000 		.4byte	.LASF23
+ 330 0108 E1020000 		.4byte	.LASF23
  331 010c 01       		.byte	0x1
  332 010d 2A       		.byte	0x2a
  333 010e 00000000 		.4byte	.LFB0
@@ -563,7 +563,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
  346 0133 E0010000 		.4byte	0x1e0
  347 0137 00       		.byte	0
  348 0138 09       		.uleb128 0x9
- 349 0139 50020000 		.4byte	.LASF24
+ 349 0139 93020000 		.4byte	.LASF24
  350 013d 01       		.byte	0x1
  351 013e 58       		.byte	0x58
  352 013f 00000000 		.4byte	.LFB1
@@ -598,10 +598,10 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
  381 018c 07010000 		.4byte	0x107
  382 0190 00       		.byte	0
  383 0191 09       		.uleb128 0x9
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 11
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc1IaVM3.s 			page 11
 
 
- 384 0192 72020000 		.4byte	.LASF26
+ 384 0192 B5020000 		.4byte	.LASF26
  385 0196 01       		.byte	0x1
  386 0197 B2       		.byte	0xb2
  387 0198 00000000 		.4byte	.LFB3
@@ -650,15 +650,15 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
  430 01ff 03       		.byte	0x3
  431 0200 BA       		.byte	0xba
  432 0201 0C       		.uleb128 0xc
- 433 0202 81020000 		.4byte	.LASF32
- 434 0206 81020000 		.4byte	.LASF32
+ 433 0202 C4020000 		.4byte	.LASF32
+ 434 0206 C4020000 		.4byte	.LASF32
  435 020a 03       		.byte	0x3
  436 020b 9E       		.byte	0x9e
  437 020c 0C       		.uleb128 0xc
  438 020d 61010000 		.4byte	.LASF33
  439 0211 61010000 		.4byte	.LASF33
  440 0215 03       		.byte	0x3
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 12
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc1IaVM3.s 			page 12
 
 
  441 0216 93       		.byte	0x93
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
  495 002d 0E       		.uleb128 0xe
  496 002e 3A       		.uleb128 0x3a
  497 002f 0B       		.uleb128 0xb
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 13
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc1IaVM3.s 			page 13
 
 
  498 0030 3B       		.uleb128 0x3b
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
  552 0066 09       		.uleb128 0x9
  553 0067 2E       		.uleb128 0x2e
  554 0068 01       		.byte	0x1
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 14
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc1IaVM3.s 			page 14
 
 
  555 0069 3F       		.uleb128 0x3f
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
  609 00a2 0E       		.uleb128 0xe
  610 00a3 03       		.uleb128 0x3
  611 00a4 0E       		.uleb128 0xe
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 15
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc1IaVM3.s 			page 15
 
 
  612 00a5 3A       		.uleb128 0x3a
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
  657      6261636B 
  657      757000
  658              	.LASF21:
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 16
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc1IaVM3.s 			page 16
 
 
  659 0020 50574D43 		.ascii	"PWMControlRegister\000"
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
  677      65537461 
  677      746500
  678              	.LASF31:
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 17
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc1IaVM3.s 			page 17
 
 
  679 0132 50574D5F 		.ascii	"PWM_red_WriteCounter\000"
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
  701 01d5 72656738 		.ascii	"reg8\000"
  701      00
  702              	.LASF16:
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 18
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc1IaVM3.s 			page 18
 
 
  703 01da 73697A65 		.ascii	"sizetype\000"
@@ -1037,69 +1037,69 @@ ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 1
  708              	.LASF13:
  709 01ff 63686172 		.ascii	"char\000"
  709      00
- 710              	.LASF22:
- 711 0204 50574D5F 		.ascii	"PWM_red_backupStruct\000"
- 711      7265645F 
- 711      6261636B 
- 711      75705374 
- 711      72756374 
- 712              	.LASF36:
- 713 0219 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWM_red_PM.c\000"
- 713      72617465 
- 713      645F536F 
- 713      75726365 
- 713      5C50536F 
- 714              	.LASF2:
- 715 023d 73686F72 		.ascii	"short int\000"
- 715      7420696E 
- 715      7400
- 716              	.LASF4:
- 717 0247 6C6F6E67 		.ascii	"long int\000"
- 717      20696E74 
- 717      00
- 718              	.LASF24:
- 719 0250 50574D5F 		.ascii	"PWM_red_RestoreConfig\000"
- 719      7265645F 
- 719      52657374 
- 719      6F726543 
- 719      6F6E6669 
- 720              	.LASF15:
- 721 0266 6C6F6E67 		.ascii	"long double\000"
- 721      20646F75 
- 721      626C6500 
- 722              	.LASF26:
- 723 0272 50574D5F 		.ascii	"PWM_red_Wakeup\000"
- 723      7265645F 
- 723      57616B65 
- 723      757000
- 724              	.LASF32:
- 725 0281 50574D5F 		.ascii	"PWM_red_WriteControlRegister\000"
- 725      7265645F 
- 725      57726974 
- 725      65436F6E 
- 725      74726F6C 
-ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccDs1OQe.s 			page 19
+ 710              	.LASF37:
+ 711 0204 443A5C45 		.ascii	"D:\\Embedded\\Assignment02\\Lab02\\AMA_EOS_Lab_02\\"
+ 711      6D626564 
+ 711      6465645C 
+ 711      41737369 
+ 711      676E6D65 
+ 712 0232 414D415F 		.ascii	"AMA_EOS_Lab_02.cydsn\000"
+ 712      454F535F 
+ 712      4C61625F 
+ 712      30322E63 
+ 712      7964736E 
+ 713              	.LASF22:
+ 714 0247 50574D5F 		.ascii	"PWM_red_backupStruct\000"
+ 714      7265645F 
+ 714      6261636B 
+ 714      75705374 
+ 714      72756374 
+ 715              	.LASF36:
+ 716 025c 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWM_red_PM.c\000"
+ 716      72617465 
+ 716      645F536F 
+ 716      75726365 
+ 716      5C50536F 
+ 717              	.LASF2:
+ 718 0280 73686F72 		.ascii	"short int\000"
+ 718      7420696E 
+ 718      7400
+ 719              	.LASF4:
+ 720 028a 6C6F6E67 		.ascii	"long int\000"
+ 720      20696E74 
+ 720      00
+ 721              	.LASF24:
+ 722 0293 50574D5F 		.ascii	"PWM_red_RestoreConfig\000"
+ 722      7265645F 
+ 722      52657374 
+ 722      6F726543 
+ 722      6F6E6669 
+ 723              	.LASF15:
+ 724 02a9 6C6F6E67 		.ascii	"long double\000"
+ 724      20646F75 
+ 724      626C6500 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc1IaVM3.s 			page 19
 
 
- 726              	.LASF23:
- 727 029e 50574D5F 		.ascii	"PWM_red_SaveConfig\000"
- 727      7265645F 
- 727      53617665 
- 727      436F6E66 
- 727      696700
- 728              	.LASF37:
- 729 02b1 443A5C45 		.ascii	"D:\\Embedded\\Assignment02\\Lab02\\Workspace01\\AMA"
- 729      6D626564 
- 729      6465645C 
- 729      41737369 
- 729      676E6D65 
- 730 02df 5F454F53 		.ascii	"_EOS_Lab_02.cydsn\000"
- 730      5F4C6162 
- 730      5F30322E 
- 730      63796473 
- 730      6E00
+ 725              	.LASF26:
+ 726 02b5 50574D5F 		.ascii	"PWM_red_Wakeup\000"
+ 726      7265645F 
+ 726      57616B65 
+ 726      757000
+ 727              	.LASF32:
+ 728 02c4 50574D5F 		.ascii	"PWM_red_WriteControlRegister\000"
+ 728      7265645F 
+ 728      57726974 
+ 728      65436F6E 
+ 728      74726F6C 
+ 729              	.LASF23:
+ 730 02e1 50574D5F 		.ascii	"PWM_red_SaveConfig\000"
+ 730      7265645F 
+ 730      53617665 
+ 730      436F6E66 
+ 730      696700
  731              	.LASF20:
- 732 02f1 496E7465 		.ascii	"InterruptMaskValue\000"
+ 732 02f4 496E7465 		.ascii	"InterruptMaskValue\000"
  732      72727570 
  732      744D6173 
  732      6B56616C 

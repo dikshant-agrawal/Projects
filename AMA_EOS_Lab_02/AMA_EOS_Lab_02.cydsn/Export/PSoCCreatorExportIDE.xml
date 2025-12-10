@@ -25,7 +25,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="AMA_EOS_Lab_02" Path="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn" Version="6.10" Type="Normal">
+  <Project Name="AMA_EOS_Lab_02" Path="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn" Version="6.10" Type="Normal">
     <CMSIS_SVD_File>AMA_EOS_Lab_02.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
@@ -34,22 +34,22 @@
       <LinkerFile Toolchain="ARM IAR Generic">.\Generated_Source\PSoC5\Cm3Iar.icf</LinkerFile>
     </LinkerFiles>
     <Folders>
-      <Folder BuildType="STRICT" Path="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn">
-        <Files Root="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn">
+      <Folder BuildType="STRICT" Path="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn">
+        <Files Root="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn">
           <File BuildType="BUILD" Toolchain="">source\asw\cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">source\asw\main.c</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn">
-        <Files Root="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn">
+      <Folder BuildType="STRICT" Path="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn">
+        <Files Root="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn">
           <File BuildType="BUILD" Toolchain="">source\bsw\reactiongame.c</File>
           <File BuildType="BUILD" Toolchain="">source\bsw\reactiongame.h</File>
           <File BuildType="BUILD" Toolchain="">source\bsw\global.h</File>
           <File BuildType="BUILD" Toolchain="">source\bsw\derivate.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn">
-        <Files Root="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn">
+      <Folder BuildType="STRICT" Path="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn">
+        <Files Root="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn">
           <File BuildType="BUILD" Toolchain="">source\bsw\labboard\led.c</File>
           <File BuildType="BUILD" Toolchain="">source\bsw\labboard\led.h</File>
           <File BuildType="BUILD" Toolchain="">source\bsw\labboard\seven.c</File>
@@ -58,8 +58,8 @@
           <File BuildType="BUILD" Toolchain="">source\bsw\labboard\button.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\Generated_Source\PSoC5">
-        <Files Root="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn">
+      <Folder BuildType="STRICT" Path="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn\Generated_Source\PSoC5">
+        <Files Root="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn">
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cyfitter_cfg.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cyfitter_cfg.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cymetadata.c</File>
@@ -277,57 +277,57 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_yellow.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_yellow.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_yellow_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_Button_Pressed.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_Button_Pressed.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_buttonPressed.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_buttonPressed.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\Export\ARM_GCC_Generic">
-        <Files Root="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn">
+      <Folder BuildType="STRICT" Path="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn\Export\ARM_GCC_Generic">
+        <Files Root="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn">
           <File BuildType="BUILD" Toolchain="ARM GCC Generic">.\Export\ARM_GCC_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\Export\ARM_MDK_Generic">
-        <Files Root="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn">
+      <Folder BuildType="STRICT" Path="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn\Export\ARM_MDK_Generic">
+        <Files Root="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn">
           <File BuildType="BUILD" Toolchain="ARM MDK Generic">.\Export\ARM_MDK_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\Export\ARM_IAR_Generic">
-        <Files Root="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn">
+      <Folder BuildType="STRICT" Path="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn\Export\ARM_IAR_Generic">
+        <Files Root="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn">
           <File BuildType="BUILD" Toolchain="ARM IAR Generic">.\Export\ARM_IAR_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">
-        <Files Root="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn" />
+        <Files Root="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_441">
-        <Files Root="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn" />
+        <Files Root="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_473">
-        <Files Root="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn" />
+        <Files Root="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051_Keil_952">
-        <Files Root="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn" />
+        <Files Root="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051">
-        <Files Root="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn" />
+        <Files Root="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0">
-        <Files Root="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn" />
+        <Files Root="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0p">
-        <Files Root="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn" />
+        <Files Root="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM3">
-        <Files Root="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn" />
+        <Files Root="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM4">
-        <Files Root="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn" />
+        <Files Root="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM7">
-        <Files Root="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn" />
+        <Files Root="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn" />
       </Folder>
-      <Folder BuildType="EXCLUDE" Path="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn\ErikaOS_v2_5_3\API">
-        <Files Root="D:\Embedded\Assignment02\Lab02\Workspace01\AMA_EOS_Lab_02.cydsn">
+      <Folder BuildType="EXCLUDE" Path="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn\ErikaOS_v2_5_3\API">
+        <Files Root="D:\Embedded\Assignment02\Lab02\AMA_EOS_Lab_02\AMA_EOS_Lab_02.cydsn">
           <File BuildType="EXCLUDE" Toolchain="">ErikaOS_v2_5_3\API\ee.h</File>
           <File BuildType="EXCLUDE" Toolchain="">ErikaOS_v2_5_3\API\ee_api.inc</File>
           <File BuildType="EXCLUDE" Toolchain="">ErikaOS_v2_5_3\API\ee_internal.inc</File>

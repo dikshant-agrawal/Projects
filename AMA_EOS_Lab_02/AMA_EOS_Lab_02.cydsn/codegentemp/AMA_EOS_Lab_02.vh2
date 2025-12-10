@@ -2,7 +2,7 @@
 --	Conversion of AMA_EOS_Lab_02.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Dec 01 23:09:22 2025
+--	Fri Dec 05 02:08:26 2025
 --
 
 USE cypress.cypress.all;
@@ -91,7 +91,7 @@ SIGNAL tmpFB_0__SEVEN_SELECT_net_0 : bit;
 SIGNAL tmpIO_0__SEVEN_SELECT_net_0 : bit;
 TERMINAL tmpSIOVREF__SEVEN_SELECT_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__SEVEN_SELECT_net_0 : bit;
-SIGNAL Net_3165 : bit;
+SIGNAL Net_3170 : bit;
 SIGNAL Net_3166 : bit;
 SIGNAL Net_3167 : bit;
 SIGNAL Net_3168 : bit;
@@ -3153,7 +3153,7 @@ zero <=  ('0') ;
 
 tmpOE__RGB_B_net_0 <=  ('1') ;
 
-Net_3165 <= (Net_3169
+Net_3170 <= (Net_3169
 	OR Net_3168
 	OR Net_3167
 	OR Net_3166);
@@ -4094,7 +4094,7 @@ BUTTON_1:cy_psoc3_pins_v1_10
 		oe_reset=>'0',
 		pin_aliases=>"",
 		pin_mode=>"I",
-		por_state=>4,
+		por_state=>3,
 		sio_group_cnt=>0,
 		sio_hifreq=>"00000000",
 		sio_hyst=>"1",
@@ -4346,10 +4346,6 @@ BUTTON_3:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__RGB_B_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__BUTTON_3_net_0);
-isr_Button_Pressed:cy_isr_v1_0
-	GENERIC MAP(int_type=>"10",
-		is_nmi=>'0')
-	PORT MAP(int_signal=>Net_3165);
 PWM_Clock:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"34d26f5b-534c-4cd8-8e64-e476304b1655",
@@ -5774,6 +5770,10 @@ LED_RED:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__RGB_B_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__LED_RED_net_0);
+isr_buttonPressed:cy_isr_v1_0
+	GENERIC MAP(int_type=>"00",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_3170);
 \PWM_green:PWMUDB:clock_enable_block\:cy_psoc3_udb_clock_enable_v1_0
 	GENERIC MAP(sync_mode=>'1')
 	PORT MAP(clock_in=>Net_604,

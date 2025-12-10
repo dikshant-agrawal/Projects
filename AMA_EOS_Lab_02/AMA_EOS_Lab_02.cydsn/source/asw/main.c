@@ -11,27 +11,110 @@
 */
 #include "project.h"
 #include "stdlib.h"
-
+#include "stdio.h"
 #include "reactiongame.h"
+#include "led.h"
 
 
-int main(void)
-{   
+
+void unhandledException(){
+    __asm("bkpt");
+}
+
+/**
+* Main function to enable to the erika os, systick timer and the global interrupts.
+*/
+int main(void){
+    
     CyGlobalIntEnable; /* Enable global interrupts. */
     
     //Set systick period to 1 ms. Enable the INT and start it.
 	EE_systick_set_period(MILLISECONDS_TO_TICKS(1, BCLK__BUS_CLK__HZ));
 	EE_systick_enable_int();
-  
+    
     for(;;)
+    StartOS(OSDEFAULTAPPMODE); 
+}
+
+/********************************************************************************
+ * Task Definitions
+ ********************************************************************************/
+
+/**
+* Task Init to initialize all the peripherals and erika os, also activate the respective task
+* \Task init autostarts on bootup. 
+*/
+TASK(tsk_init){
+    
+    RG_Init();
+    
+    //Reconfigure ISRs with OS parameters.
+    //This line MUST be called after the hardware driver initialisation!
+    EE_system_init();
+	
+    //Start SysTick
+	//Must be done here, because otherwise the isr vector is not overwritten yet
+    EE_systick_start();
+    
+    ActivateTask(tsk_background);       ///< Activate the background task 
+    ActivateTask(tsk_event);            ///< Activate the main event handler extended task
+    ActivateTask(tsk_glower);           ///< Activate the task for RGB glower functionality
+    SetRelAlarm(alrm_Tick1ms,1,100);  ///< Start the cyclic alarms 
+
+    TerminateTask();
+}
+
+/**
+* Extended task to handle all the event and alarm triggers for the reaction game.
+*/
+TASK(tsk_event){
+
+    EventMaskType ev;
+
+
+    RG_ShowWelcome();
+    while(1){
+        WaitEvent(ev_leftButton | ev_rightButton |ev_waitOver | ev_slow | ev_reset );
+        GetEvent(tsk_event, &ev);
+        ClearEvent(ev);
+        
+        RG_ProcessEvent(ev);
+
+
+    }
+    
+    TerminateTask();
+}
+
+/**
+* Task background to keep the system alive
+*/
+TASK(tsk_background){
+    while(1)
     {
-        StartOS(OSDEFAULTAPPMODE); 
+        //do something with low prioroty
+        __asm("nop");
     }
 }
 
-void unhandledException(){
-    __asm("bkpt");
+/**
+* Task declaration for the glower function from arcadian lights
+*/
+TASK(tsk_glower){
+    //RG_RGB_Set();
+    TerminateTask();
 }
+
+/**
+* Task declaration for the arcadian function
+*/
+TASK(tsk_arcadian){
+    RG_Arcadian();
+    TerminateTask();
+}
+
+
+
 
 /********************************************************************************
  * ISR Definitions
@@ -39,74 +122,18 @@ void unhandledException(){
 
 //ISR which will increment the systick counter every ms 
 ISR(systick_handler) {
-     CounterTick(Counter_Systick); 
+    CounterTick(cnt_systick);   
 }
 
-ISR2(isr_Button_Pressed){
+//ISR to handle button press
+ISR2(isr_buttonPressed){
 
-    if (BUTTON_1_Read() || BUTTON_3_Read()){
-        SetEvent(Task_Event, ev_leftButton);
+    if (BUTTON_3_Read() == 1){
+        SetEvent(tsk_event, ev_leftButton);
     }
-    
-    if( BUTTON_2_Read() || BUTTON_4_Read() ){
-       SetEvent(Task_Event, ev_rightButton);
-    }
-    
-}
-
-/********************************************************************************
- * Task Definitions
- ********************************************************************************/
-
-TASK(Task_Init){
-    
-    RG_Init();
-    
-    //Reconfigure ISRs with OS parameters.
-    //This line MUST be called after the hardware driver initialisation!
-    EE_system_init();
-    
-	
-    //Start SysTick
-	//Must be done here, because otherwise the isr vector is not overwritten yet
-    EE_systick_start(); 
-
-    
-    //Activate all extended and the background task
-    ActivateTask(Task_Background);
-    ActivateTask(Task_Event);
-   
-    
-    TerminateTask();
-
-}
-
-
-
-TASK(Task_Event){
-    
-    EventMaskType ev;
-    
-    RG_ShowWelcome();
-    
-    while(1){
-        WaitEvent(ev_leftButton | ev_rightButton | ev_slow | ev_reset  | ev_score);
-        GetEvent(Task_Event, &ev);
-        ClearEvent(ev);
-        
-        RG_ProcessEvent(ev);
-
-    }
-    
-    TerminateTask();
-}
-
-
-TASK(Task_Background){
-    while(1)
-    {
-        //do something with low prioroty
-        __asm("nop");
+    if (BUTTON_4_Read() == 1){
+        SetEvent(tsk_event, ev_rightButton);
     }
 }
+
 /* [] END OF FILE */

@@ -83,13 +83,6 @@
 /* Global pre-processor symbols/macros and type declarations                 */
 /*****************************************************************************/
 
-//####################### Defines/Macros
-/** 
- * \brief a brief description of what the define is representing
-*
-* If needed, a more detailed description can be given below */
-#define TOP_DOCUMENTED_DEFINE                    0x1
-#define AFTER_DOCUMENTED_DEFINE                  0x2         /**< \brief by putting a < next to the comment-start. The documentation referes to the left instead to the next line. */
 
 //####################### Enumerations
 /**
@@ -98,43 +91,18 @@
 * Detailed explaination of the enumeration.
 */
  enum eMyEnum{
-    S_RG_START,     /**< \State for game start. */
-    S_RG_WAITPLAYER,    /**< \State for wait period of player input. */
-    S_RG_SCORE,          /**< \brief Etc. */
-    S_RG_RESET
+    S_RG_isWaitingStart,     /**< \State for game start. */
+    S_RG_isWaitingRandOver,    /**< \State for wait period of player input. */
+    S_RG_isWaitingPlayer,          /**< \brief Etc. */
+    S_RG_isReset
 } ;
 typedef enum eMyEnum RG_State_t;
 
-//####################### Structures
-/**
-* \brief The purpose as well as the members of a structure have to be documented.
-*
-* Make clear what the structure is used for and what is the purpose of the members.
-*/
-struct sMyStruct {
-  int a;    /**< Some documentation for the member myStruct_t#a. */
-  int b;    /**< Some documentation for the member myStruct_t#b. */
-  double c; /**< Etc. */
-};
-typedef struct sMyStruct myStruct_t;
 
-// Wrapper to allow representing the file in Together as class
-#ifdef TOGETHER
-
-class FILE
-{
-public:
-#endif /* Together */
 
 /*****************************************************************************/
 /* Extern global variables                                                   */
 /*****************************************************************************/
-
-/**
- * <description>
- */
-
-
 
 
 
@@ -142,11 +110,6 @@ public:
 /* API functions                                                             */
 /*****************************************************************************/
 
-/**
- * <Description>
- * \param <Format: copy of the parameter type and name - [IN OUT] description>
- * \return <return description>
- */
 
 /**
  * Initialises the pheripherals
@@ -154,17 +117,10 @@ public:
  */
 RC_t RG_Init(void);
 
-
-/**
- * Print function
- * @param const char * const log char pointer to the char you want to print
- */
-void RG_Print(char const * const log);
-
 /**
  * Print function Executed at the start of Task
  */
-void RG_ShowWelcome(void);
+void RG_ShowWelcome();
 
 /**
  * Main function for all the event handlers 
@@ -172,27 +128,22 @@ void RG_ShowWelcome(void);
  */
 void RG_ProcessEvent(EventMaskType ev);
 
-/**
- * Function to increment the SYSTICK Counter Value
- */
-void SysTick_Handler(void);
 
 /**
- * Function to return current systick counter value
+ * Function to implement the glower function for RGB light
  */
-int CurrentSysTick();
+void RG_RGB_Set();
+
+/**
+ * Function to implement the knight rider arcadian function for RGB light
+ */
+void RG_Arcadian();
+
 
 /*****************************************************************************/
 /* Private stuff, only visible for Together, declared static in cpp - File   */
 /*****************************************************************************/
 
 
-#ifdef TOGETHER
-//Not visible for compiler, only used for document generation
-private:
-
-
-};
-#endif /* Together */
 
 #endif /* REACTIONGAME_H */
