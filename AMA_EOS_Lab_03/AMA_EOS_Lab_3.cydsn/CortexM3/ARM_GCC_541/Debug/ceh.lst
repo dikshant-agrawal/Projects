@@ -1,0 +1,2829 @@
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"ceh.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.CEH_init,"ax",%progbits
+  20              		.align	2
+  21              		.global	CEH_init
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	CEH_init, %function
+  25              	CEH_init:
+  26              	.LFB114:
+  27              		.file 1 "source\\bsw\\msg\\ceh.c"
+   1:source\bsw\msg/ceh.c **** /**
+   2:source\bsw\msg/ceh.c ****  * \file 	CEH.c
+   3:source\bsw\msg/ceh.c ****  * \author 	Peter Fromm	- Hochschule Darmstadt 
+   4:source\bsw\msg/ceh.c ****  * \date 	26.11.2016
+   5:source\bsw\msg/ceh.c ****  * \version 0.1
+   6:source\bsw\msg/ceh.c ****  *
+   7:source\bsw\msg/ceh.c ****  * \brief  Logging mechanism
+   8:source\bsw\msg/ceh.c ****  *
+   9:source\bsw\msg/ceh.c ****  * \copyright Copyright ©2016
+  10:source\bsw\msg/ceh.c ****  * Department of electrical engineering and information technology, Hochschule Darmstadt - Universi
+  11:source\bsw\msg/ceh.c ****  * Permission to use, copy, modify, and distribute this software and its documentation for educatio
+  12:source\bsw\msg/ceh.c ****  * (unless permitted by h_da) and official h_da projects, is hereby granted for enrolled students o
+  13:source\bsw\msg/ceh.c ****  * this paragraph and the following paragraph appear in all copies, modifications, and distribution
+  14:source\bsw\msg/ceh.c ****  * Contact Prof.Dr.-Ing. Peter Fromm, peter.fromm@h-da.de, Birkenweg 8 64295 Darmstadt - GERMANY fo
+  15:source\bsw\msg/ceh.c ****  *
+  16:source\bsw\msg/ceh.c ****  * \warning This software is a PROTOTYPE version and is not designed or intended for use in product
+  17:source\bsw\msg/ceh.c ****  * The user represents and warrants that it will NOT use or redistribute the Software for such purp
+  18:source\bsw\msg/ceh.c ****  * This prototype is for research purposes only. This software is provided "AS IS," without a warra
+  19:source\bsw\msg/ceh.c ****  */
+  20:source\bsw\msg/ceh.c **** /*=======================[ Includes ]==============================================================
+  21:source\bsw\msg/ceh.c **** #include <project.h>
+  22:source\bsw\msg/ceh.c **** #include <stdlib.h>
+  23:source\bsw\msg/ceh.c **** #include "ceh.h"
+  24:source\bsw\msg/ceh.c **** #include "logging.h"
+  25:source\bsw\msg/ceh.c **** 
+  26:source\bsw\msg/ceh.c **** 
+  27:source\bsw\msg/ceh.c **** /*=======================[ constant data ]=========================================================
+  28:source\bsw\msg/ceh.c **** 
+  29:source\bsw\msg/ceh.c **** 
+  30:source\bsw\msg/ceh.c **** /*=======================[ variable data ]=========================================================
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 2
+
+
+  31:source\bsw\msg/ceh.c **** 
+  32:source\bsw\msg/ceh.c **** /*=======================[ Function implementation ]===============================================
+  33:source\bsw\msg/ceh.c **** 
+  34:source\bsw\msg/ceh.c **** /**
+  35:source\bsw\msg/ceh.c ****  * OPTIONAL Init Function, only required if object is not statically defined in configuration
+  36:source\bsw\msg/ceh.c ****  * \param CEH_t *const me       : [IN/OUT] The object to be initialized
+  37:source\bsw\msg/ceh.c ****  * \param uint16_t size         : [IN] Size of buffer
+  38:source\bsw\msg/ceh.c ****  * \return RC_SUCCES or error code
+  39:source\bsw\msg/ceh.c ****  **/
+  40:source\bsw\msg/ceh.c **** RC_t CEH_init(CEH_t *const me, uint16_t size)
+  41:source\bsw\msg/ceh.c **** {
+  28              		.loc 1 41 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              	.LVL0:
+  33 0000 38B5     		push	{r3, r4, r5, lr}
+  34              		.cfi_def_cfa_offset 16
+  35              		.cfi_offset 3, -16
+  36              		.cfi_offset 4, -12
+  37              		.cfi_offset 5, -8
+  38              		.cfi_offset 14, -4
+  39 0002 0446     		mov	r4, r0
+  42:source\bsw\msg/ceh.c ****     me->nextFree = 0;
+  40              		.loc 1 42 0
+  41 0004 0025     		movs	r5, #0
+  42 0006 4580     		strh	r5, [r0, #2]	@ movhi
+  43:source\bsw\msg/ceh.c ****     me->size = size;
+  43              		.loc 1 43 0
+  44 0008 0180     		strh	r1, [r0]	@ movhi
+  44:source\bsw\msg/ceh.c ****     
+  45:source\bsw\msg/ceh.c ****     me->buffer = (CEH_event_log_entry_t*)malloc(me->size * sizeof(CEH_event_log_entry_t));
+  45              		.loc 1 45 0
+  46 000a 01EB4101 		add	r1, r1, r1, lsl #1
+  47              	.LVL1:
+  48 000e 8800     		lsls	r0, r1, #2
+  49              	.LVL2:
+  50 0010 FFF7FEFF 		bl	malloc
+  51              	.LVL3:
+  52 0014 6060     		str	r0, [r4, #4]
+  46:source\bsw\msg/ceh.c ****     return RC_SUCCESS;
+  47:source\bsw\msg/ceh.c **** }
+  53              		.loc 1 47 0
+  54 0016 2846     		mov	r0, r5
+  55 0018 38BD     		pop	{r3, r4, r5, pc}
+  56              		.cfi_endproc
+  57              	.LFE114:
+  58              		.size	CEH_init, .-CEH_init
+  59 001a 00BF     		.section	.text.CEH_report,"ax",%progbits
+  60              		.align	2
+  61              		.global	CEH_report
+  62              		.thumb
+  63              		.thumb_func
+  64              		.type	CEH_report, %function
+  65              	CEH_report:
+  66              	.LFB115:
+  48:source\bsw\msg/ceh.c ****    
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 3
+
+
+  49:source\bsw\msg/ceh.c **** /**
+  50:source\bsw\msg/ceh.c ****  * Report an store an diagnostic event
+  51:source\bsw\msg/ceh.c ****  * \param CEH_t *const me       : [IN/OUT] The object 
+  52:source\bsw\msg/ceh.c ****  * \param CEH_event_t CEH_event : [IN] Event to be reported
+  53:source\bsw\msg/ceh.c ****  * \param uint32_t data         : [IN] Optional payload
+  54:source\bsw\msg/ceh.c ****  * \return RC_SUCCES or error code
+  55:source\bsw\msg/ceh.c ****  **/
+  56:source\bsw\msg/ceh.c **** RC_t CEH_report(CEH_t *const me, CEH_event_t CEH_event, uint32_t data)
+  57:source\bsw\msg/ceh.c **** {
+  67              		.loc 1 57 0
+  68              		.cfi_startproc
+  69              		@ args = 0, pretend = 0, frame = 168
+  70              		@ frame_needed = 0, uses_anonymous_args = 0
+  71              	.LVL4:
+  72 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+  73              		.cfi_def_cfa_offset 24
+  74              		.cfi_offset 4, -24
+  75              		.cfi_offset 5, -20
+  76              		.cfi_offset 6, -16
+  77              		.cfi_offset 7, -12
+  78              		.cfi_offset 8, -8
+  79              		.cfi_offset 14, -4
+  80 0004 ACB0     		sub	sp, sp, #176
+  81              		.cfi_def_cfa_offset 200
+  82 0006 0446     		mov	r4, r0
+  83 0008 0D46     		mov	r5, r1
+  84 000a 1746     		mov	r7, r2
+  85              	.LVL5:
+  58:source\bsw\msg/ceh.c ****     
+  59:source\bsw\msg/ceh.c ****     
+  60:source\bsw\msg/ceh.c ****     RC_t result = RC_SUCCESS;
+  61:source\bsw\msg/ceh.c ****     uint32_t currentTime = CEH_getTimeInMs();
+  86              		.loc 1 61 0
+  87 000c FFF7FEFF 		bl	CEH_getTimeInMs
+  88              	.LVL6:
+  89 0010 0646     		mov	r6, r0
+  90              	.LVL7:
+  91              	.LBB2:
+  62:source\bsw\msg/ceh.c **** 
+  63:source\bsw\msg/ceh.c ****     LOG_E("CEH","%s (%d) at %dms ", CEH_source_strings[CEH_event], data, currentTime);
+  92              		.loc 1 63 0
+  93 0012 0DF1B008 		add	r8, sp, #176
+  94 0016 0323     		movs	r3, #3
+  95 0018 08F8A83D 		strb	r3, [r8, #-168]!
+  96 001c 244B     		ldr	r3, .L10
+  97 001e 1868     		ldr	r0, [r3]	@ unaligned
+  98              	.LVL8:
+  99 0020 CDF80900 		str	r0, [sp, #9]	@ unaligned
+ 100 0024 234B     		ldr	r3, .L10+4
+ 101 0026 53F82520 		ldr	r2, [r3, r5, lsl #2]
+ 102 002a 0096     		str	r6, [sp]
+ 103 002c 3B46     		mov	r3, r7
+ 104 002e 2249     		ldr	r1, .L10+8
+ 105 0030 0DF11900 		add	r0, sp, #25
+ 106 0034 FFF7FEFF 		bl	sprintf
+ 107              	.LVL9:
+ 108 0038 4046     		mov	r0, r8
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 4
+
+
+ 109 003a FFF7FEFF 		bl	LOG_send
+ 110              	.LVL10:
+ 111              	.LBE2:
+  64:source\bsw\msg/ceh.c **** 
+  65:source\bsw\msg/ceh.c ****     
+  66:source\bsw\msg/ceh.c ****     if (me->nextFree < me->size)
+ 112              		.loc 1 66 0
+ 113 003e 6288     		ldrh	r2, [r4, #2]
+ 114 0040 2388     		ldrh	r3, [r4]
+ 115 0042 9A42     		cmp	r2, r3
+ 116 0044 1CD2     		bcs	.L8
+  67:source\bsw\msg/ceh.c ****     {
+  68:source\bsw\msg/ceh.c ****         CEH_lock();
+ 117              		.loc 1 68 0
+ 118 0046 FFF7FEFF 		bl	CEH_lock
+ 119              	.LVL11:
+  69:source\bsw\msg/ceh.c ****         
+  70:source\bsw\msg/ceh.c ****         me->buffer[me->nextFree].event = CEH_event;
+ 120              		.loc 1 70 0
+ 121 004a 6168     		ldr	r1, [r4, #4]
+ 122 004c 6388     		ldrh	r3, [r4, #2]
+ 123 004e 03EB4303 		add	r3, r3, r3, lsl #1
+ 124 0052 9A00     		lsls	r2, r3, #2
+ 125 0054 8D54     		strb	r5, [r1, r2]
+  71:source\bsw\msg/ceh.c ****         me->buffer[me->nextFree].data = data;
+ 126              		.loc 1 71 0
+ 127 0056 6168     		ldr	r1, [r4, #4]
+ 128 0058 6388     		ldrh	r3, [r4, #2]
+ 129 005a 03EB4303 		add	r3, r3, r3, lsl #1
+ 130 005e 9A00     		lsls	r2, r3, #2
+ 131 0060 0A44     		add	r2, r2, r1
+ 132 0062 5760     		str	r7, [r2, #4]
+  72:source\bsw\msg/ceh.c ****         me->buffer[me->nextFree].timestamp = currentTime;
+ 133              		.loc 1 72 0
+ 134 0064 6168     		ldr	r1, [r4, #4]
+ 135 0066 6388     		ldrh	r3, [r4, #2]
+ 136 0068 03EB4303 		add	r3, r3, r3, lsl #1
+ 137 006c 9A00     		lsls	r2, r3, #2
+ 138 006e 0A44     		add	r2, r2, r1
+ 139 0070 9660     		str	r6, [r2, #8]
+  73:source\bsw\msg/ceh.c ****         
+  74:source\bsw\msg/ceh.c ****         me->nextFree++;
+ 140              		.loc 1 74 0
+ 141 0072 6388     		ldrh	r3, [r4, #2]
+ 142 0074 0133     		adds	r3, r3, #1
+ 143 0076 6380     		strh	r3, [r4, #2]	@ movhi
+  75:source\bsw\msg/ceh.c ****         
+  76:source\bsw\msg/ceh.c ****         CEH_unlock();
+ 144              		.loc 1 76 0
+ 145 0078 FFF7FEFF 		bl	CEH_unlock
+ 146              	.LVL12:
+  60:source\bsw\msg/ceh.c ****     uint32_t currentTime = CEH_getTimeInMs();
+ 147              		.loc 1 60 0
+ 148 007c 0024     		movs	r4, #0
+ 149              	.LVL13:
+ 150 007e 01E0     		b	.L4
+ 151              	.LVL14:
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 5
+
+
+ 152              	.L8:
+  77:source\bsw\msg/ceh.c ****     }
+  78:source\bsw\msg/ceh.c ****     else
+  79:source\bsw\msg/ceh.c ****     {
+  80:source\bsw\msg/ceh.c ****         result = RC_ERROR_BUFFER_FULL;
+ 153              		.loc 1 80 0
+ 154 0080 6FF00704 		mvn	r4, #7
+ 155              	.LVL15:
+ 156              	.L4:
+  81:source\bsw\msg/ceh.c ****     }
+  82:source\bsw\msg/ceh.c ****     
+  83:source\bsw\msg/ceh.c ****     //Check for additional actions required from configuration
+  84:source\bsw\msg/ceh.c ****     if(BREAKPOINT == CEH_event_table[CEH_event].reaction)
+ 157              		.loc 1 84 0
+ 158 0084 0D4B     		ldr	r3, .L10+12
+ 159 0086 03EB4505 		add	r5, r3, r5, lsl #1
+ 160 008a 6B78     		ldrb	r3, [r5, #1]	@ zero_extendqisi2
+ 161 008c 012B     		cmp	r3, #1
+ 162 008e 01D1     		bne	.L5
+  85:source\bsw\msg/ceh.c ****     {
+  86:source\bsw\msg/ceh.c ****         __asm("bkpt");
+ 163              		.loc 1 86 0
+ 164              		.syntax unified
+ 165              	@ 86 "source\bsw\msg\ceh.c" 1
+ 166 0090 00BE     		bkpt
+ 167              	@ 0 "" 2
+ 168              		.thumb
+ 169              		.syntax unified
+ 170 0092 08E0     		b	.L6
+ 171              	.L5:
+  87:source\bsw\msg/ceh.c ****     } 
+  88:source\bsw\msg/ceh.c ****     else if (RESET == CEH_event_table[CEH_event].reaction)
+ 172              		.loc 1 88 0
+ 173 0094 022B     		cmp	r3, #2
+ 174 0096 02D1     		bne	.L7
+  89:source\bsw\msg/ceh.c ****     {
+  90:source\bsw\msg/ceh.c ****         CySoftwareReset();
+ 175              		.loc 1 90 0
+ 176 0098 FFF7FEFF 		bl	CySoftwareReset
+ 177              	.LVL16:
+ 178 009c 03E0     		b	.L6
+ 179              	.L7:
+  91:source\bsw\msg/ceh.c ****     }
+  92:source\bsw\msg/ceh.c ****     else if (STOP == CEH_event_table[CEH_event].reaction)
+ 180              		.loc 1 92 0
+ 181 009e 032B     		cmp	r3, #3
+ 182 00a0 01D1     		bne	.L6
+  93:source\bsw\msg/ceh.c ****     {
+  94:source\bsw\msg/ceh.c ****         CEH_deactivateActors();
+ 183              		.loc 1 94 0
+ 184 00a2 FFF7FEFF 		bl	CEH_deactivateActors
+ 185              	.LVL17:
+ 186              	.L6:
+  95:source\bsw\msg/ceh.c ****     }
+  96:source\bsw\msg/ceh.c ****       
+  97:source\bsw\msg/ceh.c ****     return result;
+  98:source\bsw\msg/ceh.c **** }
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 6
+
+
+ 187              		.loc 1 98 0
+ 188 00a6 2046     		mov	r0, r4
+ 189 00a8 2CB0     		add	sp, sp, #176
+ 190              		.cfi_def_cfa_offset 24
+ 191              		@ sp needed
+ 192 00aa BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 193              	.LVL18:
+ 194              	.L11:
+ 195 00ae 00BF     		.align	2
+ 196              	.L10:
+ 197 00b0 00000000 		.word	.LC0
+ 198 00b4 00000000 		.word	CEH_source_strings
+ 199 00b8 04000000 		.word	.LC1
+ 200 00bc 00000000 		.word	CEH_event_table
+ 201              		.cfi_endproc
+ 202              	.LFE115:
+ 203              		.size	CEH_report, .-CEH_report
+ 204              		.section	.text.CEH_dump,"ax",%progbits
+ 205              		.align	2
+ 206              		.global	CEH_dump
+ 207              		.thumb
+ 208              		.thumb_func
+ 209              		.type	CEH_dump, %function
+ 210              	CEH_dump:
+ 211              	.LFB116:
+  99:source\bsw\msg/ceh.c **** 
+ 100:source\bsw\msg/ceh.c **** /**
+ 101:source\bsw\msg/ceh.c ****  * Dump content of CEH Buffer to UART
+ 102:source\bsw\msg/ceh.c ****  * \param CEH_t *const me       : [IN] The object 
+ 103:source\bsw\msg/ceh.c ****  * \return RC_SUCCES or error code
+ 104:source\bsw\msg/ceh.c ****  **/
+ 105:source\bsw\msg/ceh.c **** RC_t CEH_dump(CEH_t *const me)
+ 106:source\bsw\msg/ceh.c **** {
+ 212              		.loc 1 106 0
+ 213              		.cfi_startproc
+ 214              		@ args = 0, pretend = 0, frame = 168
+ 215              		@ frame_needed = 0, uses_anonymous_args = 0
+ 216              	.LVL19:
+ 217 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
+ 218              		.cfi_def_cfa_offset 28
+ 219              		.cfi_offset 4, -28
+ 220              		.cfi_offset 5, -24
+ 221              		.cfi_offset 6, -20
+ 222              		.cfi_offset 7, -16
+ 223              		.cfi_offset 8, -12
+ 224              		.cfi_offset 9, -8
+ 225              		.cfi_offset 14, -4
+ 226 0004 B1B0     		sub	sp, sp, #196
+ 227              		.cfi_def_cfa_offset 224
+ 228 0006 0646     		mov	r6, r0
+ 107:source\bsw\msg/ceh.c ****     CEH_lock();
+ 229              		.loc 1 107 0
+ 230 0008 FFF7FEFF 		bl	CEH_lock
+ 231              	.LVL20:
+ 232              	.LBB3:
+ 108:source\bsw\msg/ceh.c ****     
+ 109:source\bsw\msg/ceh.c ****     LOG_I("CEH","Number of entries: %d", me->nextFree);
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 7
+
+
+ 233              		.loc 1 109 0
+ 234 000c 30AC     		add	r4, sp, #192
+ 235 000e 0123     		movs	r3, #1
+ 236 0010 04F8A83D 		strb	r3, [r4, #-168]!
+ 237 0014 2C4B     		ldr	r3, .L16
+ 238 0016 1868     		ldr	r0, [r3]	@ unaligned
+ 239 0018 CDF81900 		str	r0, [sp, #25]	@ unaligned
+ 240 001c 7288     		ldrh	r2, [r6, #2]
+ 241 001e 2B49     		ldr	r1, .L16+4
+ 242 0020 0DF12900 		add	r0, sp, #41
+ 243 0024 FFF7FEFF 		bl	sprintf
+ 244              	.LVL21:
+ 245 0028 2046     		mov	r0, r4
+ 246 002a FFF7FEFF 		bl	LOG_send
+ 247              	.LVL22:
+ 248              	.LBE3:
+ 249              	.LBB4:
+ 110:source\bsw\msg/ceh.c ****     
+ 111:source\bsw\msg/ceh.c ****     
+ 112:source\bsw\msg/ceh.c ****     for (uint16_t i = 0; i < me->nextFree; i++)
+ 250              		.loc 1 112 0
+ 251 002e 0024     		movs	r4, #0
+ 252 0030 40E0     		b	.L13
+ 253              	.LVL23:
+ 254              	.L14:
+ 255              	.LBB5:
+ 113:source\bsw\msg/ceh.c ****     {
+ 114:source\bsw\msg/ceh.c ****         uint32_t hh, mm, ss, ms =  0;
+ 115:source\bsw\msg/ceh.c ****         uint32_t t =  me->buffer[i].timestamp;
+ 256              		.loc 1 115 0
+ 257 0032 D6F80480 		ldr	r8, [r6, #4]
+ 258 0036 04EB4403 		add	r3, r4, r4, lsl #1
+ 259 003a 4FEA830E 		lsl	lr, r3, #2
+ 260 003e 08EB0E0C 		add	ip, r8, lr
+ 261 0042 DCF80800 		ldr	r0, [ip, #8]
+ 262              	.LVL24:
+ 116:source\bsw\msg/ceh.c ****         
+ 117:source\bsw\msg/ceh.c ****         hh = t / 3600 / 1000;
+ 263              		.loc 1 117 0
+ 264 0046 224A     		ldr	r2, .L16+8
+ 265 0048 A2FB0032 		umull	r3, r2, r2, r0
+ 266 004c 520D     		lsrs	r2, r2, #21
+ 267              	.LVL25:
+ 118:source\bsw\msg/ceh.c ****         t -= hh * 3600 * 1000;
+ 268              		.loc 1 118 0
+ 269 004e 214B     		ldr	r3, .L16+12
+ 270 0050 03FB1200 		mls	r0, r3, r2, r0
+ 271              	.LVL26:
+ 119:source\bsw\msg/ceh.c ****         mm = t / 60 / 1000;
+ 272              		.loc 1 119 0
+ 273 0054 2049     		ldr	r1, .L16+16
+ 274 0056 A1FB0031 		umull	r3, r1, r1, r0
+ 275 005a 890B     		lsrs	r1, r1, #14
+ 276              	.LVL27:
+ 120:source\bsw\msg/ceh.c ****         t -= mm * 60 * 1000;
+ 277              		.loc 1 120 0
+ 278 005c 4EF66023 		movw	r3, #60000
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 8
+
+
+ 279 0060 03FB1103 		mls	r3, r3, r1, r0
+ 280              	.LVL28:
+ 121:source\bsw\msg/ceh.c ****         ss = t / 1000;
+ 281              		.loc 1 121 0
+ 282 0064 1D4D     		ldr	r5, .L16+20
+ 283 0066 A5FB0305 		umull	r0, r5, r5, r3
+ 284 006a AD09     		lsrs	r5, r5, #6
+ 285              	.LVL29:
+ 122:source\bsw\msg/ceh.c ****         t -= ss * 1000;
+ 286              		.loc 1 122 0
+ 287 006c 4FF47A79 		mov	r9, #1000
+ 288 0070 09FB1539 		mls	r9, r9, r5, r3
+ 289              	.LVL30:
+ 290              	.LBB6:
+ 123:source\bsw\msg/ceh.c ****         ms = t;
+ 124:source\bsw\msg/ceh.c **** 
+ 125:source\bsw\msg/ceh.c ****         
+ 126:source\bsw\msg/ceh.c ****         LOG_I("CEH","[%d] %s %d at %02d:%02d:%02d.%d ", i, CEH_source_strings[me->buffer[i].event],
+ 291              		.loc 1 126 0
+ 292 0074 30AF     		add	r7, sp, #192
+ 293 0076 0123     		movs	r3, #1
+ 294 0078 07F8A83D 		strb	r3, [r7, #-168]!
+ 295 007c 124B     		ldr	r3, .L16
+ 296 007e 1868     		ldr	r0, [r3]	@ unaligned
+ 297 0080 CDF81900 		str	r0, [sp, #25]	@ unaligned
+ 298 0084 18F80E00 		ldrb	r0, [r8, lr]	@ zero_extendqisi2
+ 299 0088 154B     		ldr	r3, .L16+24
+ 300 008a 53F82030 		ldr	r3, [r3, r0, lsl #2]
+ 301 008e CDF81090 		str	r9, [sp, #16]
+ 302 0092 0395     		str	r5, [sp, #12]
+ 303 0094 0291     		str	r1, [sp, #8]
+ 304 0096 0192     		str	r2, [sp, #4]
+ 305 0098 DCF80420 		ldr	r2, [ip, #4]
+ 306              	.LVL31:
+ 307 009c 0092     		str	r2, [sp]
+ 308 009e 2246     		mov	r2, r4
+ 309 00a0 1049     		ldr	r1, .L16+28
+ 310              	.LVL32:
+ 311 00a2 0DF12900 		add	r0, sp, #41
+ 312 00a6 FFF7FEFF 		bl	sprintf
+ 313              	.LVL33:
+ 314 00aa 3846     		mov	r0, r7
+ 315 00ac FFF7FEFF 		bl	LOG_send
+ 316              	.LVL34:
+ 317              	.LBE6:
+ 318              	.LBE5:
+ 112:source\bsw\msg/ceh.c ****     {
+ 319              		.loc 1 112 0
+ 320 00b0 0134     		adds	r4, r4, #1
+ 321              	.LVL35:
+ 322 00b2 A4B2     		uxth	r4, r4
+ 323              	.LVL36:
+ 324              	.L13:
+ 112:source\bsw\msg/ceh.c ****     {
+ 325              		.loc 1 112 0 is_stmt 0 discriminator 1
+ 326 00b4 7388     		ldrh	r3, [r6, #2]
+ 327 00b6 9C42     		cmp	r4, r3
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 9
+
+
+ 328 00b8 BBD3     		bcc	.L14
+ 329              	.LBE4:
+ 127:source\bsw\msg/ceh.c ****     }
+ 128:source\bsw\msg/ceh.c ****     
+ 129:source\bsw\msg/ceh.c ****     CEH_unlock();
+ 330              		.loc 1 129 0 is_stmt 1
+ 331 00ba FFF7FEFF 		bl	CEH_unlock
+ 332              	.LVL37:
+ 130:source\bsw\msg/ceh.c ****     
+ 131:source\bsw\msg/ceh.c ****     return RC_SUCCESS;
+ 132:source\bsw\msg/ceh.c **** }
+ 333              		.loc 1 132 0
+ 334 00be 0020     		movs	r0, #0
+ 335 00c0 31B0     		add	sp, sp, #196
+ 336              		.cfi_def_cfa_offset 28
+ 337              		@ sp needed
+ 338 00c2 BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
+ 339              	.LVL38:
+ 340              	.L17:
+ 341 00c6 00BF     		.align	2
+ 342              	.L16:
+ 343 00c8 00000000 		.word	.LC0
+ 344 00cc 18000000 		.word	.LC2
+ 345 00d0 B17C2195 		.word	-1792967503
+ 346 00d4 80EE3600 		.word	3600000
+ 347 00d8 73B2E745 		.word	1172812403
+ 348 00dc D34D6210 		.word	274877907
+ 349 00e0 00000000 		.word	CEH_source_strings
+ 350 00e4 30000000 		.word	.LC3
+ 351              		.cfi_endproc
+ 352              	.LFE116:
+ 353              		.size	CEH_dump, .-CEH_dump
+ 354              		.section	.text.CEH_clear,"ax",%progbits
+ 355              		.align	2
+ 356              		.global	CEH_clear
+ 357              		.thumb
+ 358              		.thumb_func
+ 359              		.type	CEH_clear, %function
+ 360              	CEH_clear:
+ 361              	.LFB117:
+ 133:source\bsw\msg/ceh.c **** 
+ 134:source\bsw\msg/ceh.c **** /**
+ 135:source\bsw\msg/ceh.c ****  * Clear content of CEH Buffer
+ 136:source\bsw\msg/ceh.c ****  * \param CEH_t *const me       : [IN] The object 
+ 137:source\bsw\msg/ceh.c ****  * \return RC_SUCCES or error code
+ 138:source\bsw\msg/ceh.c ****  **/
+ 139:source\bsw\msg/ceh.c **** RC_t CEH_clear(CEH_t *const me)
+ 140:source\bsw\msg/ceh.c **** {
+ 362              		.loc 1 140 0
+ 363              		.cfi_startproc
+ 364              		@ args = 0, pretend = 0, frame = 0
+ 365              		@ frame_needed = 0, uses_anonymous_args = 0
+ 366              		@ link register save eliminated.
+ 367              	.LVL39:
+ 141:source\bsw\msg/ceh.c ****     me->nextFree = 0;
+ 368              		.loc 1 141 0
+ 369 0000 0023     		movs	r3, #0
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 10
+
+
+ 370 0002 4380     		strh	r3, [r0, #2]	@ movhi
+ 142:source\bsw\msg/ceh.c ****     return RC_SUCCESS;
+ 143:source\bsw\msg/ceh.c **** }
+ 371              		.loc 1 143 0
+ 372 0004 1846     		mov	r0, r3
+ 373              	.LVL40:
+ 374 0006 7047     		bx	lr
+ 375              		.cfi_endproc
+ 376              	.LFE117:
+ 377              		.size	CEH_clear, .-CEH_clear
+ 378              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 379              		.align	2
+ 380              	.LC0:
+ 381 0000 43454800 		.ascii	"CEH\000"
+ 382              	.LC1:
+ 383 0004 25732028 		.ascii	"%s (%d) at %dms \000"
+ 383      25642920 
+ 383      61742025 
+ 383      646D7320 
+ 383      00
+ 384 0015 000000   		.space	3
+ 385              	.LC2:
+ 386 0018 4E756D62 		.ascii	"Number of entries: %d\000"
+ 386      6572206F 
+ 386      6620656E 
+ 386      74726965 
+ 386      733A2025 
+ 387 002e 0000     		.space	2
+ 388              	.LC3:
+ 389 0030 5B25645D 		.ascii	"[%d] %s %d at %02d:%02d:%02d.%d \000"
+ 389      20257320 
+ 389      25642061 
+ 389      74202530 
+ 389      32643A25 
+ 390              		.text
+ 391              	.Letext0:
+ 392              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 393              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 394              		.file 4 "Generated_Source\\PSoC5/ErikaOS_1_common_ee_types.inc"
+ 395              		.file 5 "Generated_Source\\PSoC5/ErikaOS_1_cortex_mx_ee_cpu.inc"
+ 396              		.file 6 ".\\source\\bsw/global.h"
+ 397              		.file 7 "source\\bsw\\msg\\ceh_cfg.h"
+ 398              		.file 8 ".\\source\\bsw\\services/logging.h"
+ 399              		.file 9 "Generated_Source\\PSoC5/ErikaOS_1_ee_oo_intfunc.inc"
+ 400              		.file 10 "Generated_Source\\PSoC5/ErikaOS_1_cortex_mx_ee_context.inc"
+ 401              		.file 11 "Generated_Source\\PSoC5/ErikaOS_1_common_ee_primitives.inc"
+ 402              		.file 12 "Generated_Source\\PSoC5/core_cm3.h"
+ 403              		.file 13 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4
+ 404              		.file 14 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4
+ 405              		.file 15 "Generated_Source\\PSoC5/CyLib.h"
+ 406              		.section	.debug_info,"",%progbits
+ 407              	.Ldebug_info0:
+ 408 0000 2D070000 		.4byte	0x72d
+ 409 0004 0400     		.2byte	0x4
+ 410 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 411 000a 04       		.byte	0x4
+ 412 000b 01       		.uleb128 0x1
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 11
+
+
+ 413 000c FF040000 		.4byte	.LASF119
+ 414 0010 0C       		.byte	0xc
+ 415 0011 D7060000 		.4byte	.LASF120
+ 416 0015 B5040000 		.4byte	.LASF121
+ 417 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 418 001d 00000000 		.4byte	0
+ 419 0021 00000000 		.4byte	.Ldebug_line0
+ 420 0025 02       		.uleb128 0x2
+ 421 0026 01       		.byte	0x1
+ 422 0027 06       		.byte	0x6
+ 423 0028 ED000000 		.4byte	.LASF0
+ 424 002c 02       		.uleb128 0x2
+ 425 002d 01       		.byte	0x1
+ 426 002e 08       		.byte	0x8
+ 427 002f 72040000 		.4byte	.LASF1
+ 428 0033 02       		.uleb128 0x2
+ 429 0034 02       		.byte	0x2
+ 430 0035 05       		.byte	0x5
+ 431 0036 2D010000 		.4byte	.LASF2
+ 432 003a 03       		.uleb128 0x3
+ 433 003b 1B060000 		.4byte	.LASF4
+ 434 003f 02       		.byte	0x2
+ 435 0040 2B       		.byte	0x2b
+ 436 0041 45000000 		.4byte	0x45
+ 437 0045 02       		.uleb128 0x2
+ 438 0046 02       		.byte	0x2
+ 439 0047 07       		.byte	0x7
+ 440 0048 B3020000 		.4byte	.LASF3
+ 441 004c 03       		.uleb128 0x3
+ 442 004d 3B030000 		.4byte	.LASF5
+ 443 0051 02       		.byte	0x2
+ 444 0052 3F       		.byte	0x3f
+ 445 0053 57000000 		.4byte	0x57
+ 446 0057 02       		.uleb128 0x2
+ 447 0058 04       		.byte	0x4
+ 448 0059 05       		.byte	0x5
+ 449 005a 1B010000 		.4byte	.LASF6
+ 450 005e 03       		.uleb128 0x3
+ 451 005f 9A010000 		.4byte	.LASF7
+ 452 0063 02       		.byte	0x2
+ 453 0064 41       		.byte	0x41
+ 454 0065 69000000 		.4byte	0x69
+ 455 0069 02       		.uleb128 0x2
+ 456 006a 04       		.byte	0x4
+ 457 006b 07       		.byte	0x7
+ 458 006c 43020000 		.4byte	.LASF8
+ 459 0070 02       		.uleb128 0x2
+ 460 0071 08       		.byte	0x8
+ 461 0072 05       		.byte	0x5
+ 462 0073 DF000000 		.4byte	.LASF9
+ 463 0077 02       		.uleb128 0x2
+ 464 0078 08       		.byte	0x8
+ 465 0079 07       		.byte	0x7
+ 466 007a 6B000000 		.4byte	.LASF10
+ 467 007e 04       		.uleb128 0x4
+ 468 007f 04       		.byte	0x4
+ 469 0080 05       		.byte	0x5
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 12
+
+
+ 470 0081 696E7400 		.ascii	"int\000"
+ 471 0085 02       		.uleb128 0x2
+ 472 0086 04       		.byte	0x4
+ 473 0087 07       		.byte	0x7
+ 474 0088 02020000 		.4byte	.LASF11
+ 475 008c 03       		.uleb128 0x3
+ 476 008d 0F020000 		.4byte	.LASF12
+ 477 0091 03       		.byte	0x3
+ 478 0092 24       		.byte	0x24
+ 479 0093 3A000000 		.4byte	0x3a
+ 480 0097 03       		.uleb128 0x3
+ 481 0098 6A040000 		.4byte	.LASF13
+ 482 009c 03       		.byte	0x3
+ 483 009d 2C       		.byte	0x2c
+ 484 009e 4C000000 		.4byte	0x4c
+ 485 00a2 03       		.uleb128 0x3
+ 486 00a3 C7050000 		.4byte	.LASF14
+ 487 00a7 03       		.byte	0x3
+ 488 00a8 30       		.byte	0x30
+ 489 00a9 5E000000 		.4byte	0x5e
+ 490 00ad 02       		.uleb128 0x2
+ 491 00ae 04       		.byte	0x4
+ 492 00af 04       		.byte	0x4
+ 493 00b0 12040000 		.4byte	.LASF15
+ 494 00b4 02       		.uleb128 0x2
+ 495 00b5 08       		.byte	0x8
+ 496 00b6 04       		.byte	0x4
+ 497 00b7 51010000 		.4byte	.LASF16
+ 498 00bb 02       		.uleb128 0x2
+ 499 00bc 01       		.byte	0x1
+ 500 00bd 08       		.byte	0x8
+ 501 00be 16060000 		.4byte	.LASF17
+ 502 00c2 02       		.uleb128 0x2
+ 503 00c3 08       		.byte	0x8
+ 504 00c4 04       		.byte	0x4
+ 505 00c5 0A060000 		.4byte	.LASF18
+ 506 00c9 02       		.uleb128 0x2
+ 507 00ca 04       		.byte	0x4
+ 508 00cb 07       		.byte	0x7
+ 509 00cc 7C030000 		.4byte	.LASF19
+ 510 00d0 05       		.uleb128 0x5
+ 511 00d1 04       		.byte	0x4
+ 512 00d2 D6000000 		.4byte	0xd6
+ 513 00d6 06       		.uleb128 0x6
+ 514 00d7 BB000000 		.4byte	0xbb
+ 515 00db 03       		.uleb128 0x3
+ 516 00dc CE060000 		.4byte	.LASF20
+ 517 00e0 04       		.byte	0x4
+ 518 00e1 53       		.byte	0x53
+ 519 00e2 7E000000 		.4byte	0x7e
+ 520 00e6 03       		.uleb128 0x3
+ 521 00e7 98060000 		.4byte	.LASF21
+ 522 00eb 04       		.byte	0x4
+ 523 00ec 54       		.byte	0x54
+ 524 00ed 85000000 		.4byte	0x85
+ 525 00f1 03       		.uleb128 0x3
+ 526 00f2 29020000 		.4byte	.LASF22
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 13
+
+
+ 527 00f6 05       		.byte	0x5
+ 528 00f7 4D       		.byte	0x4d
+ 529 00f8 E6000000 		.4byte	0xe6
+ 530 00fc 03       		.uleb128 0x3
+ 531 00fd 62070000 		.4byte	.LASF23
+ 532 0101 05       		.byte	0x5
+ 533 0102 4F       		.byte	0x4f
+ 534 0103 E6000000 		.4byte	0xe6
+ 535 0107 03       		.uleb128 0x3
+ 536 0108 E3010000 		.4byte	.LASF24
+ 537 010c 05       		.byte	0x5
+ 538 010d 78       		.byte	0x78
+ 539 010e DB000000 		.4byte	0xdb
+ 540 0112 07       		.uleb128 0x7
+ 541 0113 01       		.byte	0x1
+ 542 0114 25000000 		.4byte	0x25
+ 543 0118 06       		.byte	0x6
+ 544 0119 CF       		.byte	0xcf
+ 545 011a BB010000 		.4byte	0x1bb
+ 546 011e 08       		.uleb128 0x8
+ 547 011f 6C020000 		.4byte	.LASF25
+ 548 0123 00       		.byte	0
+ 549 0124 09       		.uleb128 0x9
+ 550 0125 09040000 		.4byte	.LASF26
+ 551 0129 7F       		.sleb128 -1
+ 552 012a 09       		.uleb128 0x9
+ 553 012b 55020000 		.4byte	.LASF27
+ 554 012f 7E       		.sleb128 -2
+ 555 0130 09       		.uleb128 0x9
+ 556 0131 AF050000 		.4byte	.LASF28
+ 557 0135 7D       		.sleb128 -3
+ 558 0136 09       		.uleb128 0x9
+ 559 0137 4C060000 		.4byte	.LASF29
+ 560 013b 7C       		.sleb128 -4
+ 561 013c 09       		.uleb128 0x9
+ 562 013d A2060000 		.4byte	.LASF30
+ 563 0141 7B       		.sleb128 -5
+ 564 0142 09       		.uleb128 0x9
+ 565 0143 36060000 		.4byte	.LASF31
+ 566 0147 7A       		.sleb128 -6
+ 567 0148 09       		.uleb128 0x9
+ 568 0149 CB030000 		.4byte	.LASF32
+ 569 014d 79       		.sleb128 -7
+ 570 014e 09       		.uleb128 0x9
+ 571 014f DE020000 		.4byte	.LASF33
+ 572 0153 78       		.sleb128 -8
+ 573 0154 09       		.uleb128 0x9
+ 574 0155 05010000 		.4byte	.LASF34
+ 575 0159 77       		.sleb128 -9
+ 576 015a 09       		.uleb128 0x9
+ 577 015b 22040000 		.4byte	.LASF35
+ 578 015f 76       		.sleb128 -10
+ 579 0160 09       		.uleb128 0x9
+ 580 0161 05000000 		.4byte	.LASF36
+ 581 0165 75       		.sleb128 -11
+ 582 0166 09       		.uleb128 0x9
+ 583 0167 43010000 		.4byte	.LASF37
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 14
+
+
+ 584 016b 74       		.sleb128 -12
+ 585 016c 09       		.uleb128 0x9
+ 586 016d 31020000 		.4byte	.LASF38
+ 587 0171 73       		.sleb128 -13
+ 588 0172 09       		.uleb128 0x9
+ 589 0173 F7050000 		.4byte	.LASF39
+ 590 0177 72       		.sleb128 -14
+ 591 0178 09       		.uleb128 0x9
+ 592 0179 56040000 		.4byte	.LASF40
+ 593 017d 71       		.sleb128 -15
+ 594 017e 09       		.uleb128 0x9
+ 595 017f 85030000 		.4byte	.LASF41
+ 596 0183 70       		.sleb128 -16
+ 597 0184 09       		.uleb128 0x9
+ 598 0185 94000000 		.4byte	.LASF42
+ 599 0189 6F       		.sleb128 -17
+ 600 018a 09       		.uleb128 0x9
+ 601 018b FD020000 		.4byte	.LASF43
+ 602 018f 6E       		.sleb128 -18
+ 603 0190 09       		.uleb128 0x9
+ 604 0191 28030000 		.4byte	.LASF44
+ 605 0195 6D       		.sleb128 -19
+ 606 0196 09       		.uleb128 0x9
+ 607 0197 D9050000 		.4byte	.LASF45
+ 608 019b 6C       		.sleb128 -20
+ 609 019c 09       		.uleb128 0x9
+ 610 019d 82000000 		.4byte	.LASF46
+ 611 01a1 6B       		.sleb128 -21
+ 612 01a2 09       		.uleb128 0x9
+ 613 01a3 A9030000 		.4byte	.LASF47
+ 614 01a7 6A       		.sleb128 -22
+ 615 01a8 09       		.uleb128 0x9
+ 616 01a9 32000000 		.4byte	.LASF48
+ 617 01ad 69       		.sleb128 -23
+ 618 01ae 09       		.uleb128 0x9
+ 619 01af 18020000 		.4byte	.LASF49
+ 620 01b3 68       		.sleb128 -24
+ 621 01b4 09       		.uleb128 0x9
+ 622 01b5 CA010000 		.4byte	.LASF50
+ 623 01b9 67       		.sleb128 -25
+ 624 01ba 00       		.byte	0
+ 625 01bb 03       		.uleb128 0x3
+ 626 01bc 5F000000 		.4byte	.LASF51
+ 627 01c0 06       		.byte	0x6
+ 628 01c1 EA       		.byte	0xea
+ 629 01c2 12010000 		.4byte	0x112
+ 630 01c6 07       		.uleb128 0x7
+ 631 01c7 01       		.byte	0x1
+ 632 01c8 2C000000 		.4byte	0x2c
+ 633 01cc 07       		.byte	0x7
+ 634 01cd 33       		.byte	0x33
+ 635 01ce EB010000 		.4byte	0x1eb
+ 636 01d2 08       		.uleb128 0x8
+ 637 01d3 00000000 		.4byte	.LASF52
+ 638 01d7 00       		.byte	0
+ 639 01d8 08       		.uleb128 0x8
+ 640 01d9 FE030000 		.4byte	.LASF53
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 15
+
+
+ 641 01dd 01       		.byte	0x1
+ 642 01de 08       		.uleb128 0x8
+ 643 01df 45030000 		.4byte	.LASF54
+ 644 01e3 02       		.byte	0x2
+ 645 01e4 08       		.uleb128 0x8
+ 646 01e5 51040000 		.4byte	.LASF55
+ 647 01e9 03       		.byte	0x3
+ 648 01ea 00       		.byte	0
+ 649 01eb 03       		.uleb128 0x3
+ 650 01ec 74060000 		.4byte	.LASF56
+ 651 01f0 07       		.byte	0x7
+ 652 01f1 38       		.byte	0x38
+ 653 01f2 C6010000 		.4byte	0x1c6
+ 654 01f6 07       		.uleb128 0x7
+ 655 01f7 01       		.byte	0x1
+ 656 01f8 2C000000 		.4byte	0x2c
+ 657 01fc 07       		.byte	0x7
+ 658 01fd 53       		.byte	0x53
+ 659 01fe 69020000 		.4byte	0x269
+ 660 0202 08       		.uleb128 0x8
+ 661 0203 EA010000 		.4byte	.LASF57
+ 662 0207 00       		.byte	0
+ 663 0208 08       		.uleb128 0x8
+ 664 0209 F4010000 		.4byte	.LASF58
+ 665 020d 01       		.byte	0x1
+ 666 020e 08       		.uleb128 0x8
+ 667 020f 71010000 		.4byte	.LASF59
+ 668 0213 02       		.byte	0x2
+ 669 0214 08       		.uleb128 0x8
+ 670 0215 12030000 		.4byte	.LASF60
+ 671 0219 03       		.byte	0x3
+ 672 021a 08       		.uleb128 0x8
+ 673 021b 54030000 		.4byte	.LASF61
+ 674 021f 04       		.byte	0x4
+ 675 0220 08       		.uleb128 0x8
+ 676 0221 B8010000 		.4byte	.LASF62
+ 677 0225 05       		.byte	0x5
+ 678 0226 08       		.uleb128 0x8
+ 679 0227 17000000 		.4byte	.LASF63
+ 680 022b 06       		.byte	0x6
+ 681 022c 08       		.uleb128 0x8
+ 682 022d ED030000 		.4byte	.LASF64
+ 683 0231 07       		.byte	0x7
+ 684 0232 08       		.uleb128 0x8
+ 685 0233 51000000 		.4byte	.LASF65
+ 686 0237 08       		.byte	0x8
+ 687 0238 08       		.uleb128 0x8
+ 688 0239 2A070000 		.4byte	.LASF66
+ 689 023d 09       		.byte	0x9
+ 690 023e 08       		.uleb128 0x8
+ 691 023f 92040000 		.4byte	.LASF67
+ 692 0243 0A       		.byte	0xa
+ 693 0244 08       		.uleb128 0x8
+ 694 0245 80010000 		.4byte	.LASF68
+ 695 0249 0B       		.byte	0xb
+ 696 024a 08       		.uleb128 0x8
+ 697 024b B1060000 		.4byte	.LASF69
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 16
+
+
+ 698 024f 0C       		.byte	0xc
+ 699 0250 08       		.uleb128 0x8
+ 700 0251 A5010000 		.4byte	.LASF70
+ 701 0255 0D       		.byte	0xd
+ 702 0256 08       		.uleb128 0x8
+ 703 0257 EC060000 		.4byte	.LASF71
+ 704 025b 0E       		.byte	0xe
+ 705 025c 08       		.uleb128 0x8
+ 706 025d 30040000 		.4byte	.LASF72
+ 707 0261 0F       		.byte	0xf
+ 708 0262 08       		.uleb128 0x8
+ 709 0263 1B070000 		.4byte	.LASF73
+ 710 0267 10       		.byte	0x10
+ 711 0268 00       		.byte	0
+ 712 0269 03       		.uleb128 0x3
+ 713 026a 37010000 		.4byte	.LASF74
+ 714 026e 07       		.byte	0x7
+ 715 026f 56       		.byte	0x56
+ 716 0270 F6010000 		.4byte	0x1f6
+ 717 0274 0A       		.uleb128 0xa
+ 718 0275 02       		.byte	0x2
+ 719 0276 07       		.byte	0x7
+ 720 0277 5B       		.byte	0x5b
+ 721 0278 95020000 		.4byte	0x295
+ 722 027c 0B       		.uleb128 0xb
+ 723 027d 87020000 		.4byte	.LASF75
+ 724 0281 07       		.byte	0x7
+ 725 0282 5C       		.byte	0x5c
+ 726 0283 69020000 		.4byte	0x269
+ 727 0287 00       		.byte	0
+ 728 0288 0B       		.uleb128 0xb
+ 729 0289 2D060000 		.4byte	.LASF76
+ 730 028d 07       		.byte	0x7
+ 731 028e 5D       		.byte	0x5d
+ 732 028f EB010000 		.4byte	0x1eb
+ 733 0293 01       		.byte	0x1
+ 734 0294 00       		.byte	0
+ 735 0295 03       		.uleb128 0x3
+ 736 0296 03070000 		.4byte	.LASF77
+ 737 029a 07       		.byte	0x7
+ 738 029b 5E       		.byte	0x5e
+ 739 029c 74020000 		.4byte	0x274
+ 740 02a0 0A       		.uleb128 0xa
+ 741 02a1 0C       		.byte	0xc
+ 742 02a2 07       		.byte	0x7
+ 743 02a3 65       		.byte	0x65
+ 744 02a4 CD020000 		.4byte	0x2cd
+ 745 02a8 0B       		.uleb128 0xb
+ 746 02a9 87020000 		.4byte	.LASF75
+ 747 02ad 07       		.byte	0x7
+ 748 02ae 66       		.byte	0x66
+ 749 02af 69020000 		.4byte	0x269
+ 750 02b3 00       		.byte	0
+ 751 02b4 0B       		.uleb128 0xb
+ 752 02b5 47060000 		.4byte	.LASF78
+ 753 02b9 07       		.byte	0x7
+ 754 02ba 67       		.byte	0x67
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 17
+
+
+ 755 02bb A2000000 		.4byte	0xa2
+ 756 02bf 04       		.byte	0x4
+ 757 02c0 0B       		.uleb128 0xb
+ 758 02c1 C5000000 		.4byte	.LASF79
+ 759 02c5 07       		.byte	0x7
+ 760 02c6 68       		.byte	0x68
+ 761 02c7 A2000000 		.4byte	0xa2
+ 762 02cb 08       		.byte	0x8
+ 763 02cc 00       		.byte	0
+ 764 02cd 03       		.uleb128 0x3
+ 765 02ce 8D020000 		.4byte	.LASF80
+ 766 02d2 07       		.byte	0x7
+ 767 02d3 69       		.byte	0x69
+ 768 02d4 A0020000 		.4byte	0x2a0
+ 769 02d8 0A       		.uleb128 0xa
+ 770 02d9 08       		.byte	0x8
+ 771 02da 07       		.byte	0x7
+ 772 02db 6D       		.byte	0x6d
+ 773 02dc 05030000 		.4byte	0x305
+ 774 02e0 0B       		.uleb128 0xb
+ 775 02e1 00010000 		.4byte	.LASF81
+ 776 02e5 07       		.byte	0x7
+ 777 02e6 6F       		.byte	0x6f
+ 778 02e7 8C000000 		.4byte	0x8c
+ 779 02eb 00       		.byte	0
+ 780 02ec 0B       		.uleb128 0xb
+ 781 02ed A6050000 		.4byte	.LASF82
+ 782 02f1 07       		.byte	0x7
+ 783 02f2 70       		.byte	0x70
+ 784 02f3 8C000000 		.4byte	0x8c
+ 785 02f7 02       		.byte	0x2
+ 786 02f8 0B       		.uleb128 0xb
+ 787 02f9 26060000 		.4byte	.LASF83
+ 788 02fd 07       		.byte	0x7
+ 789 02fe 71       		.byte	0x71
+ 790 02ff 05030000 		.4byte	0x305
+ 791 0303 04       		.byte	0x4
+ 792 0304 00       		.byte	0
+ 793 0305 05       		.uleb128 0x5
+ 794 0306 04       		.byte	0x4
+ 795 0307 CD020000 		.4byte	0x2cd
+ 796 030b 03       		.uleb128 0x3
+ 797 030c 80040000 		.4byte	.LASF84
+ 798 0310 07       		.byte	0x7
+ 799 0311 72       		.byte	0x72
+ 800 0312 D8020000 		.4byte	0x2d8
+ 801 0316 07       		.uleb128 0x7
+ 802 0317 01       		.byte	0x1
+ 803 0318 2C000000 		.4byte	0x2c
+ 804 031c 08       		.byte	0x8
+ 805 031d 3D       		.byte	0x3d
+ 806 031e 47030000 		.4byte	0x347
+ 807 0322 08       		.uleb128 0x8
+ 808 0323 5C060000 		.4byte	.LASF85
+ 809 0327 00       		.byte	0
+ 810 0328 08       		.uleb128 0x8
+ 811 0329 24010000 		.4byte	.LASF86
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 18
+
+
+ 812 032d 01       		.byte	0x1
+ 813 032e 08       		.uleb128 0x8
+ 814 032f 86040000 		.4byte	.LASF87
+ 815 0333 02       		.byte	0x2
+ 816 0334 08       		.uleb128 0x8
+ 817 0335 F3020000 		.4byte	.LASF88
+ 818 0339 03       		.byte	0x3
+ 819 033a 08       		.uleb128 0x8
+ 820 033b 28000000 		.4byte	.LASF89
+ 821 033f 04       		.byte	0x4
+ 822 0340 08       		.uleb128 0x8
+ 823 0341 BB030000 		.4byte	.LASF90
+ 824 0345 05       		.byte	0x5
+ 825 0346 00       		.byte	0
+ 826 0347 03       		.uleb128 0x3
+ 827 0348 A3020000 		.4byte	.LASF91
+ 828 034c 08       		.byte	0x8
+ 829 034d 44       		.byte	0x44
+ 830 034e 16030000 		.4byte	0x316
+ 831 0352 0A       		.uleb128 0xa
+ 832 0353 A8       		.byte	0xa8
+ 833 0354 08       		.byte	0x8
+ 834 0355 4B       		.byte	0x4b
+ 835 0356 7F030000 		.4byte	0x37f
+ 836 035a 0B       		.uleb128 0xb
+ 837 035b 81020000 		.4byte	.LASF92
+ 838 035f 08       		.byte	0x8
+ 839 0360 4C       		.byte	0x4c
+ 840 0361 47030000 		.4byte	0x347
+ 841 0365 00       		.byte	0
+ 842 0366 0B       		.uleb128 0xb
+ 843 0367 F9000000 		.4byte	.LASF93
+ 844 036b 08       		.byte	0x8
+ 845 036c 4D       		.byte	0x4d
+ 846 036d 7F030000 		.4byte	0x37f
+ 847 0371 01       		.byte	0x1
+ 848 0372 0B       		.uleb128 0xb
+ 849 0373 C3030000 		.4byte	.LASF94
+ 850 0377 08       		.byte	0x8
+ 851 0378 4E       		.byte	0x4e
+ 852 0379 8F030000 		.4byte	0x38f
+ 853 037d 11       		.byte	0x11
+ 854 037e 00       		.byte	0
+ 855 037f 0C       		.uleb128 0xc
+ 856 0380 BB000000 		.4byte	0xbb
+ 857 0384 8F030000 		.4byte	0x38f
+ 858 0388 0D       		.uleb128 0xd
+ 859 0389 C9000000 		.4byte	0xc9
+ 860 038d 0F       		.byte	0xf
+ 861 038e 00       		.byte	0
+ 862 038f 0C       		.uleb128 0xc
+ 863 0390 BB000000 		.4byte	0xbb
+ 864 0394 9F030000 		.4byte	0x39f
+ 865 0398 0D       		.uleb128 0xd
+ 866 0399 C9000000 		.4byte	0xc9
+ 867 039d 96       		.byte	0x96
+ 868 039e 00       		.byte	0
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 19
+
+
+ 869 039f 03       		.uleb128 0x3
+ 870 03a0 BD050000 		.4byte	.LASF95
+ 871 03a4 08       		.byte	0x8
+ 872 03a5 4F       		.byte	0x4f
+ 873 03a6 52030000 		.4byte	0x352
+ 874 03aa 0E       		.uleb128 0xe
+ 875 03ab AC040000 		.4byte	.LASF96
+ 876 03af 01       		.byte	0x1
+ 877 03b0 28       		.byte	0x28
+ 878 03b1 BB010000 		.4byte	0x1bb
+ 879 03b5 00000000 		.4byte	.LFB114
+ 880 03b9 1A000000 		.4byte	.LFE114-.LFB114
+ 881 03bd 01       		.uleb128 0x1
+ 882 03be 9C       		.byte	0x9c
+ 883 03bf EA030000 		.4byte	0x3ea
+ 884 03c3 0F       		.uleb128 0xf
+ 885 03c4 6D6500   		.ascii	"me\000"
+ 886 03c7 01       		.byte	0x1
+ 887 03c8 28       		.byte	0x28
+ 888 03c9 F0030000 		.4byte	0x3f0
+ 889 03cd 00000000 		.4byte	.LLST0
+ 890 03d1 10       		.uleb128 0x10
+ 891 03d2 00010000 		.4byte	.LASF81
+ 892 03d6 01       		.byte	0x1
+ 893 03d7 28       		.byte	0x28
+ 894 03d8 8C000000 		.4byte	0x8c
+ 895 03dc 1E000000 		.4byte	.LLST1
+ 896 03e0 11       		.uleb128 0x11
+ 897 03e1 14000000 		.4byte	.LVL3
+ 898 03e5 D8060000 		.4byte	0x6d8
+ 899 03e9 00       		.byte	0
+ 900 03ea 05       		.uleb128 0x5
+ 901 03eb 04       		.byte	0x4
+ 902 03ec 0B030000 		.4byte	0x30b
+ 903 03f0 06       		.uleb128 0x6
+ 904 03f1 EA030000 		.4byte	0x3ea
+ 905 03f5 0E       		.uleb128 0xe
+ 906 03f6 50070000 		.4byte	.LASF97
+ 907 03fa 01       		.byte	0x1
+ 908 03fb 38       		.byte	0x38
+ 909 03fc BB010000 		.4byte	0x1bb
+ 910 0400 00000000 		.4byte	.LFB115
+ 911 0404 C0000000 		.4byte	.LFE115-.LFB115
+ 912 0408 01       		.uleb128 0x1
+ 913 0409 9C       		.byte	0x9c
+ 914 040a DE040000 		.4byte	0x4de
+ 915 040e 0F       		.uleb128 0xf
+ 916 040f 6D6500   		.ascii	"me\000"
+ 917 0412 01       		.byte	0x1
+ 918 0413 38       		.byte	0x38
+ 919 0414 F0030000 		.4byte	0x3f0
+ 920 0418 57000000 		.4byte	.LLST2
+ 921 041c 10       		.uleb128 0x10
+ 922 041d 18040000 		.4byte	.LASF98
+ 923 0421 01       		.byte	0x1
+ 924 0422 38       		.byte	0x38
+ 925 0423 69020000 		.4byte	0x269
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 20
+
+
+ 926 0427 9C000000 		.4byte	.LLST3
+ 927 042b 10       		.uleb128 0x10
+ 928 042c 47060000 		.4byte	.LASF78
+ 929 0430 01       		.byte	0x1
+ 930 0431 38       		.byte	0x38
+ 931 0432 A2000000 		.4byte	0xa2
+ 932 0436 BD000000 		.4byte	.LLST4
+ 933 043a 12       		.uleb128 0x12
+ 934 043b 5B070000 		.4byte	.LASF99
+ 935 043f 01       		.byte	0x1
+ 936 0440 3C       		.byte	0x3c
+ 937 0441 BB010000 		.4byte	0x1bb
+ 938 0445 E9000000 		.4byte	.LLST5
+ 939 0449 12       		.uleb128 0x12
+ 940 044a 68060000 		.4byte	.LASF100
+ 941 044e 01       		.byte	0x1
+ 942 044f 3D       		.byte	0x3d
+ 943 0450 A2000000 		.4byte	0xa2
+ 944 0454 08010000 		.4byte	.LLST6
+ 945 0458 13       		.uleb128 0x13
+ 946 0459 12000000 		.4byte	.LBB2
+ 947 045d 2C000000 		.4byte	.LBE2-.LBB2
+ 948 0461 B0040000 		.4byte	0x4b0
+ 949 0465 14       		.uleb128 0x14
+ 950 0466 6D736700 		.ascii	"msg\000"
+ 951 046a 01       		.byte	0x1
+ 952 046b 3F       		.byte	0x3f
+ 953 046c 9F030000 		.4byte	0x39f
+ 954 0470 03       		.uleb128 0x3
+ 955 0471 91       		.byte	0x91
+ 956 0472 C07E     		.sleb128 -192
+ 957 0474 15       		.uleb128 0x15
+ 958 0475 38000000 		.4byte	.LVL9
+ 959 0479 E3060000 		.4byte	0x6e3
+ 960 047d 9F040000 		.4byte	0x49f
+ 961 0481 16       		.uleb128 0x16
+ 962 0482 01       		.uleb128 0x1
+ 963 0483 50       		.byte	0x50
+ 964 0484 03       		.uleb128 0x3
+ 965 0485 91       		.byte	0x91
+ 966 0486 D17E     		.sleb128 -175
+ 967 0488 16       		.uleb128 0x16
+ 968 0489 01       		.uleb128 0x1
+ 969 048a 51       		.byte	0x51
+ 970 048b 05       		.uleb128 0x5
+ 971 048c 03       		.byte	0x3
+ 972 048d 04000000 		.4byte	.LC1
+ 973 0491 16       		.uleb128 0x16
+ 974 0492 01       		.uleb128 0x1
+ 975 0493 53       		.byte	0x53
+ 976 0494 02       		.uleb128 0x2
+ 977 0495 77       		.byte	0x77
+ 978 0496 00       		.sleb128 0
+ 979 0497 16       		.uleb128 0x16
+ 980 0498 02       		.uleb128 0x2
+ 981 0499 7D       		.byte	0x7d
+ 982 049a 00       		.sleb128 0
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 21
+
+
+ 983 049b 02       		.uleb128 0x2
+ 984 049c 76       		.byte	0x76
+ 985 049d 00       		.sleb128 0
+ 986 049e 00       		.byte	0
+ 987 049f 17       		.uleb128 0x17
+ 988 04a0 3E000000 		.4byte	.LVL10
+ 989 04a4 EE060000 		.4byte	0x6ee
+ 990 04a8 16       		.uleb128 0x16
+ 991 04a9 01       		.uleb128 0x1
+ 992 04aa 50       		.byte	0x50
+ 993 04ab 02       		.uleb128 0x2
+ 994 04ac 78       		.byte	0x78
+ 995 04ad 00       		.sleb128 0
+ 996 04ae 00       		.byte	0
+ 997 04af 00       		.byte	0
+ 998 04b0 11       		.uleb128 0x11
+ 999 04b1 10000000 		.4byte	.LVL6
+ 1000 04b5 F9060000 		.4byte	0x6f9
+ 1001 04b9 11       		.uleb128 0x11
+ 1002 04ba 4A000000 		.4byte	.LVL11
+ 1003 04be 04070000 		.4byte	0x704
+ 1004 04c2 11       		.uleb128 0x11
+ 1005 04c3 7C000000 		.4byte	.LVL12
+ 1006 04c7 0F070000 		.4byte	0x70f
+ 1007 04cb 11       		.uleb128 0x11
+ 1008 04cc 9C000000 		.4byte	.LVL16
+ 1009 04d0 1A070000 		.4byte	0x71a
+ 1010 04d4 11       		.uleb128 0x11
+ 1011 04d5 A6000000 		.4byte	.LVL17
+ 1012 04d9 25070000 		.4byte	0x725
+ 1013 04dd 00       		.byte	0
+ 1014 04de 0E       		.uleb128 0xe
+ 1015 04df 4B030000 		.4byte	.LASF101
+ 1016 04e3 01       		.byte	0x1
+ 1017 04e4 69       		.byte	0x69
+ 1018 04e5 BB010000 		.4byte	0x1bb
+ 1019 04e9 00000000 		.4byte	.LFB116
+ 1020 04ed E8000000 		.4byte	.LFE116-.LFB116
+ 1021 04f1 01       		.uleb128 0x1
+ 1022 04f2 9C       		.byte	0x9c
+ 1023 04f3 28060000 		.4byte	0x628
+ 1024 04f7 0F       		.uleb128 0xf
+ 1025 04f8 6D6500   		.ascii	"me\000"
+ 1026 04fb 01       		.byte	0x1
+ 1027 04fc 69       		.byte	0x69
+ 1028 04fd F0030000 		.4byte	0x3f0
+ 1029 0501 26010000 		.4byte	.LLST7
+ 1030 0505 13       		.uleb128 0x13
+ 1031 0506 0C000000 		.4byte	.LBB3
+ 1032 050a 22000000 		.4byte	.LBE3-.LBB3
+ 1033 050e 50050000 		.4byte	0x550
+ 1034 0512 14       		.uleb128 0x14
+ 1035 0513 6D736700 		.ascii	"msg\000"
+ 1036 0517 01       		.byte	0x1
+ 1037 0518 6D       		.byte	0x6d
+ 1038 0519 9F030000 		.4byte	0x39f
+ 1039 051d 03       		.uleb128 0x3
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 22
+
+
+ 1040 051e 91       		.byte	0x91
+ 1041 051f B87E     		.sleb128 -200
+ 1042 0521 15       		.uleb128 0x15
+ 1043 0522 28000000 		.4byte	.LVL21
+ 1044 0526 E3060000 		.4byte	0x6e3
+ 1045 052a 3F050000 		.4byte	0x53f
+ 1046 052e 16       		.uleb128 0x16
+ 1047 052f 01       		.uleb128 0x1
+ 1048 0530 50       		.byte	0x50
+ 1049 0531 03       		.uleb128 0x3
+ 1050 0532 91       		.byte	0x91
+ 1051 0533 C97E     		.sleb128 -183
+ 1052 0535 16       		.uleb128 0x16
+ 1053 0536 01       		.uleb128 0x1
+ 1054 0537 51       		.byte	0x51
+ 1055 0538 05       		.uleb128 0x5
+ 1056 0539 03       		.byte	0x3
+ 1057 053a 18000000 		.4byte	.LC2
+ 1058 053e 00       		.byte	0
+ 1059 053f 17       		.uleb128 0x17
+ 1060 0540 2E000000 		.4byte	.LVL22
+ 1061 0544 EE060000 		.4byte	0x6ee
+ 1062 0548 16       		.uleb128 0x16
+ 1063 0549 01       		.uleb128 0x1
+ 1064 054a 50       		.byte	0x50
+ 1065 054b 02       		.uleb128 0x2
+ 1066 054c 74       		.byte	0x74
+ 1067 054d 00       		.sleb128 0
+ 1068 054e 00       		.byte	0
+ 1069 054f 00       		.byte	0
+ 1070 0550 13       		.uleb128 0x13
+ 1071 0551 2E000000 		.4byte	.LBB4
+ 1072 0555 8C000000 		.4byte	.LBE4-.LBB4
+ 1073 0559 15060000 		.4byte	0x615
+ 1074 055d 18       		.uleb128 0x18
+ 1075 055e 6900     		.ascii	"i\000"
+ 1076 0560 01       		.byte	0x1
+ 1077 0561 70       		.byte	0x70
+ 1078 0562 8C000000 		.4byte	0x8c
+ 1079 0566 52010000 		.4byte	.LLST8
+ 1080 056a 19       		.uleb128 0x19
+ 1081 056b 32000000 		.4byte	.LBB5
+ 1082 056f 7E000000 		.4byte	.LBE5-.LBB5
+ 1083 0573 18       		.uleb128 0x18
+ 1084 0574 686800   		.ascii	"hh\000"
+ 1085 0577 01       		.byte	0x1
+ 1086 0578 72       		.byte	0x72
+ 1087 0579 A2000000 		.4byte	0xa2
+ 1088 057d 7C010000 		.4byte	.LLST9
+ 1089 0581 18       		.uleb128 0x18
+ 1090 0582 6D6D00   		.ascii	"mm\000"
+ 1091 0585 01       		.byte	0x1
+ 1092 0586 72       		.byte	0x72
+ 1093 0587 A2000000 		.4byte	0xa2
+ 1094 058b 9C010000 		.4byte	.LLST10
+ 1095 058f 18       		.uleb128 0x18
+ 1096 0590 737300   		.ascii	"ss\000"
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 23
+
+
+ 1097 0593 01       		.byte	0x1
+ 1098 0594 72       		.byte	0x72
+ 1099 0595 A2000000 		.4byte	0xa2
+ 1100 0599 BC010000 		.4byte	.LLST11
+ 1101 059d 18       		.uleb128 0x18
+ 1102 059e 6D7300   		.ascii	"ms\000"
+ 1103 05a1 01       		.byte	0x1
+ 1104 05a2 72       		.byte	0x72
+ 1105 05a3 A2000000 		.4byte	0xa2
+ 1106 05a7 CF010000 		.4byte	.LLST12
+ 1107 05ab 18       		.uleb128 0x18
+ 1108 05ac 7400     		.ascii	"t\000"
+ 1109 05ae 01       		.byte	0x1
+ 1110 05af 73       		.byte	0x73
+ 1111 05b0 A2000000 		.4byte	0xa2
+ 1112 05b4 EE010000 		.4byte	.LLST13
+ 1113 05b8 19       		.uleb128 0x19
+ 1114 05b9 74000000 		.4byte	.LBB6
+ 1115 05bd 3C000000 		.4byte	.LBE6-.LBB6
+ 1116 05c1 14       		.uleb128 0x14
+ 1117 05c2 6D736700 		.ascii	"msg\000"
+ 1118 05c6 01       		.byte	0x1
+ 1119 05c7 7E       		.byte	0x7e
+ 1120 05c8 9F030000 		.4byte	0x39f
+ 1121 05cc 03       		.uleb128 0x3
+ 1122 05cd 91       		.byte	0x91
+ 1123 05ce B87E     		.sleb128 -200
+ 1124 05d0 15       		.uleb128 0x15
+ 1125 05d1 AA000000 		.4byte	.LVL33
+ 1126 05d5 E3060000 		.4byte	0x6e3
+ 1127 05d9 02060000 		.4byte	0x602
+ 1128 05dd 16       		.uleb128 0x16
+ 1129 05de 01       		.uleb128 0x1
+ 1130 05df 50       		.byte	0x50
+ 1131 05e0 03       		.uleb128 0x3
+ 1132 05e1 91       		.byte	0x91
+ 1133 05e2 C97E     		.sleb128 -183
+ 1134 05e4 16       		.uleb128 0x16
+ 1135 05e5 01       		.uleb128 0x1
+ 1136 05e6 51       		.byte	0x51
+ 1137 05e7 05       		.uleb128 0x5
+ 1138 05e8 03       		.byte	0x3
+ 1139 05e9 30000000 		.4byte	.LC3
+ 1140 05ed 16       		.uleb128 0x16
+ 1141 05ee 01       		.uleb128 0x1
+ 1142 05ef 52       		.byte	0x52
+ 1143 05f0 02       		.uleb128 0x2
+ 1144 05f1 74       		.byte	0x74
+ 1145 05f2 00       		.sleb128 0
+ 1146 05f3 16       		.uleb128 0x16
+ 1147 05f4 02       		.uleb128 0x2
+ 1148 05f5 7D       		.byte	0x7d
+ 1149 05f6 0C       		.sleb128 12
+ 1150 05f7 02       		.uleb128 0x2
+ 1151 05f8 75       		.byte	0x75
+ 1152 05f9 00       		.sleb128 0
+ 1153 05fa 16       		.uleb128 0x16
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 24
+
+
+ 1154 05fb 02       		.uleb128 0x2
+ 1155 05fc 7D       		.byte	0x7d
+ 1156 05fd 10       		.sleb128 16
+ 1157 05fe 02       		.uleb128 0x2
+ 1158 05ff 79       		.byte	0x79
+ 1159 0600 00       		.sleb128 0
+ 1160 0601 00       		.byte	0
+ 1161 0602 17       		.uleb128 0x17
+ 1162 0603 B0000000 		.4byte	.LVL34
+ 1163 0607 EE060000 		.4byte	0x6ee
+ 1164 060b 16       		.uleb128 0x16
+ 1165 060c 01       		.uleb128 0x1
+ 1166 060d 50       		.byte	0x50
+ 1167 060e 02       		.uleb128 0x2
+ 1168 060f 77       		.byte	0x77
+ 1169 0610 00       		.sleb128 0
+ 1170 0611 00       		.byte	0
+ 1171 0612 00       		.byte	0
+ 1172 0613 00       		.byte	0
+ 1173 0614 00       		.byte	0
+ 1174 0615 11       		.uleb128 0x11
+ 1175 0616 0C000000 		.4byte	.LVL20
+ 1176 061a 04070000 		.4byte	0x704
+ 1177 061e 11       		.uleb128 0x11
+ 1178 061f BE000000 		.4byte	.LVL37
+ 1179 0623 0F070000 		.4byte	0x70f
+ 1180 0627 00       		.byte	0
+ 1181 0628 0E       		.uleb128 0xe
+ 1182 0629 77020000 		.4byte	.LASF102
+ 1183 062d 01       		.byte	0x1
+ 1184 062e 8B       		.byte	0x8b
+ 1185 062f BB010000 		.4byte	0x1bb
+ 1186 0633 00000000 		.4byte	.LFB117
+ 1187 0637 08000000 		.4byte	.LFE117-.LFB117
+ 1188 063b 01       		.uleb128 0x1
+ 1189 063c 9C       		.byte	0x9c
+ 1190 063d 50060000 		.4byte	0x650
+ 1191 0641 0F       		.uleb128 0xf
+ 1192 0642 6D6500   		.ascii	"me\000"
+ 1193 0645 01       		.byte	0x1
+ 1194 0646 8B       		.byte	0x8b
+ 1195 0647 F0030000 		.4byte	0x3f0
+ 1196 064b 17020000 		.4byte	.LLST14
+ 1197 064f 00       		.byte	0
+ 1198 0650 1A       		.uleb128 0x1a
+ 1199 0651 C6020000 		.4byte	.LASF103
+ 1200 0655 09       		.byte	0x9
+ 1201 0656 40       		.byte	0x40
+ 1202 0657 F1000000 		.4byte	0xf1
+ 1203 065b 1A       		.uleb128 0x1a
+ 1204 065c 58010000 		.4byte	.LASF104
+ 1205 0660 09       		.byte	0x9
+ 1206 0661 47       		.byte	0x47
+ 1207 0662 FC000000 		.4byte	0xfc
+ 1208 0666 1A       		.uleb128 0x1a
+ 1209 0667 96030000 		.4byte	.LASF105
+ 1210 066b 09       		.byte	0x9
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 25
+
+
+ 1211 066c 4A       		.byte	0x4a
+ 1212 066d F1000000 		.4byte	0xf1
+ 1213 0671 1A       		.uleb128 0x1a
+ 1214 0672 8D050000 		.4byte	.LASF106
+ 1215 0676 0A       		.byte	0xa
+ 1216 0677 48       		.byte	0x48
+ 1217 0678 07010000 		.4byte	0x107
+ 1218 067c 1A       		.uleb128 0x1a
+ 1219 067d 83060000 		.4byte	.LASF107
+ 1220 0681 0B       		.byte	0xb
+ 1221 0682 44       		.byte	0x44
+ 1222 0683 F1000000 		.4byte	0xf1
+ 1223 0687 1B       		.uleb128 0x1b
+ 1224 0688 A8000000 		.4byte	.LASF108
+ 1225 068c 0C       		.byte	0xc
+ 1226 068d 1207     		.2byte	0x712
+ 1227 068f 93060000 		.4byte	0x693
+ 1228 0693 1C       		.uleb128 0x1c
+ 1229 0694 97000000 		.4byte	0x97
+ 1230 0698 0C       		.uleb128 0xc
+ 1231 0699 A3060000 		.4byte	0x6a3
+ 1232 069d A3060000 		.4byte	0x6a3
+ 1233 06a1 1D       		.uleb128 0x1d
+ 1234 06a2 00       		.byte	0
+ 1235 06a3 06       		.uleb128 0x6
+ 1236 06a4 D0000000 		.4byte	0xd0
+ 1237 06a8 1A       		.uleb128 0x1a
+ 1238 06a9 3D070000 		.4byte	.LASF109
+ 1239 06ad 07       		.byte	0x7
+ 1240 06ae 77       		.byte	0x77
+ 1241 06af B3060000 		.4byte	0x6b3
+ 1242 06b3 06       		.uleb128 0x6
+ 1243 06b4 98060000 		.4byte	0x698
+ 1244 06b8 0C       		.uleb128 0xc
+ 1245 06b9 C3060000 		.4byte	0x6c3
+ 1246 06bd C3060000 		.4byte	0x6c3
+ 1247 06c1 1D       		.uleb128 0x1d
+ 1248 06c2 00       		.byte	0
+ 1249 06c3 06       		.uleb128 0x6
+ 1250 06c4 95020000 		.4byte	0x295
+ 1251 06c8 1A       		.uleb128 0x1a
+ 1252 06c9 DD030000 		.4byte	.LASF110
+ 1253 06cd 07       		.byte	0x7
+ 1254 06ce 7A       		.byte	0x7a
+ 1255 06cf D3060000 		.4byte	0x6d3
+ 1256 06d3 06       		.uleb128 0x6
+ 1257 06d4 B8060000 		.4byte	0x6b8
+ 1258 06d8 1E       		.uleb128 0x1e
+ 1259 06d9 64000000 		.4byte	.LASF111
+ 1260 06dd 64000000 		.4byte	.LASF111
+ 1261 06e1 0D       		.byte	0xd
+ 1262 06e2 64       		.byte	0x64
+ 1263 06e3 1E       		.uleb128 0x1e
+ 1264 06e4 49000000 		.4byte	.LASF112
+ 1265 06e8 49000000 		.4byte	.LASF112
+ 1266 06ec 0E       		.byte	0xe
+ 1267 06ed E7       		.byte	0xe7
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 26
+
+
+ 1268 06ee 1E       		.uleb128 0x1e
+ 1269 06ef D0050000 		.4byte	.LASF113
+ 1270 06f3 D0050000 		.4byte	.LASF113
+ 1271 06f7 08       		.byte	0x8
+ 1272 06f8 9A       		.byte	0x9a
+ 1273 06f9 1E       		.uleb128 0x1e
+ 1274 06fa CF000000 		.4byte	.LASF114
+ 1275 06fe CF000000 		.4byte	.LASF114
+ 1276 0702 07       		.byte	0x7
+ 1277 0703 82       		.byte	0x82
+ 1278 0704 1E       		.uleb128 0x1e
+ 1279 0705 63020000 		.4byte	.LASF115
+ 1280 0709 63020000 		.4byte	.LASF115
+ 1281 070d 07       		.byte	0x7
+ 1282 070e 8C       		.byte	0x8c
+ 1283 070f 1E       		.uleb128 0x1e
+ 1284 0710 EC050000 		.4byte	.LASF116
+ 1285 0714 EC050000 		.4byte	.LASF116
+ 1286 0718 07       		.byte	0x7
+ 1287 0719 91       		.byte	0x91
+ 1288 071a 1E       		.uleb128 0x1e
+ 1289 071b B5000000 		.4byte	.LASF117
+ 1290 071f B5000000 		.4byte	.LASF117
+ 1291 0723 0F       		.byte	0xf
+ 1292 0724 7B       		.byte	0x7b
+ 1293 0725 1E       		.uleb128 0x1e
+ 1294 0726 67030000 		.4byte	.LASF118
+ 1295 072a 67030000 		.4byte	.LASF118
+ 1296 072e 07       		.byte	0x7
+ 1297 072f 87       		.byte	0x87
+ 1298 0730 00       		.byte	0
+ 1299              		.section	.debug_abbrev,"",%progbits
+ 1300              	.Ldebug_abbrev0:
+ 1301 0000 01       		.uleb128 0x1
+ 1302 0001 11       		.uleb128 0x11
+ 1303 0002 01       		.byte	0x1
+ 1304 0003 25       		.uleb128 0x25
+ 1305 0004 0E       		.uleb128 0xe
+ 1306 0005 13       		.uleb128 0x13
+ 1307 0006 0B       		.uleb128 0xb
+ 1308 0007 03       		.uleb128 0x3
+ 1309 0008 0E       		.uleb128 0xe
+ 1310 0009 1B       		.uleb128 0x1b
+ 1311 000a 0E       		.uleb128 0xe
+ 1312 000b 55       		.uleb128 0x55
+ 1313 000c 17       		.uleb128 0x17
+ 1314 000d 11       		.uleb128 0x11
+ 1315 000e 01       		.uleb128 0x1
+ 1316 000f 10       		.uleb128 0x10
+ 1317 0010 17       		.uleb128 0x17
+ 1318 0011 00       		.byte	0
+ 1319 0012 00       		.byte	0
+ 1320 0013 02       		.uleb128 0x2
+ 1321 0014 24       		.uleb128 0x24
+ 1322 0015 00       		.byte	0
+ 1323 0016 0B       		.uleb128 0xb
+ 1324 0017 0B       		.uleb128 0xb
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 27
+
+
+ 1325 0018 3E       		.uleb128 0x3e
+ 1326 0019 0B       		.uleb128 0xb
+ 1327 001a 03       		.uleb128 0x3
+ 1328 001b 0E       		.uleb128 0xe
+ 1329 001c 00       		.byte	0
+ 1330 001d 00       		.byte	0
+ 1331 001e 03       		.uleb128 0x3
+ 1332 001f 16       		.uleb128 0x16
+ 1333 0020 00       		.byte	0
+ 1334 0021 03       		.uleb128 0x3
+ 1335 0022 0E       		.uleb128 0xe
+ 1336 0023 3A       		.uleb128 0x3a
+ 1337 0024 0B       		.uleb128 0xb
+ 1338 0025 3B       		.uleb128 0x3b
+ 1339 0026 0B       		.uleb128 0xb
+ 1340 0027 49       		.uleb128 0x49
+ 1341 0028 13       		.uleb128 0x13
+ 1342 0029 00       		.byte	0
+ 1343 002a 00       		.byte	0
+ 1344 002b 04       		.uleb128 0x4
+ 1345 002c 24       		.uleb128 0x24
+ 1346 002d 00       		.byte	0
+ 1347 002e 0B       		.uleb128 0xb
+ 1348 002f 0B       		.uleb128 0xb
+ 1349 0030 3E       		.uleb128 0x3e
+ 1350 0031 0B       		.uleb128 0xb
+ 1351 0032 03       		.uleb128 0x3
+ 1352 0033 08       		.uleb128 0x8
+ 1353 0034 00       		.byte	0
+ 1354 0035 00       		.byte	0
+ 1355 0036 05       		.uleb128 0x5
+ 1356 0037 0F       		.uleb128 0xf
+ 1357 0038 00       		.byte	0
+ 1358 0039 0B       		.uleb128 0xb
+ 1359 003a 0B       		.uleb128 0xb
+ 1360 003b 49       		.uleb128 0x49
+ 1361 003c 13       		.uleb128 0x13
+ 1362 003d 00       		.byte	0
+ 1363 003e 00       		.byte	0
+ 1364 003f 06       		.uleb128 0x6
+ 1365 0040 26       		.uleb128 0x26
+ 1366 0041 00       		.byte	0
+ 1367 0042 49       		.uleb128 0x49
+ 1368 0043 13       		.uleb128 0x13
+ 1369 0044 00       		.byte	0
+ 1370 0045 00       		.byte	0
+ 1371 0046 07       		.uleb128 0x7
+ 1372 0047 04       		.uleb128 0x4
+ 1373 0048 01       		.byte	0x1
+ 1374 0049 0B       		.uleb128 0xb
+ 1375 004a 0B       		.uleb128 0xb
+ 1376 004b 49       		.uleb128 0x49
+ 1377 004c 13       		.uleb128 0x13
+ 1378 004d 3A       		.uleb128 0x3a
+ 1379 004e 0B       		.uleb128 0xb
+ 1380 004f 3B       		.uleb128 0x3b
+ 1381 0050 0B       		.uleb128 0xb
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 28
+
+
+ 1382 0051 01       		.uleb128 0x1
+ 1383 0052 13       		.uleb128 0x13
+ 1384 0053 00       		.byte	0
+ 1385 0054 00       		.byte	0
+ 1386 0055 08       		.uleb128 0x8
+ 1387 0056 28       		.uleb128 0x28
+ 1388 0057 00       		.byte	0
+ 1389 0058 03       		.uleb128 0x3
+ 1390 0059 0E       		.uleb128 0xe
+ 1391 005a 1C       		.uleb128 0x1c
+ 1392 005b 0B       		.uleb128 0xb
+ 1393 005c 00       		.byte	0
+ 1394 005d 00       		.byte	0
+ 1395 005e 09       		.uleb128 0x9
+ 1396 005f 28       		.uleb128 0x28
+ 1397 0060 00       		.byte	0
+ 1398 0061 03       		.uleb128 0x3
+ 1399 0062 0E       		.uleb128 0xe
+ 1400 0063 1C       		.uleb128 0x1c
+ 1401 0064 0D       		.uleb128 0xd
+ 1402 0065 00       		.byte	0
+ 1403 0066 00       		.byte	0
+ 1404 0067 0A       		.uleb128 0xa
+ 1405 0068 13       		.uleb128 0x13
+ 1406 0069 01       		.byte	0x1
+ 1407 006a 0B       		.uleb128 0xb
+ 1408 006b 0B       		.uleb128 0xb
+ 1409 006c 3A       		.uleb128 0x3a
+ 1410 006d 0B       		.uleb128 0xb
+ 1411 006e 3B       		.uleb128 0x3b
+ 1412 006f 0B       		.uleb128 0xb
+ 1413 0070 01       		.uleb128 0x1
+ 1414 0071 13       		.uleb128 0x13
+ 1415 0072 00       		.byte	0
+ 1416 0073 00       		.byte	0
+ 1417 0074 0B       		.uleb128 0xb
+ 1418 0075 0D       		.uleb128 0xd
+ 1419 0076 00       		.byte	0
+ 1420 0077 03       		.uleb128 0x3
+ 1421 0078 0E       		.uleb128 0xe
+ 1422 0079 3A       		.uleb128 0x3a
+ 1423 007a 0B       		.uleb128 0xb
+ 1424 007b 3B       		.uleb128 0x3b
+ 1425 007c 0B       		.uleb128 0xb
+ 1426 007d 49       		.uleb128 0x49
+ 1427 007e 13       		.uleb128 0x13
+ 1428 007f 38       		.uleb128 0x38
+ 1429 0080 0B       		.uleb128 0xb
+ 1430 0081 00       		.byte	0
+ 1431 0082 00       		.byte	0
+ 1432 0083 0C       		.uleb128 0xc
+ 1433 0084 01       		.uleb128 0x1
+ 1434 0085 01       		.byte	0x1
+ 1435 0086 49       		.uleb128 0x49
+ 1436 0087 13       		.uleb128 0x13
+ 1437 0088 01       		.uleb128 0x1
+ 1438 0089 13       		.uleb128 0x13
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 29
+
+
+ 1439 008a 00       		.byte	0
+ 1440 008b 00       		.byte	0
+ 1441 008c 0D       		.uleb128 0xd
+ 1442 008d 21       		.uleb128 0x21
+ 1443 008e 00       		.byte	0
+ 1444 008f 49       		.uleb128 0x49
+ 1445 0090 13       		.uleb128 0x13
+ 1446 0091 2F       		.uleb128 0x2f
+ 1447 0092 0B       		.uleb128 0xb
+ 1448 0093 00       		.byte	0
+ 1449 0094 00       		.byte	0
+ 1450 0095 0E       		.uleb128 0xe
+ 1451 0096 2E       		.uleb128 0x2e
+ 1452 0097 01       		.byte	0x1
+ 1453 0098 3F       		.uleb128 0x3f
+ 1454 0099 19       		.uleb128 0x19
+ 1455 009a 03       		.uleb128 0x3
+ 1456 009b 0E       		.uleb128 0xe
+ 1457 009c 3A       		.uleb128 0x3a
+ 1458 009d 0B       		.uleb128 0xb
+ 1459 009e 3B       		.uleb128 0x3b
+ 1460 009f 0B       		.uleb128 0xb
+ 1461 00a0 27       		.uleb128 0x27
+ 1462 00a1 19       		.uleb128 0x19
+ 1463 00a2 49       		.uleb128 0x49
+ 1464 00a3 13       		.uleb128 0x13
+ 1465 00a4 11       		.uleb128 0x11
+ 1466 00a5 01       		.uleb128 0x1
+ 1467 00a6 12       		.uleb128 0x12
+ 1468 00a7 06       		.uleb128 0x6
+ 1469 00a8 40       		.uleb128 0x40
+ 1470 00a9 18       		.uleb128 0x18
+ 1471 00aa 9742     		.uleb128 0x2117
+ 1472 00ac 19       		.uleb128 0x19
+ 1473 00ad 01       		.uleb128 0x1
+ 1474 00ae 13       		.uleb128 0x13
+ 1475 00af 00       		.byte	0
+ 1476 00b0 00       		.byte	0
+ 1477 00b1 0F       		.uleb128 0xf
+ 1478 00b2 05       		.uleb128 0x5
+ 1479 00b3 00       		.byte	0
+ 1480 00b4 03       		.uleb128 0x3
+ 1481 00b5 08       		.uleb128 0x8
+ 1482 00b6 3A       		.uleb128 0x3a
+ 1483 00b7 0B       		.uleb128 0xb
+ 1484 00b8 3B       		.uleb128 0x3b
+ 1485 00b9 0B       		.uleb128 0xb
+ 1486 00ba 49       		.uleb128 0x49
+ 1487 00bb 13       		.uleb128 0x13
+ 1488 00bc 02       		.uleb128 0x2
+ 1489 00bd 17       		.uleb128 0x17
+ 1490 00be 00       		.byte	0
+ 1491 00bf 00       		.byte	0
+ 1492 00c0 10       		.uleb128 0x10
+ 1493 00c1 05       		.uleb128 0x5
+ 1494 00c2 00       		.byte	0
+ 1495 00c3 03       		.uleb128 0x3
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 30
+
+
+ 1496 00c4 0E       		.uleb128 0xe
+ 1497 00c5 3A       		.uleb128 0x3a
+ 1498 00c6 0B       		.uleb128 0xb
+ 1499 00c7 3B       		.uleb128 0x3b
+ 1500 00c8 0B       		.uleb128 0xb
+ 1501 00c9 49       		.uleb128 0x49
+ 1502 00ca 13       		.uleb128 0x13
+ 1503 00cb 02       		.uleb128 0x2
+ 1504 00cc 17       		.uleb128 0x17
+ 1505 00cd 00       		.byte	0
+ 1506 00ce 00       		.byte	0
+ 1507 00cf 11       		.uleb128 0x11
+ 1508 00d0 898201   		.uleb128 0x4109
+ 1509 00d3 00       		.byte	0
+ 1510 00d4 11       		.uleb128 0x11
+ 1511 00d5 01       		.uleb128 0x1
+ 1512 00d6 31       		.uleb128 0x31
+ 1513 00d7 13       		.uleb128 0x13
+ 1514 00d8 00       		.byte	0
+ 1515 00d9 00       		.byte	0
+ 1516 00da 12       		.uleb128 0x12
+ 1517 00db 34       		.uleb128 0x34
+ 1518 00dc 00       		.byte	0
+ 1519 00dd 03       		.uleb128 0x3
+ 1520 00de 0E       		.uleb128 0xe
+ 1521 00df 3A       		.uleb128 0x3a
+ 1522 00e0 0B       		.uleb128 0xb
+ 1523 00e1 3B       		.uleb128 0x3b
+ 1524 00e2 0B       		.uleb128 0xb
+ 1525 00e3 49       		.uleb128 0x49
+ 1526 00e4 13       		.uleb128 0x13
+ 1527 00e5 02       		.uleb128 0x2
+ 1528 00e6 17       		.uleb128 0x17
+ 1529 00e7 00       		.byte	0
+ 1530 00e8 00       		.byte	0
+ 1531 00e9 13       		.uleb128 0x13
+ 1532 00ea 0B       		.uleb128 0xb
+ 1533 00eb 01       		.byte	0x1
+ 1534 00ec 11       		.uleb128 0x11
+ 1535 00ed 01       		.uleb128 0x1
+ 1536 00ee 12       		.uleb128 0x12
+ 1537 00ef 06       		.uleb128 0x6
+ 1538 00f0 01       		.uleb128 0x1
+ 1539 00f1 13       		.uleb128 0x13
+ 1540 00f2 00       		.byte	0
+ 1541 00f3 00       		.byte	0
+ 1542 00f4 14       		.uleb128 0x14
+ 1543 00f5 34       		.uleb128 0x34
+ 1544 00f6 00       		.byte	0
+ 1545 00f7 03       		.uleb128 0x3
+ 1546 00f8 08       		.uleb128 0x8
+ 1547 00f9 3A       		.uleb128 0x3a
+ 1548 00fa 0B       		.uleb128 0xb
+ 1549 00fb 3B       		.uleb128 0x3b
+ 1550 00fc 0B       		.uleb128 0xb
+ 1551 00fd 49       		.uleb128 0x49
+ 1552 00fe 13       		.uleb128 0x13
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 31
+
+
+ 1553 00ff 02       		.uleb128 0x2
+ 1554 0100 18       		.uleb128 0x18
+ 1555 0101 00       		.byte	0
+ 1556 0102 00       		.byte	0
+ 1557 0103 15       		.uleb128 0x15
+ 1558 0104 898201   		.uleb128 0x4109
+ 1559 0107 01       		.byte	0x1
+ 1560 0108 11       		.uleb128 0x11
+ 1561 0109 01       		.uleb128 0x1
+ 1562 010a 31       		.uleb128 0x31
+ 1563 010b 13       		.uleb128 0x13
+ 1564 010c 01       		.uleb128 0x1
+ 1565 010d 13       		.uleb128 0x13
+ 1566 010e 00       		.byte	0
+ 1567 010f 00       		.byte	0
+ 1568 0110 16       		.uleb128 0x16
+ 1569 0111 8A8201   		.uleb128 0x410a
+ 1570 0114 00       		.byte	0
+ 1571 0115 02       		.uleb128 0x2
+ 1572 0116 18       		.uleb128 0x18
+ 1573 0117 9142     		.uleb128 0x2111
+ 1574 0119 18       		.uleb128 0x18
+ 1575 011a 00       		.byte	0
+ 1576 011b 00       		.byte	0
+ 1577 011c 17       		.uleb128 0x17
+ 1578 011d 898201   		.uleb128 0x4109
+ 1579 0120 01       		.byte	0x1
+ 1580 0121 11       		.uleb128 0x11
+ 1581 0122 01       		.uleb128 0x1
+ 1582 0123 31       		.uleb128 0x31
+ 1583 0124 13       		.uleb128 0x13
+ 1584 0125 00       		.byte	0
+ 1585 0126 00       		.byte	0
+ 1586 0127 18       		.uleb128 0x18
+ 1587 0128 34       		.uleb128 0x34
+ 1588 0129 00       		.byte	0
+ 1589 012a 03       		.uleb128 0x3
+ 1590 012b 08       		.uleb128 0x8
+ 1591 012c 3A       		.uleb128 0x3a
+ 1592 012d 0B       		.uleb128 0xb
+ 1593 012e 3B       		.uleb128 0x3b
+ 1594 012f 0B       		.uleb128 0xb
+ 1595 0130 49       		.uleb128 0x49
+ 1596 0131 13       		.uleb128 0x13
+ 1597 0132 02       		.uleb128 0x2
+ 1598 0133 17       		.uleb128 0x17
+ 1599 0134 00       		.byte	0
+ 1600 0135 00       		.byte	0
+ 1601 0136 19       		.uleb128 0x19
+ 1602 0137 0B       		.uleb128 0xb
+ 1603 0138 01       		.byte	0x1
+ 1604 0139 11       		.uleb128 0x11
+ 1605 013a 01       		.uleb128 0x1
+ 1606 013b 12       		.uleb128 0x12
+ 1607 013c 06       		.uleb128 0x6
+ 1608 013d 00       		.byte	0
+ 1609 013e 00       		.byte	0
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 32
+
+
+ 1610 013f 1A       		.uleb128 0x1a
+ 1611 0140 34       		.uleb128 0x34
+ 1612 0141 00       		.byte	0
+ 1613 0142 03       		.uleb128 0x3
+ 1614 0143 0E       		.uleb128 0xe
+ 1615 0144 3A       		.uleb128 0x3a
+ 1616 0145 0B       		.uleb128 0xb
+ 1617 0146 3B       		.uleb128 0x3b
+ 1618 0147 0B       		.uleb128 0xb
+ 1619 0148 49       		.uleb128 0x49
+ 1620 0149 13       		.uleb128 0x13
+ 1621 014a 3F       		.uleb128 0x3f
+ 1622 014b 19       		.uleb128 0x19
+ 1623 014c 3C       		.uleb128 0x3c
+ 1624 014d 19       		.uleb128 0x19
+ 1625 014e 00       		.byte	0
+ 1626 014f 00       		.byte	0
+ 1627 0150 1B       		.uleb128 0x1b
+ 1628 0151 34       		.uleb128 0x34
+ 1629 0152 00       		.byte	0
+ 1630 0153 03       		.uleb128 0x3
+ 1631 0154 0E       		.uleb128 0xe
+ 1632 0155 3A       		.uleb128 0x3a
+ 1633 0156 0B       		.uleb128 0xb
+ 1634 0157 3B       		.uleb128 0x3b
+ 1635 0158 05       		.uleb128 0x5
+ 1636 0159 49       		.uleb128 0x49
+ 1637 015a 13       		.uleb128 0x13
+ 1638 015b 3F       		.uleb128 0x3f
+ 1639 015c 19       		.uleb128 0x19
+ 1640 015d 3C       		.uleb128 0x3c
+ 1641 015e 19       		.uleb128 0x19
+ 1642 015f 00       		.byte	0
+ 1643 0160 00       		.byte	0
+ 1644 0161 1C       		.uleb128 0x1c
+ 1645 0162 35       		.uleb128 0x35
+ 1646 0163 00       		.byte	0
+ 1647 0164 49       		.uleb128 0x49
+ 1648 0165 13       		.uleb128 0x13
+ 1649 0166 00       		.byte	0
+ 1650 0167 00       		.byte	0
+ 1651 0168 1D       		.uleb128 0x1d
+ 1652 0169 21       		.uleb128 0x21
+ 1653 016a 00       		.byte	0
+ 1654 016b 00       		.byte	0
+ 1655 016c 00       		.byte	0
+ 1656 016d 1E       		.uleb128 0x1e
+ 1657 016e 2E       		.uleb128 0x2e
+ 1658 016f 00       		.byte	0
+ 1659 0170 3F       		.uleb128 0x3f
+ 1660 0171 19       		.uleb128 0x19
+ 1661 0172 3C       		.uleb128 0x3c
+ 1662 0173 19       		.uleb128 0x19
+ 1663 0174 6E       		.uleb128 0x6e
+ 1664 0175 0E       		.uleb128 0xe
+ 1665 0176 03       		.uleb128 0x3
+ 1666 0177 0E       		.uleb128 0xe
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 33
+
+
+ 1667 0178 3A       		.uleb128 0x3a
+ 1668 0179 0B       		.uleb128 0xb
+ 1669 017a 3B       		.uleb128 0x3b
+ 1670 017b 0B       		.uleb128 0xb
+ 1671 017c 00       		.byte	0
+ 1672 017d 00       		.byte	0
+ 1673 017e 00       		.byte	0
+ 1674              		.section	.debug_loc,"",%progbits
+ 1675              	.Ldebug_loc0:
+ 1676              	.LLST0:
+ 1677 0000 00000000 		.4byte	.LVL0
+ 1678 0004 10000000 		.4byte	.LVL2
+ 1679 0008 0100     		.2byte	0x1
+ 1680 000a 50       		.byte	0x50
+ 1681 000b 10000000 		.4byte	.LVL2
+ 1682 000f 1A000000 		.4byte	.LFE114
+ 1683 0013 0100     		.2byte	0x1
+ 1684 0015 54       		.byte	0x54
+ 1685 0016 00000000 		.4byte	0
+ 1686 001a 00000000 		.4byte	0
+ 1687              	.LLST1:
+ 1688 001e 00000000 		.4byte	.LVL0
+ 1689 0022 0E000000 		.4byte	.LVL1
+ 1690 0026 0100     		.2byte	0x1
+ 1691 0028 51       		.byte	0x51
+ 1692 0029 0E000000 		.4byte	.LVL1
+ 1693 002d 10000000 		.4byte	.LVL2
+ 1694 0031 0200     		.2byte	0x2
+ 1695 0033 70       		.byte	0x70
+ 1696 0034 00       		.sleb128 0
+ 1697 0035 10000000 		.4byte	.LVL2
+ 1698 0039 13000000 		.4byte	.LVL3-1
+ 1699 003d 0200     		.2byte	0x2
+ 1700 003f 74       		.byte	0x74
+ 1701 0040 00       		.sleb128 0
+ 1702 0041 13000000 		.4byte	.LVL3-1
+ 1703 0045 1A000000 		.4byte	.LFE114
+ 1704 0049 0400     		.2byte	0x4
+ 1705 004b F3       		.byte	0xf3
+ 1706 004c 01       		.uleb128 0x1
+ 1707 004d 51       		.byte	0x51
+ 1708 004e 9F       		.byte	0x9f
+ 1709 004f 00000000 		.4byte	0
+ 1710 0053 00000000 		.4byte	0
+ 1711              	.LLST2:
+ 1712 0057 00000000 		.4byte	.LVL4
+ 1713 005b 0F000000 		.4byte	.LVL6-1
+ 1714 005f 0100     		.2byte	0x1
+ 1715 0061 50       		.byte	0x50
+ 1716 0062 0F000000 		.4byte	.LVL6-1
+ 1717 0066 7E000000 		.4byte	.LVL13
+ 1718 006a 0100     		.2byte	0x1
+ 1719 006c 54       		.byte	0x54
+ 1720 006d 7E000000 		.4byte	.LVL13
+ 1721 0071 80000000 		.4byte	.LVL14
+ 1722 0075 0400     		.2byte	0x4
+ 1723 0077 F3       		.byte	0xf3
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 34
+
+
+ 1724 0078 01       		.uleb128 0x1
+ 1725 0079 50       		.byte	0x50
+ 1726 007a 9F       		.byte	0x9f
+ 1727 007b 80000000 		.4byte	.LVL14
+ 1728 007f 84000000 		.4byte	.LVL15
+ 1729 0083 0100     		.2byte	0x1
+ 1730 0085 54       		.byte	0x54
+ 1731 0086 84000000 		.4byte	.LVL15
+ 1732 008a C0000000 		.4byte	.LFE115
+ 1733 008e 0400     		.2byte	0x4
+ 1734 0090 F3       		.byte	0xf3
+ 1735 0091 01       		.uleb128 0x1
+ 1736 0092 50       		.byte	0x50
+ 1737 0093 9F       		.byte	0x9f
+ 1738 0094 00000000 		.4byte	0
+ 1739 0098 00000000 		.4byte	0
+ 1740              	.LLST3:
+ 1741 009c 00000000 		.4byte	.LVL4
+ 1742 00a0 0F000000 		.4byte	.LVL6-1
+ 1743 00a4 0100     		.2byte	0x1
+ 1744 00a6 51       		.byte	0x51
+ 1745 00a7 0F000000 		.4byte	.LVL6-1
+ 1746 00ab C0000000 		.4byte	.LFE115
+ 1747 00af 0400     		.2byte	0x4
+ 1748 00b1 F3       		.byte	0xf3
+ 1749 00b2 01       		.uleb128 0x1
+ 1750 00b3 51       		.byte	0x51
+ 1751 00b4 9F       		.byte	0x9f
+ 1752 00b5 00000000 		.4byte	0
+ 1753 00b9 00000000 		.4byte	0
+ 1754              	.LLST4:
+ 1755 00bd 00000000 		.4byte	.LVL4
+ 1756 00c1 0F000000 		.4byte	.LVL6-1
+ 1757 00c5 0100     		.2byte	0x1
+ 1758 00c7 52       		.byte	0x52
+ 1759 00c8 0F000000 		.4byte	.LVL6-1
+ 1760 00cc AE000000 		.4byte	.LVL18
+ 1761 00d0 0100     		.2byte	0x1
+ 1762 00d2 57       		.byte	0x57
+ 1763 00d3 AE000000 		.4byte	.LVL18
+ 1764 00d7 C0000000 		.4byte	.LFE115
+ 1765 00db 0400     		.2byte	0x4
+ 1766 00dd F3       		.byte	0xf3
+ 1767 00de 01       		.uleb128 0x1
+ 1768 00df 52       		.byte	0x52
+ 1769 00e0 9F       		.byte	0x9f
+ 1770 00e1 00000000 		.4byte	0
+ 1771 00e5 00000000 		.4byte	0
+ 1772              	.LLST5:
+ 1773 00e9 0C000000 		.4byte	.LVL5
+ 1774 00ed 84000000 		.4byte	.LVL15
+ 1775 00f1 0200     		.2byte	0x2
+ 1776 00f3 30       		.byte	0x30
+ 1777 00f4 9F       		.byte	0x9f
+ 1778 00f5 84000000 		.4byte	.LVL15
+ 1779 00f9 AE000000 		.4byte	.LVL18
+ 1780 00fd 0100     		.2byte	0x1
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 35
+
+
+ 1781 00ff 54       		.byte	0x54
+ 1782 0100 00000000 		.4byte	0
+ 1783 0104 00000000 		.4byte	0
+ 1784              	.LLST6:
+ 1785 0108 12000000 		.4byte	.LVL7
+ 1786 010c 20000000 		.4byte	.LVL8
+ 1787 0110 0100     		.2byte	0x1
+ 1788 0112 50       		.byte	0x50
+ 1789 0113 20000000 		.4byte	.LVL8
+ 1790 0117 AE000000 		.4byte	.LVL18
+ 1791 011b 0100     		.2byte	0x1
+ 1792 011d 56       		.byte	0x56
+ 1793 011e 00000000 		.4byte	0
+ 1794 0122 00000000 		.4byte	0
+ 1795              	.LLST7:
+ 1796 0126 00000000 		.4byte	.LVL19
+ 1797 012a 0B000000 		.4byte	.LVL20-1
+ 1798 012e 0100     		.2byte	0x1
+ 1799 0130 50       		.byte	0x50
+ 1800 0131 0B000000 		.4byte	.LVL20-1
+ 1801 0135 C6000000 		.4byte	.LVL38
+ 1802 0139 0100     		.2byte	0x1
+ 1803 013b 56       		.byte	0x56
+ 1804 013c C6000000 		.4byte	.LVL38
+ 1805 0140 E8000000 		.4byte	.LFE116
+ 1806 0144 0400     		.2byte	0x4
+ 1807 0146 F3       		.byte	0xf3
+ 1808 0147 01       		.uleb128 0x1
+ 1809 0148 50       		.byte	0x50
+ 1810 0149 9F       		.byte	0x9f
+ 1811 014a 00000000 		.4byte	0
+ 1812 014e 00000000 		.4byte	0
+ 1813              	.LLST8:
+ 1814 0152 2E000000 		.4byte	.LVL22
+ 1815 0156 32000000 		.4byte	.LVL23
+ 1816 015a 0200     		.2byte	0x2
+ 1817 015c 30       		.byte	0x30
+ 1818 015d 9F       		.byte	0x9f
+ 1819 015e 32000000 		.4byte	.LVL23
+ 1820 0162 B2000000 		.4byte	.LVL35
+ 1821 0166 0100     		.2byte	0x1
+ 1822 0168 54       		.byte	0x54
+ 1823 0169 B4000000 		.4byte	.LVL36
+ 1824 016d C6000000 		.4byte	.LVL38
+ 1825 0171 0100     		.2byte	0x1
+ 1826 0173 54       		.byte	0x54
+ 1827 0174 00000000 		.4byte	0
+ 1828 0178 00000000 		.4byte	0
+ 1829              	.LLST9:
+ 1830 017c 4E000000 		.4byte	.LVL25
+ 1831 0180 9C000000 		.4byte	.LVL31
+ 1832 0184 0100     		.2byte	0x1
+ 1833 0186 52       		.byte	0x52
+ 1834 0187 9C000000 		.4byte	.LVL31
+ 1835 018b A9000000 		.4byte	.LVL33-1
+ 1836 018f 0300     		.2byte	0x3
+ 1837 0191 91       		.byte	0x91
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 36
+
+
+ 1838 0192 A47E     		.sleb128 -220
+ 1839 0194 00000000 		.4byte	0
+ 1840 0198 00000000 		.4byte	0
+ 1841              	.LLST10:
+ 1842 019c 5C000000 		.4byte	.LVL27
+ 1843 01a0 A2000000 		.4byte	.LVL32
+ 1844 01a4 0100     		.2byte	0x1
+ 1845 01a6 51       		.byte	0x51
+ 1846 01a7 A2000000 		.4byte	.LVL32
+ 1847 01ab A9000000 		.4byte	.LVL33-1
+ 1848 01af 0300     		.2byte	0x3
+ 1849 01b1 91       		.byte	0x91
+ 1850 01b2 A87E     		.sleb128 -216
+ 1851 01b4 00000000 		.4byte	0
+ 1852 01b8 00000000 		.4byte	0
+ 1853              	.LLST11:
+ 1854 01bc 6C000000 		.4byte	.LVL29
+ 1855 01c0 B4000000 		.4byte	.LVL36
+ 1856 01c4 0100     		.2byte	0x1
+ 1857 01c6 55       		.byte	0x55
+ 1858 01c7 00000000 		.4byte	0
+ 1859 01cb 00000000 		.4byte	0
+ 1860              	.LLST12:
+ 1861 01cf 32000000 		.4byte	.LVL23
+ 1862 01d3 74000000 		.4byte	.LVL30
+ 1863 01d7 0200     		.2byte	0x2
+ 1864 01d9 30       		.byte	0x30
+ 1865 01da 9F       		.byte	0x9f
+ 1866 01db 74000000 		.4byte	.LVL30
+ 1867 01df B4000000 		.4byte	.LVL36
+ 1868 01e3 0100     		.2byte	0x1
+ 1869 01e5 59       		.byte	0x59
+ 1870 01e6 00000000 		.4byte	0
+ 1871 01ea 00000000 		.4byte	0
+ 1872              	.LLST13:
+ 1873 01ee 46000000 		.4byte	.LVL24
+ 1874 01f2 64000000 		.4byte	.LVL28
+ 1875 01f6 0100     		.2byte	0x1
+ 1876 01f8 50       		.byte	0x50
+ 1877 01f9 64000000 		.4byte	.LVL28
+ 1878 01fd 74000000 		.4byte	.LVL30
+ 1879 0201 0100     		.2byte	0x1
+ 1880 0203 53       		.byte	0x53
+ 1881 0204 74000000 		.4byte	.LVL30
+ 1882 0208 B4000000 		.4byte	.LVL36
+ 1883 020c 0100     		.2byte	0x1
+ 1884 020e 59       		.byte	0x59
+ 1885 020f 00000000 		.4byte	0
+ 1886 0213 00000000 		.4byte	0
+ 1887              	.LLST14:
+ 1888 0217 00000000 		.4byte	.LVL39
+ 1889 021b 06000000 		.4byte	.LVL40
+ 1890 021f 0100     		.2byte	0x1
+ 1891 0221 50       		.byte	0x50
+ 1892 0222 06000000 		.4byte	.LVL40
+ 1893 0226 08000000 		.4byte	.LFE117
+ 1894 022a 0400     		.2byte	0x4
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 37
+
+
+ 1895 022c F3       		.byte	0xf3
+ 1896 022d 01       		.uleb128 0x1
+ 1897 022e 50       		.byte	0x50
+ 1898 022f 9F       		.byte	0x9f
+ 1899 0230 00000000 		.4byte	0
+ 1900 0234 00000000 		.4byte	0
+ 1901              		.section	.debug_aranges,"",%progbits
+ 1902 0000 34000000 		.4byte	0x34
+ 1903 0004 0200     		.2byte	0x2
+ 1904 0006 00000000 		.4byte	.Ldebug_info0
+ 1905 000a 04       		.byte	0x4
+ 1906 000b 00       		.byte	0
+ 1907 000c 0000     		.2byte	0
+ 1908 000e 0000     		.2byte	0
+ 1909 0010 00000000 		.4byte	.LFB114
+ 1910 0014 1A000000 		.4byte	.LFE114-.LFB114
+ 1911 0018 00000000 		.4byte	.LFB115
+ 1912 001c C0000000 		.4byte	.LFE115-.LFB115
+ 1913 0020 00000000 		.4byte	.LFB116
+ 1914 0024 E8000000 		.4byte	.LFE116-.LFB116
+ 1915 0028 00000000 		.4byte	.LFB117
+ 1916 002c 08000000 		.4byte	.LFE117-.LFB117
+ 1917 0030 00000000 		.4byte	0
+ 1918 0034 00000000 		.4byte	0
+ 1919              		.section	.debug_ranges,"",%progbits
+ 1920              	.Ldebug_ranges0:
+ 1921 0000 00000000 		.4byte	.LFB114
+ 1922 0004 1A000000 		.4byte	.LFE114
+ 1923 0008 00000000 		.4byte	.LFB115
+ 1924 000c C0000000 		.4byte	.LFE115
+ 1925 0010 00000000 		.4byte	.LFB116
+ 1926 0014 E8000000 		.4byte	.LFE116
+ 1927 0018 00000000 		.4byte	.LFB117
+ 1928 001c 08000000 		.4byte	.LFE117
+ 1929 0020 00000000 		.4byte	0
+ 1930 0024 00000000 		.4byte	0
+ 1931              		.section	.debug_line,"",%progbits
+ 1932              	.Ldebug_line0:
+ 1933 0000 4A030000 		.section	.debug_str,"MS",%progbits,1
+ 1933      0200CE02 
+ 1933      00000201 
+ 1933      FB0E0D00 
+ 1933      01010101 
+ 1934              	.LASF52:
+ 1935 0000 4E4F4E45 		.ascii	"NONE\000"
+ 1935      00
+ 1936              	.LASF36:
+ 1937 0005 52435F45 		.ascii	"RC_ERROR_TIME_OUT\000"
+ 1937      52524F52 
+ 1937      5F54494D 
+ 1937      455F4F55 
+ 1937      5400
+ 1938              	.LASF63:
+ 1939 0017 4345485F 		.ascii	"CEH_URTE_MONITOR\000"
+ 1939      55525445 
+ 1939      5F4D4F4E 
+ 1939      49544F52 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 38
+
+
+ 1939      00
+ 1940              	.LASF89:
+ 1941 0028 4C4F475F 		.ascii	"LOG_DEBUG\000"
+ 1941      44454255 
+ 1941      4700
+ 1942              	.LASF48:
+ 1943 0032 52435F45 		.ascii	"RC_ERROR_INVALID_STATE\000"
+ 1943      52524F52 
+ 1943      5F494E56 
+ 1943      414C4944 
+ 1943      5F535441 
+ 1944              	.LASF112:
+ 1945 0049 73707269 		.ascii	"sprintf\000"
+ 1945      6E746600 
+ 1946              	.LASF65:
+ 1947 0051 4345485F 		.ascii	"CEH_URTE_TASK\000"
+ 1947      55525445 
+ 1947      5F544153 
+ 1947      4B00
+ 1948              	.LASF51:
+ 1949 005f 52435F74 		.ascii	"RC_t\000"
+ 1949      00
+ 1950              	.LASF111:
+ 1951 0064 6D616C6C 		.ascii	"malloc\000"
+ 1951      6F6300
+ 1952              	.LASF10:
+ 1953 006b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1953      206C6F6E 
+ 1953      6720756E 
+ 1953      7369676E 
+ 1953      65642069 
+ 1954              	.LASF46:
+ 1955 0082 52435F45 		.ascii	"RC_ERROR_BAD_DATA\000"
+ 1955      52524F52 
+ 1955      5F424144 
+ 1955      5F444154 
+ 1955      4100
+ 1956              	.LASF42:
+ 1957 0094 52435F45 		.ascii	"RC_ERROR_READ_FAILS\000"
+ 1957      52524F52 
+ 1957      5F524541 
+ 1957      445F4641 
+ 1957      494C5300 
+ 1958              	.LASF108:
+ 1959 00a8 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1959      52784275 
+ 1959      66666572 
+ 1959      00
+ 1960              	.LASF117:
+ 1961 00b5 4379536F 		.ascii	"CySoftwareReset\000"
+ 1961      66747761 
+ 1961      72655265 
+ 1961      73657400 
+ 1962              	.LASF79:
+ 1963 00c5 74696D65 		.ascii	"timestamp\000"
+ 1963      7374616D 
+ 1963      7000
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 39
+
+
+ 1964              	.LASF114:
+ 1965 00cf 4345485F 		.ascii	"CEH_getTimeInMs\000"
+ 1965      67657454 
+ 1965      696D6549 
+ 1965      6E4D7300 
+ 1966              	.LASF9:
+ 1967 00df 6C6F6E67 		.ascii	"long long int\000"
+ 1967      206C6F6E 
+ 1967      6720696E 
+ 1967      7400
+ 1968              	.LASF0:
+ 1969 00ed 7369676E 		.ascii	"signed char\000"
+ 1969      65642063 
+ 1969      68617200 
+ 1970              	.LASF93:
+ 1971 00f9 73656E64 		.ascii	"sender\000"
+ 1971      657200
+ 1972              	.LASF81:
+ 1973 0100 73697A65 		.ascii	"size\000"
+ 1973      00
+ 1974              	.LASF34:
+ 1975 0105 52435F45 		.ascii	"RC_ERROR_BUFFER_EMTPY\000"
+ 1975      52524F52 
+ 1975      5F425546 
+ 1975      4645525F 
+ 1975      454D5450 
+ 1976              	.LASF6:
+ 1977 011b 6C6F6E67 		.ascii	"long int\000"
+ 1977      20696E74 
+ 1977      00
+ 1978              	.LASF86:
+ 1979 0124 4C4F475F 		.ascii	"LOG_INFO\000"
+ 1979      494E464F 
+ 1979      00
+ 1980              	.LASF2:
+ 1981 012d 73686F72 		.ascii	"short int\000"
+ 1981      7420696E 
+ 1981      7400
+ 1982              	.LASF74:
+ 1983 0137 4345485F 		.ascii	"CEH_event_t\000"
+ 1983      6576656E 
+ 1983      745F7400 
+ 1984              	.LASF37:
+ 1985 0143 52435F45 		.ascii	"RC_ERROR_OPEN\000"
+ 1985      52524F52 
+ 1985      5F4F5045 
+ 1985      4E00
+ 1986              	.LASF16:
+ 1987 0151 646F7562 		.ascii	"double\000"
+ 1987      6C6500
+ 1988              	.LASF104:
+ 1989 0158 45455F6F 		.ascii	"EE_oo_IRQ_suspend_status\000"
+ 1989      6F5F4952 
+ 1989      515F7375 
+ 1989      7370656E 
+ 1989      645F7374 
+ 1990              	.LASF59:
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 40
+
+
+ 1991 0171 4345485F 		.ascii	"CEH_URTE_EVENT\000"
+ 1991      55525445 
+ 1991      5F455645 
+ 1991      4E5400
+ 1992              	.LASF68:
+ 1993 0180 4345485F 		.ascii	"CEH_SIGNAL_INVALID_SCALER\000"
+ 1993      5349474E 
+ 1993      414C5F49 
+ 1993      4E56414C 
+ 1993      49445F53 
+ 1994              	.LASF7:
+ 1995 019a 5F5F7569 		.ascii	"__uint32_t\000"
+ 1995      6E743332 
+ 1995      5F7400
+ 1996              	.LASF70:
+ 1997 01a5 4345485F 		.ascii	"CEH_MESSAGE_MALLOC\000"
+ 1997      4D455353 
+ 1997      4147455F 
+ 1997      4D414C4C 
+ 1997      4F4300
+ 1998              	.LASF62:
+ 1999 01b8 4345485F 		.ascii	"CEH_URTE_CAE_INIT\000"
+ 1999      55525445 
+ 1999      5F434145 
+ 1999      5F494E49 
+ 1999      5400
+ 2000              	.LASF50:
+ 2001 01ca 52435F45 		.ascii	"RC_ERROR_NOT_IMPLEMENTED\000"
+ 2001      52524F52 
+ 2001      5F4E4F54 
+ 2001      5F494D50 
+ 2001      4C454D45 
+ 2002              	.LASF24:
+ 2003 01e3 45455F54 		.ascii	"EE_TID\000"
+ 2003      494400
+ 2004              	.LASF57:
+ 2005 01ea 4345485F 		.ascii	"CEH_EMPTY\000"
+ 2005      454D5054 
+ 2005      5900
+ 2006              	.LASF58:
+ 2007 01f4 4345485F 		.ascii	"CEH_HASBOOTED\000"
+ 2007      48415342 
+ 2007      4F4F5445 
+ 2007      4400
+ 2008              	.LASF11:
+ 2009 0202 756E7369 		.ascii	"unsigned int\000"
+ 2009      676E6564 
+ 2009      20696E74 
+ 2009      00
+ 2010              	.LASF12:
+ 2011 020f 75696E74 		.ascii	"uint16_t\000"
+ 2011      31365F74 
+ 2011      00
+ 2012              	.LASF49:
+ 2013 0218 52435F45 		.ascii	"RC_ERROR_UNKNOWN\000"
+ 2013      52524F52 
+ 2013      5F554E4B 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 41
+
+
+ 2013      4E4F574E 
+ 2013      00
+ 2014              	.LASF22:
+ 2015 0229 45455F55 		.ascii	"EE_UREG\000"
+ 2015      52454700 
+ 2016              	.LASF38:
+ 2017 0231 52435F45 		.ascii	"RC_ERROR_CHECKSUM\000"
+ 2017      52524F52 
+ 2017      5F434845 
+ 2017      434B5355 
+ 2017      4D00
+ 2018              	.LASF8:
+ 2019 0243 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2019      20756E73 
+ 2019      69676E65 
+ 2019      6420696E 
+ 2019      7400
+ 2020              	.LASF27:
+ 2021 0255 52435F45 		.ascii	"RC_ERROR_NULL\000"
+ 2021      52524F52 
+ 2021      5F4E554C 
+ 2021      4C00
+ 2022              	.LASF115:
+ 2023 0263 4345485F 		.ascii	"CEH_lock\000"
+ 2023      6C6F636B 
+ 2023      00
+ 2024              	.LASF25:
+ 2025 026c 52435F53 		.ascii	"RC_SUCCESS\000"
+ 2025      55434345 
+ 2025      535300
+ 2026              	.LASF102:
+ 2027 0277 4345485F 		.ascii	"CEH_clear\000"
+ 2027      636C6561 
+ 2027      7200
+ 2028              	.LASF92:
+ 2029 0281 6C657665 		.ascii	"level\000"
+ 2029      6C00
+ 2030              	.LASF75:
+ 2031 0287 6576656E 		.ascii	"event\000"
+ 2031      7400
+ 2032              	.LASF80:
+ 2033 028d 4345485F 		.ascii	"CEH_event_log_entry_t\000"
+ 2033      6576656E 
+ 2033      745F6C6F 
+ 2033      675F656E 
+ 2033      7472795F 
+ 2034              	.LASF91:
+ 2035 02a3 6C6F6767 		.ascii	"logging_level_t\000"
+ 2035      696E675F 
+ 2035      6C657665 
+ 2035      6C5F7400 
+ 2036              	.LASF3:
+ 2037 02b3 73686F72 		.ascii	"short unsigned int\000"
+ 2037      7420756E 
+ 2037      7369676E 
+ 2037      65642069 
+ 2037      6E7400
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 42
+
+
+ 2038              	.LASF103:
+ 2039 02c6 45455F6F 		.ascii	"EE_oo_IRQ_disable_count\000"
+ 2039      6F5F4952 
+ 2039      515F6469 
+ 2039      7361626C 
+ 2039      655F636F 
+ 2040              	.LASF33:
+ 2041 02de 52435F45 		.ascii	"RC_ERROR_BUFFER_FULL\000"
+ 2041      52524F52 
+ 2041      5F425546 
+ 2041      4645525F 
+ 2041      46554C4C 
+ 2042              	.LASF88:
+ 2043 02f3 4C4F475F 		.ascii	"LOG_ERROR\000"
+ 2043      4552524F 
+ 2043      5200
+ 2044              	.LASF43:
+ 2045 02fd 52435F45 		.ascii	"RC_ERROR_WRITE_FAILS\000"
+ 2045      52524F52 
+ 2045      5F575249 
+ 2045      54455F46 
+ 2045      41494C53 
+ 2046              	.LASF60:
+ 2047 0312 4345485F 		.ascii	"CEH_URTE_STATEHANDLER\000"
+ 2047      55525445 
+ 2047      5F535441 
+ 2047      54454841 
+ 2047      4E444C45 
+ 2048              	.LASF44:
+ 2049 0328 52435F45 		.ascii	"RC_ERROR_NOT_MATCH\000"
+ 2049      52524F52 
+ 2049      5F4E4F54 
+ 2049      5F4D4154 
+ 2049      434800
+ 2050              	.LASF5:
+ 2051 033b 5F5F696E 		.ascii	"__int32_t\000"
+ 2051      7433325F 
+ 2051      7400
+ 2052              	.LASF54:
+ 2053 0345 52455345 		.ascii	"RESET\000"
+ 2053      5400
+ 2054              	.LASF101:
+ 2055 034b 4345485F 		.ascii	"CEH_dump\000"
+ 2055      64756D70 
+ 2055      00
+ 2056              	.LASF61:
+ 2057 0354 4345485F 		.ascii	"CEH_URTE_MESSAGING\000"
+ 2057      55525445 
+ 2057      5F4D4553 
+ 2057      53414749 
+ 2057      4E4700
+ 2058              	.LASF118:
+ 2059 0367 4345485F 		.ascii	"CEH_deactivateActors\000"
+ 2059      64656163 
+ 2059      74697661 
+ 2059      74654163 
+ 2059      746F7273 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 43
+
+
+ 2060              	.LASF19:
+ 2061 037c 73697A65 		.ascii	"sizetype\000"
+ 2061      74797065 
+ 2061      00
+ 2062              	.LASF41:
+ 2063 0385 52435F45 		.ascii	"RC_ERROR_INVALID\000"
+ 2063      52524F52 
+ 2063      5F494E56 
+ 2063      414C4944 
+ 2063      00
+ 2064              	.LASF105:
+ 2065 0396 45455F41 		.ascii	"EE_ApplicationMode\000"
+ 2065      70706C69 
+ 2065      63617469 
+ 2065      6F6E4D6F 
+ 2065      646500
+ 2066              	.LASF47:
+ 2067 03a9 52435F45 		.ascii	"RC_ERROR_CANCELED\000"
+ 2067      52524F52 
+ 2067      5F43414E 
+ 2067      43454C45 
+ 2067      4400
+ 2068              	.LASF90:
+ 2069 03bb 4C4F475F 		.ascii	"LOG_OFF\000"
+ 2069      4F464600 
+ 2070              	.LASF94:
+ 2071 03c3 6D657373 		.ascii	"message\000"
+ 2071      61676500 
+ 2072              	.LASF32:
+ 2073 03cb 52435F45 		.ascii	"RC_ERROR_UNDERRUN\000"
+ 2073      52524F52 
+ 2073      5F554E44 
+ 2073      45525255 
+ 2073      4E00
+ 2074              	.LASF110:
+ 2075 03dd 4345485F 		.ascii	"CEH_event_table\000"
+ 2075      6576656E 
+ 2075      745F7461 
+ 2075      626C6500 
+ 2076              	.LASF64:
+ 2077 03ed 4345485F 		.ascii	"CEH_URTE_MAILBOX\000"
+ 2077      55525445 
+ 2077      5F4D4149 
+ 2077      4C424F58 
+ 2077      00
+ 2078              	.LASF53:
+ 2079 03fe 42524541 		.ascii	"BREAKPOINT\000"
+ 2079      4B504F49 
+ 2079      4E5400
+ 2080              	.LASF26:
+ 2081 0409 52435F45 		.ascii	"RC_ERROR\000"
+ 2081      52524F52 
+ 2081      00
+ 2082              	.LASF15:
+ 2083 0412 666C6F61 		.ascii	"float\000"
+ 2083      7400
+ 2084              	.LASF98:
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 44
+
+
+ 2085 0418 4345485F 		.ascii	"CEH_event\000"
+ 2085      6576656E 
+ 2085      7400
+ 2086              	.LASF35:
+ 2087 0422 52435F45 		.ascii	"RC_ERROR_BUSY\000"
+ 2087      52524F52 
+ 2087      5F425553 
+ 2087      5900
+ 2088              	.LASF72:
+ 2089 0430 4345485F 		.ascii	"CEH_APPLICATION_UNEXPECTED_STATE\000"
+ 2089      4150504C 
+ 2089      49434154 
+ 2089      494F4E5F 
+ 2089      554E4558 
+ 2090              	.LASF55:
+ 2091 0451 53544F50 		.ascii	"STOP\000"
+ 2091      00
+ 2092              	.LASF40:
+ 2093 0456 52435F45 		.ascii	"RC_ERROR_WRITE_ONLY\000"
+ 2093      52524F52 
+ 2093      5F575249 
+ 2093      54455F4F 
+ 2093      4E4C5900 
+ 2094              	.LASF13:
+ 2095 046a 696E7433 		.ascii	"int32_t\000"
+ 2095      325F7400 
+ 2096              	.LASF1:
+ 2097 0472 756E7369 		.ascii	"unsigned char\000"
+ 2097      676E6564 
+ 2097      20636861 
+ 2097      7200
+ 2098              	.LASF84:
+ 2099 0480 4345485F 		.ascii	"CEH_t\000"
+ 2099      7400
+ 2100              	.LASF87:
+ 2101 0486 4C4F475F 		.ascii	"LOG_WARNING\000"
+ 2101      5741524E 
+ 2101      494E4700 
+ 2102              	.LASF67:
+ 2103 0492 4345485F 		.ascii	"CEH_SIGNAL_INVALID_DRIVER\000"
+ 2103      5349474E 
+ 2103      414C5F49 
+ 2103      4E56414C 
+ 2103      49445F44 
+ 2104              	.LASF96:
+ 2105 04ac 4345485F 		.ascii	"CEH_init\000"
+ 2105      696E6974 
+ 2105      00
+ 2106              	.LASF121:
+ 2107 04b5 443A5C41 		.ascii	"D:\\AMA_EOS\\Lab_Assignments\\Assignment03\\AMA_EOS"
+ 2107      4D415F45 
+ 2107      4F535C4C 
+ 2107      61625F41 
+ 2107      73736967 
+ 2108 04e4 5F4C6162 		.ascii	"_Lab_3\\AMA_EOS_Lab_3.cydsn\000"
+ 2108      5F335C41 
+ 2108      4D415F45 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 45
+
+
+ 2108      4F535F4C 
+ 2108      61625F33 
+ 2109              	.LASF119:
+ 2110 04ff 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2110      43313120 
+ 2110      352E342E 
+ 2110      31203230 
+ 2110      31363036 
+ 2111 0532 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2111      20726576 
+ 2111      6973696F 
+ 2111      6E203233 
+ 2111      37373135 
+ 2112 0565 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2112      66756E63 
+ 2112      74696F6E 
+ 2112      2D736563 
+ 2112      74696F6E 
+ 2113              	.LASF106:
+ 2114 058d 45455F73 		.ascii	"EE_std_endcycle_next_tid\000"
+ 2114      74645F65 
+ 2114      6E646379 
+ 2114      636C655F 
+ 2114      6E657874 
+ 2115              	.LASF82:
+ 2116 05a6 6E657874 		.ascii	"nextFree\000"
+ 2116      46726565 
+ 2116      00
+ 2117              	.LASF28:
+ 2118 05af 52435F45 		.ascii	"RC_ERROR_ZERO\000"
+ 2118      52524F52 
+ 2118      5F5A4552 
+ 2118      4F00
+ 2119              	.LASF95:
+ 2120 05bd 6C6F6767 		.ascii	"logging_t\000"
+ 2120      696E675F 
+ 2120      7400
+ 2121              	.LASF14:
+ 2122 05c7 75696E74 		.ascii	"uint32_t\000"
+ 2122      33325F74 
+ 2122      00
+ 2123              	.LASF113:
+ 2124 05d0 4C4F475F 		.ascii	"LOG_send\000"
+ 2124      73656E64 
+ 2124      00
+ 2125              	.LASF45:
+ 2126 05d9 52435F45 		.ascii	"RC_ERROR_BAD_PARAM\000"
+ 2126      52524F52 
+ 2126      5F424144 
+ 2126      5F504152 
+ 2126      414D00
+ 2127              	.LASF116:
+ 2128 05ec 4345485F 		.ascii	"CEH_unlock\000"
+ 2128      756E6C6F 
+ 2128      636B00
+ 2129              	.LASF39:
+ 2130 05f7 52435F45 		.ascii	"RC_ERROR_READ_ONLY\000"
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 46
+
+
+ 2130      52524F52 
+ 2130      5F524541 
+ 2130      445F4F4E 
+ 2130      4C5900
+ 2131              	.LASF18:
+ 2132 060a 6C6F6E67 		.ascii	"long double\000"
+ 2132      20646F75 
+ 2132      626C6500 
+ 2133              	.LASF17:
+ 2134 0616 63686172 		.ascii	"char\000"
+ 2134      00
+ 2135              	.LASF4:
+ 2136 061b 5F5F7569 		.ascii	"__uint16_t\000"
+ 2136      6E743136 
+ 2136      5F7400
+ 2137              	.LASF83:
+ 2138 0626 62756666 		.ascii	"buffer\000"
+ 2138      657200
+ 2139              	.LASF76:
+ 2140 062d 72656163 		.ascii	"reaction\000"
+ 2140      74696F6E 
+ 2140      00
+ 2141              	.LASF31:
+ 2142 0636 52435F45 		.ascii	"RC_ERROR_OVERRUN\000"
+ 2142      52524F52 
+ 2142      5F4F5645 
+ 2142      5252554E 
+ 2142      00
+ 2143              	.LASF78:
+ 2144 0647 64617461 		.ascii	"data\000"
+ 2144      00
+ 2145              	.LASF29:
+ 2146 064c 52435F45 		.ascii	"RC_ERROR_MEMORY\000"
+ 2146      52524F52 
+ 2146      5F4D454D 
+ 2146      4F525900 
+ 2147              	.LASF85:
+ 2148 065c 4C4F475F 		.ascii	"LOG_VERBOSE\000"
+ 2148      56455242 
+ 2148      4F534500 
+ 2149              	.LASF100:
+ 2150 0668 63757272 		.ascii	"currentTime\000"
+ 2150      656E7454 
+ 2150      696D6500 
+ 2151              	.LASF56:
+ 2152 0674 4345485F 		.ascii	"CEH_reaction_t\000"
+ 2152      72656163 
+ 2152      74696F6E 
+ 2152      5F7400
+ 2153              	.LASF107:
+ 2154 0683 45455F49 		.ascii	"EE_IRQ_nesting_level\000"
+ 2154      52515F6E 
+ 2154      65737469 
+ 2154      6E675F6C 
+ 2154      6576656C 
+ 2155              	.LASF21:
+ 2156 0698 45455F55 		.ascii	"EE_UINT32\000"
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 47
+
+
+ 2156      494E5433 
+ 2156      3200
+ 2157              	.LASF30:
+ 2158 06a2 52435F45 		.ascii	"RC_ERROR_RANGE\000"
+ 2158      52524F52 
+ 2158      5F52414E 
+ 2158      474500
+ 2159              	.LASF69:
+ 2160 06b1 4345485F 		.ascii	"CEH_SIGNAL_INVALID_VALIDATOR\000"
+ 2160      5349474E 
+ 2160      414C5F49 
+ 2160      4E56414C 
+ 2160      49445F56 
+ 2161              	.LASF20:
+ 2162 06ce 45455F49 		.ascii	"EE_INT32\000"
+ 2162      4E543332 
+ 2162      00
+ 2163              	.LASF120:
+ 2164 06d7 736F7572 		.ascii	"source\\bsw\\msg\\ceh.c\000"
+ 2164      63655C62 
+ 2164      73775C6D 
+ 2164      73675C63 
+ 2164      65682E63 
+ 2165              	.LASF71:
+ 2166 06ec 4345485F 		.ascii	"CEH_MESSAGE_BUFFERFULL\000"
+ 2166      4D455353 
+ 2166      4147455F 
+ 2166      42554646 
+ 2166      45524655 
+ 2167              	.LASF77:
+ 2168 0703 4345485F 		.ascii	"CEH_event_table_entry_t\000"
+ 2168      6576656E 
+ 2168      745F7461 
+ 2168      626C655F 
+ 2168      656E7472 
+ 2169              	.LASF73:
+ 2170 071b 4345485F 		.ascii	"CEH_SOURCE_MAX\000"
+ 2170      534F5552 
+ 2170      43455F4D 
+ 2170      415800
+ 2171              	.LASF66:
+ 2172 072a 4345485F 		.ascii	"CEH_SIGNAL_INVALID\000"
+ 2172      5349474E 
+ 2172      414C5F49 
+ 2172      4E56414C 
+ 2172      494400
+ 2173              	.LASF109:
+ 2174 073d 4345485F 		.ascii	"CEH_source_strings\000"
+ 2174      736F7572 
+ 2174      63655F73 
+ 2174      7472696E 
+ 2174      677300
+ 2175              	.LASF97:
+ 2176 0750 4345485F 		.ascii	"CEH_report\000"
+ 2176      7265706F 
+ 2176      727400
+ 2177              	.LASF99:
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cc9HB9ic.s 			page 48
+
+
+ 2178 075b 72657375 		.ascii	"result\000"
+ 2178      6C7400
+ 2179              	.LASF23:
+ 2180 0762 45455F46 		.ascii	"EE_FREG\000"
+ 2180      52454700 
+ 2181              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -1,0 +1,4094 @@
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"cymetadata.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	cy_metadata
+  20              		.global	cy_meta_flashprotect
+  21              		.global	cy_meta_wonvl
+  22              		.global	cy_meta_custnvl
+  23              		.global	cy_meta_configecc
+  24              		.section	.cyconfigecc,"a",%progbits
+  25              		.align	2
+  26              		.type	cy_meta_configecc, %object
+  27              		.size	cy_meta_configecc, 3408
+  28              	cy_meta_configecc:
+  29 0000 05       		.byte	5
+  30 0001 52       		.byte	82
+  31 0002 00       		.byte	0
+  32 0003 40       		.byte	64
+  33 0004 0A       		.byte	10
+  34 0005 64       		.byte	100
+  35 0006 00       		.byte	0
+  36 0007 40       		.byte	64
+  37 0008 01       		.byte	1
+  38 0009 65       		.byte	101
+  39 000a 00       		.byte	0
+  40 000b 40       		.byte	64
+  41 000c 01       		.byte	1
+  42 000d 01       		.byte	1
+  43 000e 01       		.byte	1
+  44 000f 40       		.byte	64
+  45 0010 54       		.byte	84
+  46 0011 02       		.byte	2
+  47 0012 01       		.byte	1
+  48 0013 40       		.byte	64
+  49 0014 37       		.byte	55
+  50 0015 03       		.byte	3
+  51 0016 01       		.byte	1
+  52 0017 40       		.byte	64
+  53 0018 60       		.byte	96
+  54 0019 04       		.byte	4
+  55 001a 01       		.byte	1
+  56 001b 40       		.byte	64
+  57 001c 39       		.byte	57
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 2
+
+
+  58 001d 05       		.byte	5
+  59 001e 01       		.byte	1
+  60 001f 40       		.byte	64
+  61 0020 5E       		.byte	94
+  62 0021 06       		.byte	6
+  63 0022 01       		.byte	1
+  64 0023 40       		.byte	64
+  65 0024 47       		.byte	71
+  66 0025 07       		.byte	7
+  67 0026 01       		.byte	1
+  68 0027 40       		.byte	64
+  69 0028 65       		.byte	101
+  70 0029 08       		.byte	8
+  71 002a 01       		.byte	1
+  72 002b 40       		.byte	64
+  73 002c 42       		.byte	66
+  74 002d 09       		.byte	9
+  75 002e 01       		.byte	1
+  76 002f 40       		.byte	64
+  77 0030 50       		.byte	80
+  78 0031 0A       		.byte	10
+  79 0032 01       		.byte	1
+  80 0033 40       		.byte	64
+  81 0034 41       		.byte	65
+  82 0035 0B       		.byte	11
+  83 0036 01       		.byte	1
+  84 0037 40       		.byte	64
+  85 0038 57       		.byte	87
+  86 0039 0C       		.byte	12
+  87 003a 01       		.byte	1
+  88 003b 40       		.byte	64
+  89 003c 35       		.byte	53
+  90 003d 0D       		.byte	13
+  91 003e 01       		.byte	1
+  92 003f 40       		.byte	64
+  93 0040 49       		.byte	73
+  94 0041 0E       		.byte	14
+  95 0042 01       		.byte	1
+  96 0043 40       		.byte	64
+  97 0044 29       		.byte	41
+  98 0045 0F       		.byte	15
+  99 0046 01       		.byte	1
+ 100 0047 40       		.byte	64
+ 101 0048 01       		.byte	1
+ 102 0049 15       		.byte	21
+ 103 004a 01       		.byte	1
+ 104 004b 40       		.byte	64
+ 105 004c 0F       		.byte	15
+ 106 004d 16       		.byte	22
+ 107 004e 01       		.byte	1
+ 108 004f 40       		.byte	64
+ 109 0050 45       		.byte	69
+ 110 0051 17       		.byte	23
+ 111 0052 01       		.byte	1
+ 112 0053 40       		.byte	64
+ 113 0054 47       		.byte	71
+ 114 0055 18       		.byte	24
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 3
+
+
+ 115 0056 01       		.byte	1
+ 116 0057 40       		.byte	64
+ 117 0058 4F       		.byte	79
+ 118 0059 19       		.byte	25
+ 119 005a 01       		.byte	1
+ 120 005b 40       		.byte	64
+ 121 005c 51       		.byte	81
+ 122 005d 1A       		.byte	26
+ 123 005e 01       		.byte	1
+ 124 005f 40       		.byte	64
+ 125 0060 53       		.byte	83
+ 126 0061 1B       		.byte	27
+ 127 0062 01       		.byte	1
+ 128 0063 40       		.byte	64
+ 129 0064 05       		.byte	5
+ 130 0065 40       		.byte	64
+ 131 0066 01       		.byte	1
+ 132 0067 40       		.byte	64
+ 133 0068 10       		.byte	16
+ 134 0069 41       		.byte	65
+ 135 006a 01       		.byte	1
+ 136 006b 40       		.byte	64
+ 137 006c 04       		.byte	4
+ 138 006d 42       		.byte	66
+ 139 006e 01       		.byte	1
+ 140 006f 40       		.byte	64
+ 141 0070 03       		.byte	3
+ 142 0071 43       		.byte	67
+ 143 0072 01       		.byte	1
+ 144 0073 40       		.byte	64
+ 145 0074 04       		.byte	4
+ 146 0075 44       		.byte	68
+ 147 0076 01       		.byte	1
+ 148 0077 40       		.byte	64
+ 149 0078 0F       		.byte	15
+ 150 0079 45       		.byte	69
+ 151 007a 01       		.byte	1
+ 152 007b 40       		.byte	64
+ 153 007c 04       		.byte	4
+ 154 007d 46       		.byte	70
+ 155 007e 01       		.byte	1
+ 156 007f 40       		.byte	64
+ 157 0080 03       		.byte	3
+ 158 0081 48       		.byte	72
+ 159 0082 01       		.byte	1
+ 160 0083 40       		.byte	64
+ 161 0084 03       		.byte	3
+ 162 0085 49       		.byte	73
+ 163 0086 01       		.byte	1
+ 164 0087 40       		.byte	64
+ 165 0088 0C       		.byte	12
+ 166 0089 4C       		.byte	76
+ 167 008a 01       		.byte	1
+ 168 008b 40       		.byte	64
+ 169 008c 0F       		.byte	15
+ 170 008d 4D       		.byte	77
+ 171 008e 01       		.byte	1
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 4
+
+
+ 172 008f 40       		.byte	64
+ 173 0090 05       		.byte	5
+ 174 0091 50       		.byte	80
+ 175 0092 01       		.byte	1
+ 176 0093 40       		.byte	64
+ 177 0094 01       		.byte	1
+ 178 0095 51       		.byte	81
+ 179 0096 01       		.byte	1
+ 180 0097 40       		.byte	64
+ 181 0098 00       		.byte	0
+ 182 0099 40       		.byte	64
+ 183 009a 08       		.byte	8
+ 184 009b 59       		.byte	89
+ 185 009c 09       		.byte	9
+ 186 009d CA       		.byte	-54
+ 187 009e 10       		.byte	16
+ 188 009f 19       		.byte	25
+ 189 00a0 11       		.byte	17
+ 190 00a1 21       		.byte	33
+ 191 00a2 82       		.byte	-126
+ 192 00a3 0D       		.byte	13
+ 193 00a4 83       		.byte	-125
+ 194 00a5 0D       		.byte	13
+ 195 00a6 84       		.byte	-124
+ 196 00a7 0F       		.byte	15
+ 197 00a8 86       		.byte	-122
+ 198 00a9 0D       		.byte	13
+ 199 00aa 88       		.byte	-120
+ 200 00ab 0F       		.byte	15
+ 201 00ac 89       		.byte	-119
+ 202 00ad 0D       		.byte	13
+ 203 00ae 8A       		.byte	-118
+ 204 00af 0D       		.byte	13
+ 205 00b0 8D       		.byte	-115
+ 206 00b1 0D       		.byte	13
+ 207 00b2 8E       		.byte	-114
+ 208 00b3 38       		.byte	56
+ 209 00b4 8F       		.byte	-113
+ 210 00b5 0D       		.byte	13
+ 211 00b6 8A       		.byte	-118
+ 212 00b7 72       		.byte	114
+ 213 00b8 E2       		.byte	-30
+ 214 00b9 04       		.byte	4
+ 215 00ba 02       		.byte	2
+ 216 00bb 02       		.byte	2
+ 217 00bc 07       		.byte	7
+ 218 00bd 01       		.byte	1
+ 219 00be 09       		.byte	9
+ 220 00bf 02       		.byte	2
+ 221 00c0 11       		.byte	17
+ 222 00c1 02       		.byte	2
+ 223 00c2 19       		.byte	25
+ 224 00c3 02       		.byte	2
+ 225 00c4 1A       		.byte	26
+ 226 00c5 01       		.byte	1
+ 227 00c6 1D       		.byte	29
+ 228 00c7 02       		.byte	2
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 5
+
+
+ 229 00c8 26       		.byte	38
+ 230 00c9 04       		.byte	4
+ 231 00ca 2D       		.byte	45
+ 232 00cb 01       		.byte	1
+ 233 00cc 2E       		.byte	46
+ 234 00cd 01       		.byte	1
+ 235 00ce 30       		.byte	48
+ 236 00cf 04       		.byte	4
+ 237 00d0 32       		.byte	50
+ 238 00d1 01       		.byte	1
+ 239 00d2 33       		.byte	51
+ 240 00d3 02       		.byte	2
+ 241 00d4 34       		.byte	52
+ 242 00d5 02       		.byte	2
+ 243 00d6 37       		.byte	55
+ 244 00d7 01       		.byte	1
+ 245 00d8 39       		.byte	57
+ 246 00d9 08       		.byte	8
+ 247 00da 3F       		.byte	63
+ 248 00db 04       		.byte	4
+ 249 00dc 40       		.byte	64
+ 250 00dd 20       		.byte	32
+ 251 00de 41       		.byte	65
+ 252 00df 06       		.byte	6
+ 253 00e0 49       		.byte	73
+ 254 00e1 FF       		.byte	-1
+ 255 00e2 4A       		.byte	74
+ 256 00e3 FF       		.byte	-1
+ 257 00e4 4B       		.byte	75
+ 258 00e5 FF       		.byte	-1
+ 259 00e6 4D       		.byte	77
+ 260 00e7 A0       		.byte	-96
+ 261 00e8 4F       		.byte	79
+ 262 00e9 04       		.byte	4
+ 263 00ea 50       		.byte	80
+ 264 00eb 18       		.byte	24
+ 265 00ec 52       		.byte	82
+ 266 00ed 80       		.byte	-128
+ 267 00ee 54       		.byte	84
+ 268 00ef 05       		.byte	5
+ 269 00f0 58       		.byte	88
+ 270 00f1 04       		.byte	4
+ 271 00f2 59       		.byte	89
+ 272 00f3 04       		.byte	4
+ 273 00f4 5A       		.byte	90
+ 274 00f5 04       		.byte	4
+ 275 00f6 5B       		.byte	91
+ 276 00f7 04       		.byte	4
+ 277 00f8 5F       		.byte	95
+ 278 00f9 01       		.byte	1
+ 279 00fa 60       		.byte	96
+ 280 00fb 40       		.byte	64
+ 281 00fc 62       		.byte	98
+ 282 00fd C0       		.byte	-64
+ 283 00fe 64       		.byte	100
+ 284 00ff 40       		.byte	64
+ 285 0100 65       		.byte	101
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 6
+
+
+ 286 0101 40       		.byte	64
+ 287 0102 66       		.byte	102
+ 288 0103 C0       		.byte	-64
+ 289 0104 68       		.byte	104
+ 290 0105 C0       		.byte	-64
+ 291 0106 6A       		.byte	106
+ 292 0107 C0       		.byte	-64
+ 293 0108 6C       		.byte	108
+ 294 0109 C0       		.byte	-64
+ 295 010a 6E       		.byte	110
+ 296 010b C0       		.byte	-64
+ 297 010c 8F       		.byte	-113
+ 298 010d 01       		.byte	1
+ 299 010e 92       		.byte	-110
+ 300 010f 02       		.byte	2
+ 301 0110 9A       		.byte	-102
+ 302 0111 01       		.byte	1
+ 303 0112 9B       		.byte	-101
+ 304 0113 02       		.byte	2
+ 305 0114 A2       		.byte	-94
+ 306 0115 04       		.byte	4
+ 307 0116 AA       		.byte	-86
+ 308 0117 01       		.byte	1
+ 309 0118 AB       		.byte	-85
+ 310 0119 02       		.byte	2
+ 311 011a AD       		.byte	-83
+ 312 011b 01       		.byte	1
+ 313 011c B1       		.byte	-79
+ 314 011d 01       		.byte	1
+ 315 011e B2       		.byte	-78
+ 316 011f 01       		.byte	1
+ 317 0120 B4       		.byte	-76
+ 318 0121 02       		.byte	2
+ 319 0122 B5       		.byte	-75
+ 320 0123 02       		.byte	2
+ 321 0124 B6       		.byte	-74
+ 322 0125 04       		.byte	4
+ 323 0126 BE       		.byte	-66
+ 324 0127 04       		.byte	4
+ 325 0128 C0       		.byte	-64
+ 326 0129 20       		.byte	32
+ 327 012a C1       		.byte	-63
+ 328 012b 06       		.byte	6
+ 329 012c C5       		.byte	-59
+ 330 012d D0       		.byte	-48
+ 331 012e C6       		.byte	-58
+ 332 012f 01       		.byte	1
+ 333 0130 C7       		.byte	-57
+ 334 0131 02       		.byte	2
+ 335 0132 C8       		.byte	-56
+ 336 0133 16       		.byte	22
+ 337 0134 C9       		.byte	-55
+ 338 0135 FF       		.byte	-1
+ 339 0136 CA       		.byte	-54
+ 340 0137 FF       		.byte	-1
+ 341 0138 CB       		.byte	-53
+ 342 0139 FF       		.byte	-1
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 7
+
+
+ 343 013a CD       		.byte	-51
+ 344 013b AF       		.byte	-81
+ 345 013c CE       		.byte	-50
+ 346 013d 0F       		.byte	15
+ 347 013e CF       		.byte	-49
+ 348 013f 04       		.byte	4
+ 349 0140 D0       		.byte	-48
+ 350 0141 18       		.byte	24
+ 351 0142 D2       		.byte	-46
+ 352 0143 80       		.byte	-128
+ 353 0144 D4       		.byte	-44
+ 354 0145 05       		.byte	5
+ 355 0146 D8       		.byte	-40
+ 356 0147 04       		.byte	4
+ 357 0148 D9       		.byte	-39
+ 358 0149 04       		.byte	4
+ 359 014a DA       		.byte	-38
+ 360 014b 04       		.byte	4
+ 361 014c DB       		.byte	-37
+ 362 014d 04       		.byte	4
+ 363 014e DF       		.byte	-33
+ 364 014f 01       		.byte	1
+ 365 0150 E0       		.byte	-32
+ 366 0151 40       		.byte	64
+ 367 0152 E2       		.byte	-30
+ 368 0153 C0       		.byte	-64
+ 369 0154 E4       		.byte	-28
+ 370 0155 40       		.byte	64
+ 371 0156 E5       		.byte	-27
+ 372 0157 40       		.byte	64
+ 373 0158 E6       		.byte	-26
+ 374 0159 C0       		.byte	-64
+ 375 015a E8       		.byte	-24
+ 376 015b C0       		.byte	-64
+ 377 015c EA       		.byte	-22
+ 378 015d C0       		.byte	-64
+ 379 015e EC       		.byte	-20
+ 380 015f C0       		.byte	-64
+ 381 0160 EE       		.byte	-18
+ 382 0161 C0       		.byte	-64
+ 383 0162 06       		.byte	6
+ 384 0163 80       		.byte	-128
+ 385 0164 09       		.byte	9
+ 386 0165 20       		.byte	32
+ 387 0166 0A       		.byte	10
+ 388 0167 40       		.byte	64
+ 389 0168 0D       		.byte	13
+ 390 0169 20       		.byte	32
+ 391 016a 10       		.byte	16
+ 392 016b 80       		.byte	-128
+ 393 016c 12       		.byte	18
+ 394 016d 08       		.byte	8
+ 395 016e 15       		.byte	21
+ 396 016f 80       		.byte	-128
+ 397 0170 16       		.byte	22
+ 398 0171 20       		.byte	32
+ 399 0172 19       		.byte	25
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 8
+
+
+ 400 0173 B4       		.byte	-76
+ 401 0174 1D       		.byte	29
+ 402 0175 20       		.byte	32
+ 403 0176 1E       		.byte	30
+ 404 0177 20       		.byte	32
+ 405 0178 1F       		.byte	31
+ 406 0179 02       		.byte	2
+ 407 017a 22       		.byte	34
+ 408 017b 20       		.byte	32
+ 409 017c 23       		.byte	35
+ 410 017d 80       		.byte	-128
+ 411 017e 26       		.byte	38
+ 412 017f 44       		.byte	68
+ 413 0180 29       		.byte	41
+ 414 0181 80       		.byte	-128
+ 415 0182 2A       		.byte	42
+ 416 0183 20       		.byte	32
+ 417 0184 2B       		.byte	43
+ 418 0185 04       		.byte	4
+ 419 0186 2F       		.byte	47
+ 420 0187 02       		.byte	2
+ 421 0188 31       		.byte	49
+ 422 0189 10       		.byte	16
+ 423 018a 34       		.byte	52
+ 424 018b 81       		.byte	-127
+ 425 018c 37       		.byte	55
+ 426 018d 20       		.byte	32
+ 427 018e 39       		.byte	57
+ 428 018f 80       		.byte	-128
+ 429 0190 3F       		.byte	63
+ 430 0191 18       		.byte	24
+ 431 0192 41       		.byte	65
+ 432 0193 20       		.byte	32
+ 433 0194 45       		.byte	69
+ 434 0195 20       		.byte	32
+ 435 0196 49       		.byte	73
+ 436 0197 02       		.byte	2
+ 437 0198 4A       		.byte	74
+ 438 0199 08       		.byte	8
+ 439 019a 4E       		.byte	78
+ 440 019b 08       		.byte	8
+ 441 019c 50       		.byte	80
+ 442 019d 80       		.byte	-128
+ 443 019e 51       		.byte	81
+ 444 019f 40       		.byte	64
+ 445 01a0 52       		.byte	82
+ 446 01a1 08       		.byte	8
+ 447 01a2 59       		.byte	89
+ 448 01a3 06       		.byte	6
+ 449 01a4 5B       		.byte	91
+ 450 01a5 80       		.byte	-128
+ 451 01a6 5E       		.byte	94
+ 452 01a7 80       		.byte	-128
+ 453 01a8 5F       		.byte	95
+ 454 01a9 09       		.byte	9
+ 455 01aa 72       		.byte	114
+ 456 01ab 40       		.byte	64
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 9
+
+
+ 457 01ac 76       		.byte	118
+ 458 01ad 80       		.byte	-128
+ 459 01ae 83       		.byte	-125
+ 460 01af 20       		.byte	32
+ 461 01b0 84       		.byte	-124
+ 462 01b1 80       		.byte	-128
+ 463 01b2 85       		.byte	-123
+ 464 01b3 02       		.byte	2
+ 465 01b4 86       		.byte	-122
+ 466 01b5 10       		.byte	16
+ 467 01b6 8E       		.byte	-114
+ 468 01b7 24       		.byte	36
+ 469 01b8 C0       		.byte	-64
+ 470 01b9 10       		.byte	16
+ 471 01ba C2       		.byte	-62
+ 472 01bb 4A       		.byte	74
+ 473 01bc C4       		.byte	-60
+ 474 01bd AA       		.byte	-86
+ 475 01be CA       		.byte	-54
+ 476 01bf 1C       		.byte	28
+ 477 01c0 CC       		.byte	-52
+ 478 01c1 B4       		.byte	-76
+ 479 01c2 CE       		.byte	-50
+ 480 01c3 68       		.byte	104
+ 481 01c4 D0       		.byte	-48
+ 482 01c5 24       		.byte	36
+ 483 01c6 D2       		.byte	-46
+ 484 01c7 24       		.byte	36
+ 485 01c8 D6       		.byte	-42
+ 486 01c9 DB       		.byte	-37
+ 487 01ca E0       		.byte	-32
+ 488 01cb 02       		.byte	2
+ 489 01cc E2       		.byte	-30
+ 490 01cd 40       		.byte	64
+ 491 01ce E6       		.byte	-26
+ 492 01cf 01       		.byte	1
+ 493 01d0 00       		.byte	0
+ 494 01d1 08       		.byte	8
+ 495 01d2 01       		.byte	1
+ 496 01d3 04       		.byte	4
+ 497 01d4 05       		.byte	5
+ 498 01d5 60       		.byte	96
+ 499 01d6 0B       		.byte	11
+ 500 01d7 04       		.byte	4
+ 501 01d8 0C       		.byte	12
+ 502 01d9 0C       		.byte	12
+ 503 01da 0D       		.byte	13
+ 504 01db 04       		.byte	4
+ 505 01dc 0E       		.byte	14
+ 506 01dd 03       		.byte	3
+ 507 01de 10       		.byte	16
+ 508 01df 0A       		.byte	10
+ 509 01e0 11       		.byte	17
+ 510 01e1 01       		.byte	1
+ 511 01e2 14       		.byte	20
+ 512 01e3 03       		.byte	3
+ 513 01e4 15       		.byte	21
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 10
+
+
+ 514 01e5 07       		.byte	7
+ 515 01e6 16       		.byte	22
+ 516 01e7 04       		.byte	4
+ 517 01e8 17       		.byte	23
+ 518 01e9 38       		.byte	56
+ 519 01ea 18       		.byte	24
+ 520 01eb 01       		.byte	1
+ 521 01ec 19       		.byte	25
+ 522 01ed 04       		.byte	4
+ 523 01ee 1A       		.byte	26
+ 524 01ef 08       		.byte	8
+ 525 01f0 1C       		.byte	28
+ 526 01f1 0A       		.byte	10
+ 527 01f2 1D       		.byte	29
+ 528 01f3 04       		.byte	4
+ 529 01f4 20       		.byte	32
+ 530 01f5 02       		.byte	2
+ 531 01f6 21       		.byte	33
+ 532 01f7 04       		.byte	4
+ 533 01f8 24       		.byte	36
+ 534 01f9 08       		.byte	8
+ 535 01fa 26       		.byte	38
+ 536 01fb 02       		.byte	2
+ 537 01fc 28       		.byte	40
+ 538 01fd 02       		.byte	2
+ 539 01fe 29       		.byte	41
+ 540 01ff 0A       		.byte	10
+ 541 0200 2A       		.byte	42
+ 542 0201 08       		.byte	8
+ 543 0202 2B       		.byte	43
+ 544 0203 10       		.byte	16
+ 545 0204 2C       		.byte	44
+ 546 0205 08       		.byte	8
+ 547 0206 2D       		.byte	45
+ 548 0207 56       		.byte	86
+ 549 0208 2E       		.byte	46
+ 550 0209 02       		.byte	2
+ 551 020a 2F       		.byte	47
+ 552 020b 09       		.byte	9
+ 553 020c 31       		.byte	49
+ 554 020d 7F       		.byte	127
+ 555 020e 34       		.byte	52
+ 556 020f 0F       		.byte	15
+ 557 0210 39       		.byte	57
+ 558 0211 02       		.byte	2
+ 559 0212 3A       		.byte	58
+ 560 0213 20       		.byte	32
+ 561 0214 40       		.byte	64
+ 562 0215 60       		.byte	96
+ 563 0216 41       		.byte	65
+ 564 0217 02       		.byte	2
+ 565 0218 49       		.byte	73
+ 566 0219 FF       		.byte	-1
+ 567 021a 4A       		.byte	74
+ 568 021b FF       		.byte	-1
+ 569 021c 4B       		.byte	75
+ 570 021d FF       		.byte	-1
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 11
+
+
+ 571 021e 4D       		.byte	77
+ 572 021f A0       		.byte	-96
+ 573 0220 4F       		.byte	79
+ 574 0221 04       		.byte	4
+ 575 0222 50       		.byte	80
+ 576 0223 18       		.byte	24
+ 577 0224 56       		.byte	86
+ 578 0225 02       		.byte	2
+ 579 0226 57       		.byte	87
+ 580 0227 24       		.byte	36
+ 581 0228 58       		.byte	88
+ 582 0229 04       		.byte	4
+ 583 022a 59       		.byte	89
+ 584 022b 04       		.byte	4
+ 585 022c 5A       		.byte	90
+ 586 022d 04       		.byte	4
+ 587 022e 5B       		.byte	91
+ 588 022f 04       		.byte	4
+ 589 0230 5C       		.byte	92
+ 590 0231 99       		.byte	-103
+ 591 0232 5D       		.byte	93
+ 592 0233 90       		.byte	-112
+ 593 0234 5F       		.byte	95
+ 594 0235 01       		.byte	1
+ 595 0236 60       		.byte	96
+ 596 0237 40       		.byte	64
+ 597 0238 62       		.byte	98
+ 598 0239 C0       		.byte	-64
+ 599 023a 64       		.byte	100
+ 600 023b 40       		.byte	64
+ 601 023c 65       		.byte	101
+ 602 023d 40       		.byte	64
+ 603 023e 66       		.byte	102
+ 604 023f C0       		.byte	-64
+ 605 0240 68       		.byte	104
+ 606 0241 C0       		.byte	-64
+ 607 0242 6A       		.byte	106
+ 608 0243 C0       		.byte	-64
+ 609 0244 6C       		.byte	108
+ 610 0245 C0       		.byte	-64
+ 611 0246 6E       		.byte	110
+ 612 0247 C0       		.byte	-64
+ 613 0248 8B       		.byte	-117
+ 614 0249 01       		.byte	1
+ 615 024a 96       		.byte	-106
+ 616 024b 01       		.byte	1
+ 617 024c 9B       		.byte	-101
+ 618 024d 01       		.byte	1
+ 619 024e AB       		.byte	-85
+ 620 024f 02       		.byte	2
+ 621 0250 AC       		.byte	-84
+ 622 0251 01       		.byte	1
+ 623 0252 B0       		.byte	-80
+ 624 0253 01       		.byte	1
+ 625 0254 B1       		.byte	-79
+ 626 0255 02       		.byte	2
+ 627 0256 B5       		.byte	-75
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 12
+
+
+ 628 0257 01       		.byte	1
+ 629 0258 BF       		.byte	-65
+ 630 0259 10       		.byte	16
+ 631 025a C0       		.byte	-64
+ 632 025b 60       		.byte	96
+ 633 025c C1       		.byte	-63
+ 634 025d 03       		.byte	3
+ 635 025e C5       		.byte	-59
+ 636 025f D0       		.byte	-48
+ 637 0260 C6       		.byte	-58
+ 638 0261 20       		.byte	32
+ 639 0262 C7       		.byte	-57
+ 640 0263 01       		.byte	1
+ 641 0264 C8       		.byte	-56
+ 642 0265 1A       		.byte	26
+ 643 0266 C9       		.byte	-55
+ 644 0267 FF       		.byte	-1
+ 645 0268 CA       		.byte	-54
+ 646 0269 FF       		.byte	-1
+ 647 026a CB       		.byte	-53
+ 648 026b FF       		.byte	-1
+ 649 026c CD       		.byte	-51
+ 650 026d AF       		.byte	-81
+ 651 026e CE       		.byte	-50
+ 652 026f 0F       		.byte	15
+ 653 0270 CF       		.byte	-49
+ 654 0271 04       		.byte	4
+ 655 0272 D0       		.byte	-48
+ 656 0273 18       		.byte	24
+ 657 0274 D8       		.byte	-40
+ 658 0275 04       		.byte	4
+ 659 0276 D9       		.byte	-39
+ 660 0277 04       		.byte	4
+ 661 0278 DA       		.byte	-38
+ 662 0279 04       		.byte	4
+ 663 027a DC       		.byte	-36
+ 664 027b 22       		.byte	34
+ 665 027c DF       		.byte	-33
+ 666 027d 01       		.byte	1
+ 667 027e E0       		.byte	-32
+ 668 027f 40       		.byte	64
+ 669 0280 E2       		.byte	-30
+ 670 0281 C0       		.byte	-64
+ 671 0282 E4       		.byte	-28
+ 672 0283 40       		.byte	64
+ 673 0284 E5       		.byte	-27
+ 674 0285 40       		.byte	64
+ 675 0286 E6       		.byte	-26
+ 676 0287 C0       		.byte	-64
+ 677 0288 E8       		.byte	-24
+ 678 0289 C0       		.byte	-64
+ 679 028a EA       		.byte	-22
+ 680 028b C0       		.byte	-64
+ 681 028c EC       		.byte	-20
+ 682 028d C0       		.byte	-64
+ 683 028e EE       		.byte	-18
+ 684 028f C0       		.byte	-64
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 13
+
+
+ 685 0290 01       		.byte	1
+ 686 0291 82       		.byte	-126
+ 687 0292 09       		.byte	9
+ 688 0293 80       		.byte	-128
+ 689 0294 0A       		.byte	10
+ 690 0295 14       		.byte	20
+ 691 0296 0B       		.byte	11
+ 692 0297 80       		.byte	-128
+ 693 0298 0C       		.byte	12
+ 694 0299 04       		.byte	4
+ 695 029a 10       		.byte	16
+ 696 029b 20       		.byte	32
+ 697 029c 11       		.byte	17
+ 698 029d 50       		.byte	80
+ 699 029e 12       		.byte	18
+ 700 029f 80       		.byte	-128
+ 701 02a0 17       		.byte	23
+ 702 02a1 80       		.byte	-128
+ 703 02a2 18       		.byte	24
+ 704 02a3 04       		.byte	4
+ 705 02a4 19       		.byte	25
+ 706 02a5 10       		.byte	16
+ 707 02a6 1A       		.byte	26
+ 708 02a7 04       		.byte	4
+ 709 02a8 1C       		.byte	28
+ 710 02a9 40       		.byte	64
+ 711 02aa 21       		.byte	33
+ 712 02ab 02       		.byte	2
+ 713 02ac 27       		.byte	39
+ 714 02ad 88       		.byte	-120
+ 715 02ae 29       		.byte	41
+ 716 02af 52       		.byte	82
+ 717 02b0 2C       		.byte	44
+ 718 02b1 84       		.byte	-124
+ 719 02b2 2F       		.byte	47
+ 720 02b3 48       		.byte	72
+ 721 02b4 30       		.byte	48
+ 722 02b5 20       		.byte	32
+ 723 02b6 31       		.byte	49
+ 724 02b7 86       		.byte	-122
+ 725 02b8 35       		.byte	53
+ 726 02b9 20       		.byte	32
+ 727 02ba 39       		.byte	57
+ 728 02bb 52       		.byte	82
+ 729 02bc 3A       		.byte	58
+ 730 02bd 04       		.byte	4
+ 731 02be 3E       		.byte	62
+ 732 02bf 20       		.byte	32
+ 733 02c0 41       		.byte	65
+ 734 02c1 20       		.byte	32
+ 735 02c2 46       		.byte	70
+ 736 02c3 20       		.byte	32
+ 737 02c4 49       		.byte	73
+ 738 02c5 20       		.byte	32
+ 739 02c6 4D       		.byte	77
+ 740 02c7 20       		.byte	32
+ 741 02c8 4F       		.byte	79
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 14
+
+
+ 742 02c9 01       		.byte	1
+ 743 02ca 55       		.byte	85
+ 744 02cb 20       		.byte	32
+ 745 02cc 56       		.byte	86
+ 746 02cd 20       		.byte	32
+ 747 02ce 57       		.byte	87
+ 748 02cf 04       		.byte	4
+ 749 02d0 60       		.byte	96
+ 750 02d1 08       		.byte	8
+ 751 02d2 68       		.byte	104
+ 752 02d3 A0       		.byte	-96
+ 753 02d4 69       		.byte	105
+ 754 02d5 52       		.byte	82
+ 755 02d6 6A       		.byte	106
+ 756 02d7 80       		.byte	-128
+ 757 02d8 6B       		.byte	107
+ 758 02d9 01       		.byte	1
+ 759 02da 70       		.byte	112
+ 760 02db 40       		.byte	64
+ 761 02dc 71       		.byte	113
+ 762 02dd 80       		.byte	-128
+ 763 02de 97       		.byte	-105
+ 764 02df 11       		.byte	17
+ 765 02e0 98       		.byte	-104
+ 766 02e1 08       		.byte	8
+ 767 02e2 99       		.byte	-103
+ 768 02e3 20       		.byte	32
+ 769 02e4 9F       		.byte	-97
+ 770 02e5 08       		.byte	8
+ 771 02e6 A5       		.byte	-91
+ 772 02e7 02       		.byte	2
+ 773 02e8 A7       		.byte	-89
+ 774 02e9 04       		.byte	4
+ 775 02ea A8       		.byte	-88
+ 776 02eb 08       		.byte	8
+ 777 02ec AC       		.byte	-84
+ 778 02ed 01       		.byte	1
+ 779 02ee C0       		.byte	-64
+ 780 02ef 09       		.byte	9
+ 781 02f0 C2       		.byte	-62
+ 782 02f1 2F       		.byte	47
+ 783 02f2 C4       		.byte	-60
+ 784 02f3 8F       		.byte	-113
+ 785 02f4 CA       		.byte	-54
+ 786 02f5 2D       		.byte	45
+ 787 02f6 CC       		.byte	-52
+ 788 02f7 2F       		.byte	47
+ 789 02f8 CE       		.byte	-50
+ 790 02f9 2F       		.byte	47
+ 791 02fa D0       		.byte	-48
+ 792 02fb 44       		.byte	68
+ 793 02fc D2       		.byte	-46
+ 794 02fd 24       		.byte	36
+ 795 02fe D8       		.byte	-40
+ 796 02ff 04       		.byte	4
+ 797 0300 EE       		.byte	-18
+ 798 0301 04       		.byte	4
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 15
+
+
+ 799 0302 03       		.byte	3
+ 800 0303 01       		.byte	1
+ 801 0304 07       		.byte	7
+ 802 0305 02       		.byte	2
+ 803 0306 15       		.byte	21
+ 804 0307 04       		.byte	4
+ 805 0308 1A       		.byte	26
+ 806 0309 01       		.byte	1
+ 807 030a 1B       		.byte	27
+ 808 030b 01       		.byte	1
+ 809 030c 21       		.byte	33
+ 810 030d 02       		.byte	2
+ 811 030e 25       		.byte	37
+ 812 030f 02       		.byte	2
+ 813 0310 2A       		.byte	42
+ 814 0311 01       		.byte	1
+ 815 0312 34       		.byte	52
+ 816 0313 01       		.byte	1
+ 817 0314 35       		.byte	53
+ 818 0315 01       		.byte	1
+ 819 0316 37       		.byte	55
+ 820 0317 06       		.byte	6
+ 821 0318 39       		.byte	57
+ 822 0319 80       		.byte	-128
+ 823 031a 3F       		.byte	63
+ 824 031b 10       		.byte	16
+ 825 031c 40       		.byte	64
+ 826 031d 20       		.byte	32
+ 827 031e 41       		.byte	65
+ 828 031f 04       		.byte	4
+ 829 0320 45       		.byte	69
+ 830 0321 D0       		.byte	-48
+ 831 0322 47       		.byte	71
+ 832 0323 21       		.byte	33
+ 833 0324 48       		.byte	72
+ 834 0325 32       		.byte	50
+ 835 0326 49       		.byte	73
+ 836 0327 FF       		.byte	-1
+ 837 0328 4A       		.byte	74
+ 838 0329 FF       		.byte	-1
+ 839 032a 4B       		.byte	75
+ 840 032b FF       		.byte	-1
+ 841 032c 4D       		.byte	77
+ 842 032d A0       		.byte	-96
+ 843 032e 4F       		.byte	79
+ 844 032f 04       		.byte	4
+ 845 0330 50       		.byte	80
+ 846 0331 18       		.byte	24
+ 847 0332 52       		.byte	82
+ 848 0333 80       		.byte	-128
+ 849 0334 54       		.byte	84
+ 850 0335 05       		.byte	5
+ 851 0336 58       		.byte	88
+ 852 0337 04       		.byte	4
+ 853 0338 59       		.byte	89
+ 854 0339 04       		.byte	4
+ 855 033a 5A       		.byte	90
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 16
+
+
+ 856 033b 04       		.byte	4
+ 857 033c 5B       		.byte	91
+ 858 033d 04       		.byte	4
+ 859 033e 5C       		.byte	92
+ 860 033f 12       		.byte	18
+ 861 0340 5D       		.byte	93
+ 862 0341 22       		.byte	34
+ 863 0342 5F       		.byte	95
+ 864 0343 01       		.byte	1
+ 865 0344 60       		.byte	96
+ 866 0345 40       		.byte	64
+ 867 0346 62       		.byte	98
+ 868 0347 C0       		.byte	-64
+ 869 0348 64       		.byte	100
+ 870 0349 40       		.byte	64
+ 871 034a 65       		.byte	101
+ 872 034b 40       		.byte	64
+ 873 034c 66       		.byte	102
+ 874 034d C0       		.byte	-64
+ 875 034e 68       		.byte	104
+ 876 034f C0       		.byte	-64
+ 877 0350 6A       		.byte	106
+ 878 0351 C0       		.byte	-64
+ 879 0352 6C       		.byte	108
+ 880 0353 C0       		.byte	-64
+ 881 0354 6E       		.byte	110
+ 882 0355 C0       		.byte	-64
+ 883 0356 80       		.byte	-128
+ 884 0357 10       		.byte	16
+ 885 0358 81       		.byte	-127
+ 886 0359 04       		.byte	4
+ 887 035a 85       		.byte	-123
+ 888 035b 02       		.byte	2
+ 889 035c 89       		.byte	-119
+ 890 035d 04       		.byte	4
+ 891 035e 8C       		.byte	-116
+ 892 035f 14       		.byte	20
+ 893 0360 8D       		.byte	-115
+ 894 0361 04       		.byte	4
+ 895 0362 8E       		.byte	-114
+ 896 0363 28       		.byte	40
+ 897 0364 90       		.byte	-112
+ 898 0365 30       		.byte	48
+ 899 0366 93       		.byte	-109
+ 900 0367 04       		.byte	4
+ 901 0368 94       		.byte	-108
+ 902 0369 39       		.byte	57
+ 903 036a 96       		.byte	-106
+ 904 036b 02       		.byte	2
+ 905 036c 97       		.byte	-105
+ 906 036d 01       		.byte	1
+ 907 036e 98       		.byte	-104
+ 908 036f 0E       		.byte	14
+ 909 0370 99       		.byte	-103
+ 910 0371 04       		.byte	4
+ 911 0372 9A       		.byte	-102
+ 912 0373 11       		.byte	17
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 17
+
+
+ 913 0374 9C       		.byte	-100
+ 914 0375 30       		.byte	48
+ 915 0376 A0       		.byte	-96
+ 916 0377 24       		.byte	36
+ 917 0378 A1       		.byte	-95
+ 918 0379 03       		.byte	3
+ 919 037a A4       		.byte	-92
+ 920 037b 10       		.byte	16
+ 921 037c A5       		.byte	-91
+ 922 037d 03       		.byte	3
+ 923 037e A6       		.byte	-90
+ 924 037f 20       		.byte	32
+ 925 0380 A8       		.byte	-88
+ 926 0381 20       		.byte	32
+ 927 0382 AA       		.byte	-86
+ 928 0383 10       		.byte	16
+ 929 0384 AC       		.byte	-84
+ 930 0385 10       		.byte	16
+ 931 0386 AE       		.byte	-82
+ 932 0387 20       		.byte	32
+ 933 0388 B2       		.byte	-78
+ 934 0389 38       		.byte	56
+ 935 038a B3       		.byte	-77
+ 936 038b 03       		.byte	3
+ 937 038c B5       		.byte	-75
+ 938 038d 04       		.byte	4
+ 939 038e B6       		.byte	-74
+ 940 038f 07       		.byte	7
+ 941 0390 B9       		.byte	-71
+ 942 0391 08       		.byte	8
+ 943 0392 BA       		.byte	-70
+ 944 0393 80       		.byte	-128
+ 945 0394 BF       		.byte	-65
+ 946 0395 14       		.byte	20
+ 947 0396 C0       		.byte	-64
+ 948 0397 03       		.byte	3
+ 949 0398 C5       		.byte	-59
+ 950 0399 40       		.byte	64
+ 951 039a C9       		.byte	-55
+ 952 039b FF       		.byte	-1
+ 953 039c CA       		.byte	-54
+ 954 039d 07       		.byte	7
+ 955 039e CB       		.byte	-53
+ 956 039f FF       		.byte	-1
+ 957 03a0 CC       		.byte	-52
+ 958 03a1 40       		.byte	64
+ 959 03a2 CD       		.byte	-51
+ 960 03a3 20       		.byte	32
+ 961 03a4 CE       		.byte	-50
+ 962 03a5 F0       		.byte	-16
+ 963 03a6 CF       		.byte	-49
+ 964 03a7 05       		.byte	5
+ 965 03a8 D0       		.byte	-48
+ 966 03a9 08       		.byte	8
+ 967 03aa D8       		.byte	-40
+ 968 03ab 04       		.byte	4
+ 969 03ac D9       		.byte	-39
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 18
+
+
+ 970 03ad 04       		.byte	4
+ 971 03ae DA       		.byte	-38
+ 972 03af 04       		.byte	4
+ 973 03b0 DC       		.byte	-36
+ 974 03b1 09       		.byte	9
+ 975 03b2 DD       		.byte	-35
+ 976 03b3 01       		.byte	1
+ 977 03b4 DF       		.byte	-33
+ 978 03b5 01       		.byte	1
+ 979 03b6 E0       		.byte	-32
+ 980 03b7 40       		.byte	64
+ 981 03b8 E1       		.byte	-31
+ 982 03b9 A8       		.byte	-88
+ 983 03ba E2       		.byte	-30
+ 984 03bb 40       		.byte	64
+ 985 03bc E3       		.byte	-29
+ 986 03bd 20       		.byte	32
+ 987 03be 01       		.byte	1
+ 988 03bf 82       		.byte	-126
+ 989 03c0 09       		.byte	9
+ 990 03c1 80       		.byte	-128
+ 991 03c2 0A       		.byte	10
+ 992 03c3 14       		.byte	20
+ 993 03c4 0B       		.byte	11
+ 994 03c5 80       		.byte	-128
+ 995 03c6 0F       		.byte	15
+ 996 03c7 08       		.byte	8
+ 997 03c8 10       		.byte	16
+ 998 03c9 20       		.byte	32
+ 999 03ca 11       		.byte	17
+ 1000 03cb 50       		.byte	80
+ 1001 03cc 12       		.byte	18
+ 1002 03cd 80       		.byte	-128
+ 1003 03ce 17       		.byte	23
+ 1004 03cf 20       		.byte	32
+ 1005 03d0 18       		.byte	24
+ 1006 03d1 02       		.byte	2
+ 1007 03d2 19       		.byte	25
+ 1008 03d3 C4       		.byte	-60
+ 1009 03d4 1A       		.byte	26
+ 1010 03d5 30       		.byte	48
+ 1011 03d6 1D       		.byte	29
+ 1012 03d7 10       		.byte	16
+ 1013 03d8 20       		.byte	32
+ 1014 03d9 08       		.byte	8
+ 1015 03da 21       		.byte	33
+ 1016 03db 04       		.byte	4
+ 1017 03dc 27       		.byte	39
+ 1018 03dd 0A       		.byte	10
+ 1019 03de 28       		.byte	40
+ 1020 03df 10       		.byte	16
+ 1021 03e0 2B       		.byte	43
+ 1022 03e1 80       		.byte	-128
+ 1023 03e2 2C       		.byte	44
+ 1024 03e3 10       		.byte	16
+ 1025 03e4 2F       		.byte	47
+ 1026 03e5 80       		.byte	-128
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 19
+
+
+ 1027 03e6 30       		.byte	48
+ 1028 03e7 20       		.byte	32
+ 1029 03e8 31       		.byte	49
+ 1030 03e9 08       		.byte	8
+ 1031 03ea 33       		.byte	51
+ 1032 03eb 01       		.byte	1
+ 1033 03ec 34       		.byte	52
+ 1034 03ed 02       		.byte	2
+ 1035 03ee 36       		.byte	54
+ 1036 03ef 08       		.byte	8
+ 1037 03f0 37       		.byte	55
+ 1038 03f1 22       		.byte	34
+ 1039 03f2 38       		.byte	56
+ 1040 03f3 84       		.byte	-124
+ 1041 03f4 39       		.byte	57
+ 1042 03f5 12       		.byte	18
+ 1043 03f6 3C       		.byte	60
+ 1044 03f7 04       		.byte	4
+ 1045 03f8 3F       		.byte	63
+ 1046 03f9 02       		.byte	2
+ 1047 03fa 41       		.byte	65
+ 1048 03fb 04       		.byte	4
+ 1049 03fc 45       		.byte	69
+ 1050 03fd 02       		.byte	2
+ 1051 03fe 47       		.byte	71
+ 1052 03ff 20       		.byte	32
+ 1053 0400 48       		.byte	72
+ 1054 0401 40       		.byte	64
+ 1055 0402 49       		.byte	73
+ 1056 0403 01       		.byte	1
+ 1057 0404 4F       		.byte	79
+ 1058 0405 01       		.byte	1
+ 1059 0406 51       		.byte	81
+ 1060 0407 08       		.byte	8
+ 1061 0408 52       		.byte	82
+ 1062 0409 08       		.byte	8
+ 1063 040a 55       		.byte	85
+ 1064 040b 02       		.byte	2
+ 1065 040c 57       		.byte	87
+ 1066 040d 0D       		.byte	13
+ 1067 040e 5C       		.byte	92
+ 1068 040f 40       		.byte	64
+ 1069 0410 5F       		.byte	95
+ 1070 0411 09       		.byte	9
+ 1071 0412 76       		.byte	118
+ 1072 0413 80       		.byte	-128
+ 1073 0414 82       		.byte	-126
+ 1074 0415 10       		.byte	16
+ 1075 0416 87       		.byte	-121
+ 1076 0417 02       		.byte	2
+ 1077 0418 8C       		.byte	-116
+ 1078 0419 04       		.byte	4
+ 1079 041a 90       		.byte	-112
+ 1080 041b C0       		.byte	-64
+ 1081 041c 91       		.byte	-111
+ 1082 041d 52       		.byte	82
+ 1083 041e 92       		.byte	-110
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 20
+
+
+ 1084 041f 84       		.byte	-124
+ 1085 0420 93       		.byte	-109
+ 1086 0421 80       		.byte	-128
+ 1087 0422 96       		.byte	-106
+ 1088 0423 10       		.byte	16
+ 1089 0424 9B       		.byte	-101
+ 1090 0425 01       		.byte	1
+ 1091 0426 9D       		.byte	-99
+ 1092 0427 C6       		.byte	-58
+ 1093 0428 9E       		.byte	-98
+ 1094 0429 04       		.byte	4
+ 1095 042a A0       		.byte	-96
+ 1096 042b A0       		.byte	-96
+ 1097 042c A1       		.byte	-95
+ 1098 042d 80       		.byte	-128
+ 1099 042e A6       		.byte	-90
+ 1100 042f 80       		.byte	-128
+ 1101 0430 A7       		.byte	-89
+ 1102 0431 08       		.byte	8
+ 1103 0432 B2       		.byte	-78
+ 1104 0433 80       		.byte	-128
+ 1105 0434 B3       		.byte	-77
+ 1106 0435 10       		.byte	16
+ 1107 0436 B4       		.byte	-76
+ 1108 0437 04       		.byte	4
+ 1109 0438 C0       		.byte	-64
+ 1110 0439 09       		.byte	9
+ 1111 043a C2       		.byte	-62
+ 1112 043b 4F       		.byte	79
+ 1113 043c C4       		.byte	-60
+ 1114 043d 4F       		.byte	79
+ 1115 043e CA       		.byte	-54
+ 1116 043f C3       		.byte	-61
+ 1117 0440 CC       		.byte	-52
+ 1118 0441 67       		.byte	103
+ 1119 0442 CE       		.byte	-50
+ 1120 0443 CF       		.byte	-49
+ 1121 0444 D0       		.byte	-48
+ 1122 0445 A2       		.byte	-94
+ 1123 0446 D6       		.byte	-42
+ 1124 0447 D0       		.byte	-48
+ 1125 0448 E4       		.byte	-28
+ 1126 0449 06       		.byte	6
+ 1127 044a EC       		.byte	-20
+ 1128 044b 80       		.byte	-128
+ 1129 044c 01       		.byte	1
+ 1130 044d 10       		.byte	16
+ 1131 044e 04       		.byte	4
+ 1132 044f 09       		.byte	9
+ 1133 0450 05       		.byte	5
+ 1134 0451 03       		.byte	3
+ 1135 0452 06       		.byte	6
+ 1136 0453 10       		.byte	16
+ 1137 0454 07       		.byte	7
+ 1138 0455 04       		.byte	4
+ 1139 0456 08       		.byte	8
+ 1140 0457 14       		.byte	20
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 21
+
+
+ 1141 0458 0C       		.byte	12
+ 1142 0459 30       		.byte	48
+ 1143 045a 0D       		.byte	13
+ 1144 045b 0A       		.byte	10
+ 1145 045c 0E       		.byte	14
+ 1146 045d 0C       		.byte	12
+ 1147 045e 0F       		.byte	15
+ 1148 045f 04       		.byte	4
+ 1149 0460 11       		.byte	17
+ 1150 0461 03       		.byte	3
+ 1151 0462 13       		.byte	19
+ 1152 0463 0C       		.byte	12
+ 1153 0464 15       		.byte	21
+ 1154 0465 03       		.byte	3
+ 1155 0466 16       		.byte	22
+ 1156 0467 03       		.byte	3
+ 1157 0468 17       		.byte	23
+ 1158 0469 04       		.byte	4
+ 1159 046a 1A       		.byte	26
+ 1160 046b 20       		.byte	32
+ 1161 046c 1B       		.byte	27
+ 1162 046d 08       		.byte	8
+ 1163 046e 1C       		.byte	28
+ 1164 046f 2C       		.byte	44
+ 1165 0470 1E       		.byte	30
+ 1166 0471 11       		.byte	17
+ 1167 0472 22       		.byte	34
+ 1168 0473 20       		.byte	32
+ 1169 0474 24       		.byte	36
+ 1170 0475 10       		.byte	16
+ 1171 0476 2C       		.byte	44
+ 1172 0477 1C       		.byte	28
+ 1173 0478 2E       		.byte	46
+ 1174 0479 22       		.byte	34
+ 1175 047a 2F       		.byte	47
+ 1176 047b 05       		.byte	5
+ 1177 047c 32       		.byte	50
+ 1178 047d 1F       		.byte	31
+ 1179 047e 35       		.byte	53
+ 1180 047f 10       		.byte	16
+ 1181 0480 36       		.byte	54
+ 1182 0481 20       		.byte	32
+ 1183 0482 37       		.byte	55
+ 1184 0483 0F       		.byte	15
+ 1185 0484 3B       		.byte	59
+ 1186 0485 80       		.byte	-128
+ 1187 0486 3E       		.byte	62
+ 1188 0487 40       		.byte	64
+ 1189 0488 3F       		.byte	63
+ 1190 0489 10       		.byte	16
+ 1191 048a 40       		.byte	64
+ 1192 048b 60       		.byte	96
+ 1193 048c 41       		.byte	65
+ 1194 048d 02       		.byte	2
+ 1195 048e 49       		.byte	73
+ 1196 048f FF       		.byte	-1
+ 1197 0490 4A       		.byte	74
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 22
+
+
+ 1198 0491 FF       		.byte	-1
+ 1199 0492 4B       		.byte	75
+ 1200 0493 FF       		.byte	-1
+ 1201 0494 4D       		.byte	77
+ 1202 0495 A0       		.byte	-96
+ 1203 0496 4F       		.byte	79
+ 1204 0497 04       		.byte	4
+ 1205 0498 50       		.byte	80
+ 1206 0499 18       		.byte	24
+ 1207 049a 54       		.byte	84
+ 1208 049b 01       		.byte	1
+ 1209 049c 58       		.byte	88
+ 1210 049d 04       		.byte	4
+ 1211 049e 59       		.byte	89
+ 1212 049f 04       		.byte	4
+ 1213 04a0 5A       		.byte	90
+ 1214 04a1 04       		.byte	4
+ 1215 04a2 5B       		.byte	91
+ 1216 04a3 04       		.byte	4
+ 1217 04a4 5C       		.byte	92
+ 1218 04a5 11       		.byte	17
+ 1219 04a6 5D       		.byte	93
+ 1220 04a7 10       		.byte	16
+ 1221 04a8 5F       		.byte	95
+ 1222 04a9 01       		.byte	1
+ 1223 04aa 60       		.byte	96
+ 1224 04ab 40       		.byte	64
+ 1225 04ac 62       		.byte	98
+ 1226 04ad C0       		.byte	-64
+ 1227 04ae 64       		.byte	100
+ 1228 04af 40       		.byte	64
+ 1229 04b0 65       		.byte	101
+ 1230 04b1 40       		.byte	64
+ 1231 04b2 66       		.byte	102
+ 1232 04b3 C0       		.byte	-64
+ 1233 04b4 68       		.byte	104
+ 1234 04b5 C0       		.byte	-64
+ 1235 04b6 6A       		.byte	106
+ 1236 04b7 C0       		.byte	-64
+ 1237 04b8 6C       		.byte	108
+ 1238 04b9 C0       		.byte	-64
+ 1239 04ba 6E       		.byte	110
+ 1240 04bb C0       		.byte	-64
+ 1241 04bc 81       		.byte	-127
+ 1242 04bd 08       		.byte	8
+ 1243 04be 83       		.byte	-125
+ 1244 04bf 12       		.byte	18
+ 1245 04c0 86       		.byte	-122
+ 1246 04c1 01       		.byte	1
+ 1247 04c2 89       		.byte	-119
+ 1248 04c3 0A       		.byte	10
+ 1249 04c4 8B       		.byte	-117
+ 1250 04c5 14       		.byte	20
+ 1251 04c6 8E       		.byte	-114
+ 1252 04c7 01       		.byte	1
+ 1253 04c8 91       		.byte	-111
+ 1254 04c9 1C       		.byte	28
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 23
+
+
+ 1255 04ca 9B       		.byte	-101
+ 1256 04cb 01       		.byte	1
+ 1257 04cc A5       		.byte	-91
+ 1258 04cd 06       		.byte	6
+ 1259 04ce A7       		.byte	-89
+ 1260 04cf 08       		.byte	8
+ 1261 04d0 AB       		.byte	-85
+ 1262 04d1 01       		.byte	1
+ 1263 04d2 B1       		.byte	-79
+ 1264 04d3 1E       		.byte	30
+ 1265 04d4 B3       		.byte	-77
+ 1266 04d5 01       		.byte	1
+ 1267 04d6 B6       		.byte	-74
+ 1268 04d7 01       		.byte	1
+ 1269 04d8 B9       		.byte	-71
+ 1270 04d9 02       		.byte	2
+ 1271 04da BE       		.byte	-66
+ 1272 04db 40       		.byte	64
+ 1273 04dc BF       		.byte	-65
+ 1274 04dd 04       		.byte	4
+ 1275 04de C0       		.byte	-64
+ 1276 04df 60       		.byte	96
+ 1277 04e0 C1       		.byte	-63
+ 1278 04e1 02       		.byte	2
+ 1279 04e2 C5       		.byte	-59
+ 1280 04e3 D1       		.byte	-47
+ 1281 04e4 C6       		.byte	-58
+ 1282 04e5 20       		.byte	32
+ 1283 04e6 C8       		.byte	-56
+ 1284 04e7 0B       		.byte	11
+ 1285 04e8 C9       		.byte	-55
+ 1286 04e9 FF       		.byte	-1
+ 1287 04ea CA       		.byte	-54
+ 1288 04eb FF       		.byte	-1
+ 1289 04ec CB       		.byte	-53
+ 1290 04ed FF       		.byte	-1
+ 1291 04ee CD       		.byte	-51
+ 1292 04ef AF       		.byte	-81
+ 1293 04f0 CE       		.byte	-50
+ 1294 04f1 0F       		.byte	15
+ 1295 04f2 CF       		.byte	-49
+ 1296 04f3 04       		.byte	4
+ 1297 04f4 D0       		.byte	-48
+ 1298 04f5 18       		.byte	24
+ 1299 04f6 D4       		.byte	-44
+ 1300 04f7 05       		.byte	5
+ 1301 04f8 D8       		.byte	-40
+ 1302 04f9 04       		.byte	4
+ 1303 04fa D9       		.byte	-39
+ 1304 04fb 04       		.byte	4
+ 1305 04fc DA       		.byte	-38
+ 1306 04fd 04       		.byte	4
+ 1307 04fe DB       		.byte	-37
+ 1308 04ff 04       		.byte	4
+ 1309 0500 DC       		.byte	-36
+ 1310 0501 90       		.byte	-112
+ 1311 0502 DF       		.byte	-33
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 24
+
+
+ 1312 0503 01       		.byte	1
+ 1313 0504 E0       		.byte	-32
+ 1314 0505 40       		.byte	64
+ 1315 0506 E2       		.byte	-30
+ 1316 0507 C0       		.byte	-64
+ 1317 0508 E4       		.byte	-28
+ 1318 0509 40       		.byte	64
+ 1319 050a E5       		.byte	-27
+ 1320 050b 40       		.byte	64
+ 1321 050c E6       		.byte	-26
+ 1322 050d C0       		.byte	-64
+ 1323 050e E8       		.byte	-24
+ 1324 050f C0       		.byte	-64
+ 1325 0510 EA       		.byte	-22
+ 1326 0511 C0       		.byte	-64
+ 1327 0512 EC       		.byte	-20
+ 1328 0513 C0       		.byte	-64
+ 1329 0514 EE       		.byte	-18
+ 1330 0515 C0       		.byte	-64
+ 1331 0516 00       		.byte	0
+ 1332 0517 80       		.byte	-128
+ 1333 0518 01       		.byte	1
+ 1334 0519 08       		.byte	8
+ 1335 051a 04       		.byte	4
+ 1336 051b 20       		.byte	32
+ 1337 051c 07       		.byte	7
+ 1338 051d 12       		.byte	18
+ 1339 051e 0E       		.byte	14
+ 1340 051f 10       		.byte	16
+ 1341 0520 0F       		.byte	15
+ 1342 0521 0A       		.byte	10
+ 1343 0522 16       		.byte	22
+ 1344 0523 91       		.byte	-111
+ 1345 0524 19       		.byte	25
+ 1346 0525 40       		.byte	64
+ 1347 0526 1E       		.byte	30
+ 1348 0527 12       		.byte	18
+ 1349 0528 21       		.byte	33
+ 1350 0529 02       		.byte	2
+ 1351 052a 22       		.byte	34
+ 1352 052b 04       		.byte	4
+ 1353 052c 24       		.byte	36
+ 1354 052d 04       		.byte	4
+ 1355 052e 27       		.byte	39
+ 1356 052f 02       		.byte	2
+ 1357 0530 29       		.byte	41
+ 1358 0531 20       		.byte	32
+ 1359 0532 2B       		.byte	43
+ 1360 0533 20       		.byte	32
+ 1361 0534 2E       		.byte	46
+ 1362 0535 80       		.byte	-128
+ 1363 0536 31       		.byte	49
+ 1364 0537 22       		.byte	34
+ 1365 0538 34       		.byte	52
+ 1366 0539 08       		.byte	8
+ 1367 053a 36       		.byte	54
+ 1368 053b 20       		.byte	32
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 25
+
+
+ 1369 053c 37       		.byte	55
+ 1370 053d 12       		.byte	18
+ 1371 053e 3A       		.byte	58
+ 1372 053f 20       		.byte	32
+ 1373 0540 3B       		.byte	59
+ 1374 0541 02       		.byte	2
+ 1375 0542 3F       		.byte	63
+ 1376 0543 89       		.byte	-119
+ 1377 0544 41       		.byte	65
+ 1378 0545 20       		.byte	32
+ 1379 0546 45       		.byte	69
+ 1380 0547 20       		.byte	32
+ 1381 0548 48       		.byte	72
+ 1382 0549 20       		.byte	32
+ 1383 054a 49       		.byte	73
+ 1384 054b A1       		.byte	-95
+ 1385 054c 4A       		.byte	74
+ 1386 054d 01       		.byte	1
+ 1387 054e 4D       		.byte	77
+ 1388 054f 20       		.byte	32
+ 1389 0550 51       		.byte	81
+ 1390 0551 20       		.byte	32
+ 1391 0552 58       		.byte	88
+ 1392 0553 40       		.byte	64
+ 1393 0554 59       		.byte	89
+ 1394 0555 01       		.byte	1
+ 1395 0556 5A       		.byte	90
+ 1396 0557 08       		.byte	8
+ 1397 0558 5C       		.byte	92
+ 1398 0559 24       		.byte	36
+ 1399 055a 5D       		.byte	93
+ 1400 055b 80       		.byte	-128
+ 1401 055c 5F       		.byte	95
+ 1402 055d 01       		.byte	1
+ 1403 055e 82       		.byte	-126
+ 1404 055f 84       		.byte	-124
+ 1405 0560 83       		.byte	-125
+ 1406 0561 20       		.byte	32
+ 1407 0562 86       		.byte	-122
+ 1408 0563 20       		.byte	32
+ 1409 0564 8E       		.byte	-114
+ 1410 0565 01       		.byte	1
+ 1411 0566 8F       		.byte	-113
+ 1412 0567 40       		.byte	64
+ 1413 0568 96       		.byte	-106
+ 1414 0569 02       		.byte	2
+ 1415 056a 97       		.byte	-105
+ 1416 056b 26       		.byte	38
+ 1417 056c 98       		.byte	-104
+ 1418 056d 40       		.byte	64
+ 1419 056e 99       		.byte	-103
+ 1420 056f 20       		.byte	32
+ 1421 0570 9A       		.byte	-102
+ 1422 0571 20       		.byte	32
+ 1423 0572 9C       		.byte	-100
+ 1424 0573 02       		.byte	2
+ 1425 0574 9D       		.byte	-99
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 26
+
+
+ 1426 0575 50       		.byte	80
+ 1427 0576 A4       		.byte	-92
+ 1428 0577 20       		.byte	32
+ 1429 0578 A6       		.byte	-90
+ 1430 0579 86       		.byte	-122
+ 1431 057a A7       		.byte	-89
+ 1432 057b 20       		.byte	32
+ 1433 057c B0       		.byte	-80
+ 1434 057d 20       		.byte	32
+ 1435 057e B6       		.byte	-74
+ 1436 057f 21       		.byte	33
+ 1437 0580 B7       		.byte	-73
+ 1438 0581 08       		.byte	8
+ 1439 0582 C0       		.byte	-64
+ 1440 0583 E5       		.byte	-27
+ 1441 0584 C2       		.byte	-62
+ 1442 0585 E0       		.byte	-32
+ 1443 0586 C4       		.byte	-60
+ 1444 0587 B0       		.byte	-80
+ 1445 0588 CA       		.byte	-54
+ 1446 0589 16       		.byte	22
+ 1447 058a CC       		.byte	-52
+ 1448 058b E5       		.byte	-27
+ 1449 058c CE       		.byte	-50
+ 1450 058d D5       		.byte	-43
+ 1451 058e D0       		.byte	-48
+ 1452 058f 24       		.byte	36
+ 1453 0590 D2       		.byte	-46
+ 1454 0591 24       		.byte	36
+ 1455 0592 D6       		.byte	-42
+ 1456 0593 FB       		.byte	-5
+ 1457 0594 E4       		.byte	-28
+ 1458 0595 40       		.byte	64
+ 1459 0596 E8       		.byte	-24
+ 1460 0597 80       		.byte	-128
+ 1461 0598 EC       		.byte	-20
+ 1462 0599 40       		.byte	64
+ 1463 059a 0B       		.byte	11
+ 1464 059b 04       		.byte	4
+ 1465 059c 0D       		.byte	13
+ 1466 059d 02       		.byte	2
+ 1467 059e 12       		.byte	18
+ 1468 059f 02       		.byte	2
+ 1469 05a0 13       		.byte	19
+ 1470 05a1 04       		.byte	4
+ 1471 05a2 1B       		.byte	27
+ 1472 05a3 02       		.byte	2
+ 1473 05a4 1E       		.byte	30
+ 1474 05a5 02       		.byte	2
+ 1475 05a6 26       		.byte	38
+ 1476 05a7 04       		.byte	4
+ 1477 05a8 2B       		.byte	43
+ 1478 05a9 01       		.byte	1
+ 1479 05aa 2E       		.byte	46
+ 1480 05ab 01       		.byte	1
+ 1481 05ac 2F       		.byte	47
+ 1482 05ad 01       		.byte	1
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 27
+
+
+ 1483 05ae 30       		.byte	48
+ 1484 05af 04       		.byte	4
+ 1485 05b0 31       		.byte	49
+ 1486 05b1 02       		.byte	2
+ 1487 05b2 33       		.byte	51
+ 1488 05b3 01       		.byte	1
+ 1489 05b4 34       		.byte	52
+ 1490 05b5 02       		.byte	2
+ 1491 05b6 35       		.byte	53
+ 1492 05b7 04       		.byte	4
+ 1493 05b8 36       		.byte	54
+ 1494 05b9 01       		.byte	1
+ 1495 05ba 3E       		.byte	62
+ 1496 05bb 10       		.byte	16
+ 1497 05bc 3F       		.byte	63
+ 1498 05bd 10       		.byte	16
+ 1499 05be 40       		.byte	64
+ 1500 05bf 10       		.byte	16
+ 1501 05c0 41       		.byte	65
+ 1502 05c1 04       		.byte	4
+ 1503 05c2 49       		.byte	73
+ 1504 05c3 FF       		.byte	-1
+ 1505 05c4 4A       		.byte	74
+ 1506 05c5 FF       		.byte	-1
+ 1507 05c6 4B       		.byte	75
+ 1508 05c7 FF       		.byte	-1
+ 1509 05c8 4D       		.byte	77
+ 1510 05c9 A0       		.byte	-96
+ 1511 05ca 4F       		.byte	79
+ 1512 05cb 04       		.byte	4
+ 1513 05cc 50       		.byte	80
+ 1514 05cd 18       		.byte	24
+ 1515 05ce 52       		.byte	82
+ 1516 05cf 80       		.byte	-128
+ 1517 05d0 54       		.byte	84
+ 1518 05d1 05       		.byte	5
+ 1519 05d2 58       		.byte	88
+ 1520 05d3 04       		.byte	4
+ 1521 05d4 59       		.byte	89
+ 1522 05d5 04       		.byte	4
+ 1523 05d6 5A       		.byte	90
+ 1524 05d7 04       		.byte	4
+ 1525 05d8 5B       		.byte	91
+ 1526 05d9 04       		.byte	4
+ 1527 05da 5F       		.byte	95
+ 1528 05db 01       		.byte	1
+ 1529 05dc 60       		.byte	96
+ 1530 05dd 40       		.byte	64
+ 1531 05de 62       		.byte	98
+ 1532 05df C0       		.byte	-64
+ 1533 05e0 64       		.byte	100
+ 1534 05e1 40       		.byte	64
+ 1535 05e2 65       		.byte	101
+ 1536 05e3 40       		.byte	64
+ 1537 05e4 66       		.byte	102
+ 1538 05e5 C0       		.byte	-64
+ 1539 05e6 68       		.byte	104
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 28
+
+
+ 1540 05e7 C0       		.byte	-64
+ 1541 05e8 6A       		.byte	106
+ 1542 05e9 C0       		.byte	-64
+ 1543 05ea 6C       		.byte	108
+ 1544 05eb C0       		.byte	-64
+ 1545 05ec 6E       		.byte	110
+ 1546 05ed C0       		.byte	-64
+ 1547 05ee 87       		.byte	-121
+ 1548 05ef 02       		.byte	2
+ 1549 05f0 95       		.byte	-107
+ 1550 05f1 01       		.byte	1
+ 1551 05f2 9A       		.byte	-102
+ 1552 05f3 01       		.byte	1
+ 1553 05f4 9F       		.byte	-97
+ 1554 05f5 01       		.byte	1
+ 1555 05f6 A8       		.byte	-88
+ 1556 05f7 01       		.byte	1
+ 1557 05f8 AF       		.byte	-81
+ 1558 05f9 01       		.byte	1
+ 1559 05fa B0       		.byte	-80
+ 1560 05fb 01       		.byte	1
+ 1561 05fc B3       		.byte	-77
+ 1562 05fd 02       		.byte	2
+ 1563 05fe B7       		.byte	-73
+ 1564 05ff 01       		.byte	1
+ 1565 0600 BF       		.byte	-65
+ 1566 0601 40       		.byte	64
+ 1567 0602 C0       		.byte	-64
+ 1568 0603 50       		.byte	80
+ 1569 0604 C1       		.byte	-63
+ 1570 0605 04       		.byte	4
+ 1571 0606 C5       		.byte	-59
+ 1572 0607 D1       		.byte	-47
+ 1573 0608 C7       		.byte	-57
+ 1574 0609 20       		.byte	32
+ 1575 060a C8       		.byte	-56
+ 1576 060b 23       		.byte	35
+ 1577 060c C9       		.byte	-55
+ 1578 060d FF       		.byte	-1
+ 1579 060e CA       		.byte	-54
+ 1580 060f FF       		.byte	-1
+ 1581 0610 CB       		.byte	-53
+ 1582 0611 FF       		.byte	-1
+ 1583 0612 CD       		.byte	-51
+ 1584 0613 AF       		.byte	-81
+ 1585 0614 CE       		.byte	-50
+ 1586 0615 0F       		.byte	15
+ 1587 0616 CF       		.byte	-49
+ 1588 0617 04       		.byte	4
+ 1589 0618 D0       		.byte	-48
+ 1590 0619 18       		.byte	24
+ 1591 061a D4       		.byte	-44
+ 1592 061b 09       		.byte	9
+ 1593 061c D8       		.byte	-40
+ 1594 061d 04       		.byte	4
+ 1595 061e D9       		.byte	-39
+ 1596 061f 04       		.byte	4
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 29
+
+
+ 1597 0620 DA       		.byte	-38
+ 1598 0621 04       		.byte	4
+ 1599 0622 DB       		.byte	-37
+ 1600 0623 04       		.byte	4
+ 1601 0624 DD       		.byte	-35
+ 1602 0625 90       		.byte	-112
+ 1603 0626 DF       		.byte	-33
+ 1604 0627 01       		.byte	1
+ 1605 0628 E0       		.byte	-32
+ 1606 0629 40       		.byte	64
+ 1607 062a E2       		.byte	-30
+ 1608 062b C0       		.byte	-64
+ 1609 062c E4       		.byte	-28
+ 1610 062d 40       		.byte	64
+ 1611 062e E5       		.byte	-27
+ 1612 062f 40       		.byte	64
+ 1613 0630 E6       		.byte	-26
+ 1614 0631 C0       		.byte	-64
+ 1615 0632 E8       		.byte	-24
+ 1616 0633 C0       		.byte	-64
+ 1617 0634 EA       		.byte	-22
+ 1618 0635 C0       		.byte	-64
+ 1619 0636 EC       		.byte	-20
+ 1620 0637 C0       		.byte	-64
+ 1621 0638 EE       		.byte	-18
+ 1622 0639 C0       		.byte	-64
+ 1623 063a 09       		.byte	9
+ 1624 063b 02       		.byte	2
+ 1625 063c 0A       		.byte	10
+ 1626 063d 01       		.byte	1
+ 1627 063e 0F       		.byte	15
+ 1628 063f 08       		.byte	8
+ 1629 0640 10       		.byte	16
+ 1630 0641 20       		.byte	32
+ 1631 0642 13       		.byte	19
+ 1632 0643 40       		.byte	64
+ 1633 0644 14       		.byte	20
+ 1634 0645 40       		.byte	64
+ 1635 0646 15       		.byte	21
+ 1636 0647 02       		.byte	2
+ 1637 0648 17       		.byte	23
+ 1638 0649 20       		.byte	32
+ 1639 064a 18       		.byte	24
+ 1640 064b 40       		.byte	64
+ 1641 064c 19       		.byte	25
+ 1642 064d 80       		.byte	-128
+ 1643 064e 1A       		.byte	26
+ 1644 064f 05       		.byte	5
+ 1645 0650 1E       		.byte	30
+ 1646 0651 40       		.byte	64
+ 1647 0652 20       		.byte	32
+ 1648 0653 24       		.byte	36
+ 1649 0654 21       		.byte	33
+ 1650 0655 01       		.byte	1
+ 1651 0656 26       		.byte	38
+ 1652 0657 40       		.byte	64
+ 1653 0658 27       		.byte	39
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 30
+
+
+ 1654 0659 20       		.byte	32
+ 1655 065a 29       		.byte	41
+ 1656 065b 80       		.byte	-128
+ 1657 065c 2B       		.byte	43
+ 1658 065d 04       		.byte	4
+ 1659 065e 2F       		.byte	47
+ 1660 065f 01       		.byte	1
+ 1661 0660 30       		.byte	48
+ 1662 0661 20       		.byte	32
+ 1663 0662 32       		.byte	50
+ 1664 0663 02       		.byte	2
+ 1665 0664 36       		.byte	54
+ 1666 0665 80       		.byte	-128
+ 1667 0666 37       		.byte	55
+ 1668 0667 08       		.byte	8
+ 1669 0668 38       		.byte	56
+ 1670 0669 40       		.byte	64
+ 1671 066a 3B       		.byte	59
+ 1672 066b 20       		.byte	32
+ 1673 066c 3F       		.byte	63
+ 1674 066d 08       		.byte	8
+ 1675 066e 41       		.byte	65
+ 1676 066f 02       		.byte	2
+ 1677 0670 42       		.byte	66
+ 1678 0671 01       		.byte	1
+ 1679 0672 45       		.byte	69
+ 1680 0673 02       		.byte	2
+ 1681 0674 4D       		.byte	77
+ 1682 0675 82       		.byte	-126
+ 1683 0676 4F       		.byte	79
+ 1684 0677 08       		.byte	8
+ 1685 0678 55       		.byte	85
+ 1686 0679 02       		.byte	2
+ 1687 067a 59       		.byte	89
+ 1688 067b 02       		.byte	2
+ 1689 067c 5A       		.byte	90
+ 1690 067d 44       		.byte	68
+ 1691 067e 5C       		.byte	92
+ 1692 067f 22       		.byte	34
+ 1693 0680 5E       		.byte	94
+ 1694 0681 80       		.byte	-128
+ 1695 0682 5F       		.byte	95
+ 1696 0683 04       		.byte	4
+ 1697 0684 66       		.byte	102
+ 1698 0685 40       		.byte	64
+ 1699 0686 73       		.byte	115
+ 1700 0687 40       		.byte	64
+ 1701 0688 84       		.byte	-124
+ 1702 0689 10       		.byte	16
+ 1703 068a 94       		.byte	-108
+ 1704 068b 04       		.byte	4
+ 1705 068c 96       		.byte	-106
+ 1706 068d 02       		.byte	2
+ 1707 068e 97       		.byte	-105
+ 1708 068f 02       		.byte	2
+ 1709 0690 99       		.byte	-103
+ 1710 0691 20       		.byte	32
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 31
+
+
+ 1711 0692 9A       		.byte	-102
+ 1712 0693 40       		.byte	64
+ 1713 0694 9D       		.byte	-99
+ 1714 0695 50       		.byte	80
+ 1715 0696 9E       		.byte	-98
+ 1716 0697 01       		.byte	1
+ 1717 0698 9F       		.byte	-97
+ 1718 0699 08       		.byte	8
+ 1719 069a A4       		.byte	-92
+ 1720 069b 20       		.byte	32
+ 1721 069c A6       		.byte	-90
+ 1722 069d 04       		.byte	4
+ 1723 069e A7       		.byte	-89
+ 1724 069f 20       		.byte	32
+ 1725 06a0 AB       		.byte	-85
+ 1726 06a1 80       		.byte	-128
+ 1727 06a2 B1       		.byte	-79
+ 1728 06a3 20       		.byte	32
+ 1729 06a4 B2       		.byte	-78
+ 1730 06a5 40       		.byte	64
+ 1731 06a6 B4       		.byte	-76
+ 1732 06a7 40       		.byte	64
+ 1733 06a8 C2       		.byte	-62
+ 1734 06a9 49       		.byte	73
+ 1735 06aa C4       		.byte	-60
+ 1736 06ab 45       		.byte	69
+ 1737 06ac CA       		.byte	-54
+ 1738 06ad 1C       		.byte	28
+ 1739 06ae CC       		.byte	-52
+ 1740 06af 55       		.byte	85
+ 1741 06b0 CE       		.byte	-50
+ 1742 06b1 4C       		.byte	76
+ 1743 06b2 D0       		.byte	-48
+ 1744 06b3 89       		.byte	-119
+ 1745 06b4 D2       		.byte	-46
+ 1746 06b5 10       		.byte	16
+ 1747 06b6 D6       		.byte	-42
+ 1748 06b7 FB       		.byte	-5
+ 1749 06b8 D8       		.byte	-40
+ 1750 06b9 10       		.byte	16
+ 1751 06ba E0       		.byte	-32
+ 1752 06bb 08       		.byte	8
+ 1753 06bc 03       		.byte	3
+ 1754 06bd 01       		.byte	1
+ 1755 06be 08       		.byte	8
+ 1756 06bf 09       		.byte	9
+ 1757 06c0 0A       		.byte	10
+ 1758 06c1 06       		.byte	6
+ 1759 06c2 15       		.byte	21
+ 1760 06c3 02       		.byte	2
+ 1761 06c4 18       		.byte	24
+ 1762 06c5 03       		.byte	3
+ 1763 06c6 19       		.byte	25
+ 1764 06c7 02       		.byte	2
+ 1765 06c8 1A       		.byte	26
+ 1766 06c9 0C       		.byte	12
+ 1767 06ca 1C       		.byte	28
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 32
+
+
+ 1768 06cb 02       		.byte	2
+ 1769 06cc 1E       		.byte	30
+ 1770 06cd 0D       		.byte	13
+ 1771 06ce 24       		.byte	36
+ 1772 06cf 05       		.byte	5
+ 1773 06d0 25       		.byte	37
+ 1774 06d1 02       		.byte	2
+ 1775 06d2 26       		.byte	38
+ 1776 06d3 0A       		.byte	10
+ 1777 06d4 31       		.byte	49
+ 1778 06d5 01       		.byte	1
+ 1779 06d6 35       		.byte	53
+ 1780 06d7 02       		.byte	2
+ 1781 06d8 36       		.byte	54
+ 1782 06d9 0F       		.byte	15
+ 1783 06da 3A       		.byte	58
+ 1784 06db 80       		.byte	-128
+ 1785 06dc 3F       		.byte	63
+ 1786 06dd 10       		.byte	16
+ 1787 06de 40       		.byte	64
+ 1788 06df 10       		.byte	16
+ 1789 06e0 41       		.byte	65
+ 1790 06e1 06       		.byte	6
+ 1791 06e2 49       		.byte	73
+ 1792 06e3 FF       		.byte	-1
+ 1793 06e4 4A       		.byte	74
+ 1794 06e5 FF       		.byte	-1
+ 1795 06e6 4B       		.byte	75
+ 1796 06e7 FF       		.byte	-1
+ 1797 06e8 4D       		.byte	77
+ 1798 06e9 A0       		.byte	-96
+ 1799 06ea 4F       		.byte	79
+ 1800 06eb 04       		.byte	4
+ 1801 06ec 50       		.byte	80
+ 1802 06ed 18       		.byte	24
+ 1803 06ee 52       		.byte	82
+ 1804 06ef 80       		.byte	-128
+ 1805 06f0 58       		.byte	88
+ 1806 06f1 04       		.byte	4
+ 1807 06f2 59       		.byte	89
+ 1808 06f3 04       		.byte	4
+ 1809 06f4 5A       		.byte	90
+ 1810 06f5 04       		.byte	4
+ 1811 06f6 5B       		.byte	91
+ 1812 06f7 04       		.byte	4
+ 1813 06f8 5C       		.byte	92
+ 1814 06f9 09       		.byte	9
+ 1815 06fa 5F       		.byte	95
+ 1816 06fb 01       		.byte	1
+ 1817 06fc 60       		.byte	96
+ 1818 06fd 40       		.byte	64
+ 1819 06fe 62       		.byte	98
+ 1820 06ff C0       		.byte	-64
+ 1821 0700 64       		.byte	100
+ 1822 0701 40       		.byte	64
+ 1823 0702 65       		.byte	101
+ 1824 0703 40       		.byte	64
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 33
+
+
+ 1825 0704 66       		.byte	102
+ 1826 0705 C0       		.byte	-64
+ 1827 0706 68       		.byte	104
+ 1828 0707 C0       		.byte	-64
+ 1829 0708 6A       		.byte	106
+ 1830 0709 C0       		.byte	-64
+ 1831 070a 6C       		.byte	108
+ 1832 070b C0       		.byte	-64
+ 1833 070c 6E       		.byte	110
+ 1834 070d C0       		.byte	-64
+ 1835 070e 83       		.byte	-125
+ 1836 070f 06       		.byte	6
+ 1837 0710 86       		.byte	-122
+ 1838 0711 02       		.byte	2
+ 1839 0712 87       		.byte	-121
+ 1840 0713 01       		.byte	1
+ 1841 0714 8A       		.byte	-118
+ 1842 0715 01       		.byte	1
+ 1843 0716 92       		.byte	-110
+ 1844 0717 02       		.byte	2
+ 1845 0718 93       		.byte	-109
+ 1846 0719 04       		.byte	4
+ 1847 071a 99       		.byte	-103
+ 1848 071b 02       		.byte	2
+ 1849 071c 9F       		.byte	-97
+ 1850 071d 01       		.byte	1
+ 1851 071e A3       		.byte	-93
+ 1852 071f 06       		.byte	6
+ 1853 0720 A6       		.byte	-90
+ 1854 0721 01       		.byte	1
+ 1855 0722 AE       		.byte	-82
+ 1856 0723 04       		.byte	4
+ 1857 0724 B0       		.byte	-80
+ 1858 0725 02       		.byte	2
+ 1859 0726 B1       		.byte	-79
+ 1860 0727 06       		.byte	6
+ 1861 0728 B2       		.byte	-78
+ 1862 0729 01       		.byte	1
+ 1863 072a B3       		.byte	-77
+ 1864 072b 01       		.byte	1
+ 1865 072c B4       		.byte	-76
+ 1866 072d 04       		.byte	4
+ 1867 072e BF       		.byte	-65
+ 1868 072f 04       		.byte	4
+ 1869 0730 C0       		.byte	-64
+ 1870 0731 10       		.byte	16
+ 1871 0732 C1       		.byte	-63
+ 1872 0733 06       		.byte	6
+ 1873 0734 C5       		.byte	-59
+ 1874 0735 D1       		.byte	-47
+ 1875 0736 C7       		.byte	-57
+ 1876 0737 02       		.byte	2
+ 1877 0738 C8       		.byte	-56
+ 1878 0739 13       		.byte	19
+ 1879 073a C9       		.byte	-55
+ 1880 073b FF       		.byte	-1
+ 1881 073c CA       		.byte	-54
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 34
+
+
+ 1882 073d FF       		.byte	-1
+ 1883 073e CB       		.byte	-53
+ 1884 073f FF       		.byte	-1
+ 1885 0740 CD       		.byte	-51
+ 1886 0741 AF       		.byte	-81
+ 1887 0742 CE       		.byte	-50
+ 1888 0743 0F       		.byte	15
+ 1889 0744 CF       		.byte	-49
+ 1890 0745 04       		.byte	4
+ 1891 0746 D0       		.byte	-48
+ 1892 0747 18       		.byte	24
+ 1893 0748 D2       		.byte	-46
+ 1894 0749 80       		.byte	-128
+ 1895 074a D4       		.byte	-44
+ 1896 074b 05       		.byte	5
+ 1897 074c D8       		.byte	-40
+ 1898 074d 04       		.byte	4
+ 1899 074e D9       		.byte	-39
+ 1900 074f 04       		.byte	4
+ 1901 0750 DA       		.byte	-38
+ 1902 0751 04       		.byte	4
+ 1903 0752 DB       		.byte	-37
+ 1904 0753 04       		.byte	4
+ 1905 0754 DC       		.byte	-36
+ 1906 0755 90       		.byte	-112
+ 1907 0756 DF       		.byte	-33
+ 1908 0757 01       		.byte	1
+ 1909 0758 E0       		.byte	-32
+ 1910 0759 40       		.byte	64
+ 1911 075a E2       		.byte	-30
+ 1912 075b C0       		.byte	-64
+ 1913 075c E4       		.byte	-28
+ 1914 075d 40       		.byte	64
+ 1915 075e E5       		.byte	-27
+ 1916 075f 40       		.byte	64
+ 1917 0760 E6       		.byte	-26
+ 1918 0761 C0       		.byte	-64
+ 1919 0762 E8       		.byte	-24
+ 1920 0763 C0       		.byte	-64
+ 1921 0764 EA       		.byte	-22
+ 1922 0765 C0       		.byte	-64
+ 1923 0766 EC       		.byte	-20
+ 1924 0767 C0       		.byte	-64
+ 1925 0768 EE       		.byte	-18
+ 1926 0769 C0       		.byte	-64
+ 1927 076a 01       		.byte	1
+ 1928 076b 28       		.byte	40
+ 1929 076c 05       		.byte	5
+ 1930 076d 10       		.byte	16
+ 1931 076e 09       		.byte	9
+ 1932 076f 01       		.byte	1
+ 1933 0770 0E       		.byte	14
+ 1934 0771 0A       		.byte	10
+ 1935 0772 10       		.byte	16
+ 1936 0773 20       		.byte	32
+ 1937 0774 13       		.byte	19
+ 1938 0775 40       		.byte	64
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 35
+
+
+ 1939 0776 17       		.byte	23
+ 1940 0777 08       		.byte	8
+ 1941 0778 18       		.byte	24
+ 1942 0779 50       		.byte	80
+ 1943 077a 19       		.byte	25
+ 1944 077b 20       		.byte	32
+ 1945 077c 1E       		.byte	30
+ 1946 077d 02       		.byte	2
+ 1947 077e 1F       		.byte	31
+ 1948 077f 80       		.byte	-128
+ 1949 0780 21       		.byte	33
+ 1950 0781 02       		.byte	2
+ 1951 0782 22       		.byte	34
+ 1952 0783 04       		.byte	4
+ 1953 0784 25       		.byte	37
+ 1954 0785 21       		.byte	33
+ 1955 0786 27       		.byte	39
+ 1956 0787 40       		.byte	64
+ 1957 0788 2A       		.byte	42
+ 1958 0789 01       		.byte	1
+ 1959 078a 2F       		.byte	47
+ 1960 078b 20       		.byte	32
+ 1961 078c 31       		.byte	49
+ 1962 078d 02       		.byte	2
+ 1963 078e 33       		.byte	51
+ 1964 078f 60       		.byte	96
+ 1965 0790 35       		.byte	53
+ 1966 0791 10       		.byte	16
+ 1967 0792 37       		.byte	55
+ 1968 0793 08       		.byte	8
+ 1969 0794 38       		.byte	56
+ 1970 0795 08       		.byte	8
+ 1971 0796 3B       		.byte	59
+ 1972 0797 02       		.byte	2
+ 1973 0798 3C       		.byte	60
+ 1974 0799 02       		.byte	2
+ 1975 079a 43       		.byte	67
+ 1976 079b 40       		.byte	64
+ 1977 079c 47       		.byte	71
+ 1978 079d 40       		.byte	64
+ 1979 079e 49       		.byte	73
+ 1980 079f 09       		.byte	9
+ 1981 07a0 4A       		.byte	74
+ 1982 07a1 08       		.byte	8
+ 1983 07a2 4E       		.byte	78
+ 1984 07a3 08       		.byte	8
+ 1985 07a4 50       		.byte	80
+ 1986 07a5 04       		.byte	4
+ 1987 07a6 52       		.byte	82
+ 1988 07a7 08       		.byte	8
+ 1989 07a8 59       		.byte	89
+ 1990 07a9 01       		.byte	1
+ 1991 07aa 5A       		.byte	90
+ 1992 07ab 48       		.byte	72
+ 1993 07ac 73       		.byte	115
+ 1994 07ad 40       		.byte	64
+ 1995 07ae 74       		.byte	116
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 36
+
+
+ 1996 07af 01       		.byte	1
+ 1997 07b0 80       		.byte	-128
+ 1998 07b1 10       		.byte	16
+ 1999 07b2 92       		.byte	-110
+ 2000 07b3 40       		.byte	64
+ 2001 07b4 94       		.byte	-108
+ 2002 07b5 04       		.byte	4
+ 2003 07b6 96       		.byte	-106
+ 2004 07b7 02       		.byte	2
+ 2005 07b8 9D       		.byte	-99
+ 2006 07b9 48       		.byte	72
+ 2007 07ba A5       		.byte	-91
+ 2008 07bb 02       		.byte	2
+ 2009 07bc B4       		.byte	-76
+ 2010 07bd 04       		.byte	4
+ 2011 07be B5       		.byte	-75
+ 2012 07bf 02       		.byte	2
+ 2013 07c0 C0       		.byte	-64
+ 2014 07c1 46       		.byte	70
+ 2015 07c2 C2       		.byte	-62
+ 2016 07c3 C8       		.byte	-56
+ 2017 07c4 C4       		.byte	-60
+ 2018 07c5 25       		.byte	37
+ 2019 07c6 CA       		.byte	-54
+ 2020 07c7 41       		.byte	65
+ 2021 07c8 CC       		.byte	-52
+ 2022 07c9 6D       		.byte	109
+ 2023 07ca CE       		.byte	-50
+ 2024 07cb 83       		.byte	-125
+ 2025 07cc D0       		.byte	-48
+ 2026 07cd 18       		.byte	24
+ 2027 07ce D2       		.byte	-46
+ 2028 07cf 24       		.byte	36
+ 2029 07d0 D6       		.byte	-42
+ 2030 07d1 0B       		.byte	11
+ 2031 07d2 E0       		.byte	-32
+ 2032 07d3 12       		.byte	18
+ 2033 07d4 06       		.byte	6
+ 2034 07d5 01       		.byte	1
+ 2035 07d6 0E       		.byte	14
+ 2036 07d7 02       		.byte	2
+ 2037 07d8 18       		.byte	24
+ 2038 07d9 01       		.byte	1
+ 2039 07da 27       		.byte	39
+ 2040 07db 01       		.byte	1
+ 2041 07dc 2A       		.byte	42
+ 2042 07dd 02       		.byte	2
+ 2043 07de 30       		.byte	48
+ 2044 07df 01       		.byte	1
+ 2045 07e0 34       		.byte	52
+ 2046 07e1 02       		.byte	2
+ 2047 07e2 35       		.byte	53
+ 2048 07e3 01       		.byte	1
+ 2049 07e4 40       		.byte	64
+ 2050 07e5 40       		.byte	64
+ 2051 07e6 41       		.byte	65
+ 2052 07e7 03       		.byte	3
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 37
+
+
+ 2053 07e8 49       		.byte	73
+ 2054 07e9 FF       		.byte	-1
+ 2055 07ea 4A       		.byte	74
+ 2056 07eb FF       		.byte	-1
+ 2057 07ec 4B       		.byte	75
+ 2058 07ed FF       		.byte	-1
+ 2059 07ee 4D       		.byte	77
+ 2060 07ef A0       		.byte	-96
+ 2061 07f0 4F       		.byte	79
+ 2062 07f1 04       		.byte	4
+ 2063 07f2 50       		.byte	80
+ 2064 07f3 18       		.byte	24
+ 2065 07f4 54       		.byte	84
+ 2066 07f5 18       		.byte	24
+ 2067 07f6 56       		.byte	86
+ 2068 07f7 04       		.byte	4
+ 2069 07f8 58       		.byte	88
+ 2070 07f9 04       		.byte	4
+ 2071 07fa 59       		.byte	89
+ 2072 07fb 04       		.byte	4
+ 2073 07fc 5A       		.byte	90
+ 2074 07fd 04       		.byte	4
+ 2075 07fe 5B       		.byte	91
+ 2076 07ff 04       		.byte	4
+ 2077 0800 5D       		.byte	93
+ 2078 0801 10       		.byte	16
+ 2079 0802 5F       		.byte	95
+ 2080 0803 01       		.byte	1
+ 2081 0804 60       		.byte	96
+ 2082 0805 40       		.byte	64
+ 2083 0806 62       		.byte	98
+ 2084 0807 C0       		.byte	-64
+ 2085 0808 64       		.byte	100
+ 2086 0809 40       		.byte	64
+ 2087 080a 65       		.byte	101
+ 2088 080b 40       		.byte	64
+ 2089 080c 66       		.byte	102
+ 2090 080d C0       		.byte	-64
+ 2091 080e 68       		.byte	104
+ 2092 080f C0       		.byte	-64
+ 2093 0810 6A       		.byte	106
+ 2094 0811 C0       		.byte	-64
+ 2095 0812 6C       		.byte	108
+ 2096 0813 C0       		.byte	-64
+ 2097 0814 6E       		.byte	110
+ 2098 0815 C0       		.byte	-64
+ 2099 0816 8E       		.byte	-114
+ 2100 0817 02       		.byte	2
+ 2101 0818 96       		.byte	-106
+ 2102 0819 04       		.byte	4
+ 2103 081a 99       		.byte	-103
+ 2104 081b 01       		.byte	1
+ 2105 081c A6       		.byte	-90
+ 2106 081d 02       		.byte	2
+ 2107 081e AB       		.byte	-85
+ 2108 081f 01       		.byte	1
+ 2109 0820 AE       		.byte	-82
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 38
+
+
+ 2110 0821 01       		.byte	1
+ 2111 0822 B0       		.byte	-80
+ 2112 0823 01       		.byte	1
+ 2113 0824 B2       		.byte	-78
+ 2114 0825 04       		.byte	4
+ 2115 0826 B4       		.byte	-76
+ 2116 0827 02       		.byte	2
+ 2117 0828 B7       		.byte	-73
+ 2118 0829 01       		.byte	1
+ 2119 082a BE       		.byte	-66
+ 2120 082b 10       		.byte	16
+ 2121 082c C0       		.byte	-64
+ 2122 082d 40       		.byte	64
+ 2123 082e C1       		.byte	-63
+ 2124 082f 03       		.byte	3
+ 2125 0830 C5       		.byte	-59
+ 2126 0831 D0       		.byte	-48
+ 2127 0832 C6       		.byte	-58
+ 2128 0833 20       		.byte	32
+ 2129 0834 C7       		.byte	-57
+ 2130 0835 01       		.byte	1
+ 2131 0836 C8       		.byte	-56
+ 2132 0837 1A       		.byte	26
+ 2133 0838 C9       		.byte	-55
+ 2134 0839 FF       		.byte	-1
+ 2135 083a CA       		.byte	-54
+ 2136 083b FF       		.byte	-1
+ 2137 083c CB       		.byte	-53
+ 2138 083d FF       		.byte	-1
+ 2139 083e CD       		.byte	-51
+ 2140 083f AF       		.byte	-81
+ 2141 0840 CE       		.byte	-50
+ 2142 0841 0F       		.byte	15
+ 2143 0842 CF       		.byte	-49
+ 2144 0843 04       		.byte	4
+ 2145 0844 D0       		.byte	-48
+ 2146 0845 18       		.byte	24
+ 2147 0846 D2       		.byte	-46
+ 2148 0847 80       		.byte	-128
+ 2149 0848 D4       		.byte	-44
+ 2150 0849 05       		.byte	5
+ 2151 084a D8       		.byte	-40
+ 2152 084b 04       		.byte	4
+ 2153 084c D9       		.byte	-39
+ 2154 084d 04       		.byte	4
+ 2155 084e DA       		.byte	-38
+ 2156 084f 04       		.byte	4
+ 2157 0850 DB       		.byte	-37
+ 2158 0851 04       		.byte	4
+ 2159 0852 DF       		.byte	-33
+ 2160 0853 01       		.byte	1
+ 2161 0854 E0       		.byte	-32
+ 2162 0855 40       		.byte	64
+ 2163 0856 E2       		.byte	-30
+ 2164 0857 C0       		.byte	-64
+ 2165 0858 E4       		.byte	-28
+ 2166 0859 40       		.byte	64
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 39
+
+
+ 2167 085a E5       		.byte	-27
+ 2168 085b 40       		.byte	64
+ 2169 085c E6       		.byte	-26
+ 2170 085d C0       		.byte	-64
+ 2171 085e E8       		.byte	-24
+ 2172 085f C0       		.byte	-64
+ 2173 0860 EA       		.byte	-22
+ 2174 0861 C0       		.byte	-64
+ 2175 0862 EC       		.byte	-20
+ 2176 0863 C0       		.byte	-64
+ 2177 0864 EE       		.byte	-18
+ 2178 0865 C0       		.byte	-64
+ 2179 0866 00       		.byte	0
+ 2180 0867 40       		.byte	64
+ 2181 0868 01       		.byte	1
+ 2182 0869 08       		.byte	8
+ 2183 086a 04       		.byte	4
+ 2184 086b 40       		.byte	64
+ 2185 086c 09       		.byte	9
+ 2186 086d 20       		.byte	32
+ 2187 086e 0C       		.byte	12
+ 2188 086f 08       		.byte	8
+ 2189 0870 10       		.byte	16
+ 2190 0871 08       		.byte	8
+ 2191 0872 16       		.byte	22
+ 2192 0873 20       		.byte	32
+ 2193 0874 17       		.byte	23
+ 2194 0875 40       		.byte	64
+ 2195 0876 18       		.byte	24
+ 2196 0877 08       		.byte	8
+ 2197 0878 1A       		.byte	26
+ 2198 0879 40       		.byte	64
+ 2199 087a 1C       		.byte	28
+ 2200 087b 40       		.byte	64
+ 2201 087c 1E       		.byte	30
+ 2202 087d 28       		.byte	40
+ 2203 087e 21       		.byte	33
+ 2204 087f 20       		.byte	32
+ 2205 0880 26       		.byte	38
+ 2206 0881 40       		.byte	64
+ 2207 0882 29       		.byte	41
+ 2208 0883 08       		.byte	8
+ 2209 0884 2C       		.byte	44
+ 2210 0885 08       		.byte	8
+ 2211 0886 36       		.byte	54
+ 2212 0887 10       		.byte	16
+ 2213 0888 40       		.byte	64
+ 2214 0889 40       		.byte	64
+ 2215 088a 42       		.byte	66
+ 2216 088b 20       		.byte	32
+ 2217 088c 43       		.byte	67
+ 2218 088d 01       		.byte	1
+ 2219 088e 46       		.byte	70
+ 2220 088f 20       		.byte	32
+ 2221 0890 47       		.byte	71
+ 2222 0891 01       		.byte	1
+ 2223 0892 4D       		.byte	77
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 40
+
+
+ 2224 0893 01       		.byte	1
+ 2225 0894 54       		.byte	84
+ 2226 0895 08       		.byte	8
+ 2227 0896 56       		.byte	86
+ 2228 0897 20       		.byte	32
+ 2229 0898 5A       		.byte	90
+ 2230 0899 02       		.byte	2
+ 2231 089a 5D       		.byte	93
+ 2232 089b 01       		.byte	1
+ 2233 089c 5E       		.byte	94
+ 2234 089d 88       		.byte	-120
+ 2235 089e 60       		.byte	96
+ 2236 089f 04       		.byte	4
+ 2237 08a0 61       		.byte	97
+ 2238 08a1 40       		.byte	64
+ 2239 08a2 62       		.byte	98
+ 2240 08a3 01       		.byte	1
+ 2241 08a4 77       		.byte	119
+ 2242 08a5 40       		.byte	64
+ 2243 08a6 82       		.byte	-126
+ 2244 08a7 01       		.byte	1
+ 2245 08a8 C0       		.byte	-64
+ 2246 08a9 85       		.byte	-123
+ 2247 08aa C2       		.byte	-62
+ 2248 08ab 22       		.byte	34
+ 2249 08ac C4       		.byte	-60
+ 2250 08ad A2       		.byte	-94
+ 2251 08ae CA       		.byte	-54
+ 2252 08af 22       		.byte	34
+ 2253 08b0 CC       		.byte	-52
+ 2254 08b1 20       		.byte	32
+ 2255 08b2 D0       		.byte	-48
+ 2256 08b3 C3       		.byte	-61
+ 2257 08b4 D6       		.byte	-42
+ 2258 08b5 D1       		.byte	-47
+ 2259 08b6 D8       		.byte	-40
+ 2260 08b7 0D       		.byte	13
+ 2261 08b8 B1       		.byte	-79
+ 2262 08b9 08       		.byte	8
+ 2263 08ba 02       		.byte	2
+ 2264 08bb 02       		.byte	2
+ 2265 08bc 04       		.byte	4
+ 2266 08bd 06       		.byte	6
+ 2267 08be 06       		.byte	6
+ 2268 08bf 01       		.byte	1
+ 2269 08c0 0E       		.byte	14
+ 2270 08c1 06       		.byte	6
+ 2271 08c2 16       		.byte	22
+ 2272 08c3 01       		.byte	1
+ 2273 08c4 1E       		.byte	30
+ 2274 08c5 03       		.byte	3
+ 2275 08c6 26       		.byte	38
+ 2276 08c7 05       		.byte	5
+ 2277 08c8 2F       		.byte	47
+ 2278 08c9 01       		.byte	1
+ 2279 08ca 33       		.byte	51
+ 2280 08cb 01       		.byte	1
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 41
+
+
+ 2281 08cc 36       		.byte	54
+ 2282 08cd 07       		.byte	7
+ 2283 08ce 3A       		.byte	58
+ 2284 08cf 80       		.byte	-128
+ 2285 08d0 58       		.byte	88
+ 2286 08d1 04       		.byte	4
+ 2287 08d2 59       		.byte	89
+ 2288 08d3 04       		.byte	4
+ 2289 08d4 5C       		.byte	92
+ 2290 08d5 21       		.byte	33
+ 2291 08d6 5F       		.byte	95
+ 2292 08d7 01       		.byte	1
+ 2293 08d8 01       		.byte	1
+ 2294 08d9 82       		.byte	-126
+ 2295 08da 03       		.byte	3
+ 2296 08db 20       		.byte	32
+ 2297 08dc 04       		.byte	4
+ 2298 08dd 04       		.byte	4
+ 2299 08de 05       		.byte	5
+ 2300 08df 01       		.byte	1
+ 2301 08e0 07       		.byte	7
+ 2302 08e1 02       		.byte	2
+ 2303 08e2 09       		.byte	9
+ 2304 08e3 80       		.byte	-128
+ 2305 08e4 0A       		.byte	10
+ 2306 08e5 94       		.byte	-108
+ 2307 08e6 0D       		.byte	13
+ 2308 08e7 08       		.byte	8
+ 2309 08e8 0E       		.byte	14
+ 2310 08e9 01       		.byte	1
+ 2311 08ea 10       		.byte	16
+ 2312 08eb A0       		.byte	-96
+ 2313 08ec 11       		.byte	17
+ 2314 08ed 10       		.byte	16
+ 2315 08ee 14       		.byte	20
+ 2316 08ef 10       		.byte	16
+ 2317 08f0 19       		.byte	25
+ 2318 08f1 02       		.byte	2
+ 2319 08f2 1B       		.byte	27
+ 2320 08f3 20       		.byte	32
+ 2321 08f4 1E       		.byte	30
+ 2322 08f5 01       		.byte	1
+ 2323 08f6 1F       		.byte	31
+ 2324 08f7 80       		.byte	-128
+ 2325 08f8 20       		.byte	32
+ 2326 08f9 04       		.byte	4
+ 2327 08fa 22       		.byte	34
+ 2328 08fb 08       		.byte	8
+ 2329 08fc 27       		.byte	39
+ 2330 08fd 20       		.byte	32
+ 2331 08fe 28       		.byte	40
+ 2332 08ff 1A       		.byte	26
+ 2333 0900 2B       		.byte	43
+ 2334 0901 80       		.byte	-128
+ 2335 0902 2E       		.byte	46
+ 2336 0903 80       		.byte	-128
+ 2337 0904 30       		.byte	48
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 42
+
+
+ 2338 0905 20       		.byte	32
+ 2339 0906 31       		.byte	49
+ 2340 0907 09       		.byte	9
+ 2341 0908 32       		.byte	50
+ 2342 0909 40       		.byte	64
+ 2343 090a 38       		.byte	56
+ 2344 090b 80       		.byte	-128
+ 2345 090c 39       		.byte	57
+ 2346 090d 12       		.byte	18
+ 2347 090e 3B       		.byte	59
+ 2348 090f 04       		.byte	4
+ 2349 0910 42       		.byte	66
+ 2350 0911 14       		.byte	20
+ 2351 0912 48       		.byte	72
+ 2352 0913 04       		.byte	4
+ 2353 0914 49       		.byte	73
+ 2354 0915 40       		.byte	64
+ 2355 0916 4A       		.byte	74
+ 2356 0917 80       		.byte	-128
+ 2357 0918 4B       		.byte	75
+ 2358 0919 04       		.byte	4
+ 2359 091a 51       		.byte	81
+ 2360 091b 22       		.byte	34
+ 2361 091c 52       		.byte	82
+ 2362 091d 44       		.byte	68
+ 2363 091e 5C       		.byte	92
+ 2364 091f 0C       		.byte	12
+ 2365 0920 61       		.byte	97
+ 2366 0921 20       		.byte	32
+ 2367 0922 62       		.byte	98
+ 2368 0923 48       		.byte	72
+ 2369 0924 89       		.byte	-119
+ 2370 0925 02       		.byte	2
+ 2371 0926 90       		.byte	-112
+ 2372 0927 80       		.byte	-128
+ 2373 0928 91       		.byte	-111
+ 2374 0929 12       		.byte	18
+ 2375 092a 92       		.byte	-110
+ 2376 092b 94       		.byte	-108
+ 2377 092c 94       		.byte	-108
+ 2378 092d 04       		.byte	4
+ 2379 092e 98       		.byte	-104
+ 2380 092f 12       		.byte	18
+ 2381 0930 99       		.byte	-103
+ 2382 0931 C1       		.byte	-63
+ 2383 0932 9A       		.byte	-102
+ 2384 0933 80       		.byte	-128
+ 2385 0934 9B       		.byte	-101
+ 2386 0935 02       		.byte	2
+ 2387 0936 9D       		.byte	-99
+ 2388 0937 02       		.byte	2
+ 2389 0938 9E       		.byte	-98
+ 2390 0939 04       		.byte	4
+ 2391 093a 9F       		.byte	-97
+ 2392 093b 20       		.byte	32
+ 2393 093c A0       		.byte	-96
+ 2394 093d A4       		.byte	-92
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 43
+
+
+ 2395 093e A1       		.byte	-95
+ 2396 093f 88       		.byte	-120
+ 2397 0940 A6       		.byte	-90
+ 2398 0941 80       		.byte	-128
+ 2399 0942 A7       		.byte	-89
+ 2400 0943 80       		.byte	-128
+ 2401 0944 A9       		.byte	-87
+ 2402 0945 10       		.byte	16
+ 2403 0946 AC       		.byte	-84
+ 2404 0947 10       		.byte	16
+ 2405 0948 B0       		.byte	-80
+ 2406 0949 44       		.byte	68
+ 2407 094a B3       		.byte	-77
+ 2408 094b 80       		.byte	-128
+ 2409 094c B4       		.byte	-76
+ 2410 094d 01       		.byte	1
+ 2411 094e C0       		.byte	-64
+ 2412 094f BD       		.byte	-67
+ 2413 0950 C2       		.byte	-62
+ 2414 0951 AF       		.byte	-81
+ 2415 0952 C4       		.byte	-60
+ 2416 0953 2E       		.byte	46
+ 2417 0954 CA       		.byte	-54
+ 2418 0955 1F       		.byte	31
+ 2419 0956 CC       		.byte	-52
+ 2420 0957 0F       		.byte	15
+ 2421 0958 CE       		.byte	-50
+ 2422 0959 0F       		.byte	15
+ 2423 095a D0       		.byte	-48
+ 2424 095b 06       		.byte	6
+ 2425 095c D2       		.byte	-46
+ 2426 095d 0C       		.byte	12
+ 2427 095e D8       		.byte	-40
+ 2428 095f 0E       		.byte	14
+ 2429 0960 EE       		.byte	-18
+ 2430 0961 02       		.byte	2
+ 2431 0962 04       		.byte	4
+ 2432 0963 06       		.byte	6
+ 2433 0964 06       		.byte	6
+ 2434 0965 01       		.byte	1
+ 2435 0966 07       		.byte	7
+ 2436 0967 01       		.byte	1
+ 2437 0968 08       		.byte	8
+ 2438 0969 07       		.byte	7
+ 2439 096a 0D       		.byte	13
+ 2440 096b 01       		.byte	1
+ 2441 096c 0E       		.byte	14
+ 2442 096d 01       		.byte	1
+ 2443 096e 14       		.byte	20
+ 2444 096f 06       		.byte	6
+ 2445 0970 18       		.byte	24
+ 2446 0971 02       		.byte	2
+ 2447 0972 19       		.byte	25
+ 2448 0973 01       		.byte	1
+ 2449 0974 1C       		.byte	28
+ 2450 0975 04       		.byte	4
+ 2451 0976 20       		.byte	32
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 44
+
+
+ 2452 0977 01       		.byte	1
+ 2453 0978 22       		.byte	34
+ 2454 0979 06       		.byte	6
+ 2455 097a 28       		.byte	40
+ 2456 097b 06       		.byte	6
+ 2457 097c 2A       		.byte	42
+ 2458 097d 01       		.byte	1
+ 2459 097e 2B       		.byte	43
+ 2460 097f 01       		.byte	1
+ 2461 0980 31       		.byte	49
+ 2462 0981 01       		.byte	1
+ 2463 0982 32       		.byte	50
+ 2464 0983 07       		.byte	7
+ 2465 0984 39       		.byte	57
+ 2466 0985 02       		.byte	2
+ 2467 0986 3A       		.byte	58
+ 2468 0987 08       		.byte	8
+ 2469 0988 3B       		.byte	59
+ 2470 0989 20       		.byte	32
+ 2471 098a 40       		.byte	64
+ 2472 098b 46       		.byte	70
+ 2473 098c 41       		.byte	65
+ 2474 098d 02       		.byte	2
+ 2475 098e 45       		.byte	69
+ 2476 098f EB       		.byte	-21
+ 2477 0990 47       		.byte	71
+ 2478 0991 0C       		.byte	12
+ 2479 0992 48       		.byte	72
+ 2480 0993 13       		.byte	19
+ 2481 0994 49       		.byte	73
+ 2482 0995 FF       		.byte	-1
+ 2483 0996 4A       		.byte	74
+ 2484 0997 FF       		.byte	-1
+ 2485 0998 4B       		.byte	75
+ 2486 0999 FF       		.byte	-1
+ 2487 099a 4E       		.byte	78
+ 2488 099b F0       		.byte	-16
+ 2489 099c 4F       		.byte	79
+ 2490 099d 44       		.byte	68
+ 2491 099e 50       		.byte	80
+ 2492 099f 0C       		.byte	12
+ 2493 09a0 58       		.byte	88
+ 2494 09a1 04       		.byte	4
+ 2495 09a2 59       		.byte	89
+ 2496 09a3 04       		.byte	4
+ 2497 09a4 5A       		.byte	90
+ 2498 09a5 04       		.byte	4
+ 2499 09a6 5C       		.byte	92
+ 2500 09a7 11       		.byte	17
+ 2501 09a8 5D       		.byte	93
+ 2502 09a9 01       		.byte	1
+ 2503 09aa 5F       		.byte	95
+ 2504 09ab 01       		.byte	1
+ 2505 09ac 66       		.byte	102
+ 2506 09ad C0       		.byte	-64
+ 2507 09ae 6A       		.byte	106
+ 2508 09af 40       		.byte	64
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 45
+
+
+ 2509 09b0 6B       		.byte	107
+ 2510 09b1 02       		.byte	2
+ 2511 09b2 80       		.byte	-128
+ 2512 09b3 1C       		.byte	28
+ 2513 09b4 82       		.byte	-126
+ 2514 09b5 61       		.byte	97
+ 2515 09b6 84       		.byte	-124
+ 2516 09b7 1C       		.byte	28
+ 2517 09b8 86       		.byte	-122
+ 2518 09b9 62       		.byte	98
+ 2519 09ba 8A       		.byte	-118
+ 2520 09bb 04       		.byte	4
+ 2521 09bc 8D       		.byte	-115
+ 2522 09bd 01       		.byte	1
+ 2523 09be 8E       		.byte	-114
+ 2524 09bf 63       		.byte	99
+ 2525 09c0 90       		.byte	-112
+ 2526 09c1 67       		.byte	103
+ 2527 09c2 92       		.byte	-110
+ 2528 09c3 18       		.byte	24
+ 2529 09c4 94       		.byte	-108
+ 2530 09c5 18       		.byte	24
+ 2531 09c6 95       		.byte	-107
+ 2532 09c7 01       		.byte	1
+ 2533 09c8 98       		.byte	-104
+ 2534 09c9 08       		.byte	8
+ 2535 09ca 99       		.byte	-103
+ 2536 09cb 01       		.byte	1
+ 2537 09cc 9C       		.byte	-100
+ 2538 09cd 10       		.byte	16
+ 2539 09ce A0       		.byte	-96
+ 2540 09cf 40       		.byte	64
+ 2541 09d0 A4       		.byte	-92
+ 2542 09d1 60       		.byte	96
+ 2543 09d2 A8       		.byte	-88
+ 2544 09d3 7F       		.byte	127
+ 2545 09d4 A9       		.byte	-87
+ 2546 09d5 01       		.byte	1
+ 2547 09d6 AC       		.byte	-84
+ 2548 09d7 24       		.byte	36
+ 2549 09d8 AE       		.byte	-82
+ 2550 09d9 80       		.byte	-128
+ 2551 09da B1       		.byte	-79
+ 2552 09db 01       		.byte	1
+ 2553 09dc B2       		.byte	-78
+ 2554 09dd 80       		.byte	-128
+ 2555 09de B4       		.byte	-76
+ 2556 09df 1F       		.byte	31
+ 2557 09e0 B6       		.byte	-74
+ 2558 09e1 60       		.byte	96
+ 2559 09e2 BA       		.byte	-70
+ 2560 09e3 20       		.byte	32
+ 2561 09e4 BF       		.byte	-65
+ 2562 09e5 01       		.byte	1
+ 2563 09e6 D8       		.byte	-40
+ 2564 09e7 04       		.byte	4
+ 2565 09e8 D9       		.byte	-39
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 46
+
+
+ 2566 09e9 04       		.byte	4
+ 2567 09ea DB       		.byte	-37
+ 2568 09eb 04       		.byte	4
+ 2569 09ec DC       		.byte	-36
+ 2570 09ed 01       		.byte	1
+ 2571 09ee DF       		.byte	-33
+ 2572 09ef 01       		.byte	1
+ 2573 09f0 00       		.byte	0
+ 2574 09f1 54       		.byte	84
+ 2575 09f2 01       		.byte	1
+ 2576 09f3 01       		.byte	1
+ 2577 09f4 04       		.byte	4
+ 2578 09f5 44       		.byte	68
+ 2579 09f6 07       		.byte	7
+ 2580 09f7 04       		.byte	4
+ 2581 09f8 09       		.byte	9
+ 2582 09f9 28       		.byte	40
+ 2583 09fa 0A       		.byte	10
+ 2584 09fb 01       		.byte	1
+ 2585 09fc 0B       		.byte	11
+ 2586 09fd 80       		.byte	-128
+ 2587 09fe 0D       		.byte	13
+ 2588 09ff 28       		.byte	40
+ 2589 0a00 0E       		.byte	14
+ 2590 0a01 01       		.byte	1
+ 2591 0a02 10       		.byte	16
+ 2592 0a03 40       		.byte	64
+ 2593 0a04 11       		.byte	17
+ 2594 0a05 60       		.byte	96
+ 2595 0a06 13       		.byte	19
+ 2596 0a07 08       		.byte	8
+ 2597 0a08 14       		.byte	20
+ 2598 0a09 04       		.byte	4
+ 2599 0a0a 16       		.byte	22
+ 2600 0a0b 40       		.byte	64
+ 2601 0a0c 18       		.byte	24
+ 2602 0a0d 14       		.byte	20
+ 2603 0a0e 19       		.byte	25
+ 2604 0a0f 20       		.byte	32
+ 2605 0a10 1A       		.byte	26
+ 2606 0a11 02       		.byte	2
+ 2607 0a12 1F       		.byte	31
+ 2608 0a13 08       		.byte	8
+ 2609 0a14 23       		.byte	35
+ 2610 0a15 80       		.byte	-128
+ 2611 0a16 25       		.byte	37
+ 2612 0a17 10       		.byte	16
+ 2613 0a18 26       		.byte	38
+ 2614 0a19 22       		.byte	34
+ 2615 0a1a 27       		.byte	39
+ 2616 0a1b 04       		.byte	4
+ 2617 0a1c 29       		.byte	41
+ 2618 0a1d 20       		.byte	32
+ 2619 0a1e 2F       		.byte	47
+ 2620 0a1f 08       		.byte	8
+ 2621 0a20 30       		.byte	48
+ 2622 0a21 04       		.byte	4
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 47
+
+
+ 2623 0a22 32       		.byte	50
+ 2624 0a23 20       		.byte	32
+ 2625 0a24 33       		.byte	51
+ 2626 0a25 08       		.byte	8
+ 2627 0a26 36       		.byte	54
+ 2628 0a27 20       		.byte	32
+ 2629 0a28 3A       		.byte	58
+ 2630 0a29 40       		.byte	64
+ 2631 0a2a 3B       		.byte	59
+ 2632 0a2b C0       		.byte	-64
+ 2633 0a2c 3C       		.byte	60
+ 2634 0a2d 04       		.byte	4
+ 2635 0a2e 3F       		.byte	63
+ 2636 0a2f 40       		.byte	64
+ 2637 0a30 44       		.byte	68
+ 2638 0a31 08       		.byte	8
+ 2639 0a32 47       		.byte	71
+ 2640 0a33 02       		.byte	2
+ 2641 0a34 4C       		.byte	76
+ 2642 0a35 18       		.byte	24
+ 2643 0a36 4F       		.byte	79
+ 2644 0a37 01       		.byte	1
+ 2645 0a38 57       		.byte	87
+ 2646 0a39 04       		.byte	4
+ 2647 0a3a 68       		.byte	104
+ 2648 0a3b 04       		.byte	4
+ 2649 0a3c 6A       		.byte	106
+ 2650 0a3d 80       		.byte	-128
+ 2651 0a3e 6B       		.byte	107
+ 2652 0a3f 50       		.byte	80
+ 2653 0a40 70       		.byte	112
+ 2654 0a41 81       		.byte	-127
+ 2655 0a42 72       		.byte	114
+ 2656 0a43 08       		.byte	8
+ 2657 0a44 73       		.byte	115
+ 2658 0a45 20       		.byte	32
+ 2659 0a46 86       		.byte	-122
+ 2660 0a47 08       		.byte	8
+ 2661 0a48 87       		.byte	-121
+ 2662 0a49 20       		.byte	32
+ 2663 0a4a 88       		.byte	-120
+ 2664 0a4b 04       		.byte	4
+ 2665 0a4c 89       		.byte	-119
+ 2666 0a4d 01       		.byte	1
+ 2667 0a4e 8B       		.byte	-117
+ 2668 0a4f 04       		.byte	4
+ 2669 0a50 92       		.byte	-110
+ 2670 0a51 10       		.byte	16
+ 2671 0a52 94       		.byte	-108
+ 2672 0a53 20       		.byte	32
+ 2673 0a54 96       		.byte	-106
+ 2674 0a55 02       		.byte	2
+ 2675 0a56 97       		.byte	-105
+ 2676 0a57 25       		.byte	37
+ 2677 0a58 98       		.byte	-104
+ 2678 0a59 08       		.byte	8
+ 2679 0a5a 9B       		.byte	-101
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 48
+
+
+ 2680 0a5b 02       		.byte	2
+ 2681 0a5c 9D       		.byte	-99
+ 2682 0a5d 08       		.byte	8
+ 2683 0a5e 9E       		.byte	-98
+ 2684 0a5f 80       		.byte	-128
+ 2685 0a60 A4       		.byte	-92
+ 2686 0a61 40       		.byte	64
+ 2687 0a62 A6       		.byte	-90
+ 2688 0a63 02       		.byte	2
+ 2689 0a64 A7       		.byte	-89
+ 2690 0a65 04       		.byte	4
+ 2691 0a66 A8       		.byte	-88
+ 2692 0a67 20       		.byte	32
+ 2693 0a68 AB       		.byte	-85
+ 2694 0a69 04       		.byte	4
+ 2695 0a6a AF       		.byte	-81
+ 2696 0a6b 02       		.byte	2
+ 2697 0a6c B0       		.byte	-80
+ 2698 0a6d 0A       		.byte	10
+ 2699 0a6e B2       		.byte	-78
+ 2700 0a6f 10       		.byte	16
+ 2701 0a70 B3       		.byte	-77
+ 2702 0a71 01       		.byte	1
+ 2703 0a72 B5       		.byte	-75
+ 2704 0a73 10       		.byte	16
+ 2705 0a74 B7       		.byte	-73
+ 2706 0a75 01       		.byte	1
+ 2707 0a76 C0       		.byte	-64
+ 2708 0a77 EF       		.byte	-17
+ 2709 0a78 C2       		.byte	-62
+ 2710 0a79 EF       		.byte	-17
+ 2711 0a7a C4       		.byte	-60
+ 2712 0a7b 5F       		.byte	95
+ 2713 0a7c CA       		.byte	-54
+ 2714 0a7d 24       		.byte	36
+ 2715 0a7e CC       		.byte	-52
+ 2716 0a7f 26       		.byte	38
+ 2717 0a80 CE       		.byte	-50
+ 2718 0a81 58       		.byte	88
+ 2719 0a82 D0       		.byte	-48
+ 2720 0a83 A0       		.byte	-96
+ 2721 0a84 D2       		.byte	-46
+ 2722 0a85 20       		.byte	32
+ 2723 0a86 E0       		.byte	-32
+ 2724 0a87 02       		.byte	2
+ 2725 0a88 E4       		.byte	-28
+ 2726 0a89 22       		.byte	34
+ 2727 0a8a E8       		.byte	-24
+ 2728 0a8b E0       		.byte	-32
+ 2729 0a8c EC       		.byte	-20
+ 2730 0a8d 20       		.byte	32
+ 2731 0a8e 00       		.byte	0
+ 2732 0a8f 01       		.byte	1
+ 2733 0a90 01       		.byte	1
+ 2734 0a91 22       		.byte	34
+ 2735 0a92 03       		.byte	3
+ 2736 0a93 51       		.byte	81
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 49
+
+
+ 2737 0a94 04       		.byte	4
+ 2738 0a95 0E       		.byte	14
+ 2739 0a96 05       		.byte	5
+ 2740 0a97 67       		.byte	103
+ 2741 0a98 08       		.byte	8
+ 2742 0a99 0C       		.byte	12
+ 2743 0a9a 09       		.byte	9
+ 2744 0a9b 67       		.byte	103
+ 2745 0a9c 0A       		.byte	10
+ 2746 0a9d 02       		.byte	2
+ 2747 0a9e 0E       		.byte	14
+ 2748 0a9f 02       		.byte	2
+ 2749 0aa0 10       		.byte	16
+ 2750 0aa1 02       		.byte	2
+ 2751 0aa2 12       		.byte	18
+ 2752 0aa3 0C       		.byte	12
+ 2753 0aa4 14       		.byte	20
+ 2754 0aa5 0C       		.byte	12
+ 2755 0aa6 15       		.byte	21
+ 2756 0aa7 44       		.byte	68
+ 2757 0aa8 17       		.byte	23
+ 2758 0aa9 31       		.byte	49
+ 2759 0aaa 18       		.byte	24
+ 2760 0aab 04       		.byte	4
+ 2761 0aac 19       		.byte	25
+ 2762 0aad 01       		.byte	1
+ 2763 0aae 1B       		.byte	27
+ 2764 0aaf 0E       		.byte	14
+ 2765 0ab0 1C       		.byte	28
+ 2766 0ab1 08       		.byte	8
+ 2767 0ab2 20       		.byte	32
+ 2768 0ab3 0E       		.byte	14
+ 2769 0ab4 24       		.byte	36
+ 2770 0ab5 01       		.byte	1
+ 2771 0ab6 28       		.byte	40
+ 2772 0ab7 01       		.byte	1
+ 2773 0ab8 30       		.byte	48
+ 2774 0ab9 01       		.byte	1
+ 2775 0aba 32       		.byte	50
+ 2776 0abb 0E       		.byte	14
+ 2777 0abc 33       		.byte	51
+ 2778 0abd 60       		.byte	96
+ 2779 0abe 35       		.byte	53
+ 2780 0abf 07       		.byte	7
+ 2781 0ac0 37       		.byte	55
+ 2782 0ac1 18       		.byte	24
+ 2783 0ac2 3F       		.byte	63
+ 2784 0ac3 40       		.byte	64
+ 2785 0ac4 40       		.byte	64
+ 2786 0ac5 54       		.byte	84
+ 2787 0ac6 41       		.byte	65
+ 2788 0ac7 03       		.byte	3
+ 2789 0ac8 42       		.byte	66
+ 2790 0ac9 06       		.byte	6
+ 2791 0aca 44       		.byte	68
+ 2792 0acb 01       		.byte	1
+ 2793 0acc 45       		.byte	69
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 50
+
+
+ 2794 0acd C0       		.byte	-64
+ 2795 0ace 46       		.byte	70
+ 2796 0acf E0       		.byte	-32
+ 2797 0ad0 48       		.byte	72
+ 2798 0ad1 0A       		.byte	10
+ 2799 0ad2 49       		.byte	73
+ 2800 0ad3 FF       		.byte	-1
+ 2801 0ad4 4A       		.byte	74
+ 2802 0ad5 FF       		.byte	-1
+ 2803 0ad6 4B       		.byte	75
+ 2804 0ad7 FF       		.byte	-1
+ 2805 0ad8 4C       		.byte	76
+ 2806 0ad9 62       		.byte	98
+ 2807 0ada 4D       		.byte	77
+ 2808 0adb A0       		.byte	-96
+ 2809 0adc 4E       		.byte	78
+ 2810 0add F0       		.byte	-16
+ 2811 0ade 4F       		.byte	79
+ 2812 0adf 41       		.byte	65
+ 2813 0ae0 50       		.byte	80
+ 2814 0ae1 0C       		.byte	12
+ 2815 0ae2 56       		.byte	86
+ 2816 0ae3 02       		.byte	2
+ 2817 0ae4 57       		.byte	87
+ 2818 0ae5 10       		.byte	16
+ 2819 0ae6 58       		.byte	88
+ 2820 0ae7 04       		.byte	4
+ 2821 0ae8 59       		.byte	89
+ 2822 0ae9 04       		.byte	4
+ 2823 0aea 5A       		.byte	90
+ 2824 0aeb 04       		.byte	4
+ 2825 0aec 5B       		.byte	91
+ 2826 0aed 04       		.byte	4
+ 2827 0aee 5C       		.byte	92
+ 2828 0aef 11       		.byte	17
+ 2829 0af0 5D       		.byte	93
+ 2830 0af1 11       		.byte	17
+ 2831 0af2 5F       		.byte	95
+ 2832 0af3 01       		.byte	1
+ 2833 0af4 66       		.byte	102
+ 2834 0af5 40       		.byte	64
+ 2835 0af6 67       		.byte	103
+ 2836 0af7 02       		.byte	2
+ 2837 0af8 69       		.byte	105
+ 2838 0af9 10       		.byte	16
+ 2839 0afa 6A       		.byte	106
+ 2840 0afb 30       		.byte	48
+ 2841 0afc 6B       		.byte	107
+ 2842 0afd 10       		.byte	16
+ 2843 0afe 6D       		.byte	109
+ 2844 0aff 10       		.byte	16
+ 2845 0b00 6E       		.byte	110
+ 2846 0b01 10       		.byte	16
+ 2847 0b02 6F       		.byte	111
+ 2848 0b03 12       		.byte	18
+ 2849 0b04 80       		.byte	-128
+ 2850 0b05 01       		.byte	1
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 51
+
+
+ 2851 0b06 84       		.byte	-124
+ 2852 0b07 0F       		.byte	15
+ 2853 0b08 88       		.byte	-120
+ 2854 0b09 03       		.byte	3
+ 2855 0b0a 89       		.byte	-119
+ 2856 0b0b 01       		.byte	1
+ 2857 0b0c 8C       		.byte	-116
+ 2858 0b0d 03       		.byte	3
+ 2859 0b0e 8E       		.byte	-114
+ 2860 0b0f 0C       		.byte	12
+ 2861 0b10 94       		.byte	-108
+ 2862 0b11 0C       		.byte	12
+ 2863 0b12 98       		.byte	-104
+ 2864 0b13 04       		.byte	4
+ 2865 0b14 9E       		.byte	-98
+ 2866 0b15 03       		.byte	3
+ 2867 0b16 A0       		.byte	-96
+ 2868 0b17 0C       		.byte	12
+ 2869 0b18 A2       		.byte	-94
+ 2870 0b19 03       		.byte	3
+ 2871 0b1a A4       		.byte	-92
+ 2872 0b1b 02       		.byte	2
+ 2873 0b1c A8       		.byte	-88
+ 2874 0b1d 0F       		.byte	15
+ 2875 0b1e AC       		.byte	-84
+ 2876 0b1f 08       		.byte	8
+ 2877 0b20 B1       		.byte	-79
+ 2878 0b21 01       		.byte	1
+ 2879 0b22 B6       		.byte	-74
+ 2880 0b23 0F       		.byte	15
+ 2881 0b24 BA       		.byte	-70
+ 2882 0b25 80       		.byte	-128
+ 2883 0b26 BF       		.byte	-65
+ 2884 0b27 01       		.byte	1
+ 2885 0b28 D8       		.byte	-40
+ 2886 0b29 04       		.byte	4
+ 2887 0b2a D9       		.byte	-39
+ 2888 0b2b 04       		.byte	4
+ 2889 0b2c DC       		.byte	-36
+ 2890 0b2d 01       		.byte	1
+ 2891 0b2e DF       		.byte	-33
+ 2892 0b2f 01       		.byte	1
+ 2893 0b30 00       		.byte	0
+ 2894 0b31 42       		.byte	66
+ 2895 0b32 02       		.byte	2
+ 2896 0b33 20       		.byte	32
+ 2897 0b34 03       		.byte	3
+ 2898 0b35 08       		.byte	8
+ 2899 0b36 04       		.byte	4
+ 2900 0b37 02       		.byte	2
+ 2901 0b38 05       		.byte	5
+ 2902 0b39 40       		.byte	64
+ 2903 0b3a 06       		.byte	6
+ 2904 0b3b 20       		.byte	32
+ 2905 0b3c 07       		.byte	7
+ 2906 0b3d 08       		.byte	8
+ 2907 0b3e 09       		.byte	9
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 52
+
+
+ 2908 0b3f 28       		.byte	40
+ 2909 0b40 0A       		.byte	10
+ 2910 0b41 01       		.byte	1
+ 2911 0b42 0B       		.byte	11
+ 2912 0b43 80       		.byte	-128
+ 2913 0b44 0D       		.byte	13
+ 2914 0b45 28       		.byte	40
+ 2915 0b46 0F       		.byte	15
+ 2916 0b47 02       		.byte	2
+ 2917 0b48 11       		.byte	17
+ 2918 0b49 14       		.byte	20
+ 2919 0b4a 13       		.byte	19
+ 2920 0b4b 02       		.byte	2
+ 2921 0b4c 14       		.byte	20
+ 2922 0b4d 04       		.byte	4
+ 2923 0b4e 15       		.byte	21
+ 2924 0b4f 08       		.byte	8
+ 2925 0b50 16       		.byte	22
+ 2926 0b51 02       		.byte	2
+ 2927 0b52 17       		.byte	23
+ 2928 0b53 02       		.byte	2
+ 2929 0b54 18       		.byte	24
+ 2930 0b55 40       		.byte	64
+ 2931 0b56 19       		.byte	25
+ 2932 0b57 08       		.byte	8
+ 2933 0b58 1B       		.byte	27
+ 2934 0b59 01       		.byte	1
+ 2935 0b5a 1D       		.byte	29
+ 2936 0b5b 40       		.byte	64
+ 2937 0b5c 1F       		.byte	31
+ 2938 0b5d 40       		.byte	64
+ 2939 0b5e 20       		.byte	32
+ 2940 0b5f 01       		.byte	1
+ 2941 0b60 21       		.byte	33
+ 2942 0b61 04       		.byte	4
+ 2943 0b62 22       		.byte	34
+ 2944 0b63 14       		.byte	20
+ 2945 0b64 23       		.byte	35
+ 2946 0b65 08       		.byte	8
+ 2947 0b66 25       		.byte	37
+ 2948 0b67 01       		.byte	1
+ 2949 0b68 32       		.byte	50
+ 2950 0b69 14       		.byte	20
+ 2951 0b6a 38       		.byte	56
+ 2952 0b6b 02       		.byte	2
+ 2953 0b6c 39       		.byte	57
+ 2954 0b6d 14       		.byte	20
+ 2955 0b6e 3E       		.byte	62
+ 2956 0b6f 10       		.byte	16
+ 2957 0b70 40       		.byte	64
+ 2958 0b71 41       		.byte	65
+ 2959 0b72 42       		.byte	66
+ 2960 0b73 20       		.byte	32
+ 2961 0b74 43       		.byte	67
+ 2962 0b75 04       		.byte	4
+ 2963 0b76 48       		.byte	72
+ 2964 0b77 40       		.byte	64
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 53
+
+
+ 2965 0b78 4A       		.byte	74
+ 2966 0b79 04       		.byte	4
+ 2967 0b7a 4B       		.byte	75
+ 2968 0b7b 80       		.byte	-128
+ 2969 0b7c 53       		.byte	83
+ 2970 0b7d 10       		.byte	16
+ 2971 0b7e 5B       		.byte	91
+ 2972 0b7f 80       		.byte	-128
+ 2973 0b80 5D       		.byte	93
+ 2974 0b81 08       		.byte	8
+ 2975 0b82 5E       		.byte	94
+ 2976 0b83 08       		.byte	8
+ 2977 0b84 68       		.byte	104
+ 2978 0b85 01       		.byte	1
+ 2979 0b86 69       		.byte	105
+ 2980 0b87 14       		.byte	20
+ 2981 0b88 71       		.byte	113
+ 2982 0b89 28       		.byte	40
+ 2983 0b8a 72       		.byte	114
+ 2984 0b8b 03       		.byte	3
+ 2985 0b8c 84       		.byte	-124
+ 2986 0b8d 40       		.byte	64
+ 2987 0b8e 86       		.byte	-122
+ 2988 0b8f 04       		.byte	4
+ 2989 0b90 89       		.byte	-119
+ 2990 0b91 20       		.byte	32
+ 2991 0b92 8B       		.byte	-117
+ 2992 0b93 02       		.byte	2
+ 2993 0b94 8C       		.byte	-116
+ 2994 0b95 01       		.byte	1
+ 2995 0b96 8D       		.byte	-115
+ 2996 0b97 41       		.byte	65
+ 2997 0b98 92       		.byte	-110
+ 2998 0b99 10       		.byte	16
+ 2999 0b9a 94       		.byte	-108
+ 3000 0b9b 40       		.byte	64
+ 3001 0b9c 95       		.byte	-107
+ 3002 0b9d 40       		.byte	64
+ 3003 0b9e 96       		.byte	-106
+ 3004 0b9f 01       		.byte	1
+ 3005 0ba0 97       		.byte	-105
+ 3006 0ba1 A0       		.byte	-96
+ 3007 0ba2 98       		.byte	-104
+ 3008 0ba3 04       		.byte	4
+ 3009 0ba4 99       		.byte	-103
+ 3010 0ba5 20       		.byte	32
+ 3011 0ba6 9B       		.byte	-101
+ 3012 0ba7 84       		.byte	-124
+ 3013 0ba8 9C       		.byte	-100
+ 3014 0ba9 40       		.byte	64
+ 3015 0baa 9D       		.byte	-99
+ 3016 0bab 08       		.byte	8
+ 3017 0bac 9F       		.byte	-97
+ 3018 0bad 08       		.byte	8
+ 3019 0bae A2       		.byte	-94
+ 3020 0baf 20       		.byte	32
+ 3021 0bb0 A3       		.byte	-93
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 54
+
+
+ 3022 0bb1 08       		.byte	8
+ 3023 0bb2 A4       		.byte	-92
+ 3024 0bb3 40       		.byte	64
+ 3025 0bb4 A5       		.byte	-91
+ 3026 0bb5 28       		.byte	40
+ 3027 0bb6 AB       		.byte	-85
+ 3028 0bb7 50       		.byte	80
+ 3029 0bb8 AC       		.byte	-84
+ 3030 0bb9 80       		.byte	-128
+ 3031 0bba B0       		.byte	-80
+ 3032 0bbb 0C       		.byte	12
+ 3033 0bbc B2       		.byte	-78
+ 3034 0bbd 80       		.byte	-128
+ 3035 0bbe B4       		.byte	-76
+ 3036 0bbf 01       		.byte	1
+ 3037 0bc0 B6       		.byte	-74
+ 3038 0bc1 40       		.byte	64
+ 3039 0bc2 C0       		.byte	-64
+ 3040 0bc3 FF       		.byte	-1
+ 3041 0bc4 C2       		.byte	-62
+ 3042 0bc5 EF       		.byte	-17
+ 3043 0bc6 C4       		.byte	-60
+ 3044 0bc7 FE       		.byte	-2
+ 3045 0bc8 CC       		.byte	-52
+ 3046 0bc9 06       		.byte	6
+ 3047 0bca CE       		.byte	-50
+ 3048 0bcb 27       		.byte	39
+ 3049 0bcc D0       		.byte	-48
+ 3050 0bcd 0B       		.byte	11
+ 3051 0bce D2       		.byte	-46
+ 3052 0bcf 0C       		.byte	12
+ 3053 0bd0 D6       		.byte	-42
+ 3054 0bd1 08       		.byte	8
+ 3055 0bd2 E8       		.byte	-24
+ 3056 0bd3 0C       		.byte	12
+ 3057 0bd4 EC       		.byte	-20
+ 3058 0bd5 21       		.byte	33
+ 3059 0bd6 32       		.byte	50
+ 3060 0bd7 10       		.byte	16
+ 3061 0bd8 35       		.byte	53
+ 3062 0bd9 80       		.byte	-128
+ 3063 0bda 81       		.byte	-127
+ 3064 0bdb 80       		.byte	-128
+ 3065 0bdc CC       		.byte	-52
+ 3066 0bdd 30       		.byte	48
+ 3067 0bde E2       		.byte	-30
+ 3068 0bdf 20       		.byte	32
+ 3069 0be0 07       		.byte	7
+ 3070 0be1 01       		.byte	1
+ 3071 0be2 09       		.byte	9
+ 3072 0be3 08       		.byte	8
+ 3073 0be4 0F       		.byte	15
+ 3074 0be5 40       		.byte	64
+ 3075 0be6 5C       		.byte	92
+ 3076 0be7 02       		.byte	2
+ 3077 0be8 63       		.byte	99
+ 3078 0be9 02       		.byte	2
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 55
+
+
+ 3079 0bea 80       		.byte	-128
+ 3080 0beb 02       		.byte	2
+ 3081 0bec 81       		.byte	-127
+ 3082 0bed 08       		.byte	8
+ 3083 0bee 87       		.byte	-121
+ 3084 0bef 41       		.byte	65
+ 3085 0bf0 8E       		.byte	-114
+ 3086 0bf1 10       		.byte	16
+ 3087 0bf2 96       		.byte	-106
+ 3088 0bf3 20       		.byte	32
+ 3089 0bf4 C0       		.byte	-64
+ 3090 0bf5 80       		.byte	-128
+ 3091 0bf6 C2       		.byte	-62
+ 3092 0bf7 30       		.byte	48
+ 3093 0bf8 D6       		.byte	-42
+ 3094 0bf9 C0       		.byte	-64
+ 3095 0bfa E0       		.byte	-32
+ 3096 0bfb 80       		.byte	-128
+ 3097 0bfc E4       		.byte	-28
+ 3098 0bfd 40       		.byte	64
+ 3099 0bfe E6       		.byte	-26
+ 3100 0bff 90       		.byte	-112
+ 3101 0c00 57       		.byte	87
+ 3102 0c01 04       		.byte	4
+ 3103 0c02 AF       		.byte	-81
+ 3104 0c03 01       		.byte	1
+ 3105 0c04 D4       		.byte	-44
+ 3106 0c05 40       		.byte	64
+ 3107 0c06 E8       		.byte	-24
+ 3108 0c07 40       		.byte	64
+ 3109 0c08 9D       		.byte	-99
+ 3110 0c09 80       		.byte	-128
+ 3111 0c0a A7       		.byte	-89
+ 3112 0c0b 04       		.byte	4
+ 3113 0c0c B1       		.byte	-79
+ 3114 0c0d 80       		.byte	-128
+ 3115 0c0e 73       		.byte	115
+ 3116 0c0f 80       		.byte	-128
+ 3117 0c10 76       		.byte	118
+ 3118 0c11 80       		.byte	-128
+ 3119 0c12 DC       		.byte	-36
+ 3120 0c13 01       		.byte	1
+ 3121 0c14 DE       		.byte	-34
+ 3122 0c15 04       		.byte	4
+ 3123 0c16 57       		.byte	87
+ 3124 0c17 06       		.byte	6
+ 3125 0c18 5C       		.byte	92
+ 3126 0c19 02       		.byte	2
+ 3127 0c1a 60       		.byte	96
+ 3128 0c1b 10       		.byte	16
+ 3129 0c1c 86       		.byte	-122
+ 3130 0c1d 80       		.byte	-128
+ 3131 0c1e 8C       		.byte	-116
+ 3132 0c1f 02       		.byte	2
+ 3133 0c20 90       		.byte	-112
+ 3134 0c21 10       		.byte	16
+ 3135 0c22 9E       		.byte	-98
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 56
+
+
+ 3136 0c23 80       		.byte	-128
+ 3137 0c24 B4       		.byte	-76
+ 3138 0c25 10       		.byte	16
+ 3139 0c26 B7       		.byte	-73
+ 3140 0c27 80       		.byte	-128
+ 3141 0c28 D4       		.byte	-44
+ 3142 0c29 02       		.byte	2
+ 3143 0c2a D6       		.byte	-42
+ 3144 0c2b 05       		.byte	5
+ 3145 0c2c D8       		.byte	-40
+ 3146 0c2d 02       		.byte	2
+ 3147 0c2e E0       		.byte	-32
+ 3148 0c2f 08       		.byte	8
+ 3149 0c30 E8       		.byte	-24
+ 3150 0c31 08       		.byte	8
+ 3151 0c32 EC       		.byte	-20
+ 3152 0c33 08       		.byte	8
+ 3153 0c34 87       		.byte	-121
+ 3154 0c35 02       		.byte	2
+ 3155 0c36 A7       		.byte	-89
+ 3156 0c37 02       		.byte	2
+ 3157 0c38 B7       		.byte	-73
+ 3158 0c39 04       		.byte	4
+ 3159 0c3a E8       		.byte	-24
+ 3160 0c3b 02       		.byte	2
+ 3161 0c3c 9D       		.byte	-99
+ 3162 0c3d 80       		.byte	-128
+ 3163 0c3e AB       		.byte	-85
+ 3164 0c3f 04       		.byte	4
+ 3165 0c40 EE       		.byte	-18
+ 3166 0c41 20       		.byte	32
+ 3167 0c42 01       		.byte	1
+ 3168 0c43 80       		.byte	-128
+ 3169 0c44 9D       		.byte	-99
+ 3170 0c45 80       		.byte	-128
+ 3171 0c46 C0       		.byte	-64
+ 3172 0c47 40       		.byte	64
+ 3173 0c48 50       		.byte	80
+ 3174 0c49 10       		.byte	16
+ 3175 0c4a 55       		.byte	85
+ 3176 0c4b 01       		.byte	1
+ 3177 0c4c 57       		.byte	87
+ 3178 0c4d 08       		.byte	8
+ 3179 0c4e 58       		.byte	88
+ 3180 0c4f 12       		.byte	18
+ 3181 0c50 5E       		.byte	94
+ 3182 0c51 01       		.byte	1
+ 3183 0c52 60       		.byte	96
+ 3184 0c53 08       		.byte	8
+ 3185 0c54 66       		.byte	102
+ 3186 0c55 10       		.byte	16
+ 3187 0c56 84       		.byte	-124
+ 3188 0c57 02       		.byte	2
+ 3189 0c58 86       		.byte	-122
+ 3190 0c59 10       		.byte	16
+ 3191 0c5a D4       		.byte	-44
+ 3192 0c5b 07       		.byte	7
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 57
+
+
+ 3193 0c5c D6       		.byte	-42
+ 3194 0c5d 07       		.byte	7
+ 3195 0c5e D8       		.byte	-40
+ 3196 0c5f 03       		.byte	3
+ 3197 0c60 12       		.byte	18
+ 3198 0c61 80       		.byte	-128
+ 3199 0c62 75       		.byte	117
+ 3200 0c63 04       		.byte	4
+ 3201 0c64 8D       		.byte	-115
+ 3202 0c65 04       		.byte	4
+ 3203 0c66 8E       		.byte	-114
+ 3204 0c67 80       		.byte	-128
+ 3205 0c68 A8       		.byte	-88
+ 3206 0c69 10       		.byte	16
+ 3207 0c6a A9       		.byte	-87
+ 3208 0c6b 01       		.byte	1
+ 3209 0c6c AE       		.byte	-82
+ 3210 0c6d 01       		.byte	1
+ 3211 0c6e B0       		.byte	-80
+ 3212 0c6f 10       		.byte	16
+ 3213 0c70 B4       		.byte	-76
+ 3214 0c71 08       		.byte	8
+ 3215 0c72 B7       		.byte	-73
+ 3216 0c73 08       		.byte	8
+ 3217 0c74 C4       		.byte	-60
+ 3218 0c75 08       		.byte	8
+ 3219 0c76 DE       		.byte	-34
+ 3220 0c77 04       		.byte	4
+ 3221 0c78 E0       		.byte	-32
+ 3222 0c79 08       		.byte	8
+ 3223 0c7a E2       		.byte	-30
+ 3224 0c7b 02       		.byte	2
+ 3225 0c7c E8       		.byte	-24
+ 3226 0c7d 0E       		.byte	14
+ 3227 0c7e 10       		.byte	16
+ 3228 0c7f 06       		.byte	6
+ 3229 0c80 11       		.byte	17
+ 3230 0c81 01       		.byte	1
+ 3231 0c82 1A       		.byte	26
+ 3232 0c83 06       		.byte	6
+ 3233 0c84 1B       		.byte	27
+ 3234 0c85 01       		.byte	1
+ 3235 0c86 1C       		.byte	28
+ 3236 0c87 02       		.byte	2
+ 3237 0c88 00       		.byte	0
+ 3238 0c89 0F       		.byte	15
+ 3239 0c8a 00       		.byte	0
+ 3240 0c8b 00       		.byte	0
+ 3241 0c8c A4       		.byte	-92
+ 3242 0c8d 84       		.byte	-124
+ 3243 0c8e 00       		.byte	0
+ 3244 0c8f 00       		.byte	0
+ 3245 0c90 40       		.byte	64
+ 3246 0c91 00       		.byte	0
+ 3247 0c92 00       		.byte	0
+ 3248 0c93 00       		.byte	0
+ 3249 0c94 10       		.byte	16
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 58
+
+
+ 3250 0c95 10       		.byte	16
+ 3251 0c96 60       		.byte	96
+ 3252 0c97 00       		.byte	0
+ 3253 0c98 02       		.byte	2
+ 3254 0c99 00       		.byte	0
+ 3255 0c9a 0D       		.byte	13
+ 3256 0c9b 10       		.byte	16
+ 3257 0c9c 00       		.byte	0
+ 3258 0c9d 10       		.byte	16
+ 3259 0c9e 00       		.byte	0
+ 3260 0c9f 00       		.byte	0
+ 3261 0ca0 72       		.byte	114
+ 3262 0ca1 10       		.byte	16
+ 3263 0ca2 08       		.byte	8
+ 3264 0ca3 00       		.byte	0
+ 3265 0ca4 4D       		.byte	77
+ 3266 0ca5 00       		.byte	0
+ 3267 0ca6 00       		.byte	0
+ 3268 0ca7 08       		.byte	8
+ 3269 0ca8 01       		.byte	1
+ 3270 0ca9 00       		.byte	0
+ 3271 0caa 32       		.byte	50
+ 3272 0cab 03       		.byte	3
+ 3273 0cac 12       		.byte	18
+ 3274 0cad 10       		.byte	16
+ 3275 0cae 64       		.byte	100
+ 3276 0caf 00       		.byte	0
+ 3277 0cb0 4D       		.byte	77
+ 3278 0cb1 00       		.byte	0
+ 3279 0cb2 00       		.byte	0
+ 3280 0cb3 10       		.byte	16
+ 3281 0cb4 4D       		.byte	77
+ 3282 0cb5 01       		.byte	1
+ 3283 0cb6 00       		.byte	0
+ 3284 0cb7 0E       		.byte	14
+ 3285 0cb8 4D       		.byte	77
+ 3286 0cb9 01       		.byte	1
+ 3287 0cba 00       		.byte	0
+ 3288 0cbb 06       		.byte	6
+ 3289 0cbc 0D       		.byte	13
+ 3290 0cbd 0C       		.byte	12
+ 3291 0cbe 40       		.byte	64
+ 3292 0cbf 03       		.byte	3
+ 3293 0cc0 00       		.byte	0
+ 3294 0cc1 00       		.byte	0
+ 3295 0cc2 00       		.byte	0
+ 3296 0cc3 0C       		.byte	12
+ 3297 0cc4 70       		.byte	112
+ 3298 0cc5 00       		.byte	0
+ 3299 0cc6 00       		.byte	0
+ 3300 0cc7 10       		.byte	16
+ 3301 0cc8 0F       		.byte	15
+ 3302 0cc9 0F       		.byte	15
+ 3303 0cca 00       		.byte	0
+ 3304 0ccb 00       		.byte	0
+ 3305 0ccc 00       		.byte	0
+ 3306 0ccd 00       		.byte	0
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 59
+
+
+ 3307 0cce 22       		.byte	34
+ 3308 0ccf 20       		.byte	32
+ 3309 0cd0 00       		.byte	0
+ 3310 0cd1 00       		.byte	0
+ 3311 0cd2 00       		.byte	0
+ 3312 0cd3 04       		.byte	4
+ 3313 0cd4 25       		.byte	37
+ 3314 0cd5 03       		.byte	3
+ 3315 0cd6 60       		.byte	96
+ 3316 0cd7 00       		.byte	0
+ 3317 0cd8 00       		.byte	0
+ 3318 0cd9 CD       		.byte	-51
+ 3319 0cda FD       		.byte	-3
+ 3320 0cdb EB       		.byte	-21
+ 3321 0cdc 3F       		.byte	63
+ 3322 0cdd FF       		.byte	-1
+ 3323 0cde FF       		.byte	-1
+ 3324 0cdf FF       		.byte	-1
+ 3325 0ce0 22       		.byte	34
+ 3326 0ce1 00       		.byte	0
+ 3327 0ce2 F0       		.byte	-16
+ 3328 0ce3 08       		.byte	8
+ 3329 0ce4 04       		.byte	4
+ 3330 0ce5 00       		.byte	0
+ 3331 0ce6 00       		.byte	0
+ 3332 0ce7 00       		.byte	0
+ 3333 0ce8 40       		.byte	64
+ 3334 0ce9 00       		.byte	0
+ 3335 0cea 00       		.byte	0
+ 3336 0ceb 00       		.byte	0
+ 3337 0cec 04       		.byte	4
+ 3338 0ced 04       		.byte	4
+ 3339 0cee 04       		.byte	4
+ 3340 0cef 04       		.byte	4
+ 3341 0cf0 19       		.byte	25
+ 3342 0cf1 99       		.byte	-103
+ 3343 0cf2 00       		.byte	0
+ 3344 0cf3 01       		.byte	1
+ 3345 0cf4 00       		.byte	0
+ 3346 0cf5 00       		.byte	0
+ 3347 0cf6 C0       		.byte	-64
+ 3348 0cf7 00       		.byte	0
+ 3349 0cf8 40       		.byte	64
+ 3350 0cf9 01       		.byte	1
+ 3351 0cfa 10       		.byte	16
+ 3352 0cfb 11       		.byte	17
+ 3353 0cfc C0       		.byte	-64
+ 3354 0cfd 01       		.byte	1
+ 3355 0cfe 00       		.byte	0
+ 3356 0cff 11       		.byte	17
+ 3357 0d00 40       		.byte	64
+ 3358 0d01 01       		.byte	1
+ 3359 0d02 40       		.byte	64
+ 3360 0d03 01       		.byte	1
+ 3361 0d04 00       		.byte	0
+ 3362 0d05 00       		.byte	0
+ 3363 0d06 00       		.byte	0
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 60
+
+
+ 3364 0d07 00       		.byte	0
+ 3365 0d08 00       		.byte	0
+ 3366 0d09 00       		.byte	0
+ 3367 0d0a 00       		.byte	0
+ 3368 0d0b 00       		.byte	0
+ 3369 0d0c 00       		.byte	0
+ 3370 0d0d 00       		.byte	0
+ 3371 0d0e 00       		.byte	0
+ 3372 0d0f 00       		.byte	0
+ 3373 0d10 00       		.byte	0
+ 3374 0d11 00       		.byte	0
+ 3375 0d12 00       		.byte	0
+ 3376 0d13 00       		.byte	0
+ 3377 0d14 07       		.byte	7
+ 3378 0d15 01       		.byte	1
+ 3379 0d16 00       		.byte	0
+ 3380 0d17 00       		.byte	0
+ 3381 0d18 00       		.byte	0
+ 3382 0d19 00       		.byte	0
+ 3383 0d1a 00       		.byte	0
+ 3384 0d1b 00       		.byte	0
+ 3385 0d1c 01       		.byte	1
+ 3386 0d1d 00       		.byte	0
+ 3387 0d1e 07       		.byte	7
+ 3388 0d1f 01       		.byte	1
+ 3389 0d20 03       		.byte	3
+ 3390 0d21 01       		.byte	1
+ 3391 0d22 03       		.byte	3
+ 3392 0d23 01       		.byte	1
+ 3393 0d24 38       		.byte	56
+ 3394 0d25 C0       		.byte	-64
+ 3395 0d26 C0       		.byte	-64
+ 3396 0d27 00       		.byte	0
+ 3397 0d28 C0       		.byte	-64
+ 3398 0d29 00       		.byte	0
+ 3399 0d2a 00       		.byte	0
+ 3400 0d2b 00       		.byte	0
+ 3401 0d2c 80       		.byte	-128
+ 3402 0d2d 00       		.byte	0
+ 3403 0d2e 40       		.byte	64
+ 3404 0d2f BC       		.byte	-68
+ 3405 0d30 BC       		.byte	-68
+ 3406 0d31 00       		.byte	0
+ 3407 0d32 B4       		.byte	-76
+ 3408 0d33 00       		.byte	0
+ 3409 0d34 00       		.byte	0
+ 3410 0d35 00       		.byte	0
+ 3411 0d36 00       		.byte	0
+ 3412 0d37 00       		.byte	0
+ 3413 0d38 00       		.byte	0
+ 3414 0d39 FF       		.byte	-1
+ 3415 0d3a FF       		.byte	-1
+ 3416 0d3b 00       		.byte	0
+ 3417 0d3c FF       		.byte	-1
+ 3418 0d3d 00       		.byte	0
+ 3419 0d3e 00       		.byte	0
+ 3420 0d3f 00       		.byte	0
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 61
+
+
+ 3421 0d40 00       		.byte	0
+ 3422 0d41 39       		.byte	57
+ 3423 0d42 39       		.byte	57
+ 3424 0d43 00       		.byte	0
+ 3425 0d44 39       		.byte	57
+ 3426 0d45 00       		.byte	0
+ 3427 0d46 00       		.byte	0
+ 3428 0d47 00       		.byte	0
+ 3429 0d48 04       		.byte	4
+ 3430 0d49 38       		.byte	56
+ 3431 0d4a 38       		.byte	56
+ 3432 0d4b 00       		.byte	0
+ 3433 0d4c 08       		.byte	8
+ 3434 0d4d 00       		.byte	0
+ 3435 0d4e 00       		.byte	0
+ 3436 0d4f 00       		.byte	0
+ 3437              		.section	.cywolatch,"a",%progbits
+ 3438              		.align	2
+ 3439              		.type	cy_meta_wonvl, %object
+ 3440              		.size	cy_meta_wonvl, 4
+ 3441              	cy_meta_wonvl:
+ 3442 0000 BC       		.byte	-68
+ 3443 0001 90       		.byte	-112
+ 3444 0002 AC       		.byte	-84
+ 3445 0003 AF       		.byte	-81
+ 3446              		.section	.cycustnvl,"a",%progbits
+ 3447              		.align	2
+ 3448              		.type	cy_meta_custnvl, %object
+ 3449              		.size	cy_meta_custnvl, 4
+ 3450              	cy_meta_custnvl:
+ 3451 0000 00       		.byte	0
+ 3452 0001 00       		.byte	0
+ 3453 0002 00       		.byte	0
+ 3454 0003 07       		.byte	7
+ 3455              		.section	.cymeta,"a",%progbits
+ 3456              		.align	2
+ 3457              		.type	cy_metadata, %object
+ 3458              		.size	cy_metadata, 12
+ 3459              	cy_metadata:
+ 3460 0000 00       		.byte	0
+ 3461 0001 01       		.byte	1
+ 3462 0002 2E       		.byte	46
+ 3463 0003 16       		.byte	22
+ 3464 0004 10       		.byte	16
+ 3465 0005 69       		.byte	105
+ 3466 0006 00       		.byte	0
+ 3467 0007 00       		.byte	0
+ 3468 0008 00       		.byte	0
+ 3469 0009 00       		.byte	0
+ 3470 000a 00       		.byte	0
+ 3471 000b 00       		.byte	0
+ 3472              		.section	.cyflashprotect,"a",%progbits
+ 3473              		.align	2
+ 3474              		.type	cy_meta_flashprotect, %object
+ 3475              		.size	cy_meta_flashprotect, 256
+ 3476              	cy_meta_flashprotect:
+ 3477 0000 00000000 		.space	256
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 62
+
+
+ 3477      00000000 
+ 3477      00000000 
+ 3477      00000000 
+ 3477      00000000 
+ 3478              		.text
+ 3479              	.Letext0:
+ 3480              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 3481              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 3482              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ 3483              		.section	.debug_info,"",%progbits
+ 3484              	.Ldebug_info0:
+ 3485 0000 35010000 		.4byte	0x135
+ 3486 0004 0400     		.2byte	0x4
+ 3487 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 3488 000a 04       		.byte	0x4
+ 3489 000b 01       		.uleb128 0x1
+ 3490 000c 6E000000 		.4byte	.LASF17
+ 3491 0010 0C       		.byte	0xc
+ 3492 0011 C8010000 		.4byte	.LASF18
+ 3493 0015 16000000 		.4byte	.LASF19
+ 3494 0019 00000000 		.4byte	.Ldebug_line0
+ 3495 001d 02       		.uleb128 0x2
+ 3496 001e 01       		.byte	0x1
+ 3497 001f 06       		.byte	0x6
+ 3498 0020 BC010000 		.4byte	.LASF0
+ 3499 0024 03       		.uleb128 0x3
+ 3500 0025 00000000 		.4byte	.LASF9
+ 3501 0029 01       		.byte	0x1
+ 3502 002a 1D       		.byte	0x1d
+ 3503 002b 2F000000 		.4byte	0x2f
+ 3504 002f 02       		.uleb128 0x2
+ 3505 0030 01       		.byte	0x1
+ 3506 0031 08       		.byte	0x8
+ 3507 0032 60000000 		.4byte	.LASF1
+ 3508 0036 02       		.uleb128 0x2
+ 3509 0037 02       		.byte	0x2
+ 3510 0038 05       		.byte	0x5
+ 3511 0039 A9010000 		.4byte	.LASF2
+ 3512 003d 02       		.uleb128 0x2
+ 3513 003e 02       		.byte	0x2
+ 3514 003f 07       		.byte	0x7
+ 3515 0040 0E010000 		.4byte	.LASF3
+ 3516 0044 02       		.uleb128 0x2
+ 3517 0045 04       		.byte	0x4
+ 3518 0046 05       		.byte	0x5
+ 3519 0047 B3010000 		.4byte	.LASF4
+ 3520 004b 02       		.uleb128 0x2
+ 3521 004c 04       		.byte	0x4
+ 3522 004d 07       		.byte	0x7
+ 3523 004e FC000000 		.4byte	.LASF5
+ 3524 0052 02       		.uleb128 0x2
+ 3525 0053 08       		.byte	0x8
+ 3526 0054 05       		.byte	0x5
+ 3527 0055 9B010000 		.4byte	.LASF6
+ 3528 0059 02       		.uleb128 0x2
+ 3529 005a 08       		.byte	0x8
+ 3530 005b 07       		.byte	0x7
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 63
+
+
+ 3531 005c 50010000 		.4byte	.LASF7
+ 3532 0060 04       		.uleb128 0x4
+ 3533 0061 04       		.byte	0x4
+ 3534 0062 05       		.byte	0x5
+ 3535 0063 696E7400 		.ascii	"int\000"
+ 3536 0067 02       		.uleb128 0x2
+ 3537 0068 04       		.byte	0x4
+ 3538 0069 07       		.byte	0x7
+ 3539 006a 43010000 		.4byte	.LASF8
+ 3540 006e 03       		.uleb128 0x3
+ 3541 006f 67010000 		.4byte	.LASF10
+ 3542 0073 02       		.byte	0x2
+ 3543 0074 18       		.byte	0x18
+ 3544 0075 24000000 		.4byte	0x24
+ 3545 0079 05       		.uleb128 0x5
+ 3546 007a 91000000 		.4byte	0x91
+ 3547 007e 8A000000 		.4byte	0x8a
+ 3548 0082 06       		.uleb128 0x6
+ 3549 0083 8A000000 		.4byte	0x8a
+ 3550 0087 4F0D     		.2byte	0xd4f
+ 3551 0089 00       		.byte	0
+ 3552 008a 02       		.uleb128 0x2
+ 3553 008b 04       		.byte	0x4
+ 3554 008c 07       		.byte	0x7
+ 3555 008d 92010000 		.4byte	.LASF11
+ 3556 0091 07       		.uleb128 0x7
+ 3557 0092 6E000000 		.4byte	0x6e
+ 3558 0096 08       		.uleb128 0x8
+ 3559 0097 31010000 		.4byte	.LASF12
+ 3560 009b 03       		.byte	0x3
+ 3561 009c 1F       		.byte	0x1f
+ 3562 009d A7000000 		.4byte	0xa7
+ 3563 00a1 05       		.uleb128 0x5
+ 3564 00a2 03       		.byte	0x3
+ 3565 00a3 00000000 		.4byte	cy_meta_configecc
+ 3566 00a7 07       		.uleb128 0x7
+ 3567 00a8 79000000 		.4byte	0x79
+ 3568 00ac 05       		.uleb128 0x5
+ 3569 00ad 91000000 		.4byte	0x91
+ 3570 00b1 BC000000 		.4byte	0xbc
+ 3571 00b5 09       		.uleb128 0x9
+ 3572 00b6 8A000000 		.4byte	0x8a
+ 3573 00ba 03       		.byte	0x3
+ 3574 00bb 00       		.byte	0
+ 3575 00bc 0A       		.uleb128 0xa
+ 3576 00bd 21010000 		.4byte	.LASF13
+ 3577 00c1 03       		.byte	0x3
+ 3578 00c2 D601     		.2byte	0x1d6
+ 3579 00c4 CE000000 		.4byte	0xce
+ 3580 00c8 05       		.uleb128 0x5
+ 3581 00c9 03       		.byte	0x3
+ 3582 00ca 00000000 		.4byte	cy_meta_custnvl
+ 3583 00ce 07       		.uleb128 0x7
+ 3584 00cf AC000000 		.4byte	0xac
+ 3585 00d3 0A       		.uleb128 0xa
+ 3586 00d4 84010000 		.4byte	.LASF14
+ 3587 00d8 03       		.byte	0x3
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 64
+
+
+ 3588 00d9 E401     		.2byte	0x1e4
+ 3589 00db E5000000 		.4byte	0xe5
+ 3590 00df 05       		.uleb128 0x5
+ 3591 00e0 03       		.byte	0x3
+ 3592 00e1 00000000 		.4byte	cy_meta_wonvl
+ 3593 00e5 07       		.uleb128 0x7
+ 3594 00e6 AC000000 		.4byte	0xac
+ 3595 00ea 05       		.uleb128 0x5
+ 3596 00eb 91000000 		.4byte	0x91
+ 3597 00ef FA000000 		.4byte	0xfa
+ 3598 00f3 09       		.uleb128 0x9
+ 3599 00f4 8A000000 		.4byte	0x8a
+ 3600 00f8 FF       		.byte	0xff
+ 3601 00f9 00       		.byte	0
+ 3602 00fa 0A       		.uleb128 0xa
+ 3603 00fb 6F010000 		.4byte	.LASF15
+ 3604 00ff 03       		.byte	0x3
+ 3605 0100 F201     		.2byte	0x1f2
+ 3606 0102 0C010000 		.4byte	0x10c
+ 3607 0106 05       		.uleb128 0x5
+ 3608 0107 03       		.byte	0x3
+ 3609 0108 00000000 		.4byte	cy_meta_flashprotect
+ 3610 010c 07       		.uleb128 0x7
+ 3611 010d EA000000 		.4byte	0xea
+ 3612 0111 05       		.uleb128 0x5
+ 3613 0112 91000000 		.4byte	0x91
+ 3614 0116 21010000 		.4byte	0x121
+ 3615 011a 09       		.uleb128 0x9
+ 3616 011b 8A000000 		.4byte	0x8a
+ 3617 011f 0B       		.byte	0xb
+ 3618 0120 00       		.byte	0
+ 3619 0121 0A       		.uleb128 0xa
+ 3620 0122 0A000000 		.4byte	.LASF16
+ 3621 0126 03       		.byte	0x3
+ 3622 0127 1F02     		.2byte	0x21f
+ 3623 0129 33010000 		.4byte	0x133
+ 3624 012d 05       		.uleb128 0x5
+ 3625 012e 03       		.byte	0x3
+ 3626 012f 00000000 		.4byte	cy_metadata
+ 3627 0133 07       		.uleb128 0x7
+ 3628 0134 11010000 		.4byte	0x111
+ 3629 0138 00       		.byte	0
+ 3630              		.section	.debug_abbrev,"",%progbits
+ 3631              	.Ldebug_abbrev0:
+ 3632 0000 01       		.uleb128 0x1
+ 3633 0001 11       		.uleb128 0x11
+ 3634 0002 01       		.byte	0x1
+ 3635 0003 25       		.uleb128 0x25
+ 3636 0004 0E       		.uleb128 0xe
+ 3637 0005 13       		.uleb128 0x13
+ 3638 0006 0B       		.uleb128 0xb
+ 3639 0007 03       		.uleb128 0x3
+ 3640 0008 0E       		.uleb128 0xe
+ 3641 0009 1B       		.uleb128 0x1b
+ 3642 000a 0E       		.uleb128 0xe
+ 3643 000b 10       		.uleb128 0x10
+ 3644 000c 17       		.uleb128 0x17
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 65
+
+
+ 3645 000d 00       		.byte	0
+ 3646 000e 00       		.byte	0
+ 3647 000f 02       		.uleb128 0x2
+ 3648 0010 24       		.uleb128 0x24
+ 3649 0011 00       		.byte	0
+ 3650 0012 0B       		.uleb128 0xb
+ 3651 0013 0B       		.uleb128 0xb
+ 3652 0014 3E       		.uleb128 0x3e
+ 3653 0015 0B       		.uleb128 0xb
+ 3654 0016 03       		.uleb128 0x3
+ 3655 0017 0E       		.uleb128 0xe
+ 3656 0018 00       		.byte	0
+ 3657 0019 00       		.byte	0
+ 3658 001a 03       		.uleb128 0x3
+ 3659 001b 16       		.uleb128 0x16
+ 3660 001c 00       		.byte	0
+ 3661 001d 03       		.uleb128 0x3
+ 3662 001e 0E       		.uleb128 0xe
+ 3663 001f 3A       		.uleb128 0x3a
+ 3664 0020 0B       		.uleb128 0xb
+ 3665 0021 3B       		.uleb128 0x3b
+ 3666 0022 0B       		.uleb128 0xb
+ 3667 0023 49       		.uleb128 0x49
+ 3668 0024 13       		.uleb128 0x13
+ 3669 0025 00       		.byte	0
+ 3670 0026 00       		.byte	0
+ 3671 0027 04       		.uleb128 0x4
+ 3672 0028 24       		.uleb128 0x24
+ 3673 0029 00       		.byte	0
+ 3674 002a 0B       		.uleb128 0xb
+ 3675 002b 0B       		.uleb128 0xb
+ 3676 002c 3E       		.uleb128 0x3e
+ 3677 002d 0B       		.uleb128 0xb
+ 3678 002e 03       		.uleb128 0x3
+ 3679 002f 08       		.uleb128 0x8
+ 3680 0030 00       		.byte	0
+ 3681 0031 00       		.byte	0
+ 3682 0032 05       		.uleb128 0x5
+ 3683 0033 01       		.uleb128 0x1
+ 3684 0034 01       		.byte	0x1
+ 3685 0035 49       		.uleb128 0x49
+ 3686 0036 13       		.uleb128 0x13
+ 3687 0037 01       		.uleb128 0x1
+ 3688 0038 13       		.uleb128 0x13
+ 3689 0039 00       		.byte	0
+ 3690 003a 00       		.byte	0
+ 3691 003b 06       		.uleb128 0x6
+ 3692 003c 21       		.uleb128 0x21
+ 3693 003d 00       		.byte	0
+ 3694 003e 49       		.uleb128 0x49
+ 3695 003f 13       		.uleb128 0x13
+ 3696 0040 2F       		.uleb128 0x2f
+ 3697 0041 05       		.uleb128 0x5
+ 3698 0042 00       		.byte	0
+ 3699 0043 00       		.byte	0
+ 3700 0044 07       		.uleb128 0x7
+ 3701 0045 26       		.uleb128 0x26
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 66
+
+
+ 3702 0046 00       		.byte	0
+ 3703 0047 49       		.uleb128 0x49
+ 3704 0048 13       		.uleb128 0x13
+ 3705 0049 00       		.byte	0
+ 3706 004a 00       		.byte	0
+ 3707 004b 08       		.uleb128 0x8
+ 3708 004c 34       		.uleb128 0x34
+ 3709 004d 00       		.byte	0
+ 3710 004e 03       		.uleb128 0x3
+ 3711 004f 0E       		.uleb128 0xe
+ 3712 0050 3A       		.uleb128 0x3a
+ 3713 0051 0B       		.uleb128 0xb
+ 3714 0052 3B       		.uleb128 0x3b
+ 3715 0053 0B       		.uleb128 0xb
+ 3716 0054 49       		.uleb128 0x49
+ 3717 0055 13       		.uleb128 0x13
+ 3718 0056 3F       		.uleb128 0x3f
+ 3719 0057 19       		.uleb128 0x19
+ 3720 0058 02       		.uleb128 0x2
+ 3721 0059 18       		.uleb128 0x18
+ 3722 005a 00       		.byte	0
+ 3723 005b 00       		.byte	0
+ 3724 005c 09       		.uleb128 0x9
+ 3725 005d 21       		.uleb128 0x21
+ 3726 005e 00       		.byte	0
+ 3727 005f 49       		.uleb128 0x49
+ 3728 0060 13       		.uleb128 0x13
+ 3729 0061 2F       		.uleb128 0x2f
+ 3730 0062 0B       		.uleb128 0xb
+ 3731 0063 00       		.byte	0
+ 3732 0064 00       		.byte	0
+ 3733 0065 0A       		.uleb128 0xa
+ 3734 0066 34       		.uleb128 0x34
+ 3735 0067 00       		.byte	0
+ 3736 0068 03       		.uleb128 0x3
+ 3737 0069 0E       		.uleb128 0xe
+ 3738 006a 3A       		.uleb128 0x3a
+ 3739 006b 0B       		.uleb128 0xb
+ 3740 006c 3B       		.uleb128 0x3b
+ 3741 006d 05       		.uleb128 0x5
+ 3742 006e 49       		.uleb128 0x49
+ 3743 006f 13       		.uleb128 0x13
+ 3744 0070 3F       		.uleb128 0x3f
+ 3745 0071 19       		.uleb128 0x19
+ 3746 0072 02       		.uleb128 0x2
+ 3747 0073 18       		.uleb128 0x18
+ 3748 0074 00       		.byte	0
+ 3749 0075 00       		.byte	0
+ 3750 0076 00       		.byte	0
+ 3751              		.section	.debug_aranges,"",%progbits
+ 3752 0000 14000000 		.4byte	0x14
+ 3753 0004 0200     		.2byte	0x2
+ 3754 0006 00000000 		.4byte	.Ldebug_info0
+ 3755 000a 04       		.byte	0x4
+ 3756 000b 00       		.byte	0
+ 3757 000c 0000     		.2byte	0
+ 3758 000e 0000     		.2byte	0
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 67
+
+
+ 3759 0010 00000000 		.4byte	0
+ 3760 0014 00000000 		.4byte	0
+ 3761              		.section	.debug_line,"",%progbits
+ 3762              	.Ldebug_line0:
+ 3763 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
+ 3763      02003701 
+ 3763      00000201 
+ 3763      FB0E0D00 
+ 3763      01010101 
+ 3764              	.LASF9:
+ 3765 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 3765      6E74385F 
+ 3765      7400
+ 3766              	.LASF16:
+ 3767 000a 63795F6D 		.ascii	"cy_metadata\000"
+ 3767      65746164 
+ 3767      61746100 
+ 3768              	.LASF19:
+ 3769 0016 443A5C41 		.ascii	"D:\\AMA_EOS\\Lab_Assignments\\Assignment03\\AMA_EOS"
+ 3769      4D415F45 
+ 3769      4F535C4C 
+ 3769      61625F41 
+ 3769      73736967 
+ 3770 0045 5F4C6162 		.ascii	"_Lab_3\\AMA_EOS_Lab_3.cydsn\000"
+ 3770      5F335C41 
+ 3770      4D415F45 
+ 3770      4F535F4C 
+ 3770      61625F33 
+ 3771              	.LASF1:
+ 3772 0060 756E7369 		.ascii	"unsigned char\000"
+ 3772      676E6564 
+ 3772      20636861 
+ 3772      7200
+ 3773              	.LASF17:
+ 3774 006e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 3774      43313120 
+ 3774      352E342E 
+ 3774      31203230 
+ 3774      31363036 
+ 3775 00a1 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 3775      20726576 
+ 3775      6973696F 
+ 3775      6E203233 
+ 3775      37373135 
+ 3776 00d4 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 3776      66756E63 
+ 3776      74696F6E 
+ 3776      2D736563 
+ 3776      74696F6E 
+ 3777              	.LASF5:
+ 3778 00fc 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3778      20756E73 
+ 3778      69676E65 
+ 3778      6420696E 
+ 3778      7400
+ 3779              	.LASF3:
+ 3780 010e 73686F72 		.ascii	"short unsigned int\000"
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 68
+
+
+ 3780      7420756E 
+ 3780      7369676E 
+ 3780      65642069 
+ 3780      6E7400
+ 3781              	.LASF13:
+ 3782 0121 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 3782      6574615F 
+ 3782      63757374 
+ 3782      6E766C00 
+ 3783              	.LASF12:
+ 3784 0131 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 3784      6574615F 
+ 3784      636F6E66 
+ 3784      69676563 
+ 3784      6300
+ 3785              	.LASF8:
+ 3786 0143 756E7369 		.ascii	"unsigned int\000"
+ 3786      676E6564 
+ 3786      20696E74 
+ 3786      00
+ 3787              	.LASF7:
+ 3788 0150 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3788      206C6F6E 
+ 3788      6720756E 
+ 3788      7369676E 
+ 3788      65642069 
+ 3789              	.LASF10:
+ 3790 0167 75696E74 		.ascii	"uint8_t\000"
+ 3790      385F7400 
+ 3791              	.LASF15:
+ 3792 016f 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 3792      6574615F 
+ 3792      666C6173 
+ 3792      6870726F 
+ 3792      74656374 
+ 3793              	.LASF14:
+ 3794 0184 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 3794      6574615F 
+ 3794      776F6E76 
+ 3794      6C00
+ 3795              	.LASF11:
+ 3796 0192 73697A65 		.ascii	"sizetype\000"
+ 3796      74797065 
+ 3796      00
+ 3797              	.LASF6:
+ 3798 019b 6C6F6E67 		.ascii	"long long int\000"
+ 3798      206C6F6E 
+ 3798      6720696E 
+ 3798      7400
+ 3799              	.LASF2:
+ 3800 01a9 73686F72 		.ascii	"short int\000"
+ 3800      7420696E 
+ 3800      7400
+ 3801              	.LASF4:
+ 3802 01b3 6C6F6E67 		.ascii	"long int\000"
+ 3802      20696E74 
+ 3802      00
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccymBl6O.s 			page 69
+
+
+ 3803              	.LASF0:
+ 3804 01bc 7369676E 		.ascii	"signed char\000"
+ 3804      65642063 
+ 3804      68617200 
+ 3805              	.LASF18:
+ 3806 01c8 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 3806      72617465 
+ 3806      645F536F 
+ 3806      75726365 
+ 3806      5C50536F 
+ 3807              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

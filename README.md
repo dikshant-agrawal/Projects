@@ -3,15 +3,19 @@ This repository contains all assignments and projects developed across multiple 
 ________________________________________
 📂 Repository Structure
 ├── AMA_EOS_Lab_01/          # AMA_EOS Lab 1: Timing Analyzer API
-├── AMA_EOS_Lab_02/          # AMA_EOS Lab 2: Reaction Game + Arcadian effects
+├── AMA_EOS_Lab_02/          # AMA_EOS Lab 2: Reaction Game + Arcadian 
+├── AMA_EOS_Lab_03/          # AMA_EOS Lab 2: JSON Parser + TFT Drawer
+effects
 ├── APT_Lab1a/               # APT Lab 1 – Exercise 1.1
 ├── APT_Lab1b/               # APT Lab 1 – Exercise 2.1
-├── APT_Lab1c/                # APT Lab 1 – Exercise 3.1
-├── APT_Lab2a/                # APT Lab 2 – Complete Battleship model
+├── APT_Lab1c/               # APT Lab 1 – Exercise 3.1
+├── APT_Lab2/                # APT Lab 2 – Complete Battleship model
 │   ├── part1tests.cpp
 │   ├── part2tests.cpp
 │   └── part3tests.cpp
-├── ASDT_LAB1/               # ASDT Lab 1: Tic Tac Toe Game         
+├── APT_Lab3/                # APT Lab 3: Student Database in C++ 
+├── ASDT_LAB1/               # ASDT Lab 1: Tic Tac Toe Game 
+├── ASDT_LAB2/               # ASDT Lab 1: UART_CAN UART ISR          
 └── README.md
 _________________________________________________________________________
 ⏱️ AMS Lab – Timing Analyzer

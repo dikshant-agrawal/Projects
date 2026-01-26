@@ -1,0 +1,3087 @@
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"drawer.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.DRAWER__colorFromToken,"ax",%progbits
+  20              		.align	2
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	DRAWER__colorFromToken, %function
+  24              	DRAWER__colorFromToken:
+  25              	.LFB117:
+  26              		.file 1 "drawer.c"
+   1:drawer.c      **** /* ========================================
+   2:drawer.c      ****  *
+   3:drawer.c      ****  * Copyright YOUR COMPANY, THE YEAR
+   4:drawer.c      ****  * All Rights Reserved
+   5:drawer.c      ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:drawer.c      ****  *
+   7:drawer.c      ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:drawer.c      ****  * WHICH IS THE PROPERTY OF your company.
+   9:drawer.c      ****  *
+  10:drawer.c      ****  * ========================================
+  11:drawer.c      **** */
+  12:drawer.c      **** 
+  13:drawer.c      **** #include "drawer.h"
+  14:drawer.c      **** #include "stdlib.h"
+  15:drawer.c      **** #include <string.h>
+  16:drawer.c      **** 
+  17:drawer.c      **** 
+  18:drawer.c      **** // Convert color string from JSON into TFT color enum
+  19:drawer.c      **** static TFT_color_t DRAWER__colorFromToken(char* buf)
+  20:drawer.c      **** {
+  27              		.loc 1 20 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              	.LVL0:
+  32 0000 10B5     		push	{r4, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  36 0002 0446     		mov	r4, r0
+  21:drawer.c      ****     
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 2
+
+
+  22:drawer.c      ****     if(strcmp(buf, "red") == 0) return RED;
+  37              		.loc 1 22 0
+  38 0004 2349     		ldr	r1, .L13
+  39 0006 FFF7FEFF 		bl	strcmp
+  40              	.LVL1:
+  41 000a 50B3     		cbz	r0, .L3
+  23:drawer.c      ****     if(strcmp(buf, "white") == 0) return WHITE;
+  42              		.loc 1 23 0
+  43 000c 2249     		ldr	r1, .L13+4
+  44 000e 2046     		mov	r0, r4
+  45 0010 FFF7FEFF 		bl	strcmp
+  46              	.LVL2:
+  47 0014 38B3     		cbz	r0, .L4
+  24:drawer.c      ****     if(strcmp(buf, "blue") == 0) return BLUE;
+  48              		.loc 1 24 0
+  49 0016 2149     		ldr	r1, .L13+8
+  50 0018 2046     		mov	r0, r4
+  51 001a FFF7FEFF 		bl	strcmp
+  52              	.LVL3:
+  53 001e 28B3     		cbz	r0, .L5
+  25:drawer.c      ****     if(strcmp(buf, "black") == 0) return BLACK;
+  54              		.loc 1 25 0
+  55 0020 1F49     		ldr	r1, .L13+12
+  56 0022 2046     		mov	r0, r4
+  57 0024 FFF7FEFF 		bl	strcmp
+  58              	.LVL4:
+  59 0028 18B3     		cbz	r0, .L6
+  26:drawer.c      ****     if(strcmp(buf, "green") == 0) return GREEN;
+  60              		.loc 1 26 0
+  61 002a 1E49     		ldr	r1, .L13+16
+  62 002c 2046     		mov	r0, r4
+  63 002e FFF7FEFF 		bl	strcmp
+  64              	.LVL5:
+  65 0032 00B3     		cbz	r0, .L7
+  27:drawer.c      ****     if(strcmp(buf, "cyan") == 0) return CYAN;
+  66              		.loc 1 27 0
+  67 0034 1C49     		ldr	r1, .L13+20
+  68 0036 2046     		mov	r0, r4
+  69 0038 FFF7FEFF 		bl	strcmp
+  70              	.LVL6:
+  71 003c F0B1     		cbz	r0, .L8
+  28:drawer.c      ****     if(strcmp(buf, "yellow") == 0) return YELLOW;
+  72              		.loc 1 28 0
+  73 003e 1B49     		ldr	r1, .L13+24
+  74 0040 2046     		mov	r0, r4
+  75 0042 FFF7FEFF 		bl	strcmp
+  76              	.LVL7:
+  77 0046 E0B1     		cbz	r0, .L9
+  29:drawer.c      ****     if(strcmp(buf, "brown") == 0) return BROWN;
+  78              		.loc 1 29 0
+  79 0048 1949     		ldr	r1, .L13+28
+  80 004a 2046     		mov	r0, r4
+  81 004c FFF7FEFF 		bl	strcmp
+  82              	.LVL8:
+  83 0050 D0B1     		cbz	r0, .L10
+  30:drawer.c      ****     if(strcmp(buf, "gray") == 0) return GRAY;
+  84              		.loc 1 30 0
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 3
+
+
+  85 0052 1849     		ldr	r1, .L13+32
+  86 0054 2046     		mov	r0, r4
+  87 0056 FFF7FEFF 		bl	strcmp
+  88              	.LVL9:
+  89 005a C0B9     		cbnz	r0, .L11
+  90 005c 40F62140 		movw	r0, #3105
+  91 0060 10BD     		pop	{r4, pc}
+  92              	.LVL10:
+  93              	.L3:
+  22:drawer.c      ****     if(strcmp(buf, "white") == 0) return WHITE;
+  94              		.loc 1 22 0
+  95 0062 1F20     		movs	r0, #31
+  96 0064 10BD     		pop	{r4, pc}
+  97              	.LVL11:
+  98              	.L4:
+  23:drawer.c      ****     if(strcmp(buf, "blue") == 0) return BLUE;
+  99              		.loc 1 23 0
+ 100 0066 4FF6FF70 		movw	r0, #65535
+ 101 006a 10BD     		pop	{r4, pc}
+ 102              	.LVL12:
+ 103              	.L5:
+  24:drawer.c      ****     if(strcmp(buf, "black") == 0) return BLACK;
+ 104              		.loc 1 24 0
+ 105 006c 4FF47840 		mov	r0, #63488
+ 106 0070 10BD     		pop	{r4, pc}
+ 107              	.LVL13:
+ 108              	.L6:
+  25:drawer.c      ****     if(strcmp(buf, "green") == 0) return GREEN;
+ 109              		.loc 1 25 0
+ 110 0072 0020     		movs	r0, #0
+ 111 0074 10BD     		pop	{r4, pc}
+ 112              	.LVL14:
+ 113              	.L7:
+  26:drawer.c      ****     if(strcmp(buf, "cyan") == 0) return CYAN;
+ 114              		.loc 1 26 0
+ 115 0076 4FF4FC60 		mov	r0, #2016
+ 116 007a 10BD     		pop	{r4, pc}
+ 117              	.LVL15:
+ 118              	.L8:
+  27:drawer.c      ****     if(strcmp(buf, "yellow") == 0) return YELLOW;
+ 119              		.loc 1 27 0
+ 120 007c 4FF6E070 		movw	r0, #65504
+ 121 0080 10BD     		pop	{r4, pc}
+ 122              	.LVL16:
+ 123              	.L9:
+  28:drawer.c      ****     if(strcmp(buf, "brown") == 0) return BROWN;
+ 124              		.loc 1 28 0
+ 125 0082 40F2FF70 		movw	r0, #2047
+ 126 0086 10BD     		pop	{r4, pc}
+ 127              	.LVL17:
+ 128              	.L10:
+  29:drawer.c      ****     if(strcmp(buf, "gray") == 0) return GRAY;
+ 129              		.loc 1 29 0
+ 130 0088 40F23D20 		movw	r0, #573
+ 131 008c 10BD     		pop	{r4, pc}
+ 132              	.LVL18:
+ 133              	.L11:
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 4
+
+
+  31:drawer.c      ****     
+  32:drawer.c      ****     return RED;
+ 134              		.loc 1 32 0
+ 135 008e 1F20     		movs	r0, #31
+  33:drawer.c      **** }
+ 136              		.loc 1 33 0
+ 137 0090 10BD     		pop	{r4, pc}
+ 138              	.LVL19:
+ 139              	.L14:
+ 140 0092 00BF     		.align	2
+ 141              	.L13:
+ 142 0094 00000000 		.word	.LC0
+ 143 0098 04000000 		.word	.LC1
+ 144 009c 0C000000 		.word	.LC2
+ 145 00a0 14000000 		.word	.LC3
+ 146 00a4 1C000000 		.word	.LC4
+ 147 00a8 24000000 		.word	.LC5
+ 148 00ac 2C000000 		.word	.LC6
+ 149 00b0 34000000 		.word	.LC7
+ 150 00b4 3C000000 		.word	.LC8
+ 151              		.cfi_endproc
+ 152              	.LFE117:
+ 153              		.size	DRAWER__colorFromToken, .-DRAWER__colorFromToken
+ 154              		.section	.text.DRAWER_getNextDrawCommand,"ax",%progbits
+ 155              		.align	2
+ 156              		.global	DRAWER_getNextDrawCommand
+ 157              		.thumb
+ 158              		.thumb_func
+ 159              		.type	DRAWER_getNextDrawCommand, %function
+ 160              	DRAWER_getNextDrawCommand:
+ 161              	.LFB118:
+  34:drawer.c      **** 
+  35:drawer.c      **** 
+  36:drawer.c      **** /**
+  37:drawer.c      ****  * Translates a JSON tag into a command type for the TFT
+  38:drawer.c      ****  * \param Drawer_t *const me            - [OUT] the next command
+  39:drawer.c      ****  * \param Parser_t *const parser        - [IN/OUT] Parser object pointer
+  40:drawer.c      ****  * \param MSG_id_t *const msgId         - [IN/OUT] Msg id for the messaging service
+  41:drawer.c      ****  * \return RC_SUCCESS if a command was found, RC_ERROR_BUFFER_EMTPY if parsing has come to an end, 
+  42:drawer.c      ****  */
+  43:drawer.c      **** 
+  44:drawer.c      **** RC_t DRAWER_getNextDrawCommand(Drawer_t *const me, Parser_t *const parser, MSG_id_t *const msgId){
+ 162              		.loc 1 44 0
+ 163              		.cfi_startproc
+ 164              		@ args = 0, pretend = 0, frame = 32
+ 165              		@ frame_needed = 0, uses_anonymous_args = 0
+ 166              	.LVL20:
+ 167 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
+ 168              		.cfi_def_cfa_offset 28
+ 169              		.cfi_offset 4, -28
+ 170              		.cfi_offset 5, -24
+ 171              		.cfi_offset 6, -20
+ 172              		.cfi_offset 7, -16
+ 173              		.cfi_offset 8, -12
+ 174              		.cfi_offset 9, -8
+ 175              		.cfi_offset 14, -4
+ 176 0004 89B0     		sub	sp, sp, #36
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 5
+
+
+ 177              		.cfi_def_cfa_offset 64
+  45:drawer.c      ****     
+  46:drawer.c      ****     // Check for invalid pointers
+  47:drawer.c      ****     if(!parser || !me || !msgId){
+ 178              		.loc 1 47 0
+ 179 0006 0029     		cmp	r1, #0
+ 180 0008 00F09880 		beq	.L24
+ 181 000c 0D46     		mov	r5, r1
+ 182              		.loc 1 47 0 is_stmt 0 discriminator 1
+ 183 000e 0028     		cmp	r0, #0
+ 184 0010 00F09780 		beq	.L25
+ 185              		.loc 1 47 0 discriminator 2
+ 186 0014 002A     		cmp	r2, #0
+ 187 0016 00F09780 		beq	.L26
+ 188 001a 9046     		mov	r8, r2
+ 189 001c 0746     		mov	r7, r0
+  48:drawer.c      ****         return RC_ERROR_BAD_PARAM;
+  49:drawer.c      ****     }
+  50:drawer.c      ****     
+  51:drawer.c      ****     jsmntok_t token;
+  52:drawer.c      ****     uint16_t savedIndex = parser->nextToken; // Save parser state for rollback
+ 190              		.loc 1 52 0 is_stmt 1
+ 191 001e B1F8D648 		ldrh	r4, [r1, #2262]
+ 192              	.LVL21:
+  53:drawer.c      **** 
+  54:drawer.c      ****     // Get next JSON token
+  55:drawer.c      ****    if (PARSER_getNextToken(parser, &token) != RC_SUCCESS) {
+ 193              		.loc 1 55 0
+ 194 0022 04A9     		add	r1, sp, #16
+ 195              	.LVL22:
+ 196 0024 2846     		mov	r0, r5
+ 197              	.LVL23:
+ 198 0026 FFF7FEFF 		bl	PARSER_getNextToken
+ 199              	.LVL24:
+ 200 002a 0028     		cmp	r0, #0
+ 201 002c 40F08F80 		bne	.L27
+  56:drawer.c      ****         return RC_ERROR_OVERRUN;
+  57:drawer.c      ****     }
+  58:drawer.c      ****     
+  59:drawer.c      ****     // Expect a string command
+  60:drawer.c      ****     if(token.type != JSMN_STRING){
+ 202              		.loc 1 60 0
+ 203 0030 9DF81030 		ldrb	r3, [sp, #16]	@ zero_extendqisi2
+ 204 0034 042B     		cmp	r3, #4
+ 205 0036 40F08D80 		bne	.L28
+  61:drawer.c      ****         return RC_ERROR_NOT_MATCH;
+  62:drawer.c      ****     }
+  63:drawer.c      ****     
+  64:drawer.c      ****     // Length of color string
+  65:drawer.c      ****     uint16_t length = token.end - token.start;
+ 206              		.loc 1 65 0
+ 207 003a 059A     		ldr	r2, [sp, #20]
+ 208 003c 069B     		ldr	r3, [sp, #24]
+ 209 003e 9B1A     		subs	r3, r3, r2
+ 210 0040 9BB2     		uxth	r3, r3
+ 211              	.LVL25:
+  66:drawer.c      ****     
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 6
+
+
+  67:drawer.c      ****     // color string must be exactly one character
+  68:drawer.c      ****     if(length != 1){
+ 212              		.loc 1 68 0
+ 213 0042 012B     		cmp	r3, #1
+ 214 0044 04D0     		beq	.L17
+  69:drawer.c      ****         parser->nextToken = savedIndex;
+ 215              		.loc 1 69 0
+ 216 0046 A5F8D648 		strh	r4, [r5, #2262]	@ movhi
+  70:drawer.c      ****         return RC_ERROR_NOT_MATCH;
+ 217              		.loc 1 70 0
+ 218 004a 6FF01209 		mvn	r9, #18
+ 219 004e 8CE0     		b	.L16
+ 220              	.L17:
+  71:drawer.c      ****     }
+  72:drawer.c      ****     
+  73:drawer.c      ****     // Read color character
+  74:drawer.c      ****     char str = parser->content[token.start];
+ 221              		.loc 1 74 0
+ 222 0050 2A44     		add	r2, r2, r5
+ 223 0052 137B     		ldrb	r3, [r2, #12]	@ zero_extendqisi2
+ 224              	.LVL26:
+  75:drawer.c      ****     
+  76:drawer.c      ****     // COLOR COMMAND FOUND
+  77:drawer.c      ****     if( str == 'c'){
+ 225              		.loc 1 77 0
+ 226 0054 632B     		cmp	r3, #99
+ 227 0056 29D1     		bne	.L18
+ 228              	.LBB2:
+  78:drawer.c      **** 
+  79:drawer.c      ****          // Read color string token
+  80:drawer.c      ****         if (PARSER_getNextToken(parser, &token) != RC_SUCCESS) {
+ 229              		.loc 1 80 0
+ 230 0058 04A9     		add	r1, sp, #16
+ 231 005a 2846     		mov	r0, r5
+ 232 005c FFF7FEFF 		bl	PARSER_getNextToken
+ 233              	.LVL27:
+ 234 0060 8146     		mov	r9, r0
+ 235 0062 E8B9     		cbnz	r0, .L29
+  81:drawer.c      ****             return RC_ERROR_OVERRUN;
+  82:drawer.c      ****         }
+  83:drawer.c      **** 
+  84:drawer.c      ****         // Color must be a string
+  85:drawer.c      ****         if(token.type != JSMN_STRING){
+ 236              		.loc 1 85 0
+ 237 0064 9DF81030 		ldrb	r3, [sp, #16]	@ zero_extendqisi2
+ 238 0068 042B     		cmp	r3, #4
+ 239 006a 1CD1     		bne	.L30
+  86:drawer.c      ****             return RC_ERROR_BAD_DATA;
+  87:drawer.c      ****         }
+  88:drawer.c      ****         
+  89:drawer.c      ****         uint8_t strLenght = token.end - token.start;    // Color string length
+ 240              		.loc 1 89 0
+ 241 006c 059A     		ldr	r2, [sp, #20]
+ 242 006e 069B     		ldr	r3, [sp, #24]
+ 243 0070 9B1A     		subs	r3, r3, r2
+ 244 0072 DCB2     		uxtb	r4, r3
+ 245              	.LVL28:
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 7
+
+
+  90:drawer.c      ****         
+  91:drawer.c      ****         char tempBuf[16];
+  92:drawer.c      ****         memcpy(tempBuf, &parser->content[token.start], strLenght);  // Copy color text
+ 246              		.loc 1 92 0
+ 247 0074 0832     		adds	r2, r2, #8
+ 248 0076 A918     		adds	r1, r5, r2
+ 249 0078 2246     		mov	r2, r4
+ 250 007a 0431     		adds	r1, r1, #4
+ 251 007c 6846     		mov	r0, sp
+ 252 007e FFF7FEFF 		bl	memcpy
+ 253              	.LVL29:
+  93:drawer.c      ****         tempBuf[strLenght] = '\0';                                  // Null-terminate string
+ 254              		.loc 1 93 0
+ 255 0082 08AB     		add	r3, sp, #32
+ 256 0084 1C44     		add	r4, r4, r3
+ 257              	.LVL30:
+ 258 0086 0023     		movs	r3, #0
+ 259 0088 04F8203C 		strb	r3, [r4, #-32]
+  94:drawer.c      ****         
+  95:drawer.c      ****         msgId->m_signal = 0;                            // MSG SIGNAL 0
+ 260              		.loc 1 95 0
+ 261 008c 88F80030 		strb	r3, [r8]
+  96:drawer.c      ****         msgId->m_event = EVE_COLOR;                     // Color event
+ 262              		.loc 1 96 0
+ 263 0090 88F80130 		strb	r3, [r8, #1]
+  97:drawer.c      ****         
+  98:drawer.c      ****         me->command = DRAWER_CMD_COLOR;                 // Set color command
+ 264              		.loc 1 98 0
+ 265 0094 3B70     		strb	r3, [r7]
+  99:drawer.c      ****         me->data.color = DRAWER__colorFromToken(tempBuf);// Convert color
+ 266              		.loc 1 99 0
+ 267 0096 6846     		mov	r0, sp
+ 268 0098 FFF7FEFF 		bl	DRAWER__colorFromToken
+ 269              	.LVL31:
+ 270 009c 7880     		strh	r0, [r7, #2]	@ movhi
+ 100:drawer.c      ****         
+ 101:drawer.c      ****         return RC_SUCCESS;
+ 271              		.loc 1 101 0
+ 272 009e 64E0     		b	.L16
+ 273              	.LVL32:
+ 274              	.L29:
+  81:drawer.c      ****         }
+ 275              		.loc 1 81 0
+ 276 00a0 6FF00509 		mvn	r9, #5
+ 277 00a4 61E0     		b	.L16
+ 278              	.L30:
+  86:drawer.c      ****         }
+ 279              		.loc 1 86 0
+ 280 00a6 6FF01409 		mvn	r9, #20
+ 281 00aa 5EE0     		b	.L16
+ 282              	.LVL33:
+ 283              	.L18:
+ 284              	.LBE2:
+ 102:drawer.c      ****     }
+ 103:drawer.c      ****     
+ 104:drawer.c      ****     // DRAW COMMAND FOUND
+ 105:drawer.c      ****     if(str == 'd'){
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 8
+
+
+ 285              		.loc 1 105 0
+ 286 00ac 642B     		cmp	r3, #100
+ 287 00ae 40D1     		bne	.L20
+ 106:drawer.c      **** 
+ 107:drawer.c      ****         // Read array of coordinates
+ 108:drawer.c      ****         if (PARSER_getNextToken(parser, &token) != RC_SUCCESS) {
+ 288              		.loc 1 108 0
+ 289 00b0 04A9     		add	r1, sp, #16
+ 290 00b2 2846     		mov	r0, r5
+ 291 00b4 FFF7FEFF 		bl	PARSER_getNextToken
+ 292              	.LVL34:
+ 293 00b8 8146     		mov	r9, r0
+ 294 00ba 0028     		cmp	r0, #0
+ 295 00bc 4DD1     		bne	.L31
+ 109:drawer.c      ****             return RC_ERROR_OVERRUN;
+ 110:drawer.c      ****         }
+ 111:drawer.c      ****         
+ 112:drawer.c      ****         // Expect array with 4 values
+ 113:drawer.c      ****         if(token.type != JSMN_ARRAY || token.size != 4){
+ 296              		.loc 1 113 0
+ 297 00be 9DF81030 		ldrb	r3, [sp, #16]	@ zero_extendqisi2
+ 298 00c2 022B     		cmp	r3, #2
+ 299 00c4 4CD1     		bne	.L32
+ 300              		.loc 1 113 0 is_stmt 0 discriminator 1
+ 301 00c6 079B     		ldr	r3, [sp, #28]
+ 302 00c8 042B     		cmp	r3, #4
+ 303 00ca 4CD1     		bne	.L33
+ 304 00cc 0026     		movs	r6, #0
+ 305 00ce 26E0     		b	.L21
+ 306              	.LVL35:
+ 307              	.L23:
+ 308              	.LBB3:
+ 309              	.LBB4:
+ 114:drawer.c      ****             return RC_ERROR_BAD_DATA;
+ 115:drawer.c      ****         }
+ 116:drawer.c      ****         
+ 117:drawer.c      ****         // Parse x1, y1, x2, y2
+ 118:drawer.c      ****         for(uint8_t i = 0; i < 4; i++){
+ 119:drawer.c      ****             if (PARSER_getNextToken(parser, &token) != RC_SUCCESS) {
+ 310              		.loc 1 119 0 is_stmt 1
+ 311 00d0 04A9     		add	r1, sp, #16
+ 312 00d2 2846     		mov	r0, r5
+ 313 00d4 FFF7FEFF 		bl	PARSER_getNextToken
+ 314              	.LVL36:
+ 315 00d8 D8B9     		cbnz	r0, .L34
+ 120:drawer.c      ****                 return RC_ERROR_OVERRUN;
+ 121:drawer.c      ****             }
+ 122:drawer.c      ****             
+ 123:drawer.c      ****             // Coordinates must be numbers
+ 124:drawer.c      ****             if (token.type != JSMN_PRIMITIVE) {
+ 316              		.loc 1 124 0
+ 317 00da 9DF81030 		ldrb	r3, [sp, #16]	@ zero_extendqisi2
+ 318 00de 082B     		cmp	r3, #8
+ 319 00e0 1AD1     		bne	.L35
+ 125:drawer.c      ****                 return RC_ERROR_BAD_DATA;
+ 126:drawer.c      ****             }
+ 127:drawer.c      **** 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 9
+
+
+ 128:drawer.c      ****             uint16_t arrLength = token.end - token.start;
+ 320              		.loc 1 128 0
+ 321 00e2 0599     		ldr	r1, [sp, #20]
+ 322 00e4 069C     		ldr	r4, [sp, #24]
+ 323 00e6 641A     		subs	r4, r4, r1
+ 324 00e8 A4B2     		uxth	r4, r4
+ 325              	.LVL37:
+ 129:drawer.c      ****             
+ 130:drawer.c      ****             char tempBuf[16];
+ 131:drawer.c      ****             memcpy(tempBuf, &parser->content[token.start], arrLength);
+ 326              		.loc 1 131 0
+ 327 00ea 0831     		adds	r1, r1, #8
+ 328 00ec 2944     		add	r1, r1, r5
+ 329 00ee 2246     		mov	r2, r4
+ 330 00f0 0431     		adds	r1, r1, #4
+ 331 00f2 6846     		mov	r0, sp
+ 332 00f4 FFF7FEFF 		bl	memcpy
+ 333              	.LVL38:
+ 132:drawer.c      ****             tempBuf[arrLength] = '\0';
+ 334              		.loc 1 132 0
+ 335 00f8 08AB     		add	r3, sp, #32
+ 336 00fa 1C44     		add	r4, r4, r3
+ 337              	.LVL39:
+ 338 00fc 0023     		movs	r3, #0
+ 339 00fe 04F8203C 		strb	r3, [r4, #-32]
+ 133:drawer.c      ****             
+ 134:drawer.c      **** 
+ 135:drawer.c      ****             me->data.coordinate[i] = (uint16_t)atoi(tempBuf); // Convert to integer
+ 340              		.loc 1 135 0
+ 341 0102 6846     		mov	r0, sp
+ 342 0104 FFF7FEFF 		bl	atoi
+ 343              	.LVL40:
+ 344 0108 BB19     		adds	r3, r7, r6
+ 345 010a 9870     		strb	r0, [r3, #2]
+ 346              	.LBE4:
+ 118:drawer.c      ****             if (PARSER_getNextToken(parser, &token) != RC_SUCCESS) {
+ 347              		.loc 1 118 0
+ 348 010c 0136     		adds	r6, r6, #1
+ 349              	.LVL41:
+ 350 010e F6B2     		uxtb	r6, r6
+ 351              	.LVL42:
+ 352 0110 05E0     		b	.L21
+ 353              	.L34:
+ 354              	.LBB5:
+ 120:drawer.c      ****             }
+ 355              		.loc 1 120 0
+ 356 0112 6FF00509 		mvn	r9, #5
+ 357 0116 28E0     		b	.L16
+ 358              	.L35:
+ 125:drawer.c      ****             }
+ 359              		.loc 1 125 0
+ 360 0118 6FF01409 		mvn	r9, #20
+ 361 011c 25E0     		b	.L16
+ 362              	.LVL43:
+ 363              	.L21:
+ 364              	.LBE5:
+ 118:drawer.c      ****             if (PARSER_getNextToken(parser, &token) != RC_SUCCESS) {
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 10
+
+
+ 365              		.loc 1 118 0 discriminator 1
+ 366 011e 032E     		cmp	r6, #3
+ 367 0120 D6D9     		bls	.L23
+ 368              	.LBE3:
+ 136:drawer.c      ****         } 
+ 137:drawer.c      ****         
+ 138:drawer.c      ****         msgId->m_signal = 0;       
+ 369              		.loc 1 138 0
+ 370 0122 0023     		movs	r3, #0
+ 371 0124 88F80030 		strb	r3, [r8]
+ 139:drawer.c      ****         msgId->m_event = EVE_DRAW;      // Draw event
+ 372              		.loc 1 139 0
+ 373 0128 0123     		movs	r3, #1
+ 374 012a 88F80130 		strb	r3, [r8, #1]
+ 140:drawer.c      ****             
+ 141:drawer.c      ****         me->command = DRAWER_CMD_DRAW;  // Set draw command
+ 375              		.loc 1 141 0
+ 376 012e 3B70     		strb	r3, [r7]
+ 142:drawer.c      **** 
+ 143:drawer.c      ****         return RC_SUCCESS;
+ 377              		.loc 1 143 0
+ 378 0130 1BE0     		b	.L16
+ 379              	.LVL44:
+ 380              	.L20:
+ 144:drawer.c      ****     }
+ 145:drawer.c      ****     
+ 146:drawer.c      ****      // Roll back parser if command not recognized
+ 147:drawer.c      ****     parser->nextToken = savedIndex;
+ 381              		.loc 1 147 0
+ 382 0132 A5F8D648 		strh	r4, [r5, #2262]	@ movhi
+ 148:drawer.c      ****     return RC_ERROR_NOT_MATCH;
+ 383              		.loc 1 148 0
+ 384 0136 6FF01209 		mvn	r9, #18
+ 385 013a 16E0     		b	.L16
+ 386              	.LVL45:
+ 387              	.L24:
+  48:drawer.c      ****     }
+ 388              		.loc 1 48 0
+ 389 013c 6FF01309 		mvn	r9, #19
+ 390 0140 13E0     		b	.L16
+ 391              	.L25:
+ 392 0142 6FF01309 		mvn	r9, #19
+ 393 0146 10E0     		b	.L16
+ 394              	.L26:
+ 395 0148 6FF01309 		mvn	r9, #19
+ 396 014c 0DE0     		b	.L16
+ 397              	.LVL46:
+ 398              	.L27:
+  56:drawer.c      ****     }
+ 399              		.loc 1 56 0
+ 400 014e 6FF00509 		mvn	r9, #5
+ 401 0152 0AE0     		b	.L16
+ 402              	.L28:
+  61:drawer.c      ****     }
+ 403              		.loc 1 61 0
+ 404 0154 6FF01209 		mvn	r9, #18
+ 405 0158 07E0     		b	.L16
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 11
+
+
+ 406              	.L31:
+ 109:drawer.c      ****         }
+ 407              		.loc 1 109 0
+ 408 015a 6FF00509 		mvn	r9, #5
+ 409 015e 04E0     		b	.L16
+ 410              	.L32:
+ 114:drawer.c      ****         }
+ 411              		.loc 1 114 0
+ 412 0160 6FF01409 		mvn	r9, #20
+ 413 0164 01E0     		b	.L16
+ 414              	.L33:
+ 415 0166 6FF01409 		mvn	r9, #20
+ 416              	.LVL47:
+ 417              	.L16:
+ 149:drawer.c      **** }
+ 418              		.loc 1 149 0 discriminator 1
+ 419 016a 4846     		mov	r0, r9
+ 420 016c 09B0     		add	sp, sp, #36
+ 421              		.cfi_def_cfa_offset 28
+ 422              		@ sp needed
+ 423 016e BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
+ 424              		.cfi_endproc
+ 425              	.LFE118:
+ 426              		.size	DRAWER_getNextDrawCommand, .-DRAWER_getNextDrawCommand
+ 427 0172 00BF     		.section	.rodata.str1.4,"aMS",%progbits,1
+ 428              		.align	2
+ 429              	.LC0:
+ 430 0000 72656400 		.ascii	"red\000"
+ 431              	.LC1:
+ 432 0004 77686974 		.ascii	"white\000"
+ 432      6500
+ 433 000a 0000     		.space	2
+ 434              	.LC2:
+ 435 000c 626C7565 		.ascii	"blue\000"
+ 435      00
+ 436 0011 000000   		.space	3
+ 437              	.LC3:
+ 438 0014 626C6163 		.ascii	"black\000"
+ 438      6B00
+ 439 001a 0000     		.space	2
+ 440              	.LC4:
+ 441 001c 67726565 		.ascii	"green\000"
+ 441      6E00
+ 442 0022 0000     		.space	2
+ 443              	.LC5:
+ 444 0024 6379616E 		.ascii	"cyan\000"
+ 444      00
+ 445 0029 000000   		.space	3
+ 446              	.LC6:
+ 447 002c 79656C6C 		.ascii	"yellow\000"
+ 447      6F7700
+ 448 0033 00       		.space	1
+ 449              	.LC7:
+ 450 0034 62726F77 		.ascii	"brown\000"
+ 450      6E00
+ 451 003a 0000     		.space	2
+ 452              	.LC8:
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 12
+
+
+ 453 003c 67726179 		.ascii	"gray\000"
+ 453      00
+ 454              		.text
+ 455              	.Letext0:
+ 456              		.file 2 ".\\source\\bsw/global.h"
+ 457              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 458              		.file 4 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 459              		.file 5 ".\\source\\bsw\\tft/tft.h"
+ 460              		.file 6 ".\\source\\bsw/jsmn.h"
+ 461              		.file 7 ".\\source\\bsw/parser.h"
+ 462              		.file 8 "Generated_Source\\PSoC5/ErikaOS_1_common_ee_types.inc"
+ 463              		.file 9 "Generated_Source\\PSoC5/ErikaOS_1_cortex_mx_ee_cpu.inc"
+ 464              		.file 10 ".\\source\\bsw\\msg/message_cfg.h"
+ 465              		.file 11 ".\\source\\bsw/drawer.h"
+ 466              		.file 12 "Generated_Source\\PSoC5/ErikaOS_1_ee_oo_intfunc.inc"
+ 467              		.file 13 "Generated_Source\\PSoC5/ErikaOS_1_cortex_mx_ee_context.inc"
+ 468              		.file 14 "Generated_Source\\PSoC5/ErikaOS_1_common_ee_primitives.inc"
+ 469              		.file 15 "Generated_Source\\PSoC5/core_cm3.h"
+ 470              		.file 16 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4
+ 471              		.file 17 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4
+ 472              		.section	.debug_info,"",%progbits
+ 473              	.Ldebug_info0:
+ 474 0000 AD070000 		.4byte	0x7ad
+ 475 0004 0400     		.2byte	0x4
+ 476 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 477 000a 04       		.byte	0x4
+ 478 000b 01       		.uleb128 0x1
+ 479 000c CE040000 		.4byte	.LASF120
+ 480 0010 0C       		.byte	0xc
+ 481 0011 F6020000 		.4byte	.LASF121
+ 482 0015 79040000 		.4byte	.LASF122
+ 483 0019 18000000 		.4byte	.Ldebug_ranges0+0x18
+ 484 001d 00000000 		.4byte	0
+ 485 0021 00000000 		.4byte	.Ldebug_line0
+ 486 0025 02       		.uleb128 0x2
+ 487 0026 01       		.byte	0x1
+ 488 0027 06       		.byte	0x6
+ 489 0028 DC000000 		.4byte	.LASF0
+ 490 002c 03       		.uleb128 0x3
+ 491 002d 6F060000 		.4byte	.LASF3
+ 492 0031 02       		.byte	0x2
+ 493 0032 91       		.byte	0x91
+ 494 0033 37000000 		.4byte	0x37
+ 495 0037 02       		.uleb128 0x2
+ 496 0038 01       		.byte	0x1
+ 497 0039 08       		.byte	0x8
+ 498 003a 46040000 		.4byte	.LASF1
+ 499 003e 02       		.uleb128 0x2
+ 500 003f 02       		.byte	0x2
+ 501 0040 05       		.byte	0x5
+ 502 0041 6F040000 		.4byte	.LASF2
+ 503 0045 03       		.uleb128 0x3
+ 504 0046 32020000 		.4byte	.LASF4
+ 505 004a 02       		.byte	0x2
+ 506 004b 93       		.byte	0x93
+ 507 004c 50000000 		.4byte	0x50
+ 508 0050 02       		.uleb128 0x2
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 13
+
+
+ 509 0051 02       		.byte	0x2
+ 510 0052 07       		.byte	0x7
+ 511 0053 AF020000 		.4byte	.LASF5
+ 512 0057 02       		.uleb128 0x2
+ 513 0058 04       		.byte	0x4
+ 514 0059 05       		.byte	0x5
+ 515 005a 3E010000 		.4byte	.LASF6
+ 516 005e 02       		.uleb128 0x2
+ 517 005f 04       		.byte	0x4
+ 518 0060 07       		.byte	0x7
+ 519 0061 70020000 		.4byte	.LASF7
+ 520 0065 02       		.uleb128 0x2
+ 521 0066 04       		.byte	0x4
+ 522 0067 04       		.byte	0x4
+ 523 0068 0B040000 		.4byte	.LASF8
+ 524 006c 02       		.uleb128 0x2
+ 525 006d 08       		.byte	0x8
+ 526 006e 04       		.byte	0x4
+ 527 006f 83010000 		.4byte	.LASF9
+ 528 0073 02       		.uleb128 0x2
+ 529 0074 08       		.byte	0x8
+ 530 0075 05       		.byte	0x5
+ 531 0076 CE000000 		.4byte	.LASF10
+ 532 007a 02       		.uleb128 0x2
+ 533 007b 08       		.byte	0x8
+ 534 007c 07       		.byte	0x7
+ 535 007d 8D000000 		.4byte	.LASF11
+ 536 0081 02       		.uleb128 0x2
+ 537 0082 01       		.byte	0x1
+ 538 0083 08       		.byte	0x8
+ 539 0084 AE050000 		.4byte	.LASF12
+ 540 0088 04       		.uleb128 0x4
+ 541 0089 01       		.byte	0x1
+ 542 008a 25000000 		.4byte	0x25
+ 543 008e 02       		.byte	0x2
+ 544 008f CF       		.byte	0xcf
+ 545 0090 31010000 		.4byte	0x131
+ 546 0094 05       		.uleb128 0x5
+ 547 0095 90020000 		.4byte	.LASF13
+ 548 0099 00       		.byte	0
+ 549 009a 06       		.uleb128 0x6
+ 550 009b FD030000 		.4byte	.LASF14
+ 551 009f 7F       		.sleb128 -1
+ 552 00a0 06       		.uleb128 0x6
+ 553 00a1 82020000 		.4byte	.LASF15
+ 554 00a5 7E       		.sleb128 -2
+ 555 00a6 06       		.uleb128 0x6
+ 556 00a7 61050000 		.4byte	.LASF16
+ 557 00ab 7D       		.sleb128 -3
+ 558 00ac 06       		.uleb128 0x6
+ 559 00ad E8000000 		.4byte	.LASF17
+ 560 00b1 7C       		.sleb128 -4
+ 561 00b2 06       		.uleb128 0x6
+ 562 00b3 57060000 		.4byte	.LASF18
+ 563 00b7 7B       		.sleb128 -5
+ 564 00b8 06       		.uleb128 0x6
+ 565 00b9 FF050000 		.4byte	.LASF19
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 14
+
+
+ 566 00bd 7A       		.sleb128 -6
+ 567 00be 06       		.uleb128 0x6
+ 568 00bf C6030000 		.4byte	.LASF20
+ 569 00c3 79       		.sleb128 -7
+ 570 00c4 06       		.uleb128 0x6
+ 571 00c5 DA020000 		.4byte	.LASF21
+ 572 00c9 78       		.sleb128 -8
+ 573 00ca 06       		.uleb128 0x6
+ 574 00cb 28010000 		.4byte	.LASF22
+ 575 00cf 77       		.sleb128 -9
+ 576 00d0 06       		.uleb128 0x6
+ 577 00d1 23040000 		.4byte	.LASF23
+ 578 00d5 76       		.sleb128 -10
+ 579 00d6 06       		.uleb128 0x6
+ 580 00d7 00000000 		.4byte	.LASF24
+ 581 00db 75       		.sleb128 -11
+ 582 00dc 06       		.uleb128 0x6
+ 583 00dd 75010000 		.4byte	.LASF25
+ 584 00e1 74       		.sleb128 -12
+ 585 00e2 06       		.uleb128 0x6
+ 586 00e3 5E020000 		.4byte	.LASF26
+ 587 00e7 73       		.sleb128 -13
+ 588 00e8 06       		.uleb128 0x6
+ 589 00e9 82050000 		.4byte	.LASF27
+ 590 00ed 72       		.sleb128 -14
+ 591 00ee 06       		.uleb128 0x6
+ 592 00ef 61000000 		.4byte	.LASF28
+ 593 00f3 71       		.sleb128 -15
+ 594 00f4 06       		.uleb128 0x6
+ 595 00f5 77030000 		.4byte	.LASF29
+ 596 00f9 70       		.sleb128 -16
+ 597 00fa 06       		.uleb128 0x6
+ 598 00fb D8030000 		.4byte	.LASF30
+ 599 00ff 6F       		.sleb128 -17
+ 600 0100 06       		.uleb128 0x6
+ 601 0101 09030000 		.4byte	.LASF31
+ 602 0105 6E       		.sleb128 -18
+ 603 0106 06       		.uleb128 0x6
+ 604 0107 7A000000 		.4byte	.LASF32
+ 605 010b 6D       		.sleb128 -19
+ 606 010c 06       		.uleb128 0x6
+ 607 010d 6F050000 		.4byte	.LASF33
+ 608 0111 6C       		.sleb128 -20
+ 609 0112 06       		.uleb128 0x6
+ 610 0113 A4000000 		.4byte	.LASF34
+ 611 0117 6B       		.sleb128 -21
+ 612 0118 06       		.uleb128 0x6
+ 613 0119 AF030000 		.4byte	.LASF35
+ 614 011d 6A       		.sleb128 -22
+ 615 011e 06       		.uleb128 0x6
+ 616 011f 32000000 		.4byte	.LASF36
+ 617 0123 69       		.sleb128 -23
+ 618 0124 06       		.uleb128 0x6
+ 619 0125 45020000 		.4byte	.LASF37
+ 620 0129 68       		.sleb128 -24
+ 621 012a 06       		.uleb128 0x6
+ 622 012b E6050000 		.4byte	.LASF38
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 15
+
+
+ 623 012f 67       		.sleb128 -25
+ 624 0130 00       		.byte	0
+ 625 0131 03       		.uleb128 0x3
+ 626 0132 5C000000 		.4byte	.LASF39
+ 627 0136 02       		.byte	0x2
+ 628 0137 EA       		.byte	0xea
+ 629 0138 88000000 		.4byte	0x88
+ 630 013c 03       		.uleb128 0x3
+ 631 013d 28030000 		.4byte	.LASF40
+ 632 0141 03       		.byte	0x3
+ 633 0142 3F       		.byte	0x3f
+ 634 0143 57000000 		.4byte	0x57
+ 635 0147 07       		.uleb128 0x7
+ 636 0148 04       		.byte	0x4
+ 637 0149 05       		.byte	0x5
+ 638 014a 696E7400 		.ascii	"int\000"
+ 639 014e 02       		.uleb128 0x2
+ 640 014f 04       		.byte	0x4
+ 641 0150 07       		.byte	0x7
+ 642 0151 25020000 		.4byte	.LASF41
+ 643 0155 02       		.uleb128 0x2
+ 644 0156 08       		.byte	0x8
+ 645 0157 04       		.byte	0x4
+ 646 0158 95050000 		.4byte	.LASF42
+ 647 015c 02       		.uleb128 0x2
+ 648 015d 04       		.byte	0x4
+ 649 015e 07       		.byte	0x7
+ 650 015f 66030000 		.4byte	.LASF43
+ 651 0163 08       		.uleb128 0x8
+ 652 0164 04       		.byte	0x4
+ 653 0165 81000000 		.4byte	0x81
+ 654 0169 03       		.uleb128 0x3
+ 655 016a 3E040000 		.4byte	.LASF44
+ 656 016e 04       		.byte	0x4
+ 657 016f 2C       		.byte	0x2c
+ 658 0170 3C010000 		.4byte	0x13c
+ 659 0174 03       		.uleb128 0x3
+ 660 0175 02020000 		.4byte	.LASF45
+ 661 0179 05       		.byte	0x5
+ 662 017a 38       		.byte	0x38
+ 663 017b 45000000 		.4byte	0x45
+ 664 017f 04       		.uleb128 0x4
+ 665 0180 02       		.byte	0x2
+ 666 0181 50000000 		.4byte	0x50
+ 667 0185 05       		.byte	0x5
+ 668 0186 5C       		.byte	0x5c
+ 669 0187 1D020000 		.4byte	0x21d
+ 670 018b 09       		.uleb128 0x9
+ 671 018c C8000000 		.4byte	.LASF46
+ 672 0190 FFFF     		.2byte	0xffff
+ 673 0192 05       		.uleb128 0x5
+ 674 0193 B3050000 		.4byte	.LASF47
+ 675 0197 00       		.byte	0
+ 676 0198 09       		.uleb128 0x9
+ 677 0199 B9050000 		.4byte	.LASF48
+ 678 019d 00F8     		.2byte	0xf800
+ 679 019f 09       		.uleb128 0x9
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 16
+
+
+ 680 01a0 06040000 		.4byte	.LASF49
+ 681 01a4 1FF8     		.2byte	0xf81f
+ 682 01a6 09       		.uleb128 0x9
+ 683 01a7 57000000 		.4byte	.LASF50
+ 684 01ab FF07     		.2byte	0x7ff
+ 685 01ad 09       		.uleb128 0x9
+ 686 01ae 9B020000 		.4byte	.LASF51
+ 687 01b2 E0FF     		.2byte	0xffe0
+ 688 01b4 0A       		.uleb128 0xa
+ 689 01b5 52454400 		.ascii	"RED\000"
+ 690 01b9 1F       		.byte	0x1f
+ 691 01ba 09       		.uleb128 0x9
+ 692 01bb 49000000 		.4byte	.LASF52
+ 693 01bf 1FF8     		.2byte	0xf81f
+ 694 01c1 09       		.uleb128 0x9
+ 695 01c2 C6050000 		.4byte	.LASF53
+ 696 01c6 E007     		.2byte	0x7e0
+ 697 01c8 09       		.uleb128 0x9
+ 698 01c9 5C050000 		.4byte	.LASF54
+ 699 01cd E0FF     		.2byte	0xffe0
+ 700 01cf 09       		.uleb128 0x9
+ 701 01d0 6E010000 		.4byte	.LASF55
+ 702 01d4 FF07     		.2byte	0x7ff
+ 703 01d6 09       		.uleb128 0x9
+ 704 01d7 61010000 		.4byte	.LASF56
+ 705 01db 3D02     		.2byte	0x23d
+ 706 01dd 09       		.uleb128 0x9
+ 707 01de FC010000 		.4byte	.LASF57
+ 708 01e2 3FE0     		.2byte	0xe03f
+ 709 01e4 09       		.uleb128 0x9
+ 710 01e5 C1030000 		.4byte	.LASF58
+ 711 01e9 210C     		.2byte	0xc21
+ 712 01eb 09       		.uleb128 0x9
+ 713 01ec F4030000 		.4byte	.LASF59
+ 714 01f0 89F3     		.2byte	0xf389
+ 715 01f2 09       		.uleb128 0x9
+ 716 01f3 32030000 		.4byte	.LASF60
+ 717 01f7 BE3E     		.2byte	0x3ebe
+ 718 01f9 09       		.uleb128 0x9
+ 719 01fa 83060000 		.4byte	.LASF61
+ 720 01fe 2A1A     		.2byte	0x1a2a
+ 721 0200 09       		.uleb128 0x9
+ 722 0201 10060000 		.4byte	.LASF62
+ 723 0205 21F8     		.2byte	0xf821
+ 724 0207 09       		.uleb128 0x9
+ 725 0208 EF010000 		.4byte	.LASF63
+ 726 020c 6318     		.2byte	0x1863
+ 727 020e 09       		.uleb128 0x9
+ 728 020f FF020000 		.4byte	.LASF64
+ 729 0213 658A     		.2byte	0x8a65
+ 730 0215 09       		.uleb128 0x9
+ 731 0216 EF020000 		.4byte	.LASF65
+ 732 021a D448     		.2byte	0x48d4
+ 733 021c 00       		.byte	0
+ 734 021d 04       		.uleb128 0x4
+ 735 021e 01       		.byte	0x1
+ 736 021f 37000000 		.4byte	0x37
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 17
+
+
+ 737 0223 06       		.byte	0x6
+ 738 0224 2E       		.byte	0x2e
+ 739 0225 48020000 		.4byte	0x248
+ 740 0229 05       		.uleb128 0x5
+ 741 022a 43030000 		.4byte	.LASF66
+ 742 022e 00       		.byte	0
+ 743 022f 05       		.uleb128 0x5
+ 744 0230 77060000 		.4byte	.LASF67
+ 745 0234 01       		.byte	0x1
+ 746 0235 05       		.uleb128 0x5
+ 747 0236 DB050000 		.4byte	.LASF68
+ 748 023a 02       		.byte	0x2
+ 749 023b 05       		.uleb128 0x5
+ 750 023c 2C060000 		.4byte	.LASF69
+ 751 0240 04       		.byte	0x4
+ 752 0241 05       		.uleb128 0x5
+ 753 0242 CC050000 		.4byte	.LASF70
+ 754 0246 08       		.byte	0x8
+ 755 0247 00       		.byte	0
+ 756 0248 03       		.uleb128 0x3
+ 757 0249 96010000 		.4byte	.LASF71
+ 758 024d 06       		.byte	0x6
+ 759 024e 34       		.byte	0x34
+ 760 024f 1D020000 		.4byte	0x21d
+ 761 0253 0B       		.uleb128 0xb
+ 762 0254 36040000 		.4byte	.LASF76
+ 763 0258 10       		.byte	0x10
+ 764 0259 06       		.byte	0x6
+ 765 025a 45       		.byte	0x45
+ 766 025b 90020000 		.4byte	0x290
+ 767 025f 0C       		.uleb128 0xc
+ 768 0260 75000000 		.4byte	.LASF72
+ 769 0264 06       		.byte	0x6
+ 770 0265 46       		.byte	0x46
+ 771 0266 48020000 		.4byte	0x248
+ 772 026a 00       		.byte	0
+ 773 026b 0C       		.uleb128 0xc
+ 774 026c 8C060000 		.4byte	.LASF73
+ 775 0270 06       		.byte	0x6
+ 776 0271 47       		.byte	0x47
+ 777 0272 47010000 		.4byte	0x147
+ 778 0276 04       		.byte	0x4
+ 779 0277 0D       		.uleb128 0xd
+ 780 0278 656E6400 		.ascii	"end\000"
+ 781 027c 06       		.byte	0x6
+ 782 027d 48       		.byte	0x48
+ 783 027e 47010000 		.4byte	0x147
+ 784 0282 08       		.byte	0x8
+ 785 0283 0C       		.uleb128 0xc
+ 786 0284 AA020000 		.4byte	.LASF74
+ 787 0288 06       		.byte	0x6
+ 788 0289 49       		.byte	0x49
+ 789 028a 47010000 		.4byte	0x147
+ 790 028e 0C       		.byte	0xc
+ 791 028f 00       		.byte	0
+ 792 0290 03       		.uleb128 0x3
+ 793 0291 1E030000 		.4byte	.LASF75
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 18
+
+
+ 794 0295 06       		.byte	0x6
+ 795 0296 4D       		.byte	0x4d
+ 796 0297 53020000 		.4byte	0x253
+ 797 029b 0B       		.uleb128 0xb
+ 798 029c 8A010000 		.4byte	.LASF77
+ 799 02a0 0C       		.byte	0xc
+ 800 02a1 06       		.byte	0x6
+ 801 02a2 53       		.byte	0x53
+ 802 02a3 CC020000 		.4byte	0x2cc
+ 803 02a7 0D       		.uleb128 0xd
+ 804 02a8 706F7300 		.ascii	"pos\000"
+ 805 02ac 06       		.byte	0x6
+ 806 02ad 54       		.byte	0x54
+ 807 02ae 4E010000 		.4byte	0x14e
+ 808 02b2 00       		.byte	0
+ 809 02b3 0C       		.uleb128 0xc
+ 810 02b4 54040000 		.4byte	.LASF78
+ 811 02b8 06       		.byte	0x6
+ 812 02b9 55       		.byte	0x55
+ 813 02ba 4E010000 		.4byte	0x14e
+ 814 02be 04       		.byte	0x4
+ 815 02bf 0C       		.uleb128 0xc
+ 816 02c0 A6030000 		.4byte	.LASF79
+ 817 02c4 06       		.byte	0x6
+ 818 02c5 56       		.byte	0x56
+ 819 02c6 47010000 		.4byte	0x147
+ 820 02ca 08       		.byte	0x8
+ 821 02cb 00       		.byte	0
+ 822 02cc 03       		.uleb128 0x3
+ 823 02cd 8A010000 		.4byte	.LASF77
+ 824 02d1 06       		.byte	0x6
+ 825 02d2 57       		.byte	0x57
+ 826 02d3 9B020000 		.4byte	0x29b
+ 827 02d7 0E       		.uleb128 0xe
+ 828 02d8 EC030000 		.4byte	.LASF80
+ 829 02dc DC08     		.2byte	0x8dc
+ 830 02de 07       		.byte	0x7
+ 831 02df 60       		.byte	0x60
+ 832 02e0 30030000 		.4byte	0x330
+ 833 02e4 0C       		.uleb128 0xc
+ 834 02e5 3C030000 		.4byte	.LASF81
+ 835 02e9 07       		.byte	0x7
+ 836 02ea 61       		.byte	0x61
+ 837 02eb CC020000 		.4byte	0x2cc
+ 838 02ef 00       		.byte	0
+ 839 02f0 0C       		.uleb128 0xc
+ 840 02f1 6F030000 		.4byte	.LASF82
+ 841 02f5 07       		.byte	0x7
+ 842 02f6 62       		.byte	0x62
+ 843 02f7 30030000 		.4byte	0x330
+ 844 02fb 0C       		.byte	0xc
+ 845 02fc 0C       		.uleb128 0xc
+ 846 02fd 11040000 		.4byte	.LASF83
+ 847 0301 07       		.byte	0x7
+ 848 0302 63       		.byte	0x63
+ 849 0303 40030000 		.4byte	0x340
+ 850 0307 D4       		.byte	0xd4
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 19
+
+
+ 851 0308 0F       		.uleb128 0xf
+ 852 0309 17040000 		.4byte	.LASF84
+ 853 030d 07       		.byte	0x7
+ 854 030e 64       		.byte	0x64
+ 855 030f 45000000 		.4byte	0x45
+ 856 0313 D408     		.2byte	0x8d4
+ 857 0315 0F       		.uleb128 0xf
+ 858 0316 3B020000 		.4byte	.LASF85
+ 859 031a 07       		.byte	0x7
+ 860 031b 65       		.byte	0x65
+ 861 031c 45000000 		.4byte	0x45
+ 862 0320 D608     		.2byte	0x8d6
+ 863 0322 0F       		.uleb128 0xf
+ 864 0323 BA010000 		.4byte	.LASF86
+ 865 0327 07       		.byte	0x7
+ 866 0328 66       		.byte	0x66
+ 867 0329 45000000 		.4byte	0x45
+ 868 032d D808     		.2byte	0x8d8
+ 869 032f 00       		.byte	0
+ 870 0330 10       		.uleb128 0x10
+ 871 0331 81000000 		.4byte	0x81
+ 872 0335 40030000 		.4byte	0x340
+ 873 0339 11       		.uleb128 0x11
+ 874 033a 5C010000 		.4byte	0x15c
+ 875 033e C7       		.byte	0xc7
+ 876 033f 00       		.byte	0
+ 877 0340 10       		.uleb128 0x10
+ 878 0341 90020000 		.4byte	0x290
+ 879 0345 50030000 		.4byte	0x350
+ 880 0349 11       		.uleb128 0x11
+ 881 034a 5C010000 		.4byte	0x15c
+ 882 034e 7F       		.byte	0x7f
+ 883 034f 00       		.byte	0
+ 884 0350 03       		.uleb128 0x3
+ 885 0351 15010000 		.4byte	.LASF87
+ 886 0355 07       		.byte	0x7
+ 887 0356 68       		.byte	0x68
+ 888 0357 D7020000 		.4byte	0x2d7
+ 889 035b 03       		.uleb128 0x3
+ 890 035c 66060000 		.4byte	.LASF88
+ 891 0360 08       		.byte	0x8
+ 892 0361 53       		.byte	0x53
+ 893 0362 47010000 		.4byte	0x147
+ 894 0366 03       		.uleb128 0x3
+ 895 0367 4D060000 		.4byte	.LASF89
+ 896 036b 08       		.byte	0x8
+ 897 036c 54       		.byte	0x54
+ 898 036d 4E010000 		.4byte	0x14e
+ 899 0371 03       		.uleb128 0x3
+ 900 0372 56020000 		.4byte	.LASF90
+ 901 0376 09       		.byte	0x9
+ 902 0377 4D       		.byte	0x4d
+ 903 0378 66030000 		.4byte	0x366
+ 904 037c 03       		.uleb128 0x3
+ 905 037d 92060000 		.4byte	.LASF91
+ 906 0381 09       		.byte	0x9
+ 907 0382 4F       		.byte	0x4f
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 20
+
+
+ 908 0383 66030000 		.4byte	0x366
+ 909 0387 03       		.uleb128 0x3
+ 910 0388 F5010000 		.4byte	.LASF92
+ 911 038c 09       		.byte	0x9
+ 912 038d 78       		.byte	0x78
+ 913 038e 5B030000 		.4byte	0x35b
+ 914 0392 12       		.uleb128 0x12
+ 915 0393 02       		.byte	0x2
+ 916 0394 0A       		.byte	0xa
+ 917 0395 41       		.byte	0x41
+ 918 0396 B3030000 		.4byte	0x3b3
+ 919 039a 0C       		.uleb128 0xc
+ 920 039b A1020000 		.4byte	.LASF93
+ 921 039f 0A       		.byte	0xa
+ 922 03a0 43       		.byte	0x43
+ 923 03a1 2C000000 		.4byte	0x2c
+ 924 03a5 00       		.byte	0
+ 925 03a6 0C       		.uleb128 0xc
+ 926 03a7 1B060000 		.4byte	.LASF94
+ 927 03ab 0A       		.byte	0xa
+ 928 03ac 44       		.byte	0x44
+ 929 03ad 2C000000 		.4byte	0x2c
+ 930 03b1 01       		.byte	0x1
+ 931 03b2 00       		.byte	0
+ 932 03b3 03       		.uleb128 0x3
+ 933 03b4 23060000 		.4byte	.LASF95
+ 934 03b8 0A       		.byte	0xa
+ 935 03b9 45       		.byte	0x45
+ 936 03ba 92030000 		.4byte	0x392
+ 937 03be 04       		.uleb128 0x4
+ 938 03bf 01       		.byte	0x1
+ 939 03c0 37000000 		.4byte	0x37
+ 940 03c4 0B       		.byte	0xb
+ 941 03c5 5E       		.byte	0x5e
+ 942 03c6 D7030000 		.4byte	0x3d7
+ 943 03ca 05       		.uleb128 0x5
+ 944 03cb DE010000 		.4byte	.LASF96
+ 945 03cf 00       		.byte	0
+ 946 03d0 05       		.uleb128 0x5
+ 947 03d1 1B000000 		.4byte	.LASF97
+ 948 03d5 01       		.byte	0x1
+ 949 03d6 00       		.byte	0
+ 950 03d7 03       		.uleb128 0x3
+ 951 03d8 00010000 		.4byte	.LASF98
+ 952 03dc 0B       		.byte	0xb
+ 953 03dd 5E       		.byte	0x5e
+ 954 03de BE030000 		.4byte	0x3be
+ 955 03e2 13       		.uleb128 0x13
+ 956 03e3 04       		.byte	0x4
+ 957 03e4 0B       		.byte	0xb
+ 958 03e5 62       		.byte	0x62
+ 959 03e6 01040000 		.4byte	0x401
+ 960 03ea 14       		.uleb128 0x14
+ 961 03eb A8050000 		.4byte	.LASF99
+ 962 03ef 0B       		.byte	0xb
+ 963 03f0 64       		.byte	0x64
+ 964 03f1 74010000 		.4byte	0x174
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 21
+
+
+ 965 03f5 14       		.uleb128 0x14
+ 966 03f6 88030000 		.4byte	.LASF100
+ 967 03fa 0B       		.byte	0xb
+ 968 03fb 65       		.byte	0x65
+ 969 03fc 01040000 		.4byte	0x401
+ 970 0400 00       		.byte	0
+ 971 0401 10       		.uleb128 0x10
+ 972 0402 2C000000 		.4byte	0x2c
+ 973 0406 11040000 		.4byte	0x411
+ 974 040a 11       		.uleb128 0x11
+ 975 040b 5C010000 		.4byte	0x15c
+ 976 040f 03       		.byte	0x3
+ 977 0410 00       		.byte	0
+ 978 0411 0B       		.uleb128 0xb
+ 979 0412 66040000 		.4byte	.LASF101
+ 980 0416 06       		.byte	0x6
+ 981 0417 0B       		.byte	0xb
+ 982 0418 60       		.byte	0x60
+ 983 0419 36040000 		.4byte	0x436
+ 984 041d 0C       		.uleb128 0xc
+ 985 041e BE050000 		.4byte	.LASF102
+ 986 0422 0B       		.byte	0xb
+ 987 0423 61       		.byte	0x61
+ 988 0424 D7030000 		.4byte	0x3d7
+ 989 0428 00       		.byte	0
+ 990 0429 0C       		.uleb128 0xc
+ 991 042a B6000000 		.4byte	.LASF103
+ 992 042e 0B       		.byte	0xb
+ 993 042f 66       		.byte	0x66
+ 994 0430 E2030000 		.4byte	0x3e2
+ 995 0434 02       		.byte	0x2
+ 996 0435 00       		.byte	0
+ 997 0436 03       		.uleb128 0x3
+ 998 0437 12000000 		.4byte	.LASF104
+ 999 043b 0B       		.byte	0xb
+ 1000 043c 68       		.byte	0x68
+ 1001 043d 11040000 		.4byte	0x411
+ 1002 0441 15       		.uleb128 0x15
+ 1003 0442 0E020000 		.4byte	.LASF123
+ 1004 0446 01       		.byte	0x1
+ 1005 0447 13       		.byte	0x13
+ 1006 0448 74010000 		.4byte	0x174
+ 1007 044c 00000000 		.4byte	.LFB117
+ 1008 0450 B8000000 		.4byte	.LFE117-.LFB117
+ 1009 0454 01       		.uleb128 0x1
+ 1010 0455 9C       		.byte	0x9c
+ 1011 0456 6B050000 		.4byte	0x56b
+ 1012 045a 16       		.uleb128 0x16
+ 1013 045b 62756600 		.ascii	"buf\000"
+ 1014 045f 01       		.byte	0x1
+ 1015 0460 13       		.byte	0x13
+ 1016 0461 63010000 		.4byte	0x163
+ 1017 0465 00000000 		.4byte	.LLST0
+ 1018 0469 17       		.uleb128 0x17
+ 1019 046a 0A000000 		.4byte	.LVL1
+ 1020 046e 86070000 		.4byte	0x786
+ 1021 0472 86040000 		.4byte	0x486
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 22
+
+
+ 1022 0476 18       		.uleb128 0x18
+ 1023 0477 01       		.uleb128 0x1
+ 1024 0478 50       		.byte	0x50
+ 1025 0479 02       		.uleb128 0x2
+ 1026 047a 74       		.byte	0x74
+ 1027 047b 00       		.sleb128 0
+ 1028 047c 18       		.uleb128 0x18
+ 1029 047d 01       		.uleb128 0x1
+ 1030 047e 51       		.byte	0x51
+ 1031 047f 05       		.uleb128 0x5
+ 1032 0480 03       		.byte	0x3
+ 1033 0481 00000000 		.4byte	.LC0
+ 1034 0485 00       		.byte	0
+ 1035 0486 17       		.uleb128 0x17
+ 1036 0487 14000000 		.4byte	.LVL2
+ 1037 048b 86070000 		.4byte	0x786
+ 1038 048f A3040000 		.4byte	0x4a3
+ 1039 0493 18       		.uleb128 0x18
+ 1040 0494 01       		.uleb128 0x1
+ 1041 0495 50       		.byte	0x50
+ 1042 0496 02       		.uleb128 0x2
+ 1043 0497 74       		.byte	0x74
+ 1044 0498 00       		.sleb128 0
+ 1045 0499 18       		.uleb128 0x18
+ 1046 049a 01       		.uleb128 0x1
+ 1047 049b 51       		.byte	0x51
+ 1048 049c 05       		.uleb128 0x5
+ 1049 049d 03       		.byte	0x3
+ 1050 049e 04000000 		.4byte	.LC1
+ 1051 04a2 00       		.byte	0
+ 1052 04a3 17       		.uleb128 0x17
+ 1053 04a4 1E000000 		.4byte	.LVL3
+ 1054 04a8 86070000 		.4byte	0x786
+ 1055 04ac C0040000 		.4byte	0x4c0
+ 1056 04b0 18       		.uleb128 0x18
+ 1057 04b1 01       		.uleb128 0x1
+ 1058 04b2 50       		.byte	0x50
+ 1059 04b3 02       		.uleb128 0x2
+ 1060 04b4 74       		.byte	0x74
+ 1061 04b5 00       		.sleb128 0
+ 1062 04b6 18       		.uleb128 0x18
+ 1063 04b7 01       		.uleb128 0x1
+ 1064 04b8 51       		.byte	0x51
+ 1065 04b9 05       		.uleb128 0x5
+ 1066 04ba 03       		.byte	0x3
+ 1067 04bb 0C000000 		.4byte	.LC2
+ 1068 04bf 00       		.byte	0
+ 1069 04c0 17       		.uleb128 0x17
+ 1070 04c1 28000000 		.4byte	.LVL4
+ 1071 04c5 86070000 		.4byte	0x786
+ 1072 04c9 DD040000 		.4byte	0x4dd
+ 1073 04cd 18       		.uleb128 0x18
+ 1074 04ce 01       		.uleb128 0x1
+ 1075 04cf 50       		.byte	0x50
+ 1076 04d0 02       		.uleb128 0x2
+ 1077 04d1 74       		.byte	0x74
+ 1078 04d2 00       		.sleb128 0
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 23
+
+
+ 1079 04d3 18       		.uleb128 0x18
+ 1080 04d4 01       		.uleb128 0x1
+ 1081 04d5 51       		.byte	0x51
+ 1082 04d6 05       		.uleb128 0x5
+ 1083 04d7 03       		.byte	0x3
+ 1084 04d8 14000000 		.4byte	.LC3
+ 1085 04dc 00       		.byte	0
+ 1086 04dd 17       		.uleb128 0x17
+ 1087 04de 32000000 		.4byte	.LVL5
+ 1088 04e2 86070000 		.4byte	0x786
+ 1089 04e6 FA040000 		.4byte	0x4fa
+ 1090 04ea 18       		.uleb128 0x18
+ 1091 04eb 01       		.uleb128 0x1
+ 1092 04ec 50       		.byte	0x50
+ 1093 04ed 02       		.uleb128 0x2
+ 1094 04ee 74       		.byte	0x74
+ 1095 04ef 00       		.sleb128 0
+ 1096 04f0 18       		.uleb128 0x18
+ 1097 04f1 01       		.uleb128 0x1
+ 1098 04f2 51       		.byte	0x51
+ 1099 04f3 05       		.uleb128 0x5
+ 1100 04f4 03       		.byte	0x3
+ 1101 04f5 1C000000 		.4byte	.LC4
+ 1102 04f9 00       		.byte	0
+ 1103 04fa 17       		.uleb128 0x17
+ 1104 04fb 3C000000 		.4byte	.LVL6
+ 1105 04ff 86070000 		.4byte	0x786
+ 1106 0503 17050000 		.4byte	0x517
+ 1107 0507 18       		.uleb128 0x18
+ 1108 0508 01       		.uleb128 0x1
+ 1109 0509 50       		.byte	0x50
+ 1110 050a 02       		.uleb128 0x2
+ 1111 050b 74       		.byte	0x74
+ 1112 050c 00       		.sleb128 0
+ 1113 050d 18       		.uleb128 0x18
+ 1114 050e 01       		.uleb128 0x1
+ 1115 050f 51       		.byte	0x51
+ 1116 0510 05       		.uleb128 0x5
+ 1117 0511 03       		.byte	0x3
+ 1118 0512 24000000 		.4byte	.LC5
+ 1119 0516 00       		.byte	0
+ 1120 0517 17       		.uleb128 0x17
+ 1121 0518 46000000 		.4byte	.LVL7
+ 1122 051c 86070000 		.4byte	0x786
+ 1123 0520 34050000 		.4byte	0x534
+ 1124 0524 18       		.uleb128 0x18
+ 1125 0525 01       		.uleb128 0x1
+ 1126 0526 50       		.byte	0x50
+ 1127 0527 02       		.uleb128 0x2
+ 1128 0528 74       		.byte	0x74
+ 1129 0529 00       		.sleb128 0
+ 1130 052a 18       		.uleb128 0x18
+ 1131 052b 01       		.uleb128 0x1
+ 1132 052c 51       		.byte	0x51
+ 1133 052d 05       		.uleb128 0x5
+ 1134 052e 03       		.byte	0x3
+ 1135 052f 2C000000 		.4byte	.LC6
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 24
+
+
+ 1136 0533 00       		.byte	0
+ 1137 0534 17       		.uleb128 0x17
+ 1138 0535 50000000 		.4byte	.LVL8
+ 1139 0539 86070000 		.4byte	0x786
+ 1140 053d 51050000 		.4byte	0x551
+ 1141 0541 18       		.uleb128 0x18
+ 1142 0542 01       		.uleb128 0x1
+ 1143 0543 50       		.byte	0x50
+ 1144 0544 02       		.uleb128 0x2
+ 1145 0545 74       		.byte	0x74
+ 1146 0546 00       		.sleb128 0
+ 1147 0547 18       		.uleb128 0x18
+ 1148 0548 01       		.uleb128 0x1
+ 1149 0549 51       		.byte	0x51
+ 1150 054a 05       		.uleb128 0x5
+ 1151 054b 03       		.byte	0x3
+ 1152 054c 34000000 		.4byte	.LC7
+ 1153 0550 00       		.byte	0
+ 1154 0551 19       		.uleb128 0x19
+ 1155 0552 5A000000 		.4byte	.LVL9
+ 1156 0556 86070000 		.4byte	0x786
+ 1157 055a 18       		.uleb128 0x18
+ 1158 055b 01       		.uleb128 0x1
+ 1159 055c 50       		.byte	0x50
+ 1160 055d 02       		.uleb128 0x2
+ 1161 055e 74       		.byte	0x74
+ 1162 055f 00       		.sleb128 0
+ 1163 0560 18       		.uleb128 0x18
+ 1164 0561 01       		.uleb128 0x1
+ 1165 0562 51       		.byte	0x51
+ 1166 0563 05       		.uleb128 0x5
+ 1167 0564 03       		.byte	0x3
+ 1168 0565 3C000000 		.4byte	.LC8
+ 1169 0569 00       		.byte	0
+ 1170 056a 00       		.byte	0
+ 1171 056b 1A       		.uleb128 0x1a
+ 1172 056c 47010000 		.4byte	.LASF124
+ 1173 0570 01       		.byte	0x1
+ 1174 0571 2C       		.byte	0x2c
+ 1175 0572 31010000 		.4byte	0x131
+ 1176 0576 00000000 		.4byte	.LFB118
+ 1177 057a 72010000 		.4byte	.LFE118-.LFB118
+ 1178 057e 01       		.uleb128 0x1
+ 1179 057f 9C       		.byte	0x9c
+ 1180 0580 0D070000 		.4byte	0x70d
+ 1181 0584 16       		.uleb128 0x16
+ 1182 0585 6D6500   		.ascii	"me\000"
+ 1183 0588 01       		.byte	0x1
+ 1184 0589 2C       		.byte	0x2c
+ 1185 058a 13070000 		.4byte	0x713
+ 1186 058e 2C000000 		.4byte	.LLST1
+ 1187 0592 1B       		.uleb128 0x1b
+ 1188 0593 3C030000 		.4byte	.LASF81
+ 1189 0597 01       		.byte	0x1
+ 1190 0598 2C       		.byte	0x2c
+ 1191 0599 1E070000 		.4byte	0x71e
+ 1192 059d 6E000000 		.4byte	.LLST2
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 25
+
+
+ 1193 05a1 1B       		.uleb128 0x1b
+ 1194 05a2 51000000 		.4byte	.LASF105
+ 1195 05a6 01       		.byte	0x1
+ 1196 05a7 2C       		.byte	0x2c
+ 1197 05a8 29070000 		.4byte	0x729
+ 1198 05ac B0000000 		.4byte	.LLST3
+ 1199 05b0 1C       		.uleb128 0x1c
+ 1200 05b1 11040000 		.4byte	.LASF83
+ 1201 05b5 01       		.byte	0x1
+ 1202 05b6 33       		.byte	0x33
+ 1203 05b7 90020000 		.4byte	0x290
+ 1204 05bb 02       		.uleb128 0x2
+ 1205 05bc 91       		.byte	0x91
+ 1206 05bd 50       		.sleb128 -48
+ 1207 05be 1D       		.uleb128 0x1d
+ 1208 05bf C3040000 		.4byte	.LASF106
+ 1209 05c3 01       		.byte	0x1
+ 1210 05c4 34       		.byte	0x34
+ 1211 05c5 45000000 		.4byte	0x45
+ 1212 05c9 F2000000 		.4byte	.LLST4
+ 1213 05cd 1D       		.uleb128 0x1d
+ 1214 05ce A1050000 		.4byte	.LASF107
+ 1215 05d2 01       		.byte	0x1
+ 1216 05d3 41       		.byte	0x41
+ 1217 05d4 45000000 		.4byte	0x45
+ 1218 05d8 26010000 		.4byte	.LLST5
+ 1219 05dc 1E       		.uleb128 0x1e
+ 1220 05dd 73747200 		.ascii	"str\000"
+ 1221 05e1 01       		.byte	0x1
+ 1222 05e2 4A       		.byte	0x4a
+ 1223 05e3 81000000 		.4byte	0x81
+ 1224 05e7 6F010000 		.4byte	.LLST6
+ 1225 05eb 1F       		.uleb128 0x1f
+ 1226 05ec 58000000 		.4byte	.LBB2
+ 1227 05f0 54000000 		.4byte	.LBE2-.LBB2
+ 1228 05f4 5A060000 		.4byte	0x65a
+ 1229 05f8 1D       		.uleb128 0x1d
+ 1230 05f9 1E010000 		.4byte	.LASF108
+ 1231 05fd 01       		.byte	0x1
+ 1232 05fe 59       		.byte	0x59
+ 1233 05ff 2C000000 		.4byte	0x2c
+ 1234 0603 98010000 		.4byte	.LLST7
+ 1235 0607 1C       		.uleb128 0x1c
+ 1236 0608 F8000000 		.4byte	.LASF109
+ 1237 060c 01       		.byte	0x1
+ 1238 060d 5B       		.byte	0x5b
+ 1239 060e 2E070000 		.4byte	0x72e
+ 1240 0612 02       		.uleb128 0x2
+ 1241 0613 91       		.byte	0x91
+ 1242 0614 40       		.sleb128 -64
+ 1243 0615 17       		.uleb128 0x17
+ 1244 0616 60000000 		.4byte	.LVL27
+ 1245 061a 91070000 		.4byte	0x791
+ 1246 061e 2F060000 		.4byte	0x62f
+ 1247 0622 18       		.uleb128 0x18
+ 1248 0623 01       		.uleb128 0x1
+ 1249 0624 50       		.byte	0x50
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 26
+
+
+ 1250 0625 02       		.uleb128 0x2
+ 1251 0626 75       		.byte	0x75
+ 1252 0627 00       		.sleb128 0
+ 1253 0628 18       		.uleb128 0x18
+ 1254 0629 01       		.uleb128 0x1
+ 1255 062a 51       		.byte	0x51
+ 1256 062b 02       		.uleb128 0x2
+ 1257 062c 91       		.byte	0x91
+ 1258 062d 50       		.sleb128 -48
+ 1259 062e 00       		.byte	0
+ 1260 062f 17       		.uleb128 0x17
+ 1261 0630 82000000 		.4byte	.LVL29
+ 1262 0634 9C070000 		.4byte	0x79c
+ 1263 0638 49060000 		.4byte	0x649
+ 1264 063c 18       		.uleb128 0x18
+ 1265 063d 01       		.uleb128 0x1
+ 1266 063e 50       		.byte	0x50
+ 1267 063f 02       		.uleb128 0x2
+ 1268 0640 7D       		.byte	0x7d
+ 1269 0641 00       		.sleb128 0
+ 1270 0642 18       		.uleb128 0x18
+ 1271 0643 01       		.uleb128 0x1
+ 1272 0644 52       		.byte	0x52
+ 1273 0645 02       		.uleb128 0x2
+ 1274 0646 74       		.byte	0x74
+ 1275 0647 00       		.sleb128 0
+ 1276 0648 00       		.byte	0
+ 1277 0649 19       		.uleb128 0x19
+ 1278 064a 9C000000 		.4byte	.LVL31
+ 1279 064e 41040000 		.4byte	0x441
+ 1280 0652 18       		.uleb128 0x18
+ 1281 0653 01       		.uleb128 0x1
+ 1282 0654 50       		.byte	0x50
+ 1283 0655 02       		.uleb128 0x2
+ 1284 0656 7D       		.byte	0x7d
+ 1285 0657 00       		.sleb128 0
+ 1286 0658 00       		.byte	0
+ 1287 0659 00       		.byte	0
+ 1288 065a 1F       		.uleb128 0x1f
+ 1289 065b D0000000 		.4byte	.LBB3
+ 1290 065f 52000000 		.4byte	.LBE3-.LBB3
+ 1291 0663 DC060000 		.4byte	0x6dc
+ 1292 0667 1E       		.uleb128 0x1e
+ 1293 0668 6900     		.ascii	"i\000"
+ 1294 066a 01       		.byte	0x1
+ 1295 066b 76       		.byte	0x76
+ 1296 066c 2C000000 		.4byte	0x2c
+ 1297 0670 AB010000 		.4byte	.LLST8
+ 1298 0674 20       		.uleb128 0x20
+ 1299 0675 00000000 		.4byte	.Ldebug_ranges0+0
+ 1300 0679 1D       		.uleb128 0x1d
+ 1301 067a 5C040000 		.4byte	.LASF110
+ 1302 067e 01       		.byte	0x1
+ 1303 067f 80       		.byte	0x80
+ 1304 0680 45000000 		.4byte	0x45
+ 1305 0684 C9010000 		.4byte	.LLST9
+ 1306 0688 1C       		.uleb128 0x1c
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 27
+
+
+ 1307 0689 F8000000 		.4byte	.LASF109
+ 1308 068d 01       		.byte	0x1
+ 1309 068e 82       		.byte	0x82
+ 1310 068f 2E070000 		.4byte	0x72e
+ 1311 0693 02       		.uleb128 0x2
+ 1312 0694 91       		.byte	0x91
+ 1313 0695 40       		.sleb128 -64
+ 1314 0696 17       		.uleb128 0x17
+ 1315 0697 D8000000 		.4byte	.LVL36
+ 1316 069b 91070000 		.4byte	0x791
+ 1317 069f B0060000 		.4byte	0x6b0
+ 1318 06a3 18       		.uleb128 0x18
+ 1319 06a4 01       		.uleb128 0x1
+ 1320 06a5 50       		.byte	0x50
+ 1321 06a6 02       		.uleb128 0x2
+ 1322 06a7 75       		.byte	0x75
+ 1323 06a8 00       		.sleb128 0
+ 1324 06a9 18       		.uleb128 0x18
+ 1325 06aa 01       		.uleb128 0x1
+ 1326 06ab 51       		.byte	0x51
+ 1327 06ac 02       		.uleb128 0x2
+ 1328 06ad 91       		.byte	0x91
+ 1329 06ae 50       		.sleb128 -48
+ 1330 06af 00       		.byte	0
+ 1331 06b0 17       		.uleb128 0x17
+ 1332 06b1 F8000000 		.4byte	.LVL38
+ 1333 06b5 9C070000 		.4byte	0x79c
+ 1334 06b9 CA060000 		.4byte	0x6ca
+ 1335 06bd 18       		.uleb128 0x18
+ 1336 06be 01       		.uleb128 0x1
+ 1337 06bf 50       		.byte	0x50
+ 1338 06c0 02       		.uleb128 0x2
+ 1339 06c1 7D       		.byte	0x7d
+ 1340 06c2 00       		.sleb128 0
+ 1341 06c3 18       		.uleb128 0x18
+ 1342 06c4 01       		.uleb128 0x1
+ 1343 06c5 52       		.byte	0x52
+ 1344 06c6 02       		.uleb128 0x2
+ 1345 06c7 74       		.byte	0x74
+ 1346 06c8 00       		.sleb128 0
+ 1347 06c9 00       		.byte	0
+ 1348 06ca 19       		.uleb128 0x19
+ 1349 06cb 08010000 		.4byte	.LVL40
+ 1350 06cf A5070000 		.4byte	0x7a5
+ 1351 06d3 18       		.uleb128 0x18
+ 1352 06d4 01       		.uleb128 0x1
+ 1353 06d5 50       		.byte	0x50
+ 1354 06d6 02       		.uleb128 0x2
+ 1355 06d7 7D       		.byte	0x7d
+ 1356 06d8 00       		.sleb128 0
+ 1357 06d9 00       		.byte	0
+ 1358 06da 00       		.byte	0
+ 1359 06db 00       		.byte	0
+ 1360 06dc 17       		.uleb128 0x17
+ 1361 06dd 2A000000 		.4byte	.LVL24
+ 1362 06e1 91070000 		.4byte	0x791
+ 1363 06e5 F6060000 		.4byte	0x6f6
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 28
+
+
+ 1364 06e9 18       		.uleb128 0x18
+ 1365 06ea 01       		.uleb128 0x1
+ 1366 06eb 50       		.byte	0x50
+ 1367 06ec 02       		.uleb128 0x2
+ 1368 06ed 75       		.byte	0x75
+ 1369 06ee 00       		.sleb128 0
+ 1370 06ef 18       		.uleb128 0x18
+ 1371 06f0 01       		.uleb128 0x1
+ 1372 06f1 51       		.byte	0x51
+ 1373 06f2 02       		.uleb128 0x2
+ 1374 06f3 91       		.byte	0x91
+ 1375 06f4 50       		.sleb128 -48
+ 1376 06f5 00       		.byte	0
+ 1377 06f6 19       		.uleb128 0x19
+ 1378 06f7 B8000000 		.4byte	.LVL34
+ 1379 06fb 91070000 		.4byte	0x791
+ 1380 06ff 18       		.uleb128 0x18
+ 1381 0700 01       		.uleb128 0x1
+ 1382 0701 50       		.byte	0x50
+ 1383 0702 02       		.uleb128 0x2
+ 1384 0703 75       		.byte	0x75
+ 1385 0704 00       		.sleb128 0
+ 1386 0705 18       		.uleb128 0x18
+ 1387 0706 01       		.uleb128 0x1
+ 1388 0707 51       		.byte	0x51
+ 1389 0708 02       		.uleb128 0x2
+ 1390 0709 91       		.byte	0x91
+ 1391 070a 50       		.sleb128 -48
+ 1392 070b 00       		.byte	0
+ 1393 070c 00       		.byte	0
+ 1394 070d 08       		.uleb128 0x8
+ 1395 070e 04       		.byte	0x4
+ 1396 070f 36040000 		.4byte	0x436
+ 1397 0713 21       		.uleb128 0x21
+ 1398 0714 0D070000 		.4byte	0x70d
+ 1399 0718 08       		.uleb128 0x8
+ 1400 0719 04       		.byte	0x4
+ 1401 071a 50030000 		.4byte	0x350
+ 1402 071e 21       		.uleb128 0x21
+ 1403 071f 18070000 		.4byte	0x718
+ 1404 0723 08       		.uleb128 0x8
+ 1405 0724 04       		.byte	0x4
+ 1406 0725 B3030000 		.4byte	0x3b3
+ 1407 0729 21       		.uleb128 0x21
+ 1408 072a 23070000 		.4byte	0x723
+ 1409 072e 10       		.uleb128 0x10
+ 1410 072f 81000000 		.4byte	0x81
+ 1411 0733 3E070000 		.4byte	0x73e
+ 1412 0737 11       		.uleb128 0x11
+ 1413 0738 5C010000 		.4byte	0x15c
+ 1414 073c 0F       		.byte	0xf
+ 1415 073d 00       		.byte	0
+ 1416 073e 22       		.uleb128 0x22
+ 1417 073f C2020000 		.4byte	.LASF111
+ 1418 0743 0C       		.byte	0xc
+ 1419 0744 40       		.byte	0x40
+ 1420 0745 71030000 		.4byte	0x371
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 29
+
+
+ 1421 0749 22       		.uleb128 0x22
+ 1422 074a A1010000 		.4byte	.LASF112
+ 1423 074e 0C       		.byte	0xc
+ 1424 074f 47       		.byte	0x47
+ 1425 0750 7C030000 		.4byte	0x37c
+ 1426 0754 22       		.uleb128 0x22
+ 1427 0755 93030000 		.4byte	.LASF113
+ 1428 0759 0C       		.byte	0xc
+ 1429 075a 4A       		.byte	0x4a
+ 1430 075b 71030000 		.4byte	0x371
+ 1431 075f 22       		.uleb128 0x22
+ 1432 0760 C5010000 		.4byte	.LASF114
+ 1433 0764 0D       		.byte	0xd
+ 1434 0765 48       		.byte	0x48
+ 1435 0766 87030000 		.4byte	0x387
+ 1436 076a 22       		.uleb128 0x22
+ 1437 076b 38060000 		.4byte	.LASF115
+ 1438 076f 0E       		.byte	0xe
+ 1439 0770 44       		.byte	0x44
+ 1440 0771 71030000 		.4byte	0x371
+ 1441 0775 23       		.uleb128 0x23
+ 1442 0776 BB000000 		.4byte	.LASF116
+ 1443 077a 0F       		.byte	0xf
+ 1444 077b 1207     		.2byte	0x712
+ 1445 077d 81070000 		.4byte	0x781
+ 1446 0781 24       		.uleb128 0x24
+ 1447 0782 69010000 		.4byte	0x169
+ 1448 0786 25       		.uleb128 0x25
+ 1449 0787 2B000000 		.4byte	.LASF117
+ 1450 078b 2B000000 		.4byte	.LASF117
+ 1451 078f 10       		.byte	0x10
+ 1452 0790 1C       		.byte	0x1c
+ 1453 0791 25       		.uleb128 0x25
+ 1454 0792 52030000 		.4byte	.LASF118
+ 1455 0796 52030000 		.4byte	.LASF118
+ 1456 079a 07       		.byte	0x7
+ 1457 079b 9A       		.byte	0x9a
+ 1458 079c 26       		.uleb128 0x26
+ 1459 079d 67010000 		.4byte	.LASF125
+ 1460 07a1 67010000 		.4byte	.LASF125
+ 1461 07a5 25       		.uleb128 0x25
+ 1462 07a6 31040000 		.4byte	.LASF119
+ 1463 07aa 31040000 		.4byte	.LASF119
+ 1464 07ae 11       		.byte	0x11
+ 1465 07af 4D       		.byte	0x4d
+ 1466 07b0 00       		.byte	0
+ 1467              		.section	.debug_abbrev,"",%progbits
+ 1468              	.Ldebug_abbrev0:
+ 1469 0000 01       		.uleb128 0x1
+ 1470 0001 11       		.uleb128 0x11
+ 1471 0002 01       		.byte	0x1
+ 1472 0003 25       		.uleb128 0x25
+ 1473 0004 0E       		.uleb128 0xe
+ 1474 0005 13       		.uleb128 0x13
+ 1475 0006 0B       		.uleb128 0xb
+ 1476 0007 03       		.uleb128 0x3
+ 1477 0008 0E       		.uleb128 0xe
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 30
+
+
+ 1478 0009 1B       		.uleb128 0x1b
+ 1479 000a 0E       		.uleb128 0xe
+ 1480 000b 55       		.uleb128 0x55
+ 1481 000c 17       		.uleb128 0x17
+ 1482 000d 11       		.uleb128 0x11
+ 1483 000e 01       		.uleb128 0x1
+ 1484 000f 10       		.uleb128 0x10
+ 1485 0010 17       		.uleb128 0x17
+ 1486 0011 00       		.byte	0
+ 1487 0012 00       		.byte	0
+ 1488 0013 02       		.uleb128 0x2
+ 1489 0014 24       		.uleb128 0x24
+ 1490 0015 00       		.byte	0
+ 1491 0016 0B       		.uleb128 0xb
+ 1492 0017 0B       		.uleb128 0xb
+ 1493 0018 3E       		.uleb128 0x3e
+ 1494 0019 0B       		.uleb128 0xb
+ 1495 001a 03       		.uleb128 0x3
+ 1496 001b 0E       		.uleb128 0xe
+ 1497 001c 00       		.byte	0
+ 1498 001d 00       		.byte	0
+ 1499 001e 03       		.uleb128 0x3
+ 1500 001f 16       		.uleb128 0x16
+ 1501 0020 00       		.byte	0
+ 1502 0021 03       		.uleb128 0x3
+ 1503 0022 0E       		.uleb128 0xe
+ 1504 0023 3A       		.uleb128 0x3a
+ 1505 0024 0B       		.uleb128 0xb
+ 1506 0025 3B       		.uleb128 0x3b
+ 1507 0026 0B       		.uleb128 0xb
+ 1508 0027 49       		.uleb128 0x49
+ 1509 0028 13       		.uleb128 0x13
+ 1510 0029 00       		.byte	0
+ 1511 002a 00       		.byte	0
+ 1512 002b 04       		.uleb128 0x4
+ 1513 002c 04       		.uleb128 0x4
+ 1514 002d 01       		.byte	0x1
+ 1515 002e 0B       		.uleb128 0xb
+ 1516 002f 0B       		.uleb128 0xb
+ 1517 0030 49       		.uleb128 0x49
+ 1518 0031 13       		.uleb128 0x13
+ 1519 0032 3A       		.uleb128 0x3a
+ 1520 0033 0B       		.uleb128 0xb
+ 1521 0034 3B       		.uleb128 0x3b
+ 1522 0035 0B       		.uleb128 0xb
+ 1523 0036 01       		.uleb128 0x1
+ 1524 0037 13       		.uleb128 0x13
+ 1525 0038 00       		.byte	0
+ 1526 0039 00       		.byte	0
+ 1527 003a 05       		.uleb128 0x5
+ 1528 003b 28       		.uleb128 0x28
+ 1529 003c 00       		.byte	0
+ 1530 003d 03       		.uleb128 0x3
+ 1531 003e 0E       		.uleb128 0xe
+ 1532 003f 1C       		.uleb128 0x1c
+ 1533 0040 0B       		.uleb128 0xb
+ 1534 0041 00       		.byte	0
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 31
+
+
+ 1535 0042 00       		.byte	0
+ 1536 0043 06       		.uleb128 0x6
+ 1537 0044 28       		.uleb128 0x28
+ 1538 0045 00       		.byte	0
+ 1539 0046 03       		.uleb128 0x3
+ 1540 0047 0E       		.uleb128 0xe
+ 1541 0048 1C       		.uleb128 0x1c
+ 1542 0049 0D       		.uleb128 0xd
+ 1543 004a 00       		.byte	0
+ 1544 004b 00       		.byte	0
+ 1545 004c 07       		.uleb128 0x7
+ 1546 004d 24       		.uleb128 0x24
+ 1547 004e 00       		.byte	0
+ 1548 004f 0B       		.uleb128 0xb
+ 1549 0050 0B       		.uleb128 0xb
+ 1550 0051 3E       		.uleb128 0x3e
+ 1551 0052 0B       		.uleb128 0xb
+ 1552 0053 03       		.uleb128 0x3
+ 1553 0054 08       		.uleb128 0x8
+ 1554 0055 00       		.byte	0
+ 1555 0056 00       		.byte	0
+ 1556 0057 08       		.uleb128 0x8
+ 1557 0058 0F       		.uleb128 0xf
+ 1558 0059 00       		.byte	0
+ 1559 005a 0B       		.uleb128 0xb
+ 1560 005b 0B       		.uleb128 0xb
+ 1561 005c 49       		.uleb128 0x49
+ 1562 005d 13       		.uleb128 0x13
+ 1563 005e 00       		.byte	0
+ 1564 005f 00       		.byte	0
+ 1565 0060 09       		.uleb128 0x9
+ 1566 0061 28       		.uleb128 0x28
+ 1567 0062 00       		.byte	0
+ 1568 0063 03       		.uleb128 0x3
+ 1569 0064 0E       		.uleb128 0xe
+ 1570 0065 1C       		.uleb128 0x1c
+ 1571 0066 05       		.uleb128 0x5
+ 1572 0067 00       		.byte	0
+ 1573 0068 00       		.byte	0
+ 1574 0069 0A       		.uleb128 0xa
+ 1575 006a 28       		.uleb128 0x28
+ 1576 006b 00       		.byte	0
+ 1577 006c 03       		.uleb128 0x3
+ 1578 006d 08       		.uleb128 0x8
+ 1579 006e 1C       		.uleb128 0x1c
+ 1580 006f 0B       		.uleb128 0xb
+ 1581 0070 00       		.byte	0
+ 1582 0071 00       		.byte	0
+ 1583 0072 0B       		.uleb128 0xb
+ 1584 0073 13       		.uleb128 0x13
+ 1585 0074 01       		.byte	0x1
+ 1586 0075 03       		.uleb128 0x3
+ 1587 0076 0E       		.uleb128 0xe
+ 1588 0077 0B       		.uleb128 0xb
+ 1589 0078 0B       		.uleb128 0xb
+ 1590 0079 3A       		.uleb128 0x3a
+ 1591 007a 0B       		.uleb128 0xb
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 32
+
+
+ 1592 007b 3B       		.uleb128 0x3b
+ 1593 007c 0B       		.uleb128 0xb
+ 1594 007d 01       		.uleb128 0x1
+ 1595 007e 13       		.uleb128 0x13
+ 1596 007f 00       		.byte	0
+ 1597 0080 00       		.byte	0
+ 1598 0081 0C       		.uleb128 0xc
+ 1599 0082 0D       		.uleb128 0xd
+ 1600 0083 00       		.byte	0
+ 1601 0084 03       		.uleb128 0x3
+ 1602 0085 0E       		.uleb128 0xe
+ 1603 0086 3A       		.uleb128 0x3a
+ 1604 0087 0B       		.uleb128 0xb
+ 1605 0088 3B       		.uleb128 0x3b
+ 1606 0089 0B       		.uleb128 0xb
+ 1607 008a 49       		.uleb128 0x49
+ 1608 008b 13       		.uleb128 0x13
+ 1609 008c 38       		.uleb128 0x38
+ 1610 008d 0B       		.uleb128 0xb
+ 1611 008e 00       		.byte	0
+ 1612 008f 00       		.byte	0
+ 1613 0090 0D       		.uleb128 0xd
+ 1614 0091 0D       		.uleb128 0xd
+ 1615 0092 00       		.byte	0
+ 1616 0093 03       		.uleb128 0x3
+ 1617 0094 08       		.uleb128 0x8
+ 1618 0095 3A       		.uleb128 0x3a
+ 1619 0096 0B       		.uleb128 0xb
+ 1620 0097 3B       		.uleb128 0x3b
+ 1621 0098 0B       		.uleb128 0xb
+ 1622 0099 49       		.uleb128 0x49
+ 1623 009a 13       		.uleb128 0x13
+ 1624 009b 38       		.uleb128 0x38
+ 1625 009c 0B       		.uleb128 0xb
+ 1626 009d 00       		.byte	0
+ 1627 009e 00       		.byte	0
+ 1628 009f 0E       		.uleb128 0xe
+ 1629 00a0 13       		.uleb128 0x13
+ 1630 00a1 01       		.byte	0x1
+ 1631 00a2 03       		.uleb128 0x3
+ 1632 00a3 0E       		.uleb128 0xe
+ 1633 00a4 0B       		.uleb128 0xb
+ 1634 00a5 05       		.uleb128 0x5
+ 1635 00a6 3A       		.uleb128 0x3a
+ 1636 00a7 0B       		.uleb128 0xb
+ 1637 00a8 3B       		.uleb128 0x3b
+ 1638 00a9 0B       		.uleb128 0xb
+ 1639 00aa 01       		.uleb128 0x1
+ 1640 00ab 13       		.uleb128 0x13
+ 1641 00ac 00       		.byte	0
+ 1642 00ad 00       		.byte	0
+ 1643 00ae 0F       		.uleb128 0xf
+ 1644 00af 0D       		.uleb128 0xd
+ 1645 00b0 00       		.byte	0
+ 1646 00b1 03       		.uleb128 0x3
+ 1647 00b2 0E       		.uleb128 0xe
+ 1648 00b3 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 33
+
+
+ 1649 00b4 0B       		.uleb128 0xb
+ 1650 00b5 3B       		.uleb128 0x3b
+ 1651 00b6 0B       		.uleb128 0xb
+ 1652 00b7 49       		.uleb128 0x49
+ 1653 00b8 13       		.uleb128 0x13
+ 1654 00b9 38       		.uleb128 0x38
+ 1655 00ba 05       		.uleb128 0x5
+ 1656 00bb 00       		.byte	0
+ 1657 00bc 00       		.byte	0
+ 1658 00bd 10       		.uleb128 0x10
+ 1659 00be 01       		.uleb128 0x1
+ 1660 00bf 01       		.byte	0x1
+ 1661 00c0 49       		.uleb128 0x49
+ 1662 00c1 13       		.uleb128 0x13
+ 1663 00c2 01       		.uleb128 0x1
+ 1664 00c3 13       		.uleb128 0x13
+ 1665 00c4 00       		.byte	0
+ 1666 00c5 00       		.byte	0
+ 1667 00c6 11       		.uleb128 0x11
+ 1668 00c7 21       		.uleb128 0x21
+ 1669 00c8 00       		.byte	0
+ 1670 00c9 49       		.uleb128 0x49
+ 1671 00ca 13       		.uleb128 0x13
+ 1672 00cb 2F       		.uleb128 0x2f
+ 1673 00cc 0B       		.uleb128 0xb
+ 1674 00cd 00       		.byte	0
+ 1675 00ce 00       		.byte	0
+ 1676 00cf 12       		.uleb128 0x12
+ 1677 00d0 13       		.uleb128 0x13
+ 1678 00d1 01       		.byte	0x1
+ 1679 00d2 0B       		.uleb128 0xb
+ 1680 00d3 0B       		.uleb128 0xb
+ 1681 00d4 3A       		.uleb128 0x3a
+ 1682 00d5 0B       		.uleb128 0xb
+ 1683 00d6 3B       		.uleb128 0x3b
+ 1684 00d7 0B       		.uleb128 0xb
+ 1685 00d8 01       		.uleb128 0x1
+ 1686 00d9 13       		.uleb128 0x13
+ 1687 00da 00       		.byte	0
+ 1688 00db 00       		.byte	0
+ 1689 00dc 13       		.uleb128 0x13
+ 1690 00dd 17       		.uleb128 0x17
+ 1691 00de 01       		.byte	0x1
+ 1692 00df 0B       		.uleb128 0xb
+ 1693 00e0 0B       		.uleb128 0xb
+ 1694 00e1 3A       		.uleb128 0x3a
+ 1695 00e2 0B       		.uleb128 0xb
+ 1696 00e3 3B       		.uleb128 0x3b
+ 1697 00e4 0B       		.uleb128 0xb
+ 1698 00e5 01       		.uleb128 0x1
+ 1699 00e6 13       		.uleb128 0x13
+ 1700 00e7 00       		.byte	0
+ 1701 00e8 00       		.byte	0
+ 1702 00e9 14       		.uleb128 0x14
+ 1703 00ea 0D       		.uleb128 0xd
+ 1704 00eb 00       		.byte	0
+ 1705 00ec 03       		.uleb128 0x3
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 34
+
+
+ 1706 00ed 0E       		.uleb128 0xe
+ 1707 00ee 3A       		.uleb128 0x3a
+ 1708 00ef 0B       		.uleb128 0xb
+ 1709 00f0 3B       		.uleb128 0x3b
+ 1710 00f1 0B       		.uleb128 0xb
+ 1711 00f2 49       		.uleb128 0x49
+ 1712 00f3 13       		.uleb128 0x13
+ 1713 00f4 00       		.byte	0
+ 1714 00f5 00       		.byte	0
+ 1715 00f6 15       		.uleb128 0x15
+ 1716 00f7 2E       		.uleb128 0x2e
+ 1717 00f8 01       		.byte	0x1
+ 1718 00f9 03       		.uleb128 0x3
+ 1719 00fa 0E       		.uleb128 0xe
+ 1720 00fb 3A       		.uleb128 0x3a
+ 1721 00fc 0B       		.uleb128 0xb
+ 1722 00fd 3B       		.uleb128 0x3b
+ 1723 00fe 0B       		.uleb128 0xb
+ 1724 00ff 27       		.uleb128 0x27
+ 1725 0100 19       		.uleb128 0x19
+ 1726 0101 49       		.uleb128 0x49
+ 1727 0102 13       		.uleb128 0x13
+ 1728 0103 11       		.uleb128 0x11
+ 1729 0104 01       		.uleb128 0x1
+ 1730 0105 12       		.uleb128 0x12
+ 1731 0106 06       		.uleb128 0x6
+ 1732 0107 40       		.uleb128 0x40
+ 1733 0108 18       		.uleb128 0x18
+ 1734 0109 9742     		.uleb128 0x2117
+ 1735 010b 19       		.uleb128 0x19
+ 1736 010c 01       		.uleb128 0x1
+ 1737 010d 13       		.uleb128 0x13
+ 1738 010e 00       		.byte	0
+ 1739 010f 00       		.byte	0
+ 1740 0110 16       		.uleb128 0x16
+ 1741 0111 05       		.uleb128 0x5
+ 1742 0112 00       		.byte	0
+ 1743 0113 03       		.uleb128 0x3
+ 1744 0114 08       		.uleb128 0x8
+ 1745 0115 3A       		.uleb128 0x3a
+ 1746 0116 0B       		.uleb128 0xb
+ 1747 0117 3B       		.uleb128 0x3b
+ 1748 0118 0B       		.uleb128 0xb
+ 1749 0119 49       		.uleb128 0x49
+ 1750 011a 13       		.uleb128 0x13
+ 1751 011b 02       		.uleb128 0x2
+ 1752 011c 17       		.uleb128 0x17
+ 1753 011d 00       		.byte	0
+ 1754 011e 00       		.byte	0
+ 1755 011f 17       		.uleb128 0x17
+ 1756 0120 898201   		.uleb128 0x4109
+ 1757 0123 01       		.byte	0x1
+ 1758 0124 11       		.uleb128 0x11
+ 1759 0125 01       		.uleb128 0x1
+ 1760 0126 31       		.uleb128 0x31
+ 1761 0127 13       		.uleb128 0x13
+ 1762 0128 01       		.uleb128 0x1
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 35
+
+
+ 1763 0129 13       		.uleb128 0x13
+ 1764 012a 00       		.byte	0
+ 1765 012b 00       		.byte	0
+ 1766 012c 18       		.uleb128 0x18
+ 1767 012d 8A8201   		.uleb128 0x410a
+ 1768 0130 00       		.byte	0
+ 1769 0131 02       		.uleb128 0x2
+ 1770 0132 18       		.uleb128 0x18
+ 1771 0133 9142     		.uleb128 0x2111
+ 1772 0135 18       		.uleb128 0x18
+ 1773 0136 00       		.byte	0
+ 1774 0137 00       		.byte	0
+ 1775 0138 19       		.uleb128 0x19
+ 1776 0139 898201   		.uleb128 0x4109
+ 1777 013c 01       		.byte	0x1
+ 1778 013d 11       		.uleb128 0x11
+ 1779 013e 01       		.uleb128 0x1
+ 1780 013f 31       		.uleb128 0x31
+ 1781 0140 13       		.uleb128 0x13
+ 1782 0141 00       		.byte	0
+ 1783 0142 00       		.byte	0
+ 1784 0143 1A       		.uleb128 0x1a
+ 1785 0144 2E       		.uleb128 0x2e
+ 1786 0145 01       		.byte	0x1
+ 1787 0146 3F       		.uleb128 0x3f
+ 1788 0147 19       		.uleb128 0x19
+ 1789 0148 03       		.uleb128 0x3
+ 1790 0149 0E       		.uleb128 0xe
+ 1791 014a 3A       		.uleb128 0x3a
+ 1792 014b 0B       		.uleb128 0xb
+ 1793 014c 3B       		.uleb128 0x3b
+ 1794 014d 0B       		.uleb128 0xb
+ 1795 014e 27       		.uleb128 0x27
+ 1796 014f 19       		.uleb128 0x19
+ 1797 0150 49       		.uleb128 0x49
+ 1798 0151 13       		.uleb128 0x13
+ 1799 0152 11       		.uleb128 0x11
+ 1800 0153 01       		.uleb128 0x1
+ 1801 0154 12       		.uleb128 0x12
+ 1802 0155 06       		.uleb128 0x6
+ 1803 0156 40       		.uleb128 0x40
+ 1804 0157 18       		.uleb128 0x18
+ 1805 0158 9742     		.uleb128 0x2117
+ 1806 015a 19       		.uleb128 0x19
+ 1807 015b 01       		.uleb128 0x1
+ 1808 015c 13       		.uleb128 0x13
+ 1809 015d 00       		.byte	0
+ 1810 015e 00       		.byte	0
+ 1811 015f 1B       		.uleb128 0x1b
+ 1812 0160 05       		.uleb128 0x5
+ 1813 0161 00       		.byte	0
+ 1814 0162 03       		.uleb128 0x3
+ 1815 0163 0E       		.uleb128 0xe
+ 1816 0164 3A       		.uleb128 0x3a
+ 1817 0165 0B       		.uleb128 0xb
+ 1818 0166 3B       		.uleb128 0x3b
+ 1819 0167 0B       		.uleb128 0xb
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 36
+
+
+ 1820 0168 49       		.uleb128 0x49
+ 1821 0169 13       		.uleb128 0x13
+ 1822 016a 02       		.uleb128 0x2
+ 1823 016b 17       		.uleb128 0x17
+ 1824 016c 00       		.byte	0
+ 1825 016d 00       		.byte	0
+ 1826 016e 1C       		.uleb128 0x1c
+ 1827 016f 34       		.uleb128 0x34
+ 1828 0170 00       		.byte	0
+ 1829 0171 03       		.uleb128 0x3
+ 1830 0172 0E       		.uleb128 0xe
+ 1831 0173 3A       		.uleb128 0x3a
+ 1832 0174 0B       		.uleb128 0xb
+ 1833 0175 3B       		.uleb128 0x3b
+ 1834 0176 0B       		.uleb128 0xb
+ 1835 0177 49       		.uleb128 0x49
+ 1836 0178 13       		.uleb128 0x13
+ 1837 0179 02       		.uleb128 0x2
+ 1838 017a 18       		.uleb128 0x18
+ 1839 017b 00       		.byte	0
+ 1840 017c 00       		.byte	0
+ 1841 017d 1D       		.uleb128 0x1d
+ 1842 017e 34       		.uleb128 0x34
+ 1843 017f 00       		.byte	0
+ 1844 0180 03       		.uleb128 0x3
+ 1845 0181 0E       		.uleb128 0xe
+ 1846 0182 3A       		.uleb128 0x3a
+ 1847 0183 0B       		.uleb128 0xb
+ 1848 0184 3B       		.uleb128 0x3b
+ 1849 0185 0B       		.uleb128 0xb
+ 1850 0186 49       		.uleb128 0x49
+ 1851 0187 13       		.uleb128 0x13
+ 1852 0188 02       		.uleb128 0x2
+ 1853 0189 17       		.uleb128 0x17
+ 1854 018a 00       		.byte	0
+ 1855 018b 00       		.byte	0
+ 1856 018c 1E       		.uleb128 0x1e
+ 1857 018d 34       		.uleb128 0x34
+ 1858 018e 00       		.byte	0
+ 1859 018f 03       		.uleb128 0x3
+ 1860 0190 08       		.uleb128 0x8
+ 1861 0191 3A       		.uleb128 0x3a
+ 1862 0192 0B       		.uleb128 0xb
+ 1863 0193 3B       		.uleb128 0x3b
+ 1864 0194 0B       		.uleb128 0xb
+ 1865 0195 49       		.uleb128 0x49
+ 1866 0196 13       		.uleb128 0x13
+ 1867 0197 02       		.uleb128 0x2
+ 1868 0198 17       		.uleb128 0x17
+ 1869 0199 00       		.byte	0
+ 1870 019a 00       		.byte	0
+ 1871 019b 1F       		.uleb128 0x1f
+ 1872 019c 0B       		.uleb128 0xb
+ 1873 019d 01       		.byte	0x1
+ 1874 019e 11       		.uleb128 0x11
+ 1875 019f 01       		.uleb128 0x1
+ 1876 01a0 12       		.uleb128 0x12
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 37
+
+
+ 1877 01a1 06       		.uleb128 0x6
+ 1878 01a2 01       		.uleb128 0x1
+ 1879 01a3 13       		.uleb128 0x13
+ 1880 01a4 00       		.byte	0
+ 1881 01a5 00       		.byte	0
+ 1882 01a6 20       		.uleb128 0x20
+ 1883 01a7 0B       		.uleb128 0xb
+ 1884 01a8 01       		.byte	0x1
+ 1885 01a9 55       		.uleb128 0x55
+ 1886 01aa 17       		.uleb128 0x17
+ 1887 01ab 00       		.byte	0
+ 1888 01ac 00       		.byte	0
+ 1889 01ad 21       		.uleb128 0x21
+ 1890 01ae 26       		.uleb128 0x26
+ 1891 01af 00       		.byte	0
+ 1892 01b0 49       		.uleb128 0x49
+ 1893 01b1 13       		.uleb128 0x13
+ 1894 01b2 00       		.byte	0
+ 1895 01b3 00       		.byte	0
+ 1896 01b4 22       		.uleb128 0x22
+ 1897 01b5 34       		.uleb128 0x34
+ 1898 01b6 00       		.byte	0
+ 1899 01b7 03       		.uleb128 0x3
+ 1900 01b8 0E       		.uleb128 0xe
+ 1901 01b9 3A       		.uleb128 0x3a
+ 1902 01ba 0B       		.uleb128 0xb
+ 1903 01bb 3B       		.uleb128 0x3b
+ 1904 01bc 0B       		.uleb128 0xb
+ 1905 01bd 49       		.uleb128 0x49
+ 1906 01be 13       		.uleb128 0x13
+ 1907 01bf 3F       		.uleb128 0x3f
+ 1908 01c0 19       		.uleb128 0x19
+ 1909 01c1 3C       		.uleb128 0x3c
+ 1910 01c2 19       		.uleb128 0x19
+ 1911 01c3 00       		.byte	0
+ 1912 01c4 00       		.byte	0
+ 1913 01c5 23       		.uleb128 0x23
+ 1914 01c6 34       		.uleb128 0x34
+ 1915 01c7 00       		.byte	0
+ 1916 01c8 03       		.uleb128 0x3
+ 1917 01c9 0E       		.uleb128 0xe
+ 1918 01ca 3A       		.uleb128 0x3a
+ 1919 01cb 0B       		.uleb128 0xb
+ 1920 01cc 3B       		.uleb128 0x3b
+ 1921 01cd 05       		.uleb128 0x5
+ 1922 01ce 49       		.uleb128 0x49
+ 1923 01cf 13       		.uleb128 0x13
+ 1924 01d0 3F       		.uleb128 0x3f
+ 1925 01d1 19       		.uleb128 0x19
+ 1926 01d2 3C       		.uleb128 0x3c
+ 1927 01d3 19       		.uleb128 0x19
+ 1928 01d4 00       		.byte	0
+ 1929 01d5 00       		.byte	0
+ 1930 01d6 24       		.uleb128 0x24
+ 1931 01d7 35       		.uleb128 0x35
+ 1932 01d8 00       		.byte	0
+ 1933 01d9 49       		.uleb128 0x49
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 38
+
+
+ 1934 01da 13       		.uleb128 0x13
+ 1935 01db 00       		.byte	0
+ 1936 01dc 00       		.byte	0
+ 1937 01dd 25       		.uleb128 0x25
+ 1938 01de 2E       		.uleb128 0x2e
+ 1939 01df 00       		.byte	0
+ 1940 01e0 3F       		.uleb128 0x3f
+ 1941 01e1 19       		.uleb128 0x19
+ 1942 01e2 3C       		.uleb128 0x3c
+ 1943 01e3 19       		.uleb128 0x19
+ 1944 01e4 6E       		.uleb128 0x6e
+ 1945 01e5 0E       		.uleb128 0xe
+ 1946 01e6 03       		.uleb128 0x3
+ 1947 01e7 0E       		.uleb128 0xe
+ 1948 01e8 3A       		.uleb128 0x3a
+ 1949 01e9 0B       		.uleb128 0xb
+ 1950 01ea 3B       		.uleb128 0x3b
+ 1951 01eb 0B       		.uleb128 0xb
+ 1952 01ec 00       		.byte	0
+ 1953 01ed 00       		.byte	0
+ 1954 01ee 26       		.uleb128 0x26
+ 1955 01ef 2E       		.uleb128 0x2e
+ 1956 01f0 00       		.byte	0
+ 1957 01f1 3F       		.uleb128 0x3f
+ 1958 01f2 19       		.uleb128 0x19
+ 1959 01f3 3C       		.uleb128 0x3c
+ 1960 01f4 19       		.uleb128 0x19
+ 1961 01f5 6E       		.uleb128 0x6e
+ 1962 01f6 0E       		.uleb128 0xe
+ 1963 01f7 03       		.uleb128 0x3
+ 1964 01f8 0E       		.uleb128 0xe
+ 1965 01f9 00       		.byte	0
+ 1966 01fa 00       		.byte	0
+ 1967 01fb 00       		.byte	0
+ 1968              		.section	.debug_loc,"",%progbits
+ 1969              	.Ldebug_loc0:
+ 1970              	.LLST0:
+ 1971 0000 00000000 		.4byte	.LVL0
+ 1972 0004 09000000 		.4byte	.LVL1-1
+ 1973 0008 0100     		.2byte	0x1
+ 1974 000a 50       		.byte	0x50
+ 1975 000b 09000000 		.4byte	.LVL1-1
+ 1976 000f 92000000 		.4byte	.LVL19
+ 1977 0013 0100     		.2byte	0x1
+ 1978 0015 54       		.byte	0x54
+ 1979 0016 92000000 		.4byte	.LVL19
+ 1980 001a B8000000 		.4byte	.LFE117
+ 1981 001e 0400     		.2byte	0x4
+ 1982 0020 F3       		.byte	0xf3
+ 1983 0021 01       		.uleb128 0x1
+ 1984 0022 50       		.byte	0x50
+ 1985 0023 9F       		.byte	0x9f
+ 1986 0024 00000000 		.4byte	0
+ 1987 0028 00000000 		.4byte	0
+ 1988              	.LLST1:
+ 1989 002c 00000000 		.4byte	.LVL20
+ 1990 0030 26000000 		.4byte	.LVL23
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 39
+
+
+ 1991 0034 0100     		.2byte	0x1
+ 1992 0036 50       		.byte	0x50
+ 1993 0037 26000000 		.4byte	.LVL23
+ 1994 003b 3C010000 		.4byte	.LVL45
+ 1995 003f 0100     		.2byte	0x1
+ 1996 0041 57       		.byte	0x57
+ 1997 0042 3C010000 		.4byte	.LVL45
+ 1998 0046 4E010000 		.4byte	.LVL46
+ 1999 004a 0100     		.2byte	0x1
+ 2000 004c 50       		.byte	0x50
+ 2001 004d 4E010000 		.4byte	.LVL46
+ 2002 0051 6A010000 		.4byte	.LVL47
+ 2003 0055 0100     		.2byte	0x1
+ 2004 0057 57       		.byte	0x57
+ 2005 0058 6A010000 		.4byte	.LVL47
+ 2006 005c 72010000 		.4byte	.LFE118
+ 2007 0060 0400     		.2byte	0x4
+ 2008 0062 F3       		.byte	0xf3
+ 2009 0063 01       		.uleb128 0x1
+ 2010 0064 50       		.byte	0x50
+ 2011 0065 9F       		.byte	0x9f
+ 2012 0066 00000000 		.4byte	0
+ 2013 006a 00000000 		.4byte	0
+ 2014              	.LLST2:
+ 2015 006e 00000000 		.4byte	.LVL20
+ 2016 0072 24000000 		.4byte	.LVL22
+ 2017 0076 0100     		.2byte	0x1
+ 2018 0078 51       		.byte	0x51
+ 2019 0079 24000000 		.4byte	.LVL22
+ 2020 007d 3C010000 		.4byte	.LVL45
+ 2021 0081 0100     		.2byte	0x1
+ 2022 0083 55       		.byte	0x55
+ 2023 0084 3C010000 		.4byte	.LVL45
+ 2024 0088 4E010000 		.4byte	.LVL46
+ 2025 008c 0100     		.2byte	0x1
+ 2026 008e 51       		.byte	0x51
+ 2027 008f 4E010000 		.4byte	.LVL46
+ 2028 0093 6A010000 		.4byte	.LVL47
+ 2029 0097 0100     		.2byte	0x1
+ 2030 0099 55       		.byte	0x55
+ 2031 009a 6A010000 		.4byte	.LVL47
+ 2032 009e 72010000 		.4byte	.LFE118
+ 2033 00a2 0400     		.2byte	0x4
+ 2034 00a4 F3       		.byte	0xf3
+ 2035 00a5 01       		.uleb128 0x1
+ 2036 00a6 51       		.byte	0x51
+ 2037 00a7 9F       		.byte	0x9f
+ 2038 00a8 00000000 		.4byte	0
+ 2039 00ac 00000000 		.4byte	0
+ 2040              	.LLST3:
+ 2041 00b0 00000000 		.4byte	.LVL20
+ 2042 00b4 29000000 		.4byte	.LVL24-1
+ 2043 00b8 0100     		.2byte	0x1
+ 2044 00ba 52       		.byte	0x52
+ 2045 00bb 29000000 		.4byte	.LVL24-1
+ 2046 00bf 3C010000 		.4byte	.LVL45
+ 2047 00c3 0100     		.2byte	0x1
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 40
+
+
+ 2048 00c5 58       		.byte	0x58
+ 2049 00c6 3C010000 		.4byte	.LVL45
+ 2050 00ca 4E010000 		.4byte	.LVL46
+ 2051 00ce 0100     		.2byte	0x1
+ 2052 00d0 52       		.byte	0x52
+ 2053 00d1 4E010000 		.4byte	.LVL46
+ 2054 00d5 6A010000 		.4byte	.LVL47
+ 2055 00d9 0100     		.2byte	0x1
+ 2056 00db 58       		.byte	0x58
+ 2057 00dc 6A010000 		.4byte	.LVL47
+ 2058 00e0 72010000 		.4byte	.LFE118
+ 2059 00e4 0400     		.2byte	0x4
+ 2060 00e6 F3       		.byte	0xf3
+ 2061 00e7 01       		.uleb128 0x1
+ 2062 00e8 52       		.byte	0x52
+ 2063 00e9 9F       		.byte	0x9f
+ 2064 00ea 00000000 		.4byte	0
+ 2065 00ee 00000000 		.4byte	0
+ 2066              	.LLST4:
+ 2067 00f2 22000000 		.4byte	.LVL21
+ 2068 00f6 74000000 		.4byte	.LVL28
+ 2069 00fa 0100     		.2byte	0x1
+ 2070 00fc 54       		.byte	0x54
+ 2071 00fd A0000000 		.4byte	.LVL32
+ 2072 0101 D0000000 		.4byte	.LVL35
+ 2073 0105 0100     		.2byte	0x1
+ 2074 0107 54       		.byte	0x54
+ 2075 0108 32010000 		.4byte	.LVL44
+ 2076 010c 3C010000 		.4byte	.LVL45
+ 2077 0110 0100     		.2byte	0x1
+ 2078 0112 54       		.byte	0x54
+ 2079 0113 4E010000 		.4byte	.LVL46
+ 2080 0117 6A010000 		.4byte	.LVL47
+ 2081 011b 0100     		.2byte	0x1
+ 2082 011d 54       		.byte	0x54
+ 2083 011e 00000000 		.4byte	0
+ 2084 0122 00000000 		.4byte	0
+ 2085              	.LLST5:
+ 2086 0126 42000000 		.4byte	.LVL25
+ 2087 012a 54000000 		.4byte	.LVL26
+ 2088 012e 0100     		.2byte	0x1
+ 2089 0130 53       		.byte	0x53
+ 2090 0131 54000000 		.4byte	.LVL26
+ 2091 0135 5F000000 		.4byte	.LVL27-1
+ 2092 0139 0800     		.2byte	0x8
+ 2093 013b 91       		.byte	0x91
+ 2094 013c 58       		.sleb128 -40
+ 2095 013d 06       		.byte	0x6
+ 2096 013e 91       		.byte	0x91
+ 2097 013f 54       		.sleb128 -44
+ 2098 0140 06       		.byte	0x6
+ 2099 0141 1C       		.byte	0x1c
+ 2100 0142 9F       		.byte	0x9f
+ 2101 0143 AC000000 		.4byte	.LVL33
+ 2102 0147 B7000000 		.4byte	.LVL34-1
+ 2103 014b 0800     		.2byte	0x8
+ 2104 014d 91       		.byte	0x91
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 41
+
+
+ 2105 014e 58       		.sleb128 -40
+ 2106 014f 06       		.byte	0x6
+ 2107 0150 91       		.byte	0x91
+ 2108 0151 54       		.sleb128 -44
+ 2109 0152 06       		.byte	0x6
+ 2110 0153 1C       		.byte	0x1c
+ 2111 0154 9F       		.byte	0x9f
+ 2112 0155 32010000 		.4byte	.LVL44
+ 2113 0159 3C010000 		.4byte	.LVL45
+ 2114 015d 0800     		.2byte	0x8
+ 2115 015f 91       		.byte	0x91
+ 2116 0160 58       		.sleb128 -40
+ 2117 0161 06       		.byte	0x6
+ 2118 0162 91       		.byte	0x91
+ 2119 0163 54       		.sleb128 -44
+ 2120 0164 06       		.byte	0x6
+ 2121 0165 1C       		.byte	0x1c
+ 2122 0166 9F       		.byte	0x9f
+ 2123 0167 00000000 		.4byte	0
+ 2124 016b 00000000 		.4byte	0
+ 2125              	.LLST6:
+ 2126 016f 54000000 		.4byte	.LVL26
+ 2127 0173 5F000000 		.4byte	.LVL27-1
+ 2128 0177 0100     		.2byte	0x1
+ 2129 0179 53       		.byte	0x53
+ 2130 017a AC000000 		.4byte	.LVL33
+ 2131 017e B7000000 		.4byte	.LVL34-1
+ 2132 0182 0100     		.2byte	0x1
+ 2133 0184 53       		.byte	0x53
+ 2134 0185 32010000 		.4byte	.LVL44
+ 2135 0189 3C010000 		.4byte	.LVL45
+ 2136 018d 0100     		.2byte	0x1
+ 2137 018f 53       		.byte	0x53
+ 2138 0190 00000000 		.4byte	0
+ 2139 0194 00000000 		.4byte	0
+ 2140              	.LLST7:
+ 2141 0198 74000000 		.4byte	.LVL28
+ 2142 019c 86000000 		.4byte	.LVL30
+ 2143 01a0 0100     		.2byte	0x1
+ 2144 01a2 54       		.byte	0x54
+ 2145 01a3 00000000 		.4byte	0
+ 2146 01a7 00000000 		.4byte	0
+ 2147              	.LLST8:
+ 2148 01ab D0000000 		.4byte	.LVL35
+ 2149 01af 0E010000 		.4byte	.LVL41
+ 2150 01b3 0100     		.2byte	0x1
+ 2151 01b5 56       		.byte	0x56
+ 2152 01b6 10010000 		.4byte	.LVL42
+ 2153 01ba 32010000 		.4byte	.LVL44
+ 2154 01be 0100     		.2byte	0x1
+ 2155 01c0 56       		.byte	0x56
+ 2156 01c1 00000000 		.4byte	0
+ 2157 01c5 00000000 		.4byte	0
+ 2158              	.LLST9:
+ 2159 01c9 EA000000 		.4byte	.LVL37
+ 2160 01cd FC000000 		.4byte	.LVL39
+ 2161 01d1 0100     		.2byte	0x1
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 42
+
+
+ 2162 01d3 54       		.byte	0x54
+ 2163 01d4 00000000 		.4byte	0
+ 2164 01d8 00000000 		.4byte	0
+ 2165              		.section	.debug_aranges,"",%progbits
+ 2166 0000 24000000 		.4byte	0x24
+ 2167 0004 0200     		.2byte	0x2
+ 2168 0006 00000000 		.4byte	.Ldebug_info0
+ 2169 000a 04       		.byte	0x4
+ 2170 000b 00       		.byte	0
+ 2171 000c 0000     		.2byte	0
+ 2172 000e 0000     		.2byte	0
+ 2173 0010 00000000 		.4byte	.LFB117
+ 2174 0014 B8000000 		.4byte	.LFE117-.LFB117
+ 2175 0018 00000000 		.4byte	.LFB118
+ 2176 001c 72010000 		.4byte	.LFE118-.LFB118
+ 2177 0020 00000000 		.4byte	0
+ 2178 0024 00000000 		.4byte	0
+ 2179              		.section	.debug_ranges,"",%progbits
+ 2180              	.Ldebug_ranges0:
+ 2181 0000 D0000000 		.4byte	.LBB4
+ 2182 0004 0C010000 		.4byte	.LBE4
+ 2183 0008 12010000 		.4byte	.LBB5
+ 2184 000c 1E010000 		.4byte	.LBE5
+ 2185 0010 00000000 		.4byte	0
+ 2186 0014 00000000 		.4byte	0
+ 2187 0018 00000000 		.4byte	.LFB117
+ 2188 001c B8000000 		.4byte	.LFE117
+ 2189 0020 00000000 		.4byte	.LFB118
+ 2190 0024 72010000 		.4byte	.LFE118
+ 2191 0028 00000000 		.4byte	0
+ 2192 002c 00000000 		.4byte	0
+ 2193              		.section	.debug_line,"",%progbits
+ 2194              	.Ldebug_line0:
+ 2195 0000 7A030000 		.section	.debug_str,"MS",%progbits,1
+ 2195      0200E602 
+ 2195      00000201 
+ 2195      FB0E0D00 
+ 2195      01010101 
+ 2196              	.LASF24:
+ 2197 0000 52435F45 		.ascii	"RC_ERROR_TIME_OUT\000"
+ 2197      52524F52 
+ 2197      5F54494D 
+ 2197      455F4F55 
+ 2197      5400
+ 2198              	.LASF104:
+ 2199 0012 44726177 		.ascii	"Drawer_t\000"
+ 2199      65725F74 
+ 2199      00
+ 2200              	.LASF97:
+ 2201 001b 44524157 		.ascii	"DRAWER_CMD_DRAW\000"
+ 2201      45525F43 
+ 2201      4D445F44 
+ 2201      52415700 
+ 2202              	.LASF117:
+ 2203 002b 73747263 		.ascii	"strcmp\000"
+ 2203      6D7000
+ 2204              	.LASF36:
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 43
+
+
+ 2205 0032 52435F45 		.ascii	"RC_ERROR_INVALID_STATE\000"
+ 2205      52524F52 
+ 2205      5F494E56 
+ 2205      414C4944 
+ 2205      5F535441 
+ 2206              	.LASF52:
+ 2207 0049 4D414745 		.ascii	"MAGENTA\000"
+ 2207      4E544100 
+ 2208              	.LASF105:
+ 2209 0051 6D736749 		.ascii	"msgId\000"
+ 2209      6400
+ 2210              	.LASF50:
+ 2211 0057 47524544 		.ascii	"GRED\000"
+ 2211      00
+ 2212              	.LASF39:
+ 2213 005c 52435F74 		.ascii	"RC_t\000"
+ 2213      00
+ 2214              	.LASF28:
+ 2215 0061 52435F45 		.ascii	"RC_ERROR_WRITE_ONLY\000"
+ 2215      52524F52 
+ 2215      5F575249 
+ 2215      54455F4F 
+ 2215      4E4C5900 
+ 2216              	.LASF72:
+ 2217 0075 74797065 		.ascii	"type\000"
+ 2217      00
+ 2218              	.LASF32:
+ 2219 007a 52435F45 		.ascii	"RC_ERROR_NOT_MATCH\000"
+ 2219      52524F52 
+ 2219      5F4E4F54 
+ 2219      5F4D4154 
+ 2219      434800
+ 2220              	.LASF11:
+ 2221 008d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2221      206C6F6E 
+ 2221      6720756E 
+ 2221      7369676E 
+ 2221      65642069 
+ 2222              	.LASF34:
+ 2223 00a4 52435F45 		.ascii	"RC_ERROR_BAD_DATA\000"
+ 2223      52524F52 
+ 2223      5F424144 
+ 2223      5F444154 
+ 2223      4100
+ 2224              	.LASF103:
+ 2225 00b6 64617461 		.ascii	"data\000"
+ 2225      00
+ 2226              	.LASF116:
+ 2227 00bb 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 2227      52784275 
+ 2227      66666572 
+ 2227      00
+ 2228              	.LASF46:
+ 2229 00c8 57484954 		.ascii	"WHITE\000"
+ 2229      4500
+ 2230              	.LASF10:
+ 2231 00ce 6C6F6E67 		.ascii	"long long int\000"
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 44
+
+
+ 2231      206C6F6E 
+ 2231      6720696E 
+ 2231      7400
+ 2232              	.LASF0:
+ 2233 00dc 7369676E 		.ascii	"signed char\000"
+ 2233      65642063 
+ 2233      68617200 
+ 2234              	.LASF17:
+ 2235 00e8 52435F45 		.ascii	"RC_ERROR_MEMORY\000"
+ 2235      52524F52 
+ 2235      5F4D454D 
+ 2235      4F525900 
+ 2236              	.LASF109:
+ 2237 00f8 74656D70 		.ascii	"tempBuf\000"
+ 2237      42756600 
+ 2238              	.LASF98:
+ 2239 0100 44726177 		.ascii	"Drawer_commandType_t\000"
+ 2239      65725F63 
+ 2239      6F6D6D61 
+ 2239      6E645479 
+ 2239      70655F74 
+ 2240              	.LASF87:
+ 2241 0115 50617273 		.ascii	"Parser_t\000"
+ 2241      65725F74 
+ 2241      00
+ 2242              	.LASF108:
+ 2243 011e 7374724C 		.ascii	"strLenght\000"
+ 2243      656E6768 
+ 2243      7400
+ 2244              	.LASF22:
+ 2245 0128 52435F45 		.ascii	"RC_ERROR_BUFFER_EMTPY\000"
+ 2245      52524F52 
+ 2245      5F425546 
+ 2245      4645525F 
+ 2245      454D5450 
+ 2246              	.LASF6:
+ 2247 013e 6C6F6E67 		.ascii	"long int\000"
+ 2247      20696E74 
+ 2247      00
+ 2248              	.LASF124:
+ 2249 0147 44524157 		.ascii	"DRAWER_getNextDrawCommand\000"
+ 2249      45525F67 
+ 2249      65744E65 
+ 2249      78744472 
+ 2249      6177436F 
+ 2250              	.LASF56:
+ 2251 0161 42524F57 		.ascii	"BROWN\000"
+ 2251      4E00
+ 2252              	.LASF125:
+ 2253 0167 6D656D63 		.ascii	"memcpy\000"
+ 2253      707900
+ 2254              	.LASF55:
+ 2255 016e 59454C4C 		.ascii	"YELLOW\000"
+ 2255      4F5700
+ 2256              	.LASF25:
+ 2257 0175 52435F45 		.ascii	"RC_ERROR_OPEN\000"
+ 2257      52524F52 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 45
+
+
+ 2257      5F4F5045 
+ 2257      4E00
+ 2258              	.LASF9:
+ 2259 0183 646F7562 		.ascii	"double\000"
+ 2259      6C6500
+ 2260              	.LASF77:
+ 2261 018a 6A736D6E 		.ascii	"jsmn_parser\000"
+ 2261      5F706172 
+ 2261      73657200 
+ 2262              	.LASF71:
+ 2263 0196 6A736D6E 		.ascii	"jsmntype_t\000"
+ 2263      74797065 
+ 2263      5F7400
+ 2264              	.LASF112:
+ 2265 01a1 45455F6F 		.ascii	"EE_oo_IRQ_suspend_status\000"
+ 2265      6F5F4952 
+ 2265      515F7375 
+ 2265      7370656E 
+ 2265      645F7374 
+ 2266              	.LASF86:
+ 2267 01ba 746F6B65 		.ascii	"tokenCount\000"
+ 2267      6E436F75 
+ 2267      6E7400
+ 2268              	.LASF114:
+ 2269 01c5 45455F73 		.ascii	"EE_std_endcycle_next_tid\000"
+ 2269      74645F65 
+ 2269      6E646379 
+ 2269      636C655F 
+ 2269      6E657874 
+ 2270              	.LASF96:
+ 2271 01de 44524157 		.ascii	"DRAWER_CMD_COLOR\000"
+ 2271      45525F43 
+ 2271      4D445F43 
+ 2271      4F4C4F52 
+ 2271      00
+ 2272              	.LASF63:
+ 2273 01ef 4C475241 		.ascii	"LGRAY\000"
+ 2273      5900
+ 2274              	.LASF92:
+ 2275 01f5 45455F54 		.ascii	"EE_TID\000"
+ 2275      494400
+ 2276              	.LASF57:
+ 2277 01fc 42525245 		.ascii	"BRRED\000"
+ 2277      4400
+ 2278              	.LASF45:
+ 2279 0202 5446545F 		.ascii	"TFT_color_t\000"
+ 2279      636F6C6F 
+ 2279      725F7400 
+ 2280              	.LASF123:
+ 2281 020e 44524157 		.ascii	"DRAWER__colorFromToken\000"
+ 2281      45525F5F 
+ 2281      636F6C6F 
+ 2281      7246726F 
+ 2281      6D546F6B 
+ 2282              	.LASF41:
+ 2283 0225 756E7369 		.ascii	"unsigned int\000"
+ 2283      676E6564 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 46
+
+
+ 2283      20696E74 
+ 2283      00
+ 2284              	.LASF4:
+ 2285 0232 75696E74 		.ascii	"uint16_t\000"
+ 2285      31365F74 
+ 2285      00
+ 2286              	.LASF85:
+ 2287 023b 6E657874 		.ascii	"nextToken\000"
+ 2287      546F6B65 
+ 2287      6E00
+ 2288              	.LASF37:
+ 2289 0245 52435F45 		.ascii	"RC_ERROR_UNKNOWN\000"
+ 2289      52524F52 
+ 2289      5F554E4B 
+ 2289      4E4F574E 
+ 2289      00
+ 2290              	.LASF90:
+ 2291 0256 45455F55 		.ascii	"EE_UREG\000"
+ 2291      52454700 
+ 2292              	.LASF26:
+ 2293 025e 52435F45 		.ascii	"RC_ERROR_CHECKSUM\000"
+ 2293      52524F52 
+ 2293      5F434845 
+ 2293      434B5355 
+ 2293      4D00
+ 2294              	.LASF7:
+ 2295 0270 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2295      20756E73 
+ 2295      69676E65 
+ 2295      6420696E 
+ 2295      7400
+ 2296              	.LASF15:
+ 2297 0282 52435F45 		.ascii	"RC_ERROR_NULL\000"
+ 2297      52524F52 
+ 2297      5F4E554C 
+ 2297      4C00
+ 2298              	.LASF13:
+ 2299 0290 52435F53 		.ascii	"RC_SUCCESS\000"
+ 2299      55434345 
+ 2299      535300
+ 2300              	.LASF51:
+ 2301 029b 47424C55 		.ascii	"GBLUE\000"
+ 2301      4500
+ 2302              	.LASF93:
+ 2303 02a1 6D5F7369 		.ascii	"m_signal\000"
+ 2303      676E616C 
+ 2303      00
+ 2304              	.LASF74:
+ 2305 02aa 73697A65 		.ascii	"size\000"
+ 2305      00
+ 2306              	.LASF5:
+ 2307 02af 73686F72 		.ascii	"short unsigned int\000"
+ 2307      7420756E 
+ 2307      7369676E 
+ 2307      65642069 
+ 2307      6E7400
+ 2308              	.LASF111:
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 47
+
+
+ 2309 02c2 45455F6F 		.ascii	"EE_oo_IRQ_disable_count\000"
+ 2309      6F5F4952 
+ 2309      515F6469 
+ 2309      7361626C 
+ 2309      655F636F 
+ 2310              	.LASF21:
+ 2311 02da 52435F45 		.ascii	"RC_ERROR_BUFFER_FULL\000"
+ 2311      52524F52 
+ 2311      5F425546 
+ 2311      4645525F 
+ 2311      46554C4C 
+ 2312              	.LASF65:
+ 2313 02ef 4C42424C 		.ascii	"LBBLUE\000"
+ 2313      554500
+ 2314              	.LASF121:
+ 2315 02f6 64726177 		.ascii	"drawer.c\000"
+ 2315      65722E63 
+ 2315      00
+ 2316              	.LASF64:
+ 2317 02ff 4C475241 		.ascii	"LGRAYBLUE\000"
+ 2317      59424C55 
+ 2317      4500
+ 2318              	.LASF31:
+ 2319 0309 52435F45 		.ascii	"RC_ERROR_WRITE_FAILS\000"
+ 2319      52524F52 
+ 2319      5F575249 
+ 2319      54455F46 
+ 2319      41494C53 
+ 2320              	.LASF75:
+ 2321 031e 6A736D6E 		.ascii	"jsmntok_t\000"
+ 2321      746F6B5F 
+ 2321      7400
+ 2322              	.LASF40:
+ 2323 0328 5F5F696E 		.ascii	"__int32_t\000"
+ 2323      7433325F 
+ 2323      7400
+ 2324              	.LASF60:
+ 2325 0332 4C494748 		.ascii	"LIGHTBLUE\000"
+ 2325      54424C55 
+ 2325      4500
+ 2326              	.LASF81:
+ 2327 033c 70617273 		.ascii	"parser\000"
+ 2327      657200
+ 2328              	.LASF66:
+ 2329 0343 4A534D4E 		.ascii	"JSMN_UNDEFINED\000"
+ 2329      5F554E44 
+ 2329      4546494E 
+ 2329      454400
+ 2330              	.LASF118:
+ 2331 0352 50415253 		.ascii	"PARSER_getNextToken\000"
+ 2331      45525F67 
+ 2331      65744E65 
+ 2331      7874546F 
+ 2331      6B656E00 
+ 2332              	.LASF43:
+ 2333 0366 73697A65 		.ascii	"sizetype\000"
+ 2333      74797065 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 48
+
+
+ 2333      00
+ 2334              	.LASF82:
+ 2335 036f 636F6E74 		.ascii	"content\000"
+ 2335      656E7400 
+ 2336              	.LASF29:
+ 2337 0377 52435F45 		.ascii	"RC_ERROR_INVALID\000"
+ 2337      52524F52 
+ 2337      5F494E56 
+ 2337      414C4944 
+ 2337      00
+ 2338              	.LASF100:
+ 2339 0388 636F6F72 		.ascii	"coordinate\000"
+ 2339      64696E61 
+ 2339      746500
+ 2340              	.LASF113:
+ 2341 0393 45455F41 		.ascii	"EE_ApplicationMode\000"
+ 2341      70706C69 
+ 2341      63617469 
+ 2341      6F6E4D6F 
+ 2341      646500
+ 2342              	.LASF79:
+ 2343 03a6 746F6B73 		.ascii	"toksuper\000"
+ 2343      75706572 
+ 2343      00
+ 2344              	.LASF35:
+ 2345 03af 52435F45 		.ascii	"RC_ERROR_CANCELED\000"
+ 2345      52524F52 
+ 2345      5F43414E 
+ 2345      43454C45 
+ 2345      4400
+ 2346              	.LASF58:
+ 2347 03c1 47524159 		.ascii	"GRAY\000"
+ 2347      00
+ 2348              	.LASF20:
+ 2349 03c6 52435F45 		.ascii	"RC_ERROR_UNDERRUN\000"
+ 2349      52524F52 
+ 2349      5F554E44 
+ 2349      45525255 
+ 2349      4E00
+ 2350              	.LASF30:
+ 2351 03d8 52435F45 		.ascii	"RC_ERROR_READ_FAILS\000"
+ 2351      52524F52 
+ 2351      5F524541 
+ 2351      445F4641 
+ 2351      494C5300 
+ 2352              	.LASF80:
+ 2353 03ec 73506172 		.ascii	"sParser\000"
+ 2353      73657200 
+ 2354              	.LASF59:
+ 2355 03f4 4441524B 		.ascii	"DARKBLUE\000"
+ 2355      424C5545 
+ 2355      00
+ 2356              	.LASF14:
+ 2357 03fd 52435F45 		.ascii	"RC_ERROR\000"
+ 2357      52524F52 
+ 2357      00
+ 2358              	.LASF49:
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 49
+
+
+ 2359 0406 42524544 		.ascii	"BRED\000"
+ 2359      00
+ 2360              	.LASF8:
+ 2361 040b 666C6F61 		.ascii	"float\000"
+ 2361      7400
+ 2362              	.LASF83:
+ 2363 0411 746F6B65 		.ascii	"token\000"
+ 2363      6E00
+ 2364              	.LASF84:
+ 2365 0417 6E657874 		.ascii	"nextFreePos\000"
+ 2365      46726565 
+ 2365      506F7300 
+ 2366              	.LASF23:
+ 2367 0423 52435F45 		.ascii	"RC_ERROR_BUSY\000"
+ 2367      52524F52 
+ 2367      5F425553 
+ 2367      5900
+ 2368              	.LASF119:
+ 2369 0431 61746F69 		.ascii	"atoi\000"
+ 2369      00
+ 2370              	.LASF76:
+ 2371 0436 6A736D6E 		.ascii	"jsmntok\000"
+ 2371      746F6B00 
+ 2372              	.LASF44:
+ 2373 043e 696E7433 		.ascii	"int32_t\000"
+ 2373      325F7400 
+ 2374              	.LASF1:
+ 2375 0446 756E7369 		.ascii	"unsigned char\000"
+ 2375      676E6564 
+ 2375      20636861 
+ 2375      7200
+ 2376              	.LASF78:
+ 2377 0454 746F6B6E 		.ascii	"toknext\000"
+ 2377      65787400 
+ 2378              	.LASF110:
+ 2379 045c 6172724C 		.ascii	"arrLength\000"
+ 2379      656E6774 
+ 2379      6800
+ 2380              	.LASF101:
+ 2381 0466 73436F6D 		.ascii	"sCommand\000"
+ 2381      6D616E64 
+ 2381      00
+ 2382              	.LASF2:
+ 2383 046f 73686F72 		.ascii	"short int\000"
+ 2383      7420696E 
+ 2383      7400
+ 2384              	.LASF122:
+ 2385 0479 443A5C41 		.ascii	"D:\\AMA_EOS\\Lab_Assignments\\Assignment03\\AMA_EOS"
+ 2385      4D415F45 
+ 2385      4F535C4C 
+ 2385      61625F41 
+ 2385      73736967 
+ 2386 04a8 5F4C6162 		.ascii	"_Lab_3\\AMA_EOS_Lab_3.cydsn\000"
+ 2386      5F335C41 
+ 2386      4D415F45 
+ 2386      4F535F4C 
+ 2386      61625F33 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 50
+
+
+ 2387              	.LASF106:
+ 2388 04c3 73617665 		.ascii	"savedIndex\000"
+ 2388      64496E64 
+ 2388      657800
+ 2389              	.LASF120:
+ 2390 04ce 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2390      43313120 
+ 2390      352E342E 
+ 2390      31203230 
+ 2390      31363036 
+ 2391 0501 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2391      20726576 
+ 2391      6973696F 
+ 2391      6E203233 
+ 2391      37373135 
+ 2392 0534 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2392      66756E63 
+ 2392      74696F6E 
+ 2392      2D736563 
+ 2392      74696F6E 
+ 2393              	.LASF54:
+ 2394 055c 4359414E 		.ascii	"CYAN\000"
+ 2394      00
+ 2395              	.LASF16:
+ 2396 0561 52435F45 		.ascii	"RC_ERROR_ZERO\000"
+ 2396      52524F52 
+ 2396      5F5A4552 
+ 2396      4F00
+ 2397              	.LASF33:
+ 2398 056f 52435F45 		.ascii	"RC_ERROR_BAD_PARAM\000"
+ 2398      52524F52 
+ 2398      5F424144 
+ 2398      5F504152 
+ 2398      414D00
+ 2399              	.LASF27:
+ 2400 0582 52435F45 		.ascii	"RC_ERROR_READ_ONLY\000"
+ 2400      52524F52 
+ 2400      5F524541 
+ 2400      445F4F4E 
+ 2400      4C5900
+ 2401              	.LASF42:
+ 2402 0595 6C6F6E67 		.ascii	"long double\000"
+ 2402      20646F75 
+ 2402      626C6500 
+ 2403              	.LASF107:
+ 2404 05a1 6C656E67 		.ascii	"length\000"
+ 2404      746800
+ 2405              	.LASF99:
+ 2406 05a8 636F6C6F 		.ascii	"color\000"
+ 2406      7200
+ 2407              	.LASF12:
+ 2408 05ae 63686172 		.ascii	"char\000"
+ 2408      00
+ 2409              	.LASF47:
+ 2410 05b3 424C4143 		.ascii	"BLACK\000"
+ 2410      4B00
+ 2411              	.LASF48:
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 51
+
+
+ 2412 05b9 424C5545 		.ascii	"BLUE\000"
+ 2412      00
+ 2413              	.LASF102:
+ 2414 05be 636F6D6D 		.ascii	"command\000"
+ 2414      616E6400 
+ 2415              	.LASF53:
+ 2416 05c6 47524545 		.ascii	"GREEN\000"
+ 2416      4E00
+ 2417              	.LASF70:
+ 2418 05cc 4A534D4E 		.ascii	"JSMN_PRIMITIVE\000"
+ 2418      5F505249 
+ 2418      4D495449 
+ 2418      564500
+ 2419              	.LASF68:
+ 2420 05db 4A534D4E 		.ascii	"JSMN_ARRAY\000"
+ 2420      5F415252 
+ 2420      415900
+ 2421              	.LASF38:
+ 2422 05e6 52435F45 		.ascii	"RC_ERROR_NOT_IMPLEMENTED\000"
+ 2422      52524F52 
+ 2422      5F4E4F54 
+ 2422      5F494D50 
+ 2422      4C454D45 
+ 2423              	.LASF19:
+ 2424 05ff 52435F45 		.ascii	"RC_ERROR_OVERRUN\000"
+ 2424      52524F52 
+ 2424      5F4F5645 
+ 2424      5252554E 
+ 2424      00
+ 2425              	.LASF62:
+ 2426 0610 4C494748 		.ascii	"LIGHTGREEN\000"
+ 2426      54475245 
+ 2426      454E00
+ 2427              	.LASF94:
+ 2428 061b 6D5F6576 		.ascii	"m_event\000"
+ 2428      656E7400 
+ 2429              	.LASF95:
+ 2430 0623 4D53475F 		.ascii	"MSG_id_t\000"
+ 2430      69645F74 
+ 2430      00
+ 2431              	.LASF69:
+ 2432 062c 4A534D4E 		.ascii	"JSMN_STRING\000"
+ 2432      5F535452 
+ 2432      494E4700 
+ 2433              	.LASF115:
+ 2434 0638 45455F49 		.ascii	"EE_IRQ_nesting_level\000"
+ 2434      52515F6E 
+ 2434      65737469 
+ 2434      6E675F6C 
+ 2434      6576656C 
+ 2435              	.LASF89:
+ 2436 064d 45455F55 		.ascii	"EE_UINT32\000"
+ 2436      494E5433 
+ 2436      3200
+ 2437              	.LASF18:
+ 2438 0657 52435F45 		.ascii	"RC_ERROR_RANGE\000"
+ 2438      52524F52 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\ccMWEdw4.s 			page 52
+
+
+ 2438      5F52414E 
+ 2438      474500
+ 2439              	.LASF88:
+ 2440 0666 45455F49 		.ascii	"EE_INT32\000"
+ 2440      4E543332 
+ 2440      00
+ 2441              	.LASF3:
+ 2442 066f 75696E74 		.ascii	"uint8_t\000"
+ 2442      385F7400 
+ 2443              	.LASF67:
+ 2444 0677 4A534D4E 		.ascii	"JSMN_OBJECT\000"
+ 2444      5F4F424A 
+ 2444      45435400 
+ 2445              	.LASF61:
+ 2446 0683 47524159 		.ascii	"GRAYBLUE\000"
+ 2446      424C5545 
+ 2446      00
+ 2447              	.LASF73:
+ 2448 068c 73746172 		.ascii	"start\000"
+ 2448      7400
+ 2449              	.LASF91:
+ 2450 0692 45455F46 		.ascii	"EE_FREG\000"
+ 2450      52454700 
+ 2451              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -1,0 +1,6 @@
+D:\AMA_EOS\Lab_Assignments\Assignment03\AMA_EOS_Lab_3\AMA_EOS_Lab_3.cydsn\AMA_EOS_Lab_3.cyprj|54267993-1c96-48b6-a559-d7060aa40f0b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|47604a5d-6302-4587-8312-3add51f9224b
+C:\Users\agraw\OneDrive\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|887fc186-f68e-4acd-8671-9e9c09c8e80d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|86da74e9-4ec2-42d3-9f16-a91ad020feeb
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|c6d4146a-4513-40c9-a070-65ef5678d73f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|50bb0ad0-5fc7-4249-a53f-46cb65d6b19a

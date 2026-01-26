@@ -1,0 +1,2601 @@
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"ErikaOS_1_eecfg.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	EE_oo_autostart_task_data
+  20              		.comm	EE_ApplicationMode,4,4
+  21              		.global	EE_oo_action_ROM
+  22              		.comm	EE_oo_counter_object_RAM,16,4
+  23              		.global	EE_oo_counter_object_ROM
+  24              		.global	EE_ALARM_ID
+  25              		.global	EE_ALARM_NAME
+  26              		.global	EE_alarm_ROM
+  27              		.global	EE_counter_RAM
+  28              		.global	EE_counter_ROM
+  29              		.comm	EE_resource_oldceiling,8,4
+  30              		.global	EE_resource_ceiling
+  31              		.global	EE_resource_locked
+  32              		.global	EE_resource_stack
+  33              		.global	EE_th_resource_last
+  34              		.global	EE_th_is_extended
+  35              		.global	EE_th_waswaiting
+  36              		.global	EE_th_event_waitmask
+  37              		.global	EE_th_event_active
+  38              		.global	EE_th_terminate_nextask
+  39              		.global	EE_rq_free
+  40              		.comm	EE_rq_pairs_tid,16,4
+  41              		.global	EE_rq_pairs_next
+  42              		.global	EE_rq_link
+  43              		.global	EE_th_rnact_max
+  44              		.global	EE_th_rnact
+  45              		.global	EE_rq_bitmask
+  46              		.global	EE_rq_queues_tail
+  47              		.global	EE_rq_queues_head
+  48              		.global	EE_sys_ceiling
+  49              		.global	EE_stkfirst
+  50              		.global	EE_th_next
+  51              		.global	EE_th_status
+  52              		.global	EE_th_dispatch_prio
+  53              		.global	EE_EVENT_ID
+  54              		.global	EE_EVENT_NAME
+  55              		.global	EE_RESOURCE_ID
+  56              		.global	EE_RESOURCE_NAME
+  57              		.global	EE_TASK_NAME
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 2
+
+
+  58              		.global	EE_th_ready_prio
+  59              		.global	EE_terminate_real_th_body
+  60              		.comm	EE_terminate_data,16,4
+  61              		.global	EE_hal_thread_body
+  62              		.global	EE_cortex_mx_IRQ_tos
+  63              		.global	EE_cortex_mx_active_tos
+  64              		.global	EE_cortex_mx_system_tos
+  65              		.global	EE_std_thread_tos
+  66              		.comm	EE_cortex_mx_stack_9,512,4
+  67              		.comm	EE_cortex_mx_stack_3,200,4
+  68              		.comm	EE_cortex_mx_stack_2,400,4
+  69              		.section	.rodata
+  70              		.align	2
+  71              		.type	EE_oo_autostart_task_data, %object
+  72              		.size	EE_oo_autostart_task_data, 8
+  73              	EE_oo_autostart_task_data:
+  74 0000 01000000 		.word	1
+  75 0004 08000000 		.word	EE_oo_autostart_task_mode_OSDEFAULTAPPMODE
+  76              		.type	EE_oo_autostart_task_mode_OSDEFAULTAPPMODE, %object
+  77              		.size	EE_oo_autostart_task_mode_OSDEFAULTAPPMODE, 4
+  78              	EE_oo_autostart_task_mode_OSDEFAULTAPPMODE:
+  79 0008 00000000 		.space	4
+  80              		.type	EE_oo_action_ROM, %object
+  81              		.size	EE_oo_action_ROM, 20
+  82              	EE_oo_action_ROM:
+  83 000c 00       		.byte	0
+  84 000d 000000   		.space	3
+  85 0010 03000000 		.word	3
+  86 0014 00000000 		.word	0
+  87 0018 00000000 		.word	0
+  88 001c FFFFFFFF 		.word	-1
+  89              		.type	EE_oo_counter_object_ROM, %object
+  90              		.size	EE_oo_counter_object_ROM, 12
+  91              	EE_oo_counter_object_ROM:
+  92 0020 00000000 		.space	12
+  92      00000000 
+  92      00000000 
+  93              		.type	EE_ALARM_ID, %object
+  94              		.size	EE_ALARM_ID, 4
+  95              	EE_ALARM_ID:
+  96 002c 00000000 		.space	4
+  97              		.type	EE_alarm_ROM, %object
+  98              		.size	EE_alarm_ROM, 4
+  99              	EE_alarm_ROM:
+ 100 0030 00000000 		.space	4
+ 101              		.type	EE_counter_ROM, %object
+ 102              		.size	EE_counter_ROM, 12
+ 103              	EE_counter_ROM:
+ 104 0034 FFFFFF7F 		.word	2147483647
+ 105 0038 00000000 		.word	0
+ 106 003c 00000000 		.word	0
+ 107              		.type	EE_resource_ceiling, %object
+ 108              		.size	EE_resource_ceiling, 8
+ 109              	EE_resource_ceiling:
+ 110 0040 20000000 		.word	32
+ 111 0044 00000000 		.word	0
+ 112              		.type	EE_th_is_extended, %object
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 3
+
+
+ 113              		.size	EE_th_is_extended, 16
+ 114              	EE_th_is_extended:
+ 115 0048 00000000 		.word	0
+ 116 004c 01000000 		.word	1
+ 117 0050 01000000 		.word	1
+ 118 0054 00000000 		.word	0
+ 119              		.type	EE_th_rnact_max, %object
+ 120              		.size	EE_th_rnact_max, 16
+ 121              	EE_th_rnact_max:
+ 122 0058 01000000 		.word	1
+ 123 005c 01000000 		.word	1
+ 124 0060 01000000 		.word	1
+ 125 0064 01000000 		.word	1
+ 126              		.type	EE_th_dispatch_prio, %object
+ 127              		.size	EE_th_dispatch_prio, 16
+ 128              	EE_th_dispatch_prio:
+ 129 0068 01000000 		.word	1
+ 130 006c 20000000 		.word	32
+ 131 0070 10000000 		.word	16
+ 132 0074 01000000 		.word	1
+ 133              		.type	EE_EVENT_ID, %object
+ 134              		.size	EE_EVENT_ID, 8
+ 135              	EE_EVENT_ID:
+ 136 0078 01000000 		.word	1
+ 137 007c 02000000 		.word	2
+ 138              		.type	EE_RESOURCE_ID, %object
+ 139              		.size	EE_RESOURCE_ID, 8
+ 140              	EE_RESOURCE_ID:
+ 141 0080 00000000 		.word	0
+ 142 0084 01000000 		.word	1
+ 143              		.type	EE_th_ready_prio, %object
+ 144              		.size	EE_th_ready_prio, 16
+ 145              	EE_th_ready_prio:
+ 146 0088 01000000 		.word	1
+ 147 008c 20000000 		.word	32
+ 148 0090 10000000 		.word	16
+ 149 0094 01000000 		.word	1
+ 150              		.type	EE_terminate_real_th_body, %object
+ 151              		.size	EE_terminate_real_th_body, 16
+ 152              	EE_terminate_real_th_body:
+ 153 0098 00000000 		.word	FuncTask_Init
+ 154 009c 00000000 		.word	FuncTask_JSON
+ 155 00a0 00000000 		.word	FuncTask_TFT
+ 156 00a4 00000000 		.word	FuncTask_Background
+ 157              		.type	EE_hal_thread_body, %object
+ 158              		.size	EE_hal_thread_body, 16
+ 159              	EE_hal_thread_body:
+ 160 00a8 00000000 		.word	EE_oo_thread_stub
+ 161 00ac 00000000 		.word	EE_oo_thread_stub
+ 162 00b0 00000000 		.word	EE_oo_thread_stub
+ 163 00b4 00000000 		.word	EE_oo_thread_stub
+ 164              		.type	EE_std_thread_tos, %object
+ 165              		.size	EE_std_thread_tos, 20
+ 166              	EE_std_thread_tos:
+ 167 00b8 00000000 		.word	0
+ 168 00bc 00000000 		.word	0
+ 169 00c0 01000000 		.word	1
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 4
+
+
+ 170 00c4 02000000 		.word	2
+ 171 00c8 00000000 		.word	0
+ 172              		.data
+ 173              		.align	2
+ 174              		.type	EE_ALARM_NAME, %object
+ 175              		.size	EE_ALARM_NAME, 4
+ 176              	EE_ALARM_NAME:
+ 177 0000 00000000 		.word	.LC0
+ 178              		.type	EE_counter_RAM, %object
+ 179              		.size	EE_counter_RAM, 8
+ 180              	EE_counter_RAM:
+ 181 0004 00000000 		.word	0
+ 182 0008 FFFFFFFF 		.word	-1
+ 183              		.type	EE_resource_stack, %object
+ 184              		.size	EE_resource_stack, 8
+ 185              	EE_resource_stack:
+ 186 000c FFFFFFFF 		.word	-1
+ 187 0010 FFFFFFFF 		.word	-1
+ 188              		.type	EE_th_resource_last, %object
+ 189              		.size	EE_th_resource_last, 16
+ 190              	EE_th_resource_last:
+ 191 0014 FFFFFFFF 		.word	-1
+ 192 0018 FFFFFFFF 		.word	-1
+ 193 001c FFFFFFFF 		.word	-1
+ 194 0020 FFFFFFFF 		.word	-1
+ 195              		.type	EE_th_terminate_nextask, %object
+ 196              		.size	EE_th_terminate_nextask, 16
+ 197              	EE_th_terminate_nextask:
+ 198 0024 FFFFFFFF 		.word	-1
+ 199 0028 FFFFFFFF 		.word	-1
+ 200 002c FFFFFFFF 		.word	-1
+ 201 0030 FFFFFFFF 		.word	-1
+ 202              		.type	EE_rq_pairs_next, %object
+ 203              		.size	EE_rq_pairs_next, 16
+ 204              	EE_rq_pairs_next:
+ 205 0034 01000000 		.word	1
+ 206 0038 02000000 		.word	2
+ 207 003c 03000000 		.word	3
+ 208 0040 FFFFFFFF 		.word	-1
+ 209              		.type	EE_rq_link, %object
+ 210              		.size	EE_rq_link, 16
+ 211              	EE_rq_link:
+ 212 0044 00000000 		.word	0
+ 213 0048 05000000 		.word	5
+ 214 004c 04000000 		.word	4
+ 215 0050 00000000 		.word	0
+ 216              		.type	EE_th_rnact, %object
+ 217              		.size	EE_th_rnact, 16
+ 218              	EE_th_rnact:
+ 219 0054 01000000 		.word	1
+ 220 0058 01000000 		.word	1
+ 221 005c 01000000 		.word	1
+ 222 0060 01000000 		.word	1
+ 223              		.type	EE_rq_queues_tail, %object
+ 224              		.size	EE_rq_queues_tail, 64
+ 225              	EE_rq_queues_tail:
+ 226 0064 FFFFFFFF 		.word	-1
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 5
+
+
+ 227 0068 FFFFFFFF 		.word	-1
+ 228 006c FFFFFFFF 		.word	-1
+ 229 0070 FFFFFFFF 		.word	-1
+ 230 0074 FFFFFFFF 		.word	-1
+ 231 0078 FFFFFFFF 		.word	-1
+ 232 007c FFFFFFFF 		.word	-1
+ 233 0080 FFFFFFFF 		.word	-1
+ 234 0084 FFFFFFFF 		.word	-1
+ 235 0088 FFFFFFFF 		.word	-1
+ 236 008c FFFFFFFF 		.word	-1
+ 237 0090 FFFFFFFF 		.word	-1
+ 238 0094 FFFFFFFF 		.word	-1
+ 239 0098 FFFFFFFF 		.word	-1
+ 240 009c FFFFFFFF 		.word	-1
+ 241 00a0 FFFFFFFF 		.word	-1
+ 242              		.type	EE_rq_queues_head, %object
+ 243              		.size	EE_rq_queues_head, 64
+ 244              	EE_rq_queues_head:
+ 245 00a4 FFFFFFFF 		.word	-1
+ 246 00a8 FFFFFFFF 		.word	-1
+ 247 00ac FFFFFFFF 		.word	-1
+ 248 00b0 FFFFFFFF 		.word	-1
+ 249 00b4 FFFFFFFF 		.word	-1
+ 250 00b8 FFFFFFFF 		.word	-1
+ 251 00bc FFFFFFFF 		.word	-1
+ 252 00c0 FFFFFFFF 		.word	-1
+ 253 00c4 FFFFFFFF 		.word	-1
+ 254 00c8 FFFFFFFF 		.word	-1
+ 255 00cc FFFFFFFF 		.word	-1
+ 256 00d0 FFFFFFFF 		.word	-1
+ 257 00d4 FFFFFFFF 		.word	-1
+ 258 00d8 FFFFFFFF 		.word	-1
+ 259 00dc FFFFFFFF 		.word	-1
+ 260 00e0 FFFFFFFF 		.word	-1
+ 261              		.type	EE_stkfirst, %object
+ 262              		.size	EE_stkfirst, 4
+ 263              	EE_stkfirst:
+ 264 00e4 FFFFFFFF 		.word	-1
+ 265              		.type	EE_th_next, %object
+ 266              		.size	EE_th_next, 16
+ 267              	EE_th_next:
+ 268 00e8 FFFFFFFF 		.word	-1
+ 269 00ec FFFFFFFF 		.word	-1
+ 270 00f0 FFFFFFFF 		.word	-1
+ 271 00f4 FFFFFFFF 		.word	-1
+ 272              		.type	EE_th_status, %object
+ 273              		.size	EE_th_status, 16
+ 274              	EE_th_status:
+ 275 00f8 03000000 		.word	3
+ 276 00fc 03000000 		.word	3
+ 277 0100 03000000 		.word	3
+ 278 0104 03000000 		.word	3
+ 279              		.type	EE_EVENT_NAME, %object
+ 280              		.size	EE_EVENT_NAME, 8
+ 281              	EE_EVENT_NAME:
+ 282 0108 10000000 		.word	.LC1
+ 283 010c 18000000 		.word	.LC2
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 6
+
+
+ 284              		.type	EE_RESOURCE_NAME, %object
+ 285              		.size	EE_RESOURCE_NAME, 8
+ 286              	EE_RESOURCE_NAME:
+ 287 0110 20000000 		.word	.LC3
+ 288 0114 2C000000 		.word	.LC4
+ 289              		.type	EE_TASK_NAME, %object
+ 290              		.size	EE_TASK_NAME, 16
+ 291              	EE_TASK_NAME:
+ 292 0118 38000000 		.word	.LC5
+ 293 011c 44000000 		.word	.LC6
+ 294 0120 50000000 		.word	.LC7
+ 295 0124 5C000000 		.word	.LC8
+ 296              		.type	EE_cortex_mx_IRQ_tos, %object
+ 297              		.size	EE_cortex_mx_IRQ_tos, 4
+ 298              	EE_cortex_mx_IRQ_tos:
+ 299 0128 00020000 		.word	EE_cortex_mx_stack_9+512
+ 300              		.type	EE_cortex_mx_system_tos, %object
+ 301              		.size	EE_cortex_mx_system_tos, 12
+ 302              	EE_cortex_mx_system_tos:
+ 303 012c 00000000 		.word	0
+ 304 0130 68010000 		.word	EE_cortex_mx_stack_2+360
+ 305 0134 A0000000 		.word	EE_cortex_mx_stack_3+160
+ 306              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 307              		.align	2
+ 308              	.LC0:
+ 309 0000 616C726D 		.ascii	"alrm_Tick1ms\000"
+ 309      5F546963 
+ 309      6B316D73 
+ 309      00
+ 310 000d 000000   		.space	3
+ 311              	.LC1:
+ 312 0010 65765F6A 		.ascii	"ev_json\000"
+ 312      736F6E00 
+ 313              	.LC2:
+ 314 0018 65765F54 		.ascii	"ev_TFT\000"
+ 314      465400
+ 315 001f 00       		.space	1
+ 316              	.LC3:
+ 317 0020 7265735F 		.ascii	"res_msgBox\000"
+ 317      6D736742 
+ 317      6F7800
+ 318 002b 00       		.space	1
+ 319              	.LC4:
+ 320 002c 7265735F 		.ascii	"res_json\000"
+ 320      6A736F6E 
+ 320      00
+ 321 0035 000000   		.space	3
+ 322              	.LC5:
+ 323 0038 5461736B 		.ascii	"Task_Init\000"
+ 323      5F496E69 
+ 323      7400
+ 324 0042 0000     		.space	2
+ 325              	.LC6:
+ 326 0044 5461736B 		.ascii	"Task_JSON\000"
+ 326      5F4A534F 
+ 326      4E00
+ 327 004e 0000     		.space	2
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 7
+
+
+ 328              	.LC7:
+ 329 0050 5461736B 		.ascii	"Task_TFT\000"
+ 329      5F544654 
+ 329      00
+ 330 0059 000000   		.space	3
+ 331              	.LC8:
+ 332 005c 5461736B 		.ascii	"Task_Background\000"
+ 332      5F426163 
+ 332      6B67726F 
+ 332      756E6400 
+ 333              		.bss
+ 334              		.align	2
+ 335              		.type	EE_resource_locked, %object
+ 336              		.size	EE_resource_locked, 8
+ 337              	EE_resource_locked:
+ 338 0000 00000000 		.space	8
+ 338      00000000 
+ 339              		.type	EE_th_waswaiting, %object
+ 340              		.size	EE_th_waswaiting, 16
+ 341              	EE_th_waswaiting:
+ 342 0008 00000000 		.space	16
+ 342      00000000 
+ 342      00000000 
+ 342      00000000 
+ 343              		.type	EE_th_event_waitmask, %object
+ 344              		.size	EE_th_event_waitmask, 16
+ 345              	EE_th_event_waitmask:
+ 346 0018 00000000 		.space	16
+ 346      00000000 
+ 346      00000000 
+ 346      00000000 
+ 347              		.type	EE_th_event_active, %object
+ 348              		.size	EE_th_event_active, 16
+ 349              	EE_th_event_active:
+ 350 0028 00000000 		.space	16
+ 350      00000000 
+ 350      00000000 
+ 350      00000000 
+ 351              		.type	EE_rq_free, %object
+ 352              		.size	EE_rq_free, 4
+ 353              	EE_rq_free:
+ 354 0038 00000000 		.space	4
+ 355              		.type	EE_rq_bitmask, %object
+ 356              		.size	EE_rq_bitmask, 2
+ 357              	EE_rq_bitmask:
+ 358 003c 0000     		.space	2
+ 359 003e 0000     		.space	2
+ 360              		.type	EE_sys_ceiling, %object
+ 361              		.size	EE_sys_ceiling, 4
+ 362              	EE_sys_ceiling:
+ 363 0040 00000000 		.space	4
+ 364              		.type	EE_cortex_mx_active_tos, %object
+ 365              		.size	EE_cortex_mx_active_tos, 4
+ 366              	EE_cortex_mx_active_tos:
+ 367 0044 00000000 		.space	4
+ 368              		.text
+ 369              	.Letext0:
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 8
+
+
+ 370              		.file 1 "Generated_Source\\PSoC5\\ErikaOS_1_common_ee_types.inc"
+ 371              		.file 2 "Generated_Source\\PSoC5\\ErikaOS_1_cortex_mx_ee_cpu.inc"
+ 372              		.file 3 "Generated_Source\\PSoC5\\ErikaOS_1_ee_oo_common.inc"
+ 373              		.file 4 "Generated_Source\\PSoC5\\ErikaOS_1_common_ee_hal_structs.inc"
+ 374              		.file 5 "Generated_Source\\PSoC5\\ErikaOS_1_eecfg.c"
+ 375              		.file 6 "Generated_Source\\PSoC5\\ErikaOS_1_ee_oo_intfunc.inc"
+ 376              		.file 7 "Generated_Source\\PSoC5\\ErikaOS_1_cortex_mx_ee_context.inc"
+ 377              		.file 8 "Generated_Source\\PSoC5\\ErikaOS_1_common_ee_primitives.inc"
+ 378              		.section	.debug_info,"",%progbits
+ 379              	.Ldebug_info0:
+ 380 0000 8B090000 		.4byte	0x98b
+ 381 0004 0400     		.2byte	0x4
+ 382 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 383 000a 04       		.byte	0x4
+ 384 000b 01       		.uleb128 0x1
+ 385 000c 99050000 		.4byte	.LASF120
+ 386 0010 0C       		.byte	0xc
+ 387 0011 CF070000 		.4byte	.LASF121
+ 388 0015 59020000 		.4byte	.LASF122
+ 389 0019 00000000 		.4byte	.Ldebug_line0
+ 390 001d 02       		.uleb128 0x2
+ 391 001e 01       		.byte	0x1
+ 392 001f 06       		.byte	0x6
+ 393 0020 4B010000 		.4byte	.LASF0
+ 394 0024 02       		.uleb128 0x2
+ 395 0025 01       		.byte	0x1
+ 396 0026 08       		.byte	0x8
+ 397 0027 E2040000 		.4byte	.LASF1
+ 398 002b 02       		.uleb128 0x2
+ 399 002c 02       		.byte	0x2
+ 400 002d 05       		.byte	0x5
+ 401 002e 27050000 		.4byte	.LASF2
+ 402 0032 02       		.uleb128 0x2
+ 403 0033 02       		.byte	0x2
+ 404 0034 07       		.byte	0x7
+ 405 0035 08030000 		.4byte	.LASF3
+ 406 0039 02       		.uleb128 0x2
+ 407 003a 04       		.byte	0x4
+ 408 003b 05       		.byte	0x5
+ 409 003c E9010000 		.4byte	.LASF4
+ 410 0040 02       		.uleb128 0x2
+ 411 0041 04       		.byte	0x4
+ 412 0042 07       		.byte	0x7
+ 413 0043 C6020000 		.4byte	.LASF5
+ 414 0047 02       		.uleb128 0x2
+ 415 0048 08       		.byte	0x8
+ 416 0049 05       		.byte	0x5
+ 417 004a 3D010000 		.4byte	.LASF6
+ 418 004e 02       		.uleb128 0x2
+ 419 004f 08       		.byte	0x8
+ 420 0050 07       		.byte	0x7
+ 421 0051 9A000000 		.4byte	.LASF7
+ 422 0055 03       		.uleb128 0x3
+ 423 0056 04       		.byte	0x4
+ 424 0057 05       		.byte	0x5
+ 425 0058 696E7400 		.ascii	"int\000"
+ 426 005c 02       		.uleb128 0x2
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 9
+
+
+ 427 005d 04       		.byte	0x4
+ 428 005e 07       		.byte	0x7
+ 429 005f 4C020000 		.4byte	.LASF8
+ 430 0063 02       		.uleb128 0x2
+ 431 0064 08       		.byte	0x8
+ 432 0065 04       		.byte	0x4
+ 433 0066 30040000 		.4byte	.LASF9
+ 434 006a 04       		.uleb128 0x4
+ 435 006b AF040000 		.4byte	.LASF10
+ 436 006f 01       		.byte	0x1
+ 437 0070 52       		.byte	0x52
+ 438 0071 32000000 		.4byte	0x32
+ 439 0075 04       		.uleb128 0x4
+ 440 0076 B4070000 		.4byte	.LASF11
+ 441 007a 01       		.byte	0x1
+ 442 007b 53       		.byte	0x53
+ 443 007c 55000000 		.4byte	0x55
+ 444 0080 04       		.uleb128 0x4
+ 445 0081 AA070000 		.4byte	.LASF12
+ 446 0085 01       		.byte	0x1
+ 447 0086 54       		.byte	0x54
+ 448 0087 5C000000 		.4byte	0x5c
+ 449 008b 04       		.uleb128 0x4
+ 450 008c 3B080000 		.4byte	.LASF13
+ 451 0090 01       		.byte	0x1
+ 452 0091 64       		.byte	0x64
+ 453 0092 96000000 		.4byte	0x96
+ 454 0096 05       		.uleb128 0x5
+ 455 0097 04       		.byte	0x4
+ 456 0098 06       		.uleb128 0x6
+ 457 0099 04       		.byte	0x4
+ 458 009a 9E000000 		.4byte	0x9e
+ 459 009e 07       		.uleb128 0x7
+ 460 009f 04       		.uleb128 0x4
+ 461 00a0 B3030000 		.4byte	.LASF14
+ 462 00a4 01       		.byte	0x1
+ 463 00a5 70       		.byte	0x70
+ 464 00a6 98000000 		.4byte	0x98
+ 465 00aa 04       		.uleb128 0x4
+ 466 00ab 33060000 		.4byte	.LASF15
+ 467 00af 01       		.byte	0x1
+ 468 00b0 73       		.byte	0x73
+ 469 00b1 98000000 		.4byte	0x98
+ 470 00b5 04       		.uleb128 0x4
+ 471 00b6 7D000000 		.4byte	.LASF16
+ 472 00ba 02       		.byte	0x2
+ 473 00bb 4D       		.byte	0x4d
+ 474 00bc 80000000 		.4byte	0x80
+ 475 00c0 04       		.uleb128 0x4
+ 476 00c1 52040000 		.4byte	.LASF17
+ 477 00c5 02       		.byte	0x2
+ 478 00c6 4E       		.byte	0x4e
+ 479 00c7 75000000 		.4byte	0x75
+ 480 00cb 04       		.uleb128 0x4
+ 481 00cc 55080000 		.4byte	.LASF18
+ 482 00d0 02       		.byte	0x2
+ 483 00d1 4F       		.byte	0x4f
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 10
+
+
+ 484 00d2 80000000 		.4byte	0x80
+ 485 00d6 04       		.uleb128 0x4
+ 486 00d7 71000000 		.4byte	.LASF19
+ 487 00db 02       		.byte	0x2
+ 488 00dc 54       		.byte	0x54
+ 489 00dd B5000000 		.4byte	0xb5
+ 490 00e1 04       		.uleb128 0x4
+ 491 00e2 3F020000 		.4byte	.LASF20
+ 492 00e6 02       		.byte	0x2
+ 493 00e7 78       		.byte	0x78
+ 494 00e8 75000000 		.4byte	0x75
+ 495 00ec 08       		.uleb128 0x8
+ 496 00ed EF000000 		.4byte	.LASF61
+ 497 00f1 04       		.byte	0x4
+ 498 00f2 04       		.byte	0x4
+ 499 00f3 4D       		.byte	0x4d
+ 500 00f4 05010000 		.4byte	0x105
+ 501 00f8 09       		.uleb128 0x9
+ 502 00f9 14080000 		.4byte	.LASF28
+ 503 00fd 04       		.byte	0x4
+ 504 00fe 4E       		.byte	0x4e
+ 505 00ff 8B000000 		.4byte	0x8b
+ 506 0103 00       		.byte	0
+ 507 0104 00       		.byte	0
+ 508 0105 0A       		.uleb128 0xa
+ 509 0106 17040000 		.4byte	.LASF21
+ 510 010a 03       		.byte	0x3
+ 511 010b 1101     		.2byte	0x111
+ 512 010d 6A000000 		.4byte	0x6a
+ 513 0111 0A       		.uleb128 0xa
+ 514 0112 E6000000 		.4byte	.LASF22
+ 515 0116 03       		.byte	0x3
+ 516 0117 F701     		.2byte	0x1f7
+ 517 0119 E1000000 		.4byte	0xe1
+ 518 011d 0A       		.uleb128 0xa
+ 519 011e 6E010000 		.4byte	.LASF23
+ 520 0122 03       		.byte	0x3
+ 521 0123 2C02     		.2byte	0x22c
+ 522 0125 B5000000 		.4byte	0xb5
+ 523 0129 0A       		.uleb128 0xa
+ 524 012a 42000000 		.4byte	.LASF24
+ 525 012e 03       		.byte	0x3
+ 526 012f 3502     		.2byte	0x235
+ 527 0131 B5000000 		.4byte	0xb5
+ 528 0135 0A       		.uleb128 0xa
+ 529 0136 9E060000 		.4byte	.LASF25
+ 530 013a 03       		.byte	0x3
+ 531 013b 5D02     		.2byte	0x25d
+ 532 013d B5000000 		.4byte	0xb5
+ 533 0141 0A       		.uleb128 0xa
+ 534 0142 66000000 		.4byte	.LASF26
+ 535 0146 03       		.byte	0x3
+ 536 0147 6302     		.2byte	0x263
+ 537 0149 B5000000 		.4byte	0xb5
+ 538 014d 0A       		.uleb128 0xa
+ 539 014e C4030000 		.4byte	.LASF27
+ 540 0152 03       		.byte	0x3
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 11
+
+
+ 541 0153 6C02     		.2byte	0x26c
+ 542 0155 B5000000 		.4byte	0xb5
+ 543 0159 0B       		.uleb128 0xb
+ 544 015a 0C       		.byte	0xc
+ 545 015b 03       		.byte	0x3
+ 546 015c 7202     		.2byte	0x272
+ 547 015e 8A010000 		.4byte	0x18a
+ 548 0162 0C       		.uleb128 0xc
+ 549 0163 F6000000 		.4byte	.LASF29
+ 550 0167 03       		.byte	0x3
+ 551 0168 7302     		.2byte	0x273
+ 552 016a 29010000 		.4byte	0x129
+ 553 016e 00       		.byte	0
+ 554 016f 0C       		.uleb128 0xc
+ 555 0170 5A040000 		.4byte	.LASF30
+ 556 0174 03       		.byte	0x3
+ 557 0175 7402     		.2byte	0x274
+ 558 0177 29010000 		.4byte	0x129
+ 559 017b 04       		.byte	0x4
+ 560 017c 0C       		.uleb128 0xc
+ 561 017d 36020000 		.4byte	.LASF31
+ 562 0181 03       		.byte	0x3
+ 563 0182 7502     		.2byte	0x275
+ 564 0184 29010000 		.4byte	0x129
+ 565 0188 08       		.byte	0x8
+ 566 0189 00       		.byte	0
+ 567 018a 0A       		.uleb128 0xa
+ 568 018b 82050000 		.4byte	.LASF32
+ 569 018f 03       		.byte	0x3
+ 570 0190 7A02     		.2byte	0x27a
+ 571 0192 59010000 		.4byte	0x159
+ 572 0196 0B       		.uleb128 0xb
+ 573 0197 08       		.byte	0x8
+ 574 0198 03       		.byte	0x3
+ 575 0199 7D02     		.2byte	0x27d
+ 576 019b BA010000 		.4byte	0x1ba
+ 577 019f 0C       		.uleb128 0xc
+ 578 01a0 46020000 		.4byte	.LASF33
+ 579 01a4 03       		.byte	0x3
+ 580 01a5 7E02     		.2byte	0x27e
+ 581 01a7 29010000 		.4byte	0x129
+ 582 01ab 00       		.byte	0
+ 583 01ac 0C       		.uleb128 0xc
+ 584 01ad 98060000 		.4byte	.LASF34
+ 585 01b1 03       		.byte	0x3
+ 586 01b2 7F02     		.2byte	0x27f
+ 587 01b4 35010000 		.4byte	0x135
+ 588 01b8 04       		.byte	0x4
+ 589 01b9 00       		.byte	0
+ 590 01ba 0A       		.uleb128 0xa
+ 591 01bb AF010000 		.4byte	.LASF35
+ 592 01bf 03       		.byte	0x3
+ 593 01c0 8002     		.2byte	0x280
+ 594 01c2 96010000 		.4byte	0x196
+ 595 01c6 0D       		.uleb128 0xd
+ 596 01c7 01       		.byte	0x1
+ 597 01c8 24000000 		.4byte	0x24
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 12
+
+
+ 598 01cc 03       		.byte	0x3
+ 599 01cd 8A02     		.2byte	0x28a
+ 600 01cf E0010000 		.4byte	0x1e0
+ 601 01d3 0E       		.uleb128 0xe
+ 602 01d4 F0040000 		.4byte	.LASF36
+ 603 01d8 00       		.byte	0
+ 604 01d9 0E       		.uleb128 0xe
+ 605 01da B9040000 		.4byte	.LASF37
+ 606 01de 01       		.byte	0x1
+ 607 01df 00       		.byte	0
+ 608 01e0 0A       		.uleb128 0xa
+ 609 01e1 33030000 		.4byte	.LASF38
+ 610 01e5 03       		.byte	0x3
+ 611 01e6 8D02     		.2byte	0x28d
+ 612 01e8 C6010000 		.4byte	0x1c6
+ 613 01ec 0A       		.uleb128 0xa
+ 614 01ed 5F030000 		.4byte	.LASF39
+ 615 01f1 03       		.byte	0x3
+ 616 01f2 9002     		.2byte	0x290
+ 617 01f4 E0010000 		.4byte	0x1e0
+ 618 01f8 0B       		.uleb128 0xb
+ 619 01f9 0C       		.byte	0xc
+ 620 01fa 03       		.byte	0x3
+ 621 01fb 9402     		.2byte	0x294
+ 622 01fd 27020000 		.4byte	0x227
+ 623 0201 0F       		.uleb128 0xf
+ 624 0202 6300     		.ascii	"c\000"
+ 625 0204 03       		.byte	0x3
+ 626 0205 9602     		.2byte	0x296
+ 627 0207 4D010000 		.4byte	0x14d
+ 628 020b 00       		.byte	0
+ 629 020c 0C       		.uleb128 0xc
+ 630 020d F5060000 		.4byte	.LASF40
+ 631 0211 03       		.byte	0x3
+ 632 0212 9802     		.2byte	0x298
+ 633 0214 35010000 		.4byte	0x135
+ 634 0218 04       		.byte	0x4
+ 635 0219 0C       		.uleb128 0xc
+ 636 021a 03030000 		.4byte	.LASF41
+ 637 021e 03       		.byte	0x3
+ 638 021f 9A02     		.2byte	0x29a
+ 639 0221 EC010000 		.4byte	0x1ec
+ 640 0225 08       		.byte	0x8
+ 641 0226 00       		.byte	0
+ 642 0227 0A       		.uleb128 0xa
+ 643 0228 B7000000 		.4byte	.LASF42
+ 644 022c 03       		.byte	0x3
+ 645 022d 9B02     		.2byte	0x29b
+ 646 022f F8010000 		.4byte	0x1f8
+ 647 0233 0B       		.uleb128 0xb
+ 648 0234 10       		.byte	0x10
+ 649 0235 03       		.byte	0x3
+ 650 0236 9F02     		.2byte	0x29f
+ 651 0238 71020000 		.4byte	0x271
+ 652 023c 0C       		.uleb128 0xc
+ 653 023d 67040000 		.4byte	.LASF43
+ 654 0241 03       		.byte	0x3
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 13
+
+
+ 655 0242 A002     		.2byte	0x2a0
+ 656 0244 D6000000 		.4byte	0xd6
+ 657 0248 00       		.byte	0
+ 658 0249 0C       		.uleb128 0xc
+ 659 024a 0B080000 		.4byte	.LASF44
+ 660 024e 03       		.byte	0x3
+ 661 024f A102     		.2byte	0x2a1
+ 662 0251 29010000 		.4byte	0x129
+ 663 0255 04       		.byte	0x4
+ 664 0256 0C       		.uleb128 0xc
+ 665 0257 B1000000 		.4byte	.LASF45
+ 666 025b 03       		.byte	0x3
+ 667 025c A202     		.2byte	0x2a2
+ 668 025e 29010000 		.4byte	0x129
+ 669 0262 08       		.byte	0x8
+ 670 0263 0C       		.uleb128 0xc
+ 671 0264 25000000 		.4byte	.LASF46
+ 672 0268 03       		.byte	0x3
+ 673 0269 A302     		.2byte	0x2a3
+ 674 026b 35010000 		.4byte	0x135
+ 675 026f 0C       		.byte	0xc
+ 676 0270 00       		.byte	0
+ 677 0271 0A       		.uleb128 0xa
+ 678 0272 6C040000 		.4byte	.LASF47
+ 679 0276 03       		.byte	0x3
+ 680 0277 A402     		.2byte	0x2a4
+ 681 0279 33020000 		.4byte	0x233
+ 682 027d 0D       		.uleb128 0xd
+ 683 027e 01       		.byte	0x1
+ 684 027f 24000000 		.4byte	0x24
+ 685 0283 03       		.byte	0x3
+ 686 0284 A702     		.2byte	0x2a7
+ 687 0286 A3020000 		.4byte	0x2a3
+ 688 028a 0E       		.uleb128 0xe
+ 689 028b B5060000 		.4byte	.LASF48
+ 690 028f 00       		.byte	0
+ 691 0290 0E       		.uleb128 0xe
+ 692 0291 FD060000 		.4byte	.LASF49
+ 693 0295 01       		.byte	0x1
+ 694 0296 0E       		.uleb128 0xe
+ 695 0297 D4060000 		.4byte	.LASF50
+ 696 029b 02       		.byte	0x2
+ 697 029c 0E       		.uleb128 0xe
+ 698 029d 65060000 		.4byte	.LASF51
+ 699 02a1 03       		.byte	0x3
+ 700 02a2 00       		.byte	0
+ 701 02a3 0A       		.uleb128 0xa
+ 702 02a4 57010000 		.4byte	.LASF52
+ 703 02a8 03       		.byte	0x3
+ 704 02a9 AC02     		.2byte	0x2ac
+ 705 02ab 7D020000 		.4byte	0x27d
+ 706 02af 0A       		.uleb128 0xa
+ 707 02b0 59070000 		.4byte	.LASF53
+ 708 02b4 03       		.byte	0x3
+ 709 02b5 AF02     		.2byte	0x2af
+ 710 02b7 A3020000 		.4byte	0x2a3
+ 711 02bb 0B       		.uleb128 0xb
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 14
+
+
+ 712 02bc 14       		.byte	0x14
+ 713 02bd 03       		.byte	0x3
+ 714 02be B202     		.2byte	0x2b2
+ 715 02c0 04030000 		.4byte	0x304
+ 716 02c4 0C       		.uleb128 0xc
+ 717 02c5 2F070000 		.4byte	.LASF54
+ 718 02c9 03       		.byte	0x3
+ 719 02ca B302     		.2byte	0x2b3
+ 720 02cc AF020000 		.4byte	0x2af
+ 721 02d0 00       		.byte	0
+ 722 02d1 0C       		.uleb128 0xc
+ 723 02d2 1C080000 		.4byte	.LASF55
+ 724 02d6 03       		.byte	0x3
+ 725 02d7 B402     		.2byte	0x2b4
+ 726 02d9 11010000 		.4byte	0x111
+ 727 02dd 04       		.byte	0x4
+ 728 02de 0C       		.uleb128 0xc
+ 729 02df 27060000 		.4byte	.LASF56
+ 730 02e3 03       		.byte	0x3
+ 731 02e4 B602     		.2byte	0x2b6
+ 732 02e6 1D010000 		.4byte	0x11d
+ 733 02ea 08       		.byte	0x8
+ 734 02eb 0F       		.uleb128 0xf
+ 735 02ec 6600     		.ascii	"f\000"
+ 736 02ee 03       		.byte	0x3
+ 737 02ef B802     		.2byte	0x2b8
+ 738 02f1 9F000000 		.4byte	0x9f
+ 739 02f5 0C       		.byte	0xc
+ 740 02f6 0C       		.uleb128 0xc
+ 741 02f7 1E050000 		.4byte	.LASF57
+ 742 02fb 03       		.byte	0x3
+ 743 02fc BA02     		.2byte	0x2ba
+ 744 02fe 4D010000 		.4byte	0x14d
+ 745 0302 10       		.byte	0x10
+ 746 0303 00       		.byte	0
+ 747 0304 0A       		.uleb128 0xa
+ 748 0305 99040000 		.4byte	.LASF58
+ 749 0309 03       		.byte	0x3
+ 750 030a BB02     		.2byte	0x2bb
+ 751 030c BB020000 		.4byte	0x2bb
+ 752 0310 0B       		.uleb128 0xb
+ 753 0311 04       		.byte	0x4
+ 754 0312 03       		.byte	0x3
+ 755 0313 BD02     		.2byte	0x2bd
+ 756 0315 27030000 		.4byte	0x327
+ 757 0319 0C       		.uleb128 0xc
+ 758 031a E9030000 		.4byte	.LASF59
+ 759 031e 03       		.byte	0x3
+ 760 031f BF02     		.2byte	0x2bf
+ 761 0321 41010000 		.4byte	0x141
+ 762 0325 00       		.byte	0
+ 763 0326 00       		.byte	0
+ 764 0327 0A       		.uleb128 0xa
+ 765 0328 A3020000 		.4byte	.LASF60
+ 766 032c 03       		.byte	0x3
+ 767 032d C402     		.2byte	0x2c4
+ 768 032f 10030000 		.4byte	0x310
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 15
+
+
+ 769 0333 10       		.uleb128 0x10
+ 770 0334 E9020000 		.4byte	.LASF62
+ 771 0338 08       		.byte	0x8
+ 772 0339 03       		.byte	0x3
+ 773 033a 0E04     		.2byte	0x40e
+ 774 033c 5A030000 		.4byte	0x35a
+ 775 0340 0F       		.uleb128 0xf
+ 776 0341 6E7400   		.ascii	"nt\000"
+ 777 0344 03       		.byte	0x3
+ 778 0345 0F04     		.2byte	0x40f
+ 779 0347 B5000000 		.4byte	0xb5
+ 780 034b 00       		.byte	0
+ 781 034c 0C       		.uleb128 0xc
+ 782 034d 3B070000 		.4byte	.LASF63
+ 783 0351 03       		.byte	0x3
+ 784 0352 1004     		.2byte	0x410
+ 785 0354 6A030000 		.4byte	0x36a
+ 786 0358 04       		.byte	0x4
+ 787 0359 00       		.byte	0
+ 788 035a 11       		.uleb128 0x11
+ 789 035b 65030000 		.4byte	0x365
+ 790 035f 65030000 		.4byte	0x365
+ 791 0363 12       		.uleb128 0x12
+ 792 0364 00       		.byte	0
+ 793 0365 13       		.uleb128 0x13
+ 794 0366 E1000000 		.4byte	0xe1
+ 795 036a 06       		.uleb128 0x6
+ 796 036b 04       		.byte	0x4
+ 797 036c 5A030000 		.4byte	0x35a
+ 798 0370 11       		.uleb128 0x11
+ 799 0371 65030000 		.4byte	0x365
+ 800 0375 80030000 		.4byte	0x380
+ 801 0379 14       		.uleb128 0x14
+ 802 037a 80030000 		.4byte	0x380
+ 803 037e 00       		.byte	0
+ 804 037f 00       		.byte	0
+ 805 0380 02       		.uleb128 0x2
+ 806 0381 04       		.byte	0x4
+ 807 0382 07       		.byte	0x7
+ 808 0383 27040000 		.4byte	.LASF64
+ 809 0387 15       		.uleb128 0x15
+ 810 0388 06010000 		.4byte	.LASF123
+ 811 038c 05       		.byte	0x5
+ 812 038d 6507     		.2byte	0x765
+ 813 038f 99030000 		.4byte	0x399
+ 814 0393 05       		.uleb128 0x5
+ 815 0394 03       		.byte	0x3
+ 816 0395 08000000 		.4byte	EE_oo_autostart_task_mode_OSDEFAULTAPPMODE
+ 817 0399 13       		.uleb128 0x13
+ 818 039a 70030000 		.4byte	0x370
+ 819 039e 11       		.uleb128 0x11
+ 820 039f AE030000 		.4byte	0x3ae
+ 821 03a3 AE030000 		.4byte	0x3ae
+ 822 03a7 14       		.uleb128 0x14
+ 823 03a8 80030000 		.4byte	0x380
+ 824 03ac 03       		.byte	0x3
+ 825 03ad 00       		.byte	0
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 16
+
+
+ 826 03ae 13       		.uleb128 0x13
+ 827 03af AA000000 		.4byte	0xaa
+ 828 03b3 16       		.uleb128 0x16
+ 829 03b4 0D070000 		.4byte	.LASF65
+ 830 03b8 05       		.byte	0x5
+ 831 03b9 D2       		.byte	0xd2
+ 832 03ba C4030000 		.4byte	0x3c4
+ 833 03be 05       		.uleb128 0x5
+ 834 03bf 03       		.byte	0x3
+ 835 03c0 00000000 		.4byte	EE_hal_thread_body
+ 836 03c4 13       		.uleb128 0x13
+ 837 03c5 9E030000 		.4byte	0x39e
+ 838 03c9 11       		.uleb128 0x11
+ 839 03ca D9030000 		.4byte	0x3d9
+ 840 03ce D9030000 		.4byte	0x3d9
+ 841 03d2 14       		.uleb128 0x14
+ 842 03d3 80030000 		.4byte	0x380
+ 843 03d7 04       		.byte	0x4
+ 844 03d8 00       		.byte	0
+ 845 03d9 13       		.uleb128 0x13
+ 846 03da B5000000 		.4byte	0xb5
+ 847 03de 16       		.uleb128 0x16
+ 848 03df 53060000 		.4byte	.LASF66
+ 849 03e3 05       		.byte	0x5
+ 850 03e4 71       		.byte	0x71
+ 851 03e5 EF030000 		.4byte	0x3ef
+ 852 03e9 05       		.uleb128 0x5
+ 853 03ea 03       		.byte	0x3
+ 854 03eb 00000000 		.4byte	EE_std_thread_tos
+ 855 03ef 13       		.uleb128 0x13
+ 856 03f0 C9030000 		.4byte	0x3c9
+ 857 03f4 11       		.uleb128 0x11
+ 858 03f5 80000000 		.4byte	0x80
+ 859 03f9 04040000 		.4byte	0x404
+ 860 03fd 14       		.uleb128 0x14
+ 861 03fe 80030000 		.4byte	0x380
+ 862 0402 03       		.byte	0x3
+ 863 0403 00       		.byte	0
+ 864 0404 16       		.uleb128 0x16
+ 865 0405 BD070000 		.4byte	.LASF67
+ 866 0409 05       		.byte	0x5
+ 867 040a ED       		.byte	0xed
+ 868 040b F4030000 		.4byte	0x3f4
+ 869 040f 05       		.uleb128 0x5
+ 870 0410 03       		.byte	0x3
+ 871 0411 00000000 		.4byte	EE_terminate_data
+ 872 0415 16       		.uleb128 0x16
+ 873 0416 04050000 		.4byte	.LASF68
+ 874 041a 05       		.byte	0x5
+ 875 041b F0       		.byte	0xf0
+ 876 041c 26040000 		.4byte	0x426
+ 877 0420 05       		.uleb128 0x5
+ 878 0421 03       		.byte	0x3
+ 879 0422 00000000 		.4byte	EE_terminate_real_th_body
+ 880 0426 13       		.uleb128 0x13
+ 881 0427 9E030000 		.4byte	0x39e
+ 882 042b 11       		.uleb128 0x11
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 17
+
+
+ 883 042c EC000000 		.4byte	0xec
+ 884 0430 3B040000 		.4byte	0x43b
+ 885 0434 14       		.uleb128 0x14
+ 886 0435 80030000 		.4byte	0x380
+ 887 0439 02       		.byte	0x2
+ 888 043a 00       		.byte	0
+ 889 043b 16       		.uleb128 0x16
+ 890 043c CA040000 		.4byte	.LASF69
+ 891 0440 05       		.byte	0x5
+ 892 0441 8D       		.byte	0x8d
+ 893 0442 2B040000 		.4byte	0x42b
+ 894 0446 05       		.uleb128 0x5
+ 895 0447 03       		.byte	0x3
+ 896 0448 00000000 		.4byte	EE_cortex_mx_system_tos
+ 897 044c 16       		.uleb128 0x16
+ 898 044d 97010000 		.4byte	.LASF70
+ 899 0451 05       		.byte	0x5
+ 900 0452 A9       		.byte	0xa9
+ 901 0453 B5000000 		.4byte	0xb5
+ 902 0457 05       		.uleb128 0x5
+ 903 0458 03       		.byte	0x3
+ 904 0459 00000000 		.4byte	EE_cortex_mx_active_tos
+ 905 045d 11       		.uleb128 0x11
+ 906 045e D9030000 		.4byte	0x3d9
+ 907 0462 6D040000 		.4byte	0x46d
+ 908 0466 14       		.uleb128 0x14
+ 909 0467 80030000 		.4byte	0x380
+ 910 046b 03       		.byte	0x3
+ 911 046c 00       		.byte	0
+ 912 046d 17       		.uleb128 0x17
+ 913 046e C4060000 		.4byte	.LASF71
+ 914 0472 05       		.byte	0x5
+ 915 0473 E202     		.2byte	0x2e2
+ 916 0475 7F040000 		.4byte	0x47f
+ 917 0479 05       		.uleb128 0x5
+ 918 047a 03       		.byte	0x3
+ 919 047b 00000000 		.4byte	EE_th_rnact_max
+ 920 047f 13       		.uleb128 0x13
+ 921 0480 5D040000 		.4byte	0x45d
+ 922 0484 17       		.uleb128 0x17
+ 923 0485 68070000 		.4byte	.LASF72
+ 924 0489 05       		.byte	0x5
+ 925 048a 0C01     		.2byte	0x10c
+ 926 048c 96040000 		.4byte	0x496
+ 927 0490 05       		.uleb128 0x5
+ 928 0491 03       		.byte	0x3
+ 929 0492 00000000 		.4byte	EE_th_ready_prio
+ 930 0496 13       		.uleb128 0x13
+ 931 0497 5D040000 		.4byte	0x45d
+ 932 049b 17       		.uleb128 0x17
+ 933 049c 8A030000 		.4byte	.LASF73
+ 934 04a0 05       		.byte	0x5
+ 935 04a1 4502     		.2byte	0x245
+ 936 04a3 AD040000 		.4byte	0x4ad
+ 937 04a7 05       		.uleb128 0x5
+ 938 04a8 03       		.byte	0x3
+ 939 04a9 00000000 		.4byte	EE_th_dispatch_prio
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 18
+
+
+ 940 04ad 13       		.uleb128 0x13
+ 941 04ae 5D040000 		.4byte	0x45d
+ 942 04b2 11       		.uleb128 0x11
+ 943 04b3 C2040000 		.4byte	0x4c2
+ 944 04b7 C2040000 		.4byte	0x4c2
+ 945 04bb 14       		.uleb128 0x14
+ 946 04bc 80030000 		.4byte	0x380
+ 947 04c0 03       		.byte	0x3
+ 948 04c1 00       		.byte	0
+ 949 04c2 06       		.uleb128 0x6
+ 950 04c3 04       		.byte	0x4
+ 951 04c4 CF040000 		.4byte	0x4cf
+ 952 04c8 02       		.uleb128 0x2
+ 953 04c9 01       		.byte	0x1
+ 954 04ca 08       		.byte	0x8
+ 955 04cb B0060000 		.4byte	.LASF74
+ 956 04cf 13       		.uleb128 0x13
+ 957 04d0 C8040000 		.4byte	0x4c8
+ 958 04d4 17       		.uleb128 0x17
+ 959 04d5 75050000 		.4byte	.LASF75
+ 960 04d9 05       		.byte	0x5
+ 961 04da 2801     		.2byte	0x128
+ 962 04dc B2040000 		.4byte	0x4b2
+ 963 04e0 05       		.uleb128 0x5
+ 964 04e1 03       		.byte	0x3
+ 965 04e2 00000000 		.4byte	EE_TASK_NAME
+ 966 04e6 11       		.uleb128 0x11
+ 967 04e7 C2040000 		.4byte	0x4c2
+ 968 04eb F6040000 		.4byte	0x4f6
+ 969 04ef 14       		.uleb128 0x14
+ 970 04f0 80030000 		.4byte	0x380
+ 971 04f4 01       		.byte	0x1
+ 972 04f5 00       		.byte	0
+ 973 04f6 17       		.uleb128 0x17
+ 974 04f7 7C010000 		.4byte	.LASF76
+ 975 04fb 05       		.byte	0x5
+ 976 04fc 8101     		.2byte	0x181
+ 977 04fe E6040000 		.4byte	0x4e6
+ 978 0502 05       		.uleb128 0x5
+ 979 0503 03       		.byte	0x3
+ 980 0504 00000000 		.4byte	EE_EVENT_NAME
+ 981 0508 11       		.uleb128 0x11
+ 982 0509 C2040000 		.4byte	0x4c2
+ 983 050d 18050000 		.4byte	0x518
+ 984 0511 14       		.uleb128 0x14
+ 985 0512 80030000 		.4byte	0x380
+ 986 0516 00       		.byte	0
+ 987 0517 00       		.byte	0
+ 988 0518 17       		.uleb128 0x17
+ 989 0519 B8020000 		.4byte	.LASF77
+ 990 051d 05       		.byte	0x5
+ 991 051e 3D06     		.2byte	0x63d
+ 992 0520 08050000 		.4byte	0x508
+ 993 0524 05       		.uleb128 0x5
+ 994 0525 03       		.byte	0x3
+ 995 0526 00000000 		.4byte	EE_ALARM_NAME
+ 996 052a 17       		.uleb128 0x17
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 19
+
+
+ 997 052b 00000000 		.4byte	.LASF78
+ 998 052f 05       		.byte	0x5
+ 999 0530 4601     		.2byte	0x146
+ 1000 0532 E6040000 		.4byte	0x4e6
+ 1001 0536 05       		.uleb128 0x5
+ 1002 0537 03       		.byte	0x3
+ 1003 0538 00000000 		.4byte	EE_RESOURCE_NAME
+ 1004 053c 11       		.uleb128 0x11
+ 1005 053d 4C050000 		.4byte	0x54c
+ 1006 0541 4C050000 		.4byte	0x54c
+ 1007 0545 14       		.uleb128 0x14
+ 1008 0546 80030000 		.4byte	0x380
+ 1009 054a 01       		.byte	0x1
+ 1010 054b 00       		.byte	0
+ 1011 054c 13       		.uleb128 0x13
+ 1012 054d 40000000 		.4byte	0x40
+ 1013 0551 17       		.uleb128 0x17
+ 1014 0552 4B000000 		.4byte	.LASF79
+ 1015 0556 05       		.byte	0x5
+ 1016 0557 6201     		.2byte	0x162
+ 1017 0559 63050000 		.4byte	0x563
+ 1018 055d 05       		.uleb128 0x5
+ 1019 055e 03       		.byte	0x3
+ 1020 055f 00000000 		.4byte	EE_RESOURCE_ID
+ 1021 0563 13       		.uleb128 0x13
+ 1022 0564 3C050000 		.4byte	0x53c
+ 1023 0568 17       		.uleb128 0x17
+ 1024 0569 DD010000 		.4byte	.LASF80
+ 1025 056d 05       		.byte	0x5
+ 1026 056e E201     		.2byte	0x1e2
+ 1027 0570 7A050000 		.4byte	0x57a
+ 1028 0574 05       		.uleb128 0x5
+ 1029 0575 03       		.byte	0x3
+ 1030 0576 00000000 		.4byte	EE_EVENT_ID
+ 1031 057a 13       		.uleb128 0x13
+ 1032 057b 3C050000 		.4byte	0x53c
+ 1033 057f 11       		.uleb128 0x11
+ 1034 0580 4C050000 		.4byte	0x54c
+ 1035 0584 8F050000 		.4byte	0x58f
+ 1036 0588 14       		.uleb128 0x14
+ 1037 0589 80030000 		.4byte	0x380
+ 1038 058d 00       		.byte	0
+ 1039 058e 00       		.byte	0
+ 1040 058f 17       		.uleb128 0x17
+ 1041 0590 31010000 		.4byte	.LASF81
+ 1042 0594 05       		.byte	0x5
+ 1043 0595 5906     		.2byte	0x659
+ 1044 0597 A1050000 		.4byte	0x5a1
+ 1045 059b 05       		.uleb128 0x5
+ 1046 059c 03       		.byte	0x3
+ 1047 059d 00000000 		.4byte	EE_ALARM_ID
+ 1048 05a1 13       		.uleb128 0x13
+ 1049 05a2 7F050000 		.4byte	0x57f
+ 1050 05a6 11       		.uleb128 0x11
+ 1051 05a7 B5000000 		.4byte	0xb5
+ 1052 05ab B6050000 		.4byte	0x5b6
+ 1053 05af 14       		.uleb128 0x14
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 20
+
+
+ 1054 05b0 80030000 		.4byte	0x380
+ 1055 05b4 03       		.byte	0x3
+ 1056 05b5 00       		.byte	0
+ 1057 05b6 17       		.uleb128 0x17
+ 1058 05b7 52030000 		.4byte	.LASF82
+ 1059 05bb 05       		.byte	0x5
+ 1060 05bc 8102     		.2byte	0x281
+ 1061 05be A6050000 		.4byte	0x5a6
+ 1062 05c2 05       		.uleb128 0x5
+ 1063 05c3 03       		.byte	0x3
+ 1064 05c4 00000000 		.4byte	EE_th_status
+ 1065 05c8 11       		.uleb128 0x11
+ 1066 05c9 E1000000 		.4byte	0xe1
+ 1067 05cd D8050000 		.4byte	0x5d8
+ 1068 05d1 14       		.uleb128 0x14
+ 1069 05d2 80030000 		.4byte	0x380
+ 1070 05d6 03       		.byte	0x3
+ 1071 05d7 00       		.byte	0
+ 1072 05d8 17       		.uleb128 0x17
+ 1073 05d9 F9040000 		.4byte	.LASF83
+ 1074 05dd 05       		.byte	0x5
+ 1075 05de 9D02     		.2byte	0x29d
+ 1076 05e0 C8050000 		.4byte	0x5c8
+ 1077 05e4 05       		.uleb128 0x5
+ 1078 05e5 03       		.byte	0x3
+ 1079 05e6 00000000 		.4byte	EE_th_next
+ 1080 05ea 17       		.uleb128 0x17
+ 1081 05eb 79070000 		.4byte	.LASF84
+ 1082 05ef 05       		.byte	0x5
+ 1083 05f0 C702     		.2byte	0x2c7
+ 1084 05f2 A6050000 		.4byte	0x5a6
+ 1085 05f6 05       		.uleb128 0x5
+ 1086 05f7 03       		.byte	0x3
+ 1087 05f8 00000000 		.4byte	EE_th_rnact
+ 1088 05fc 17       		.uleb128 0x17
+ 1089 05fd 2A000000 		.4byte	.LASF85
+ 1090 0601 05       		.byte	0x5
+ 1091 0602 7703     		.2byte	0x377
+ 1092 0604 C8050000 		.4byte	0x5c8
+ 1093 0608 05       		.uleb128 0x5
+ 1094 0609 03       		.byte	0x3
+ 1095 060a 00000000 		.4byte	EE_th_terminate_nextask
+ 1096 060e 17       		.uleb128 0x17
+ 1097 060f 5A000000 		.4byte	.LASF86
+ 1098 0613 05       		.byte	0x5
+ 1099 0614 B902     		.2byte	0x2b9
+ 1100 0616 E1000000 		.4byte	0xe1
+ 1101 061a 05       		.uleb128 0x5
+ 1102 061b 03       		.byte	0x3
+ 1103 061c 00000000 		.4byte	EE_stkfirst
+ 1104 0620 17       		.uleb128 0x17
+ 1105 0621 20070000 		.4byte	.LASF87
+ 1106 0625 05       		.byte	0x5
+ 1107 0626 BC02     		.2byte	0x2bc
+ 1108 0628 B5000000 		.4byte	0xb5
+ 1109 062c 05       		.uleb128 0x5
+ 1110 062d 03       		.byte	0x3
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 21
+
+
+ 1111 062e 00000000 		.4byte	EE_sys_ceiling
+ 1112 0632 17       		.uleb128 0x17
+ 1113 0633 47040000 		.4byte	.LASF88
+ 1114 0637 05       		.byte	0x5
+ 1115 0638 FD02     		.2byte	0x2fd
+ 1116 063a A6050000 		.4byte	0x5a6
+ 1117 063e 05       		.uleb128 0x5
+ 1118 063f 03       		.byte	0x3
+ 1119 0640 00000000 		.4byte	EE_rq_link
+ 1120 0644 11       		.uleb128 0x11
+ 1121 0645 C0000000 		.4byte	0xc0
+ 1122 0649 54060000 		.4byte	0x654
+ 1123 064d 14       		.uleb128 0x14
+ 1124 064e 80030000 		.4byte	0x380
+ 1125 0652 0F       		.byte	0xf
+ 1126 0653 00       		.byte	0
+ 1127 0654 17       		.uleb128 0x17
+ 1128 0655 F2010000 		.4byte	.LASF89
+ 1129 0659 05       		.byte	0x5
+ 1130 065a BF02     		.2byte	0x2bf
+ 1131 065c 44060000 		.4byte	0x644
+ 1132 0660 05       		.uleb128 0x5
+ 1133 0661 03       		.byte	0x3
+ 1134 0662 00000000 		.4byte	EE_rq_queues_head
+ 1135 0666 17       		.uleb128 0x17
+ 1136 0667 41060000 		.4byte	.LASF90
+ 1137 066b 05       		.byte	0x5
+ 1138 066c C102     		.2byte	0x2c1
+ 1139 066e 44060000 		.4byte	0x644
+ 1140 0672 05       		.uleb128 0x5
+ 1141 0673 03       		.byte	0x3
+ 1142 0674 00000000 		.4byte	EE_rq_queues_tail
+ 1143 0678 11       		.uleb128 0x11
+ 1144 0679 C0000000 		.4byte	0xc0
+ 1145 067d 88060000 		.4byte	0x688
+ 1146 0681 14       		.uleb128 0x14
+ 1147 0682 80030000 		.4byte	0x380
+ 1148 0686 03       		.byte	0x3
+ 1149 0687 00       		.byte	0
+ 1150 0688 17       		.uleb128 0x17
+ 1151 0689 D5000000 		.4byte	.LASF91
+ 1152 068d 05       		.byte	0x5
+ 1153 068e 1B03     		.2byte	0x31b
+ 1154 0690 78060000 		.4byte	0x678
+ 1155 0694 05       		.uleb128 0x5
+ 1156 0695 03       		.byte	0x3
+ 1157 0696 00000000 		.4byte	EE_rq_pairs_next
+ 1158 069a 17       		.uleb128 0x17
+ 1159 069b 85070000 		.4byte	.LASF92
+ 1160 069f 05       		.byte	0x5
+ 1161 06a0 7003     		.2byte	0x370
+ 1162 06a2 C8050000 		.4byte	0x5c8
+ 1163 06a6 05       		.uleb128 0x5
+ 1164 06a7 03       		.byte	0x3
+ 1165 06a8 00000000 		.4byte	EE_rq_pairs_tid
+ 1166 06ac 17       		.uleb128 0x17
+ 1167 06ad 78060000 		.4byte	.LASF93
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 22
+
+
+ 1168 06b1 05       		.byte	0x5
+ 1169 06b2 C402     		.2byte	0x2c4
+ 1170 06b4 05010000 		.4byte	0x105
+ 1171 06b8 05       		.uleb128 0x5
+ 1172 06b9 03       		.byte	0x3
+ 1173 06ba 00000000 		.4byte	EE_rq_bitmask
+ 1174 06be 17       		.uleb128 0x17
+ 1175 06bf 3C040000 		.4byte	.LASF94
+ 1176 06c3 05       		.byte	0x5
+ 1177 06c4 7303     		.2byte	0x373
+ 1178 06c6 C0000000 		.4byte	0xc0
+ 1179 06ca 05       		.uleb128 0x5
+ 1180 06cb 03       		.byte	0x3
+ 1181 06cc 00000000 		.4byte	EE_rq_free
+ 1182 06d0 17       		.uleb128 0x17
+ 1183 06d1 F8070000 		.4byte	.LASF95
+ 1184 06d5 05       		.byte	0x5
+ 1185 06d6 9A03     		.2byte	0x39a
+ 1186 06d8 A6050000 		.4byte	0x5a6
+ 1187 06dc 05       		.uleb128 0x5
+ 1188 06dd 03       		.byte	0x3
+ 1189 06de 00000000 		.4byte	EE_th_event_active
+ 1190 06e2 17       		.uleb128 0x17
+ 1191 06e3 31050000 		.4byte	.LASF96
+ 1192 06e7 05       		.byte	0x5
+ 1193 06e8 B603     		.2byte	0x3b6
+ 1194 06ea A6050000 		.4byte	0x5a6
+ 1195 06ee 05       		.uleb128 0x5
+ 1196 06ef 03       		.byte	0x3
+ 1197 06f0 00000000 		.4byte	EE_th_event_waitmask
+ 1198 06f4 11       		.uleb128 0x11
+ 1199 06f5 D6000000 		.4byte	0xd6
+ 1200 06f9 04070000 		.4byte	0x704
+ 1201 06fd 14       		.uleb128 0x14
+ 1202 06fe 80030000 		.4byte	0x380
+ 1203 0702 03       		.byte	0x3
+ 1204 0703 00       		.byte	0
+ 1205 0704 17       		.uleb128 0x17
+ 1206 0705 D8020000 		.4byte	.LASF97
+ 1207 0709 05       		.byte	0x5
+ 1208 070a D203     		.2byte	0x3d2
+ 1209 070c F4060000 		.4byte	0x6f4
+ 1210 0710 05       		.uleb128 0x5
+ 1211 0711 03       		.byte	0x3
+ 1212 0712 00000000 		.4byte	EE_th_waswaiting
+ 1213 0716 17       		.uleb128 0x17
+ 1214 0717 43080000 		.4byte	.LASF98
+ 1215 071b 05       		.byte	0x5
+ 1216 071c EE03     		.2byte	0x3ee
+ 1217 071e 28070000 		.4byte	0x728
+ 1218 0722 05       		.uleb128 0x5
+ 1219 0723 03       		.byte	0x3
+ 1220 0724 00000000 		.4byte	EE_th_is_extended
+ 1221 0728 13       		.uleb128 0x13
+ 1222 0729 5D040000 		.4byte	0x45d
+ 1223 072d 11       		.uleb128 0x11
+ 1224 072e D9030000 		.4byte	0x3d9
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 23
+
+
+ 1225 0732 3D070000 		.4byte	0x73d
+ 1226 0736 14       		.uleb128 0x14
+ 1227 0737 80030000 		.4byte	0x380
+ 1228 073b 01       		.byte	0x1
+ 1229 073c 00       		.byte	0
+ 1230 073d 17       		.uleb128 0x17
+ 1231 073e 5D080000 		.4byte	.LASF99
+ 1232 0742 05       		.byte	0x5
+ 1233 0743 B504     		.2byte	0x4b5
+ 1234 0745 4F070000 		.4byte	0x74f
+ 1235 0749 05       		.uleb128 0x5
+ 1236 074a 03       		.byte	0x3
+ 1237 074b 00000000 		.4byte	EE_resource_ceiling
+ 1238 074f 13       		.uleb128 0x13
+ 1239 0750 2D070000 		.4byte	0x72d
+ 1240 0754 11       		.uleb128 0x11
+ 1241 0755 B5000000 		.4byte	0xb5
+ 1242 0759 64070000 		.4byte	0x764
+ 1243 075d 14       		.uleb128 0x14
+ 1244 075e 80030000 		.4byte	0x380
+ 1245 0762 01       		.byte	0x1
+ 1246 0763 00       		.byte	0
+ 1247 0764 17       		.uleb128 0x17
+ 1248 0765 C6010000 		.4byte	.LASF100
+ 1249 0769 05       		.byte	0x5
+ 1250 076a F404     		.2byte	0x4f4
+ 1251 076c 54070000 		.4byte	0x754
+ 1252 0770 05       		.uleb128 0x5
+ 1253 0771 03       		.byte	0x3
+ 1254 0772 00000000 		.4byte	EE_resource_oldceiling
+ 1255 0776 11       		.uleb128 0x11
+ 1256 0777 D6000000 		.4byte	0xd6
+ 1257 077b 86070000 		.4byte	0x786
+ 1258 077f 14       		.uleb128 0x14
+ 1259 0780 80030000 		.4byte	0x380
+ 1260 0784 01       		.byte	0x1
+ 1261 0785 00       		.byte	0
+ 1262 0786 17       		.uleb128 0x17
+ 1263 0787 28080000 		.4byte	.LASF101
+ 1264 078b 05       		.byte	0x5
+ 1265 078c 9404     		.2byte	0x494
+ 1266 078e 76070000 		.4byte	0x776
+ 1267 0792 05       		.uleb128 0x5
+ 1268 0793 03       		.byte	0x3
+ 1269 0794 00000000 		.4byte	EE_resource_locked
+ 1270 0798 17       		.uleb128 0x17
+ 1271 0799 11000000 		.4byte	.LASF102
+ 1272 079d 05       		.byte	0x5
+ 1273 079e 3704     		.2byte	0x437
+ 1274 07a0 A6050000 		.4byte	0x5a6
+ 1275 07a4 05       		.uleb128 0x5
+ 1276 07a5 03       		.byte	0x3
+ 1277 07a6 00000000 		.4byte	EE_th_resource_last
+ 1278 07aa 17       		.uleb128 0x17
+ 1279 07ab 86060000 		.4byte	.LASF103
+ 1280 07af 05       		.byte	0x5
+ 1281 07b0 7004     		.2byte	0x470
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 24
+
+
+ 1282 07b2 54070000 		.4byte	0x754
+ 1283 07b6 05       		.uleb128 0x5
+ 1284 07b7 03       		.byte	0x3
+ 1285 07b8 00000000 		.4byte	EE_resource_stack
+ 1286 07bc 11       		.uleb128 0x11
+ 1287 07bd CC070000 		.4byte	0x7cc
+ 1288 07c1 CC070000 		.4byte	0x7cc
+ 1289 07c5 14       		.uleb128 0x14
+ 1290 07c6 80030000 		.4byte	0x380
+ 1291 07ca 00       		.byte	0
+ 1292 07cb 00       		.byte	0
+ 1293 07cc 13       		.uleb128 0x13
+ 1294 07cd 8A010000 		.4byte	0x18a
+ 1295 07d1 17       		.uleb128 0x17
+ 1296 07d2 8A040000 		.4byte	.LASF104
+ 1297 07d6 05       		.byte	0x5
+ 1298 07d7 FF05     		.2byte	0x5ff
+ 1299 07d9 E3070000 		.4byte	0x7e3
+ 1300 07dd 05       		.uleb128 0x5
+ 1301 07de 03       		.byte	0x3
+ 1302 07df 00000000 		.4byte	EE_counter_ROM
+ 1303 07e3 13       		.uleb128 0x13
+ 1304 07e4 BC070000 		.4byte	0x7bc
+ 1305 07e8 11       		.uleb128 0x11
+ 1306 07e9 F8070000 		.4byte	0x7f8
+ 1307 07ed F8070000 		.4byte	0x7f8
+ 1308 07f1 14       		.uleb128 0x14
+ 1309 07f2 80030000 		.4byte	0x380
+ 1310 07f6 00       		.byte	0
+ 1311 07f7 00       		.byte	0
+ 1312 07f8 13       		.uleb128 0x13
+ 1313 07f9 27020000 		.4byte	0x227
+ 1314 07fd 17       		.uleb128 0x17
+ 1315 07fe D0030000 		.4byte	.LASF105
+ 1316 0802 05       		.byte	0x5
+ 1317 0803 9606     		.2byte	0x696
+ 1318 0805 0F080000 		.4byte	0x80f
+ 1319 0809 05       		.uleb128 0x5
+ 1320 080a 03       		.byte	0x3
+ 1321 080b 00000000 		.4byte	EE_oo_counter_object_ROM
+ 1322 080f 13       		.uleb128 0x13
+ 1323 0810 E8070000 		.4byte	0x7e8
+ 1324 0814 11       		.uleb128 0x11
+ 1325 0815 24080000 		.4byte	0x824
+ 1326 0819 24080000 		.4byte	0x824
+ 1327 081d 14       		.uleb128 0x14
+ 1328 081e 80030000 		.4byte	0x380
+ 1329 0822 00       		.byte	0
+ 1330 0823 00       		.byte	0
+ 1331 0824 13       		.uleb128 0x13
+ 1332 0825 04030000 		.4byte	0x304
+ 1333 0829 17       		.uleb128 0x17
+ 1334 082a 06040000 		.4byte	.LASF106
+ 1335 082e 05       		.byte	0x5
+ 1336 082f BA06     		.2byte	0x6ba
+ 1337 0831 3B080000 		.4byte	0x83b
+ 1338 0835 05       		.uleb128 0x5
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 25
+
+
+ 1339 0836 03       		.byte	0x3
+ 1340 0837 00000000 		.4byte	EE_oo_action_ROM
+ 1341 083b 13       		.uleb128 0x13
+ 1342 083c 14080000 		.4byte	0x814
+ 1343 0840 11       		.uleb128 0x11
+ 1344 0841 50080000 		.4byte	0x850
+ 1345 0845 50080000 		.4byte	0x850
+ 1346 0849 14       		.uleb128 0x14
+ 1347 084a 80030000 		.4byte	0x380
+ 1348 084e 00       		.byte	0
+ 1349 084f 00       		.byte	0
+ 1350 0850 13       		.uleb128 0x13
+ 1351 0851 27030000 		.4byte	0x327
+ 1352 0855 17       		.uleb128 0x17
+ 1353 0856 8A010000 		.4byte	.LASF107
+ 1354 085a 05       		.byte	0x5
+ 1355 085b 2006     		.2byte	0x620
+ 1356 085d 67080000 		.4byte	0x867
+ 1357 0861 05       		.uleb128 0x5
+ 1358 0862 03       		.byte	0x3
+ 1359 0863 00000000 		.4byte	EE_alarm_ROM
+ 1360 0867 13       		.uleb128 0x13
+ 1361 0868 40080000 		.4byte	0x840
+ 1362 086c 11       		.uleb128 0x11
+ 1363 086d BA010000 		.4byte	0x1ba
+ 1364 0871 7C080000 		.4byte	0x87c
+ 1365 0875 14       		.uleb128 0x14
+ 1366 0876 80030000 		.4byte	0x380
+ 1367 087a 00       		.byte	0
+ 1368 087b 00       		.byte	0
+ 1369 087c 17       		.uleb128 0x17
+ 1370 087d E6060000 		.4byte	.LASF108
+ 1371 0881 05       		.byte	0x5
+ 1372 0882 0C06     		.2byte	0x60c
+ 1373 0884 6C080000 		.4byte	0x86c
+ 1374 0888 05       		.uleb128 0x5
+ 1375 0889 03       		.byte	0x3
+ 1376 088a 00000000 		.4byte	EE_counter_RAM
+ 1377 088e 11       		.uleb128 0x11
+ 1378 088f 71020000 		.4byte	0x271
+ 1379 0893 9E080000 		.4byte	0x89e
+ 1380 0897 14       		.uleb128 0x14
+ 1381 0898 80030000 		.4byte	0x380
+ 1382 089c 00       		.byte	0
+ 1383 089d 00       		.byte	0
+ 1384 089e 17       		.uleb128 0x17
+ 1385 089f 40070000 		.4byte	.LASF109
+ 1386 08a3 05       		.byte	0x5
+ 1387 08a4 B106     		.2byte	0x6b1
+ 1388 08a6 8E080000 		.4byte	0x88e
+ 1389 08aa 05       		.uleb128 0x5
+ 1390 08ab 03       		.byte	0x3
+ 1391 08ac 00000000 		.4byte	EE_oo_counter_object_RAM
+ 1392 08b0 11       		.uleb128 0x11
+ 1393 08b1 C0080000 		.4byte	0x8c0
+ 1394 08b5 C0080000 		.4byte	0x8c0
+ 1395 08b9 14       		.uleb128 0x14
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 26
+
+
+ 1396 08ba 80030000 		.4byte	0x380
+ 1397 08be 00       		.byte	0
+ 1398 08bf 00       		.byte	0
+ 1399 08c0 13       		.uleb128 0x13
+ 1400 08c1 33030000 		.4byte	0x333
+ 1401 08c5 17       		.uleb128 0x17
+ 1402 08c6 46050000 		.4byte	.LASF110
+ 1403 08ca 05       		.byte	0x5
+ 1404 08cb 9607     		.2byte	0x796
+ 1405 08cd D7080000 		.4byte	0x8d7
+ 1406 08d1 05       		.uleb128 0x5
+ 1407 08d2 03       		.byte	0x3
+ 1408 08d3 00000000 		.4byte	EE_oo_autostart_task_data
+ 1409 08d7 13       		.uleb128 0x13
+ 1410 08d8 B0080000 		.4byte	0x8b0
+ 1411 08dc 18       		.uleb128 0x18
+ 1412 08dd 1B030000 		.4byte	.LASF111
+ 1413 08e1 06       		.byte	0x6
+ 1414 08e2 40       		.byte	0x40
+ 1415 08e3 B5000000 		.4byte	0xb5
+ 1416 08e7 18       		.uleb128 0x18
+ 1417 08e8 04020000 		.4byte	.LASF112
+ 1418 08ec 06       		.byte	0x6
+ 1419 08ed 47       		.byte	0x47
+ 1420 08ee CB000000 		.4byte	0xcb
+ 1421 08f2 17       		.uleb128 0x17
+ 1422 08f3 F3030000 		.4byte	.LASF113
+ 1423 08f7 05       		.byte	0x5
+ 1424 08f8 5C07     		.2byte	0x75c
+ 1425 08fa B5000000 		.4byte	0xb5
+ 1426 08fe 05       		.uleb128 0x5
+ 1427 08ff 03       		.byte	0x3
+ 1428 0900 00000000 		.4byte	EE_ApplicationMode
+ 1429 0904 18       		.uleb128 0x18
+ 1430 0905 1D020000 		.4byte	.LASF114
+ 1431 0909 07       		.byte	0x7
+ 1432 090a 48       		.byte	0x48
+ 1433 090b E1000000 		.4byte	0xe1
+ 1434 090f 18       		.uleb128 0x18
+ 1435 0910 95070000 		.4byte	.LASF115
+ 1436 0914 08       		.byte	0x8
+ 1437 0915 44       		.byte	0x44
+ 1438 0916 B5000000 		.4byte	0xb5
+ 1439 091a 16       		.uleb128 0x16
+ 1440 091b 85000000 		.4byte	.LASF116
+ 1441 091f 05       		.byte	0x5
+ 1442 0920 AD       		.byte	0xad
+ 1443 0921 EC000000 		.4byte	0xec
+ 1444 0925 05       		.uleb128 0x5
+ 1445 0926 03       		.byte	0x3
+ 1446 0927 00000000 		.4byte	EE_cortex_mx_IRQ_tos
+ 1447 092b 11       		.uleb128 0x11
+ 1448 092c 55000000 		.4byte	0x55
+ 1449 0930 3B090000 		.4byte	0x93b
+ 1450 0934 14       		.uleb128 0x14
+ 1451 0935 80030000 		.4byte	0x380
+ 1452 0939 63       		.byte	0x63
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 27
+
+
+ 1453 093a 00       		.byte	0
+ 1454 093b 16       		.uleb128 0x16
+ 1455 093c 75030000 		.4byte	.LASF117
+ 1456 0940 05       		.byte	0x5
+ 1457 0941 15       		.byte	0x15
+ 1458 0942 2B090000 		.4byte	0x92b
+ 1459 0946 05       		.uleb128 0x5
+ 1460 0947 03       		.byte	0x3
+ 1461 0948 00000000 		.4byte	EE_cortex_mx_stack_2
+ 1462 094c 11       		.uleb128 0x11
+ 1463 094d 55000000 		.4byte	0x55
+ 1464 0951 5C090000 		.4byte	0x95c
+ 1465 0955 14       		.uleb128 0x14
+ 1466 0956 80030000 		.4byte	0x380
+ 1467 095a 31       		.byte	0x31
+ 1468 095b 00       		.byte	0
+ 1469 095c 16       		.uleb128 0x16
+ 1470 095d 60050000 		.4byte	.LASF118
+ 1471 0961 05       		.byte	0x5
+ 1472 0962 19       		.byte	0x19
+ 1473 0963 4C090000 		.4byte	0x94c
+ 1474 0967 05       		.uleb128 0x5
+ 1475 0968 03       		.byte	0x3
+ 1476 0969 00000000 		.4byte	EE_cortex_mx_stack_3
+ 1477 096d 11       		.uleb128 0x11
+ 1478 096e 55000000 		.4byte	0x55
+ 1479 0972 7D090000 		.4byte	0x97d
+ 1480 0976 14       		.uleb128 0x14
+ 1481 0977 80030000 		.4byte	0x380
+ 1482 097b 7F       		.byte	0x7f
+ 1483 097c 00       		.byte	0
+ 1484 097d 16       		.uleb128 0x16
+ 1485 097e 9E030000 		.4byte	.LASF119
+ 1486 0982 05       		.byte	0x5
+ 1487 0983 32       		.byte	0x32
+ 1488 0984 6D090000 		.4byte	0x96d
+ 1489 0988 05       		.uleb128 0x5
+ 1490 0989 03       		.byte	0x3
+ 1491 098a 00000000 		.4byte	EE_cortex_mx_stack_9
+ 1492 098e 00       		.byte	0
+ 1493              		.section	.debug_abbrev,"",%progbits
+ 1494              	.Ldebug_abbrev0:
+ 1495 0000 01       		.uleb128 0x1
+ 1496 0001 11       		.uleb128 0x11
+ 1497 0002 01       		.byte	0x1
+ 1498 0003 25       		.uleb128 0x25
+ 1499 0004 0E       		.uleb128 0xe
+ 1500 0005 13       		.uleb128 0x13
+ 1501 0006 0B       		.uleb128 0xb
+ 1502 0007 03       		.uleb128 0x3
+ 1503 0008 0E       		.uleb128 0xe
+ 1504 0009 1B       		.uleb128 0x1b
+ 1505 000a 0E       		.uleb128 0xe
+ 1506 000b 10       		.uleb128 0x10
+ 1507 000c 17       		.uleb128 0x17
+ 1508 000d 00       		.byte	0
+ 1509 000e 00       		.byte	0
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 28
+
+
+ 1510 000f 02       		.uleb128 0x2
+ 1511 0010 24       		.uleb128 0x24
+ 1512 0011 00       		.byte	0
+ 1513 0012 0B       		.uleb128 0xb
+ 1514 0013 0B       		.uleb128 0xb
+ 1515 0014 3E       		.uleb128 0x3e
+ 1516 0015 0B       		.uleb128 0xb
+ 1517 0016 03       		.uleb128 0x3
+ 1518 0017 0E       		.uleb128 0xe
+ 1519 0018 00       		.byte	0
+ 1520 0019 00       		.byte	0
+ 1521 001a 03       		.uleb128 0x3
+ 1522 001b 24       		.uleb128 0x24
+ 1523 001c 00       		.byte	0
+ 1524 001d 0B       		.uleb128 0xb
+ 1525 001e 0B       		.uleb128 0xb
+ 1526 001f 3E       		.uleb128 0x3e
+ 1527 0020 0B       		.uleb128 0xb
+ 1528 0021 03       		.uleb128 0x3
+ 1529 0022 08       		.uleb128 0x8
+ 1530 0023 00       		.byte	0
+ 1531 0024 00       		.byte	0
+ 1532 0025 04       		.uleb128 0x4
+ 1533 0026 16       		.uleb128 0x16
+ 1534 0027 00       		.byte	0
+ 1535 0028 03       		.uleb128 0x3
+ 1536 0029 0E       		.uleb128 0xe
+ 1537 002a 3A       		.uleb128 0x3a
+ 1538 002b 0B       		.uleb128 0xb
+ 1539 002c 3B       		.uleb128 0x3b
+ 1540 002d 0B       		.uleb128 0xb
+ 1541 002e 49       		.uleb128 0x49
+ 1542 002f 13       		.uleb128 0x13
+ 1543 0030 00       		.byte	0
+ 1544 0031 00       		.byte	0
+ 1545 0032 05       		.uleb128 0x5
+ 1546 0033 0F       		.uleb128 0xf
+ 1547 0034 00       		.byte	0
+ 1548 0035 0B       		.uleb128 0xb
+ 1549 0036 0B       		.uleb128 0xb
+ 1550 0037 00       		.byte	0
+ 1551 0038 00       		.byte	0
+ 1552 0039 06       		.uleb128 0x6
+ 1553 003a 0F       		.uleb128 0xf
+ 1554 003b 00       		.byte	0
+ 1555 003c 0B       		.uleb128 0xb
+ 1556 003d 0B       		.uleb128 0xb
+ 1557 003e 49       		.uleb128 0x49
+ 1558 003f 13       		.uleb128 0x13
+ 1559 0040 00       		.byte	0
+ 1560 0041 00       		.byte	0
+ 1561 0042 07       		.uleb128 0x7
+ 1562 0043 15       		.uleb128 0x15
+ 1563 0044 00       		.byte	0
+ 1564 0045 27       		.uleb128 0x27
+ 1565 0046 19       		.uleb128 0x19
+ 1566 0047 00       		.byte	0
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 29
+
+
+ 1567 0048 00       		.byte	0
+ 1568 0049 08       		.uleb128 0x8
+ 1569 004a 13       		.uleb128 0x13
+ 1570 004b 01       		.byte	0x1
+ 1571 004c 03       		.uleb128 0x3
+ 1572 004d 0E       		.uleb128 0xe
+ 1573 004e 0B       		.uleb128 0xb
+ 1574 004f 0B       		.uleb128 0xb
+ 1575 0050 3A       		.uleb128 0x3a
+ 1576 0051 0B       		.uleb128 0xb
+ 1577 0052 3B       		.uleb128 0x3b
+ 1578 0053 0B       		.uleb128 0xb
+ 1579 0054 01       		.uleb128 0x1
+ 1580 0055 13       		.uleb128 0x13
+ 1581 0056 00       		.byte	0
+ 1582 0057 00       		.byte	0
+ 1583 0058 09       		.uleb128 0x9
+ 1584 0059 0D       		.uleb128 0xd
+ 1585 005a 00       		.byte	0
+ 1586 005b 03       		.uleb128 0x3
+ 1587 005c 0E       		.uleb128 0xe
+ 1588 005d 3A       		.uleb128 0x3a
+ 1589 005e 0B       		.uleb128 0xb
+ 1590 005f 3B       		.uleb128 0x3b
+ 1591 0060 0B       		.uleb128 0xb
+ 1592 0061 49       		.uleb128 0x49
+ 1593 0062 13       		.uleb128 0x13
+ 1594 0063 38       		.uleb128 0x38
+ 1595 0064 0B       		.uleb128 0xb
+ 1596 0065 00       		.byte	0
+ 1597 0066 00       		.byte	0
+ 1598 0067 0A       		.uleb128 0xa
+ 1599 0068 16       		.uleb128 0x16
+ 1600 0069 00       		.byte	0
+ 1601 006a 03       		.uleb128 0x3
+ 1602 006b 0E       		.uleb128 0xe
+ 1603 006c 3A       		.uleb128 0x3a
+ 1604 006d 0B       		.uleb128 0xb
+ 1605 006e 3B       		.uleb128 0x3b
+ 1606 006f 05       		.uleb128 0x5
+ 1607 0070 49       		.uleb128 0x49
+ 1608 0071 13       		.uleb128 0x13
+ 1609 0072 00       		.byte	0
+ 1610 0073 00       		.byte	0
+ 1611 0074 0B       		.uleb128 0xb
+ 1612 0075 13       		.uleb128 0x13
+ 1613 0076 01       		.byte	0x1
+ 1614 0077 0B       		.uleb128 0xb
+ 1615 0078 0B       		.uleb128 0xb
+ 1616 0079 3A       		.uleb128 0x3a
+ 1617 007a 0B       		.uleb128 0xb
+ 1618 007b 3B       		.uleb128 0x3b
+ 1619 007c 05       		.uleb128 0x5
+ 1620 007d 01       		.uleb128 0x1
+ 1621 007e 13       		.uleb128 0x13
+ 1622 007f 00       		.byte	0
+ 1623 0080 00       		.byte	0
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 30
+
+
+ 1624 0081 0C       		.uleb128 0xc
+ 1625 0082 0D       		.uleb128 0xd
+ 1626 0083 00       		.byte	0
+ 1627 0084 03       		.uleb128 0x3
+ 1628 0085 0E       		.uleb128 0xe
+ 1629 0086 3A       		.uleb128 0x3a
+ 1630 0087 0B       		.uleb128 0xb
+ 1631 0088 3B       		.uleb128 0x3b
+ 1632 0089 05       		.uleb128 0x5
+ 1633 008a 49       		.uleb128 0x49
+ 1634 008b 13       		.uleb128 0x13
+ 1635 008c 38       		.uleb128 0x38
+ 1636 008d 0B       		.uleb128 0xb
+ 1637 008e 00       		.byte	0
+ 1638 008f 00       		.byte	0
+ 1639 0090 0D       		.uleb128 0xd
+ 1640 0091 04       		.uleb128 0x4
+ 1641 0092 01       		.byte	0x1
+ 1642 0093 0B       		.uleb128 0xb
+ 1643 0094 0B       		.uleb128 0xb
+ 1644 0095 49       		.uleb128 0x49
+ 1645 0096 13       		.uleb128 0x13
+ 1646 0097 3A       		.uleb128 0x3a
+ 1647 0098 0B       		.uleb128 0xb
+ 1648 0099 3B       		.uleb128 0x3b
+ 1649 009a 05       		.uleb128 0x5
+ 1650 009b 01       		.uleb128 0x1
+ 1651 009c 13       		.uleb128 0x13
+ 1652 009d 00       		.byte	0
+ 1653 009e 00       		.byte	0
+ 1654 009f 0E       		.uleb128 0xe
+ 1655 00a0 28       		.uleb128 0x28
+ 1656 00a1 00       		.byte	0
+ 1657 00a2 03       		.uleb128 0x3
+ 1658 00a3 0E       		.uleb128 0xe
+ 1659 00a4 1C       		.uleb128 0x1c
+ 1660 00a5 0B       		.uleb128 0xb
+ 1661 00a6 00       		.byte	0
+ 1662 00a7 00       		.byte	0
+ 1663 00a8 0F       		.uleb128 0xf
+ 1664 00a9 0D       		.uleb128 0xd
+ 1665 00aa 00       		.byte	0
+ 1666 00ab 03       		.uleb128 0x3
+ 1667 00ac 08       		.uleb128 0x8
+ 1668 00ad 3A       		.uleb128 0x3a
+ 1669 00ae 0B       		.uleb128 0xb
+ 1670 00af 3B       		.uleb128 0x3b
+ 1671 00b0 05       		.uleb128 0x5
+ 1672 00b1 49       		.uleb128 0x49
+ 1673 00b2 13       		.uleb128 0x13
+ 1674 00b3 38       		.uleb128 0x38
+ 1675 00b4 0B       		.uleb128 0xb
+ 1676 00b5 00       		.byte	0
+ 1677 00b6 00       		.byte	0
+ 1678 00b7 10       		.uleb128 0x10
+ 1679 00b8 13       		.uleb128 0x13
+ 1680 00b9 01       		.byte	0x1
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 31
+
+
+ 1681 00ba 03       		.uleb128 0x3
+ 1682 00bb 0E       		.uleb128 0xe
+ 1683 00bc 0B       		.uleb128 0xb
+ 1684 00bd 0B       		.uleb128 0xb
+ 1685 00be 3A       		.uleb128 0x3a
+ 1686 00bf 0B       		.uleb128 0xb
+ 1687 00c0 3B       		.uleb128 0x3b
+ 1688 00c1 05       		.uleb128 0x5
+ 1689 00c2 01       		.uleb128 0x1
+ 1690 00c3 13       		.uleb128 0x13
+ 1691 00c4 00       		.byte	0
+ 1692 00c5 00       		.byte	0
+ 1693 00c6 11       		.uleb128 0x11
+ 1694 00c7 01       		.uleb128 0x1
+ 1695 00c8 01       		.byte	0x1
+ 1696 00c9 49       		.uleb128 0x49
+ 1697 00ca 13       		.uleb128 0x13
+ 1698 00cb 01       		.uleb128 0x1
+ 1699 00cc 13       		.uleb128 0x13
+ 1700 00cd 00       		.byte	0
+ 1701 00ce 00       		.byte	0
+ 1702 00cf 12       		.uleb128 0x12
+ 1703 00d0 21       		.uleb128 0x21
+ 1704 00d1 00       		.byte	0
+ 1705 00d2 00       		.byte	0
+ 1706 00d3 00       		.byte	0
+ 1707 00d4 13       		.uleb128 0x13
+ 1708 00d5 26       		.uleb128 0x26
+ 1709 00d6 00       		.byte	0
+ 1710 00d7 49       		.uleb128 0x49
+ 1711 00d8 13       		.uleb128 0x13
+ 1712 00d9 00       		.byte	0
+ 1713 00da 00       		.byte	0
+ 1714 00db 14       		.uleb128 0x14
+ 1715 00dc 21       		.uleb128 0x21
+ 1716 00dd 00       		.byte	0
+ 1717 00de 49       		.uleb128 0x49
+ 1718 00df 13       		.uleb128 0x13
+ 1719 00e0 2F       		.uleb128 0x2f
+ 1720 00e1 0B       		.uleb128 0xb
+ 1721 00e2 00       		.byte	0
+ 1722 00e3 00       		.byte	0
+ 1723 00e4 15       		.uleb128 0x15
+ 1724 00e5 34       		.uleb128 0x34
+ 1725 00e6 00       		.byte	0
+ 1726 00e7 03       		.uleb128 0x3
+ 1727 00e8 0E       		.uleb128 0xe
+ 1728 00e9 3A       		.uleb128 0x3a
+ 1729 00ea 0B       		.uleb128 0xb
+ 1730 00eb 3B       		.uleb128 0x3b
+ 1731 00ec 05       		.uleb128 0x5
+ 1732 00ed 49       		.uleb128 0x49
+ 1733 00ee 13       		.uleb128 0x13
+ 1734 00ef 02       		.uleb128 0x2
+ 1735 00f0 18       		.uleb128 0x18
+ 1736 00f1 00       		.byte	0
+ 1737 00f2 00       		.byte	0
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 32
+
+
+ 1738 00f3 16       		.uleb128 0x16
+ 1739 00f4 34       		.uleb128 0x34
+ 1740 00f5 00       		.byte	0
+ 1741 00f6 03       		.uleb128 0x3
+ 1742 00f7 0E       		.uleb128 0xe
+ 1743 00f8 3A       		.uleb128 0x3a
+ 1744 00f9 0B       		.uleb128 0xb
+ 1745 00fa 3B       		.uleb128 0x3b
+ 1746 00fb 0B       		.uleb128 0xb
+ 1747 00fc 49       		.uleb128 0x49
+ 1748 00fd 13       		.uleb128 0x13
+ 1749 00fe 3F       		.uleb128 0x3f
+ 1750 00ff 19       		.uleb128 0x19
+ 1751 0100 02       		.uleb128 0x2
+ 1752 0101 18       		.uleb128 0x18
+ 1753 0102 00       		.byte	0
+ 1754 0103 00       		.byte	0
+ 1755 0104 17       		.uleb128 0x17
+ 1756 0105 34       		.uleb128 0x34
+ 1757 0106 00       		.byte	0
+ 1758 0107 03       		.uleb128 0x3
+ 1759 0108 0E       		.uleb128 0xe
+ 1760 0109 3A       		.uleb128 0x3a
+ 1761 010a 0B       		.uleb128 0xb
+ 1762 010b 3B       		.uleb128 0x3b
+ 1763 010c 05       		.uleb128 0x5
+ 1764 010d 49       		.uleb128 0x49
+ 1765 010e 13       		.uleb128 0x13
+ 1766 010f 3F       		.uleb128 0x3f
+ 1767 0110 19       		.uleb128 0x19
+ 1768 0111 02       		.uleb128 0x2
+ 1769 0112 18       		.uleb128 0x18
+ 1770 0113 00       		.byte	0
+ 1771 0114 00       		.byte	0
+ 1772 0115 18       		.uleb128 0x18
+ 1773 0116 34       		.uleb128 0x34
+ 1774 0117 00       		.byte	0
+ 1775 0118 03       		.uleb128 0x3
+ 1776 0119 0E       		.uleb128 0xe
+ 1777 011a 3A       		.uleb128 0x3a
+ 1778 011b 0B       		.uleb128 0xb
+ 1779 011c 3B       		.uleb128 0x3b
+ 1780 011d 0B       		.uleb128 0xb
+ 1781 011e 49       		.uleb128 0x49
+ 1782 011f 13       		.uleb128 0x13
+ 1783 0120 3F       		.uleb128 0x3f
+ 1784 0121 19       		.uleb128 0x19
+ 1785 0122 3C       		.uleb128 0x3c
+ 1786 0123 19       		.uleb128 0x19
+ 1787 0124 00       		.byte	0
+ 1788 0125 00       		.byte	0
+ 1789 0126 00       		.byte	0
+ 1790              		.section	.debug_aranges,"",%progbits
+ 1791 0000 14000000 		.4byte	0x14
+ 1792 0004 0200     		.2byte	0x2
+ 1793 0006 00000000 		.4byte	.Ldebug_info0
+ 1794 000a 04       		.byte	0x4
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 33
+
+
+ 1795 000b 00       		.byte	0
+ 1796 000c 0000     		.2byte	0
+ 1797 000e 0000     		.2byte	0
+ 1798 0010 00000000 		.4byte	0
+ 1799 0014 00000000 		.4byte	0
+ 1800              		.section	.debug_line,"",%progbits
+ 1801              	.Ldebug_line0:
+ 1802 0000 38010000 		.section	.debug_str,"MS",%progbits,1
+ 1802      02003201 
+ 1802      00000201 
+ 1802      FB0E0D00 
+ 1802      01010101 
+ 1803              	.LASF78:
+ 1804 0000 45455F52 		.ascii	"EE_RESOURCE_NAME\000"
+ 1804      45534F55 
+ 1804      5243455F 
+ 1804      4E414D45 
+ 1804      00
+ 1805              	.LASF102:
+ 1806 0011 45455F74 		.ascii	"EE_th_resource_last\000"
+ 1806      685F7265 
+ 1806      736F7572 
+ 1806      63655F6C 
+ 1806      61737400 
+ 1807              	.LASF46:
+ 1808 0025 6E657874 		.ascii	"next\000"
+ 1808      00
+ 1809              	.LASF85:
+ 1810 002a 45455F74 		.ascii	"EE_th_terminate_nextask\000"
+ 1810      685F7465 
+ 1810      726D696E 
+ 1810      6174655F 
+ 1810      6E657874 
+ 1811              	.LASF24:
+ 1812 0042 5469636B 		.ascii	"TickType\000"
+ 1812      54797065 
+ 1812      00
+ 1813              	.LASF79:
+ 1814 004b 45455F52 		.ascii	"EE_RESOURCE_ID\000"
+ 1814      45534F55 
+ 1814      5243455F 
+ 1814      494400
+ 1815              	.LASF86:
+ 1816 005a 45455F73 		.ascii	"EE_stkfirst\000"
+ 1816      746B6669 
+ 1816      72737400 
+ 1817              	.LASF26:
+ 1818 0066 41637469 		.ascii	"ActionType\000"
+ 1818      6F6E5479 
+ 1818      706500
+ 1819              	.LASF19:
+ 1820 0071 45455F54 		.ascii	"EE_TYPEBOOL\000"
+ 1820      59504542 
+ 1820      4F4F4C00 
+ 1821              	.LASF16:
+ 1822 007d 45455F55 		.ascii	"EE_UREG\000"
+ 1822      52454700 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 34
+
+
+ 1823              	.LASF116:
+ 1824 0085 45455F63 		.ascii	"EE_cortex_mx_IRQ_tos\000"
+ 1824      6F727465 
+ 1824      785F6D78 
+ 1824      5F495251 
+ 1824      5F746F73 
+ 1825              	.LASF7:
+ 1826 009a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1826      206C6F6E 
+ 1826      6720756E 
+ 1826      7369676E 
+ 1826      65642069 
+ 1827              	.LASF45:
+ 1828 00b1 64656C74 		.ascii	"delta\000"
+ 1828      6100
+ 1829              	.LASF42:
+ 1830 00b7 45455F6F 		.ascii	"EE_oo_counter_object_ROM_type\000"
+ 1830      6F5F636F 
+ 1830      756E7465 
+ 1830      725F6F62 
+ 1830      6A656374 
+ 1831              	.LASF91:
+ 1832 00d5 45455F72 		.ascii	"EE_rq_pairs_next\000"
+ 1832      715F7061 
+ 1832      6972735F 
+ 1832      6E657874 
+ 1832      00
+ 1833              	.LASF22:
+ 1834 00e6 5461736B 		.ascii	"TaskType\000"
+ 1834      54797065 
+ 1834      00
+ 1835              	.LASF61:
+ 1836 00ef 45455F54 		.ascii	"EE_TOS\000"
+ 1836      4F5300
+ 1837              	.LASF29:
+ 1838 00f6 6D617861 		.ascii	"maxallowedvalue\000"
+ 1838      6C6C6F77 
+ 1838      65647661 
+ 1838      6C756500 
+ 1839              	.LASF123:
+ 1840 0106 45455F6F 		.ascii	"EE_oo_autostart_task_mode_OSDEFAULTAPPMODE\000"
+ 1840      6F5F6175 
+ 1840      746F7374 
+ 1840      6172745F 
+ 1840      7461736B 
+ 1841              	.LASF81:
+ 1842 0131 45455F41 		.ascii	"EE_ALARM_ID\000"
+ 1842      4C41524D 
+ 1842      5F494400 
+ 1843              	.LASF6:
+ 1844 013d 6C6F6E67 		.ascii	"long long int\000"
+ 1844      206C6F6E 
+ 1844      6720696E 
+ 1844      7400
+ 1845              	.LASF0:
+ 1846 014b 7369676E 		.ascii	"signed char\000"
+ 1846      65642063 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 35
+
+
+ 1846      68617200 
+ 1847              	.LASF52:
+ 1848 0157 45455F6F 		.ascii	"EE_oo_action_kind_type\000"
+ 1848      6F5F6163 
+ 1848      74696F6E 
+ 1848      5F6B696E 
+ 1848      645F7479 
+ 1849              	.LASF23:
+ 1850 016e 4576656E 		.ascii	"EventMaskType\000"
+ 1850      744D6173 
+ 1850      6B547970 
+ 1850      6500
+ 1851              	.LASF76:
+ 1852 017c 45455F45 		.ascii	"EE_EVENT_NAME\000"
+ 1852      56454E54 
+ 1852      5F4E414D 
+ 1852      4500
+ 1853              	.LASF107:
+ 1854 018a 45455F61 		.ascii	"EE_alarm_ROM\000"
+ 1854      6C61726D 
+ 1854      5F524F4D 
+ 1854      00
+ 1855              	.LASF70:
+ 1856 0197 45455F63 		.ascii	"EE_cortex_mx_active_tos\000"
+ 1856      6F727465 
+ 1856      785F6D78 
+ 1856      5F616374 
+ 1856      6976655F 
+ 1857              	.LASF35:
+ 1858 01af 45455F6F 		.ascii	"EE_oo_counter_RAM_type\000"
+ 1858      6F5F636F 
+ 1858      756E7465 
+ 1858      725F5241 
+ 1858      4D5F7479 
+ 1859              	.LASF100:
+ 1860 01c6 45455F72 		.ascii	"EE_resource_oldceiling\000"
+ 1860      65736F75 
+ 1860      7263655F 
+ 1860      6F6C6463 
+ 1860      65696C69 
+ 1861              	.LASF80:
+ 1862 01dd 45455F45 		.ascii	"EE_EVENT_ID\000"
+ 1862      56454E54 
+ 1862      5F494400 
+ 1863              	.LASF4:
+ 1864 01e9 6C6F6E67 		.ascii	"long int\000"
+ 1864      20696E74 
+ 1864      00
+ 1865              	.LASF89:
+ 1866 01f2 45455F72 		.ascii	"EE_rq_queues_head\000"
+ 1866      715F7175 
+ 1866      65756573 
+ 1866      5F686561 
+ 1866      6400
+ 1867              	.LASF112:
+ 1868 0204 45455F6F 		.ascii	"EE_oo_IRQ_suspend_status\000"
+ 1868      6F5F4952 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 36
+
+
+ 1868      515F7375 
+ 1868      7370656E 
+ 1868      645F7374 
+ 1869              	.LASF114:
+ 1870 021d 45455F73 		.ascii	"EE_std_endcycle_next_tid\000"
+ 1870      74645F65 
+ 1870      6E646379 
+ 1870      636C655F 
+ 1870      6E657874 
+ 1871              	.LASF31:
+ 1872 0236 6D696E63 		.ascii	"mincycle\000"
+ 1872      79636C65 
+ 1872      00
+ 1873              	.LASF20:
+ 1874 023f 45455F54 		.ascii	"EE_TID\000"
+ 1874      494400
+ 1875              	.LASF33:
+ 1876 0246 76616C75 		.ascii	"value\000"
+ 1876      6500
+ 1877              	.LASF8:
+ 1878 024c 756E7369 		.ascii	"unsigned int\000"
+ 1878      676E6564 
+ 1878      20696E74 
+ 1878      00
+ 1879              	.LASF122:
+ 1880 0259 443A5C41 		.ascii	"D:\\AMA_EOS\\Lab_Assignments\\Assignment03\\AMA_EOS"
+ 1880      4D415F45 
+ 1880      4F535C4C 
+ 1880      61625F41 
+ 1880      73736967 
+ 1881 0288 5F4C6162 		.ascii	"_Lab_3\\AMA_EOS_Lab_3.cydsn\000"
+ 1881      5F335C41 
+ 1881      4D415F45 
+ 1881      4F535F4C 
+ 1881      61625F33 
+ 1882              	.LASF60:
+ 1883 02a3 45455F6F 		.ascii	"EE_oo_alarm_ROM_type\000"
+ 1883      6F5F616C 
+ 1883      61726D5F 
+ 1883      524F4D5F 
+ 1883      74797065 
+ 1884              	.LASF77:
+ 1885 02b8 45455F41 		.ascii	"EE_ALARM_NAME\000"
+ 1885      4C41524D 
+ 1885      5F4E414D 
+ 1885      4500
+ 1886              	.LASF5:
+ 1887 02c6 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1887      20756E73 
+ 1887      69676E65 
+ 1887      6420696E 
+ 1887      7400
+ 1888              	.LASF97:
+ 1889 02d8 45455F74 		.ascii	"EE_th_waswaiting\000"
+ 1889      685F7761 
+ 1889      73776169 
+ 1889      74696E67 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 37
+
+
+ 1889      00
+ 1890              	.LASF62:
+ 1891 02e9 45455F6F 		.ascii	"EE_oo_autostart_task_type\000"
+ 1891      6F5F6175 
+ 1891      746F7374 
+ 1891      6172745F 
+ 1891      7461736B 
+ 1892              	.LASF41:
+ 1893 0303 6B696E64 		.ascii	"kind\000"
+ 1893      00
+ 1894              	.LASF3:
+ 1895 0308 73686F72 		.ascii	"short unsigned int\000"
+ 1895      7420756E 
+ 1895      7369676E 
+ 1895      65642069 
+ 1895      6E7400
+ 1896              	.LASF111:
+ 1897 031b 45455F6F 		.ascii	"EE_oo_IRQ_disable_count\000"
+ 1897      6F5F4952 
+ 1897      515F6469 
+ 1897      7361626C 
+ 1897      655F636F 
+ 1898              	.LASF38:
+ 1899 0333 45455F6F 		.ascii	"EE_oo_counter_object_kind_type\000"
+ 1899      6F5F636F 
+ 1899      756E7465 
+ 1899      725F6F62 
+ 1899      6A656374 
+ 1900              	.LASF82:
+ 1901 0352 45455F74 		.ascii	"EE_th_status\000"
+ 1901      685F7374 
+ 1901      61747573 
+ 1901      00
+ 1902              	.LASF39:
+ 1903 035f 436F756E 		.ascii	"CounterObjectKindType\000"
+ 1903      7465724F 
+ 1903      626A6563 
+ 1903      744B696E 
+ 1903      64547970 
+ 1904              	.LASF117:
+ 1905 0375 45455F63 		.ascii	"EE_cortex_mx_stack_2\000"
+ 1905      6F727465 
+ 1905      785F6D78 
+ 1905      5F737461 
+ 1905      636B5F32 
+ 1906              	.LASF73:
+ 1907 038a 45455F74 		.ascii	"EE_th_dispatch_prio\000"
+ 1907      685F6469 
+ 1907      73706174 
+ 1907      63685F70 
+ 1907      72696F00 
+ 1908              	.LASF119:
+ 1909 039e 45455F63 		.ascii	"EE_cortex_mx_stack_9\000"
+ 1909      6F727465 
+ 1909      785F6D78 
+ 1909      5F737461 
+ 1909      636B5F39 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 38
+
+
+ 1910              	.LASF14:
+ 1911 03b3 45455F56 		.ascii	"EE_VOID_CALLBACK\000"
+ 1911      4F49445F 
+ 1911      43414C4C 
+ 1911      4241434B 
+ 1911      00
+ 1912              	.LASF27:
+ 1913 03c4 436F756E 		.ascii	"CounterType\000"
+ 1913      74657254 
+ 1913      79706500 
+ 1914              	.LASF105:
+ 1915 03d0 45455F6F 		.ascii	"EE_oo_counter_object_ROM\000"
+ 1915      6F5F636F 
+ 1915      756E7465 
+ 1915      725F6F62 
+ 1915      6A656374 
+ 1916              	.LASF59:
+ 1917 03e9 61637469 		.ascii	"action_id\000"
+ 1917      6F6E5F69 
+ 1917      6400
+ 1918              	.LASF113:
+ 1919 03f3 45455F41 		.ascii	"EE_ApplicationMode\000"
+ 1919      70706C69 
+ 1919      63617469 
+ 1919      6F6E4D6F 
+ 1919      646500
+ 1920              	.LASF106:
+ 1921 0406 45455F6F 		.ascii	"EE_oo_action_ROM\000"
+ 1921      6F5F6163 
+ 1921      74696F6E 
+ 1921      5F524F4D 
+ 1921      00
+ 1922              	.LASF21:
+ 1923 0417 45455F54 		.ascii	"EE_TYPE_RQ_MASK\000"
+ 1923      5950455F 
+ 1923      52515F4D 
+ 1923      41534B00 
+ 1924              	.LASF64:
+ 1925 0427 73697A65 		.ascii	"sizetype\000"
+ 1925      74797065 
+ 1925      00
+ 1926              	.LASF9:
+ 1927 0430 6C6F6E67 		.ascii	"long double\000"
+ 1927      20646F75 
+ 1927      626C6500 
+ 1928              	.LASF94:
+ 1929 043c 45455F72 		.ascii	"EE_rq_free\000"
+ 1929      715F6672 
+ 1929      656500
+ 1930              	.LASF88:
+ 1931 0447 45455F72 		.ascii	"EE_rq_link\000"
+ 1931      715F6C69 
+ 1931      6E6B00
+ 1932              	.LASF17:
+ 1933 0452 45455F53 		.ascii	"EE_SREG\000"
+ 1933      52454700 
+ 1934              	.LASF30:
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 39
+
+
+ 1935 045a 7469636B 		.ascii	"ticksperbase\000"
+ 1935      73706572 
+ 1935      62617365 
+ 1935      00
+ 1936              	.LASF43:
+ 1937 0467 75736564 		.ascii	"used\000"
+ 1937      00
+ 1938              	.LASF47:
+ 1939 046c 45455F6F 		.ascii	"EE_oo_counter_object_RAM_type\000"
+ 1939      6F5F636F 
+ 1939      756E7465 
+ 1939      725F6F62 
+ 1939      6A656374 
+ 1940              	.LASF104:
+ 1941 048a 45455F63 		.ascii	"EE_counter_ROM\000"
+ 1941      6F756E74 
+ 1941      65725F52 
+ 1941      4F4D00
+ 1942              	.LASF58:
+ 1943 0499 45455F6F 		.ascii	"EE_oo_action_ROM_type\000"
+ 1943      6F5F6163 
+ 1943      74696F6E 
+ 1943      5F524F4D 
+ 1943      5F747970 
+ 1944              	.LASF10:
+ 1945 04af 45455F55 		.ascii	"EE_UINT16\000"
+ 1945      494E5431 
+ 1945      3600
+ 1946              	.LASF37:
+ 1947 04b9 45455F53 		.ascii	"EE_SCHEDULETABLE\000"
+ 1947      43484544 
+ 1947      554C4554 
+ 1947      41424C45 
+ 1947      00
+ 1948              	.LASF69:
+ 1949 04ca 45455F63 		.ascii	"EE_cortex_mx_system_tos\000"
+ 1949      6F727465 
+ 1949      785F6D78 
+ 1949      5F737973 
+ 1949      74656D5F 
+ 1950              	.LASF1:
+ 1951 04e2 756E7369 		.ascii	"unsigned char\000"
+ 1951      676E6564 
+ 1951      20636861 
+ 1951      7200
+ 1952              	.LASF36:
+ 1953 04f0 45455F41 		.ascii	"EE_ALARM\000"
+ 1953      4C41524D 
+ 1953      00
+ 1954              	.LASF83:
+ 1955 04f9 45455F74 		.ascii	"EE_th_next\000"
+ 1955      685F6E65 
+ 1955      787400
+ 1956              	.LASF68:
+ 1957 0504 45455F74 		.ascii	"EE_terminate_real_th_body\000"
+ 1957      65726D69 
+ 1957      6E617465 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 40
+
+
+ 1957      5F726561 
+ 1957      6C5F7468 
+ 1958              	.LASF57:
+ 1959 051e 696E6363 		.ascii	"inccount\000"
+ 1959      6F756E74 
+ 1959      00
+ 1960              	.LASF2:
+ 1961 0527 73686F72 		.ascii	"short int\000"
+ 1961      7420696E 
+ 1961      7400
+ 1962              	.LASF96:
+ 1963 0531 45455F74 		.ascii	"EE_th_event_waitmask\000"
+ 1963      685F6576 
+ 1963      656E745F 
+ 1963      77616974 
+ 1963      6D61736B 
+ 1964              	.LASF110:
+ 1965 0546 45455F6F 		.ascii	"EE_oo_autostart_task_data\000"
+ 1965      6F5F6175 
+ 1965      746F7374 
+ 1965      6172745F 
+ 1965      7461736B 
+ 1966              	.LASF118:
+ 1967 0560 45455F63 		.ascii	"EE_cortex_mx_stack_3\000"
+ 1967      6F727465 
+ 1967      785F6D78 
+ 1967      5F737461 
+ 1967      636B5F33 
+ 1968              	.LASF75:
+ 1969 0575 45455F54 		.ascii	"EE_TASK_NAME\000"
+ 1969      41534B5F 
+ 1969      4E414D45 
+ 1969      00
+ 1970              	.LASF32:
+ 1971 0582 45455F6F 		.ascii	"EE_oo_counter_ROM_type\000"
+ 1971      6F5F636F 
+ 1971      756E7465 
+ 1971      725F524F 
+ 1971      4D5F7479 
+ 1972              	.LASF120:
+ 1973 0599 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1973      43313120 
+ 1973      352E342E 
+ 1973      31203230 
+ 1973      31363036 
+ 1974 05cc 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1974      20726576 
+ 1974      6973696F 
+ 1974      6E203233 
+ 1974      37373135 
+ 1975 05ff 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1975      66756E63 
+ 1975      74696F6E 
+ 1975      2D736563 
+ 1975      74696F6E 
+ 1976              	.LASF56:
+ 1977 0627 61637469 		.ascii	"action_mask\000"
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 41
+
+
+ 1977      6F6E5F6D 
+ 1977      61736B00 
+ 1978              	.LASF15:
+ 1979 0633 45455F54 		.ascii	"EE_THREAD_PTR\000"
+ 1979      48524541 
+ 1979      445F5054 
+ 1979      5200
+ 1980              	.LASF90:
+ 1981 0641 45455F72 		.ascii	"EE_rq_queues_tail\000"
+ 1981      715F7175 
+ 1981      65756573 
+ 1981      5F746169 
+ 1981      6C00
+ 1982              	.LASF66:
+ 1983 0653 45455F73 		.ascii	"EE_std_thread_tos\000"
+ 1983      74645F74 
+ 1983      68726561 
+ 1983      645F746F 
+ 1983      7300
+ 1984              	.LASF51:
+ 1985 0665 45455F41 		.ascii	"EE_ACTION_CALLBACK\000"
+ 1985      4354494F 
+ 1985      4E5F4341 
+ 1985      4C4C4241 
+ 1985      434B00
+ 1986              	.LASF93:
+ 1987 0678 45455F72 		.ascii	"EE_rq_bitmask\000"
+ 1987      715F6269 
+ 1987      746D6173 
+ 1987      6B00
+ 1988              	.LASF103:
+ 1989 0686 45455F72 		.ascii	"EE_resource_stack\000"
+ 1989      65736F75 
+ 1989      7263655F 
+ 1989      73746163 
+ 1989      6B00
+ 1990              	.LASF34:
+ 1991 0698 66697273 		.ascii	"first\000"
+ 1991      7400
+ 1992              	.LASF25:
+ 1993 069e 436F756E 		.ascii	"CounterObjectType\000"
+ 1993      7465724F 
+ 1993      626A6563 
+ 1993      74547970 
+ 1993      6500
+ 1994              	.LASF74:
+ 1995 06b0 63686172 		.ascii	"char\000"
+ 1995      00
+ 1996              	.LASF48:
+ 1997 06b5 45455F41 		.ascii	"EE_ACTION_TASK\000"
+ 1997      4354494F 
+ 1997      4E5F5441 
+ 1997      534B00
+ 1998              	.LASF71:
+ 1999 06c4 45455F74 		.ascii	"EE_th_rnact_max\000"
+ 1999      685F726E 
+ 1999      6163745F 
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 42
+
+
+ 1999      6D617800 
+ 2000              	.LASF50:
+ 2001 06d4 45455F41 		.ascii	"EE_ACTION_COUNTER\000"
+ 2001      4354494F 
+ 2001      4E5F434F 
+ 2001      554E5445 
+ 2001      5200
+ 2002              	.LASF108:
+ 2003 06e6 45455F63 		.ascii	"EE_counter_RAM\000"
+ 2003      6F756E74 
+ 2003      65725F52 
+ 2003      414D00
+ 2004              	.LASF40:
+ 2005 06f5 73706563 		.ascii	"spec_id\000"
+ 2005      5F696400 
+ 2006              	.LASF49:
+ 2007 06fd 45455F41 		.ascii	"EE_ACTION_EVENT\000"
+ 2007      4354494F 
+ 2007      4E5F4556 
+ 2007      454E5400 
+ 2008              	.LASF65:
+ 2009 070d 45455F68 		.ascii	"EE_hal_thread_body\000"
+ 2009      616C5F74 
+ 2009      68726561 
+ 2009      645F626F 
+ 2009      647900
+ 2010              	.LASF87:
+ 2011 0720 45455F73 		.ascii	"EE_sys_ceiling\000"
+ 2011      79735F63 
+ 2011      65696C69 
+ 2011      6E6700
+ 2012              	.LASF54:
+ 2013 072f 61637469 		.ascii	"action_kind\000"
+ 2013      6F6E5F6B 
+ 2013      696E6400 
+ 2014              	.LASF63:
+ 2015 073b 7461736B 		.ascii	"task\000"
+ 2015      00
+ 2016              	.LASF109:
+ 2017 0740 45455F6F 		.ascii	"EE_oo_counter_object_RAM\000"
+ 2017      6F5F636F 
+ 2017      756E7465 
+ 2017      725F6F62 
+ 2017      6A656374 
+ 2018              	.LASF53:
+ 2019 0759 41637469 		.ascii	"ActionKindType\000"
+ 2019      6F6E4B69 
+ 2019      6E645479 
+ 2019      706500
+ 2020              	.LASF72:
+ 2021 0768 45455F74 		.ascii	"EE_th_ready_prio\000"
+ 2021      685F7265 
+ 2021      6164795F 
+ 2021      7072696F 
+ 2021      00
+ 2022              	.LASF84:
+ 2023 0779 45455F74 		.ascii	"EE_th_rnact\000"
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 43
+
+
+ 2023      685F726E 
+ 2023      61637400 
+ 2024              	.LASF92:
+ 2025 0785 45455F72 		.ascii	"EE_rq_pairs_tid\000"
+ 2025      715F7061 
+ 2025      6972735F 
+ 2025      74696400 
+ 2026              	.LASF115:
+ 2027 0795 45455F49 		.ascii	"EE_IRQ_nesting_level\000"
+ 2027      52515F6E 
+ 2027      65737469 
+ 2027      6E675F6C 
+ 2027      6576656C 
+ 2028              	.LASF12:
+ 2029 07aa 45455F55 		.ascii	"EE_UINT32\000"
+ 2029      494E5433 
+ 2029      3200
+ 2030              	.LASF11:
+ 2031 07b4 45455F49 		.ascii	"EE_INT32\000"
+ 2031      4E543332 
+ 2031      00
+ 2032              	.LASF67:
+ 2033 07bd 45455F74 		.ascii	"EE_terminate_data\000"
+ 2033      65726D69 
+ 2033      6E617465 
+ 2033      5F646174 
+ 2033      6100
+ 2034              	.LASF121:
+ 2035 07cf 47656E65 		.ascii	"Generated_Source\\PSoC5\\ErikaOS_1_eecfg.c\000"
+ 2035      72617465 
+ 2035      645F536F 
+ 2035      75726365 
+ 2035      5C50536F 
+ 2036              	.LASF95:
+ 2037 07f8 45455F74 		.ascii	"EE_th_event_active\000"
+ 2037      685F6576 
+ 2037      656E745F 
+ 2037      61637469 
+ 2037      766500
+ 2038              	.LASF44:
+ 2039 080b 636E7463 		.ascii	"cntcycle\000"
+ 2039      79636C65 
+ 2039      00
+ 2040              	.LASF28:
+ 2041 0814 5359535F 		.ascii	"SYS_tos\000"
+ 2041      746F7300 
+ 2042              	.LASF55:
+ 2043 081c 61637469 		.ascii	"action_task\000"
+ 2043      6F6E5F74 
+ 2043      61736B00 
+ 2044              	.LASF101:
+ 2045 0828 45455F72 		.ascii	"EE_resource_locked\000"
+ 2045      65736F75 
+ 2045      7263655F 
+ 2045      6C6F636B 
+ 2045      656400
+ 2046              	.LASF13:
+ARM GAS  C:\Users\agraw\AppData\Local\Temp\cce8xRIb.s 			page 44
+
+
+ 2047 083b 45455F41 		.ascii	"EE_ADDR\000"
+ 2047      44445200 
+ 2048              	.LASF98:
+ 2049 0843 45455F74 		.ascii	"EE_th_is_extended\000"
+ 2049      685F6973 
+ 2049      5F657874 
+ 2049      656E6465 
+ 2049      6400
+ 2050              	.LASF18:
+ 2051 0855 45455F46 		.ascii	"EE_FREG\000"
+ 2051      52454700 
+ 2052              	.LASF99:
+ 2053 085d 45455F72 		.ascii	"EE_resource_ceiling\000"
+ 2053      65736F75 
+ 2053      7263655F 
+ 2053      6365696C 
+ 2053      696E6700 
+ 2054              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
